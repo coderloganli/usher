@@ -1,0 +1,439 @@
+{
+ "seed": 20261004,
+ "n_per_judgment": 30,
+ "sample": {
+  "type": [
+   {
+    "number": 324716,
+    "truth": "polish"
+   },
+   {
+    "number": 325491,
+    "truth": "bug"
+   },
+   {
+    "number": 325990,
+    "truth": "bug"
+   },
+   {
+    "number": 326423,
+    "truth": "feature-request"
+   },
+   {
+    "number": 326565,
+    "truth": "feature-request"
+   },
+   {
+    "number": 326887,
+    "truth": "feature-request"
+   },
+   {
+    "number": 326945,
+    "truth": "bug"
+   },
+   {
+    "number": 327020,
+    "truth": "bug"
+   },
+   {
+    "number": 327028,
+    "truth": "bug"
+   },
+   {
+    "number": 327169,
+    "truth": "bug"
+   },
+   {
+    "number": 327216,
+    "truth": "bug"
+   },
+   {
+    "number": 327471,
+    "truth": "bug"
+   },
+   {
+    "number": 327479,
+    "truth": "bug"
+   },
+   {
+    "number": 327538,
+    "truth": "polish"
+   },
+   {
+    "number": 327589,
+    "truth": "bug"
+   },
+   {
+    "number": 327641,
+    "truth": "bug"
+   },
+   {
+    "number": 328165,
+    "truth": "bug"
+   },
+   {
+    "number": 329106,
+    "truth": "debt"
+   },
+   {
+    "number": 329596,
+    "truth": "feature-request"
+   },
+   {
+    "number": 329606,
+    "truth": "bug"
+   },
+   {
+    "number": 329667,
+    "truth": "feature-request"
+   },
+   {
+    "number": 331030,
+    "truth": "bug"
+   },
+   {
+    "number": 331554,
+    "truth": "feature-request"
+   },
+   {
+    "number": 333188,
+    "truth": "bug"
+   },
+   {
+    "number": 333850,
+    "truth": "feature-request"
+   },
+   {
+    "number": 334517,
+    "truth": "bug"
+   },
+   {
+    "number": 335031,
+    "truth": "bug"
+   },
+   {
+    "number": 335678,
+    "truth": "feature-request"
+   },
+   {
+    "number": 335771,
+    "truth": "feature-request"
+   },
+   {
+    "number": 337227,
+    "truth": "bug"
+   }
+  ],
+  "assignee": [
+   {
+    "number": 324692,
+    "truth": [
+     "hediet"
+    ]
+   },
+   {
+    "number": 325086,
+    "truth": [
+     "anthonykim1"
+    ]
+   },
+   {
+    "number": 325473,
+    "truth": [
+     "anthonykim1"
+    ]
+   },
+   {
+    "number": 326021,
+    "truth": [
+     "Copilot",
+     "justschen",
+     "mrleemurray"
+    ]
+   },
+   {
+    "number": 326348,
+    "truth": [
+     "meganrogge"
+    ]
+   },
+   {
+    "number": 326538,
+    "truth": [
+     "vritant24"
+    ]
+   },
+   {
+    "number": 326875,
+    "truth": [
+     "hawkticehurst",
+     "mrleemurray"
+    ]
+   },
+   {
+    "number": 326964,
+    "truth": [
+     "lszomoru"
+    ]
+   },
+   {
+    "number": 327142,
+    "truth": [
+     "lszomoru"
+    ]
+   },
+   {
+    "number": 327179,
+    "truth": [
+     "connor4312"
+    ]
+   },
+   {
+    "number": 327515,
+    "truth": [
+     "sandy081"
+    ]
+   },
+   {
+    "number": 327600,
+    "truth": [
+     "bhavyaus"
+    ]
+   },
+   {
+    "number": 328333,
+    "truth": [
+     "dmitrivMS"
+    ]
+   },
+   {
+    "number": 328356,
+    "truth": [
+     "ulugbekna"
+    ]
+   },
+   {
+    "number": 328598,
+    "truth": [
+     "aeschli"
+    ]
+   },
+   {
+    "number": 328696,
+    "truth": [
+     "anthonykim1"
+    ]
+   },
+   {
+    "number": 328798,
+    "truth": [
+     "justschen"
+    ]
+   },
+   {
+    "number": 329308,
+    "truth": [
+     "aeschli"
+    ]
+   },
+   {
+    "number": 330447,
+    "truth": [
+     "eli-w-king"
+    ]
+   },
+   {
+    "number": 331146,
+    "truth": [
+     "hawkticehurst",
+     "mrleemurray"
+    ]
+   },
+   {
+    "number": 331159,
+    "truth": [
+     "lszomoru"
+    ]
+   },
+   {
+    "number": 331210,
+    "truth": [
+     "joshspicer"
+    ]
+   },
+   {
+    "number": 332717,
+    "truth": [
+     "justschen"
+    ]
+   },
+   {
+    "number": 333576,
+    "truth": [
+     "justschen",
+     "meganrogge"
+    ]
+   },
+   {
+    "number": 334906,
+    "truth": [
+     "aeschli"
+    ]
+   },
+   {
+    "number": 335740,
+    "truth": [
+     "federicobrancasi"
+    ]
+   },
+   {
+    "number": 336200,
+    "truth": [
+     "dmitrivMS"
+    ]
+   },
+   {
+    "number": 336883,
+    "truth": [
+     "justschen"
+    ]
+   },
+   {
+    "number": 337632,
+    "truth": [
+     "connor4312"
+    ]
+   },
+   {
+    "number": 337910,
+    "truth": [
+     "Copilot",
+     "connor4312",
+     "roblourens"
+    ]
+   }
+  ],
+  "duplicate": [
+   {
+    "number": 325290,
+    "truth": 325287
+   },
+   {
+    "number": 325568,
+    "truth": 325354
+   },
+   {
+    "number": 325709,
+    "truth": 323937
+   },
+   {
+    "number": 326177,
+    "truth": 326092
+   },
+   {
+    "number": 326208,
+    "truth": 326092
+   },
+   {
+    "number": 326297,
+    "truth": 326092
+   },
+   {
+    "number": 326308,
+    "truth": 326092
+   },
+   {
+    "number": 326463,
+    "truth": 326092
+   },
+   {
+    "number": 326912,
+    "truth": 325618
+   },
+   {
+    "number": 326962,
+    "truth": 321321
+   },
+   {
+    "number": 327183,
+    "truth": 326126
+   },
+   {
+    "number": 327469,
+    "truth": 316712
+   },
+   {
+    "number": 328032,
+    "truth": 316204
+   },
+   {
+    "number": 329174,
+    "truth": 328507
+   },
+   {
+    "number": 329811,
+    "truth": 289795
+   },
+   {
+    "number": 329921,
+    "truth": 329901
+   },
+   {
+    "number": 330055,
+    "truth": 329901
+   },
+   {
+    "number": 330155,
+    "truth": 329606
+   },
+   {
+    "number": 330436,
+    "truth": 329901
+   },
+   {
+    "number": 331806,
+    "truth": 312279
+   },
+   {
+    "number": 332603,
+    "truth": 234393
+   },
+   {
+    "number": 332928,
+    "truth": 332622
+   },
+   {
+    "number": 333594,
+    "truth": 333534
+   },
+   {
+    "number": 334857,
+    "truth": 334856
+   },
+   {
+    "number": 335744,
+    "truth": 334144
+   },
+   {
+    "number": 336835,
+    "truth": 321240
+   },
+   {
+    "number": 336976,
+    "truth": 215988
+   },
+   {
+    "number": 337191,
+    "truth": 334856
+   },
+   {
+    "number": 337210,
+    "truth": 316260
+   },
+   {
+    "number": 337822,
+    "truth": 337562
+   }
+  ]
+ }
+}
