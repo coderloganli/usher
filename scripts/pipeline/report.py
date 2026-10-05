@@ -127,7 +127,7 @@ def main() -> None:
 
 <h2>5. bot 第一次分派的覆盖情况</h2>
 <p>说明 A2 要求找出 vscode 的分诊 bot（<code>vs-code-engineering[bot]</code>）第一次把 issue 分给了谁，留到基线阶段和我们的负责人判断做对照。做法是：拉取负责人测试集每条 issue 的时间线，取第一个由这个 bot 发出的 <code>assigned</code>（分派）事件，记下被分派的人。</p>
-<p>负责人测试集共有 {f(tl['issues'])} 条 issue，其中 {f(tl['timelines_available'])} 条成功拉到了时间线，{f(tl['timelines_missing'])} 条拉不到（例如 issue 已被删除或转移）。在全部 {f(tl['issues'])} 条中，有 <b>{f(tl['with_bot_first_assignment'])}</b> 条（{pct(tl['with_bot_first_assignment'], tl['issues'])}）找到了 bot 的第一次分派；其余的 issue 是由人直接分派的，bot 没有参与。bot 分派得对不对，留到基线阶段再统计。结果保存在 <code>manifest/bot_first_assignment.tsv</code>。</p>
+<p>负责人测试集共有 {f(tl['issues'])} 条 issue，其中 {f(tl['timelines_available'])} 条成功拉到了时间线，{f(tl['timelines_missing'])} 条拉不到（例如 issue 已被删除或转移）。在全部 {f(tl['issues'])} 条中，有 <b>{f(tl['with_bot_first_assignment'])}</b> 条（{pct(tl['with_bot_first_assignment'], tl['issues'])}）找到了 bot 的第一次分派；其余 issue 的时间线里没有这个 bot 发出的分派事件（通常是维护者直接分派的）。bot 分派得对不对，留到基线阶段再统计。结果保存在 <code>manifest/bot_first_assignment.tsv</code>。</p>
 
 <h2>6. 其他检查</h2>
 <p><b>正文为空的 issue。</b>说明 A4 要求每条 issue 都有正文和创建时间。所有 issue 都有创建时间；但有一部分 issue 的正文为空（只有标题）。A7 的筛选规则里没有“去掉正文为空的 issue”这一条，所以这些 issue 目前保留在数据里，下表列出它们的数量，是否去掉需要另外决定。</p>
@@ -141,7 +141,8 @@ def main() -> None:
 <p>注意：核对表里含有 issue 正文的片段。实验说明规定公开 repo 里不放 issue 正文，所以发布前需要把核对表换成只含编号和核对结果的版本。</p>
 
 <h2>8. 如何重新运行</h2>
-<p>在 worktree 根目录执行下面这条命令，就会依次完成拉取、筛选与切分、时间线拉取、存档、核对表和本报告。拉取脚本可以中断后续跑：已经拉到的页面和时间线会被缓存，不会重复请求。完整重跑需要大约一个小时拉取 issue，再加一到两个小时拉取时间线（REST 接口每小时限 5,000 次请求，脚本会在额度不足时自动等待）。</p>
+<p>在 worktree 根目录执行下面这条命令，就会依次完成拉取、筛选与切分、时间线拉取、存档、核对表和本报告。拉取脚本可以中断后续跑：已经拉到的页面和时间线会缓存在 <code>data/raw/</code> 里，不会重复请求。这次快照拉取 issue 用了 {dur(ip['started_at'], ip['finished_at'])}，拉取时间线用了 {dur(tp['first_fetched_at'], tp['last_fetched_at'])}（REST 接口每小时限 5,000 次请求，脚本在额度不足时会自动等待到额度重置）。</p>
+<p>因为拉取结果会被缓存，在已有 <code>data/raw/</code> 的情况下再次运行这条命令不会重新拉取，而是在同一个快照上重新计算，结果和本页完全一致（已核对过两次运行的校验值相同）。如果要拉一个新的快照，需要先删掉或移走 <code>data/raw/</code> 目录。</p>
 <pre>./run_data.sh</pre>
 <p>如果只想在已有数据上重新筛选和生成报告，不再请求 GitHub，可以运行 <code>./run_data.sh --offline</code>。</p>
 </main><script>{THEME_JS}</script></body></html>

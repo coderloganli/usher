@@ -62,7 +62,7 @@ def main() -> None:
             p = TIMELINES / f"{num}.json.gz"
             events = json.loads(read_gz(p))["events"] if p.exists() else None
         else:
-            if i % 50 == 0:
+            if i % 50 == 0 and not all((TIMELINES / f"{x['number']}.json.gz").exists() for x in test[i:i + 50]):
                 pace()
             events, new = fetch(num)
             fetched += new

@@ -21,7 +21,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;back
 pre{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:13px}
 button{font:inherit;background:var(--accent);color:var(--bg);border:0;border-radius:6px;padding:5px 12px;cursor:pointer}
 button.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
-.theme{position:fixed;top:10px;right:12px}
+.theme{position:fixed;top:10px;right:12px;background:var(--surface)}
 .muted{color:var(--muted)}
 """
 
