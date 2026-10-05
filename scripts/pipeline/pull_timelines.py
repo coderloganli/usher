@@ -10,7 +10,7 @@ Pacing: REST allows ~5,000 requests/hour. The script checks the core budget ever
 50 issues and sleeps until reset when fewer than 200 requests are left.
 
 Output: data/bot_first_assignment.json and manifest/bot_first_assignment.tsv
-        data/timeline_meta.json (pull times, request counts, failures)
+        data/timeline_meta.json (first/last fetch time, REST pages, coverage)
 Usage : .venv/bin/python scripts/pipeline/pull_timelines.py [--extract-only]
 """
 from __future__ import annotations
@@ -54,11 +54,7 @@ def main() -> None:
     TIMELINES.mkdir(parents=True, exist_ok=True)
     test = json.load(open(SETS))["assignee"]["test"]
     meta_f = DATA / "timeline_meta.json"
-    meta = json.load(open(meta_f)) if meta_f.exists() else {"started_at": None, "finished_at": None}
-    if not extract_only and meta["started_at"] is None:
-        meta["started_at"] = now()
-        write_json(meta_f, meta)
-    t0 = time.time()
+    meta = {}
     out, fetched, missing = {}, 0, 0
     for i, it in enumerate(test):
         num = it["number"]
@@ -85,16 +81,17 @@ def main() -> None:
         }
         if (i + 1) % 250 == 0:
             log(f"{i + 1}/{len(test)} done ({fetched} fetched this run)")
-    if not extract_only:
-        meta["finished_at"] = now()
-        # Wall time actually spent in fetching runs (the pull may span several resumed runs).
-        meta["active_seconds"] = meta.get("active_seconds", 0) + round(time.time() - t0)
-        meta["runs"] = meta.get("runs", 0) + 1
-    pages = 0
+    # Pull window = first .. last `fetched_at` over the cached timelines of this test set
+    # (robust to interrupted and resumed runs).
+    pages, stamps = 0, []
     for it in test:
         p = TIMELINES / f"{it['number']}.json.gz"
         if p.exists():
-            pages += json.loads(read_gz(p)).get("pages", 0)
+            d = json.loads(read_gz(p))
+            pages += d.get("pages", 0)
+            stamps.append(d["fetched_at"])
+    meta["first_fetched_at"] = min(stamps) if stamps else None
+    meta["last_fetched_at"] = max(stamps) if stamps else None
     n_bot = sum(v["bot_assignee"] is not None for v in out.values())
     n_bot_in_final = sum(v["bot_assignee"] in v["final_assignees"] for v in out.values()
                          if v["bot_assignee"] is not None)

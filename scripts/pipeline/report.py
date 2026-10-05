@@ -108,7 +108,7 @@ def main() -> None:
 <h2>1. 快照信息</h2>
 <p>issue 数据通过 GitHub 的 GraphQL 接口一次性批量拉取，每页 100 条，按创建时间从新到旧翻页。拉取从 <b>{ip['started_at']}</b>（UTC）开始，到 <b>{ip['finished_at']}</b> 结束，用时 {dur(ip['started_at'], ip['finished_at'])}，共请求 {f(ip['graphql_pages'])} 页。创建时间在 {ip['range_utc'][0][:10]} 到 2026-09-30 之间的 issue 共有 <b>{f(ip['issues'])}</b> 条。每条 issue 记录了编号、创建时间、标题、正文、提交者、最终标签、最终负责人，以及 GitHub 的 duplicateOf 字段（这条 issue 被维护者标为哪条 issue 的重复，以及那条原 issue 的创建时间和所在仓库）。</p>
 <p>标签每条最多取 {ip['limits']['labels']} 个，负责人每条最多取 {ip['limits']['assignees']} 位。实际超出上限、因而可能被截断的 issue 数量是：标签 {f(trunc['labels'])} 条，负责人 {f(trunc['assignees'])} 条。</p>
-<p>测试集的操作记录（时间线）通过 REST 接口逐条拉取，第一次从 {tp['started_at']} 开始，最后一次在 {tp['finished_at']} 结束；拉取分 {tp['runs']} 次运行完成（可以中断后续跑），实际拉取用时合计约 {round(tp['active_seconds'] / 60)} 分钟，共 {f(tp['rest_pages'] or 0)} 页请求。时间线和 issue 不是在同一时刻拉取的，两者之间 issue 本身可能又有变化，但我们只从时间线里读 bot 的第一次分派，这一事件在之后不会改变。</p>
+<p>测试集的操作记录（时间线）通过 REST 接口逐条拉取，第一条在 {tp['first_fetched_at']} 拉取，最后一条在 {tp['last_fetched_at']} 拉取，前后历时 {dur(tp['first_fetched_at'], tp['last_fetched_at'])}，共 {f(tp['rest_pages'] or 0)} 页请求（时间线超过 100 条事件的 issue 需要翻页）。时间线和 issue 不是在同一时刻拉取的，两者之间 issue 本身可能又有变化，但我们只从时间线里读 bot 的第一次分派，这一事件在之后不会改变。</p>
 <p>快照的存档放在 <code>manifest/</code> 目录：<code>snapshot.json</code> 记录拉取时间和查询语句；<code>issue_numbers.txt</code> 是全部 {f(ip['issues'])} 个 issue 编号；<code>issue_hashes.tsv</code> 给每条 issue 的内容（标题、正文、标签、负责人、重复关系等）算了一个校验值，别人重新拉取后可以逐条比对哪些 issue 和我们的不同；<code>checksums.sha256</code> 记录了 <code>data/</code> 下全部 {f(snap['files_checksummed'])} 个数据文件的 SHA-256 校验值（一种文件“指纹”，内容只要改动一个字节，校验值就会完全不同）。存档时间是 {snap['archived_at']}。</p>
 
 <h2>2. 筛选后每项判断的数量</h2>

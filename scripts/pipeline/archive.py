@@ -49,9 +49,8 @@ def main() -> None:
                        "range_utc": pull["range"], "issues": pull["issues"], "graphql_pages": pull["pages"],
                        "truncated_connections": pull["truncated_connections"], "limits": pull["limits"],
                        "query": st["query"]},
-        "timeline_pull": {k: tl.get(k) for k in ("started_at", "finished_at", "issues", "timelines_available",
-                                                 "timelines_missing", "rest_pages",
-                                                 "active_seconds", "runs")},
+        "timeline_pull": {k: tl.get(k) for k in ("first_fetched_at", "last_fetched_at", "issues", "timelines_available",
+                                                 "timelines_missing", "rest_pages")},
         "files_checksummed": len(files),
         "key_files": {str(p.relative_to(ROOT)): sha256_file(p)
                       for p in [DATA / "issues.jsonl.gz", DATA / "sets.json", DATA / "bot_first_assignment.json"]},

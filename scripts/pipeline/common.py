@@ -123,23 +123,40 @@ def is_rate_error(msg: str) -> bool:
     return any(k in low for k in ("rate limit", "secondary", "abuse", "retry-after"))
 
 
-def gh(args: list[str], max_tries: int = 12) -> str:
-    """Run `gh` with exponential backoff; long waits on primary/secondary rate limits."""
-    delay = 10
-    for attempt in range(max_tries):
+def gh(args: list[str], max_tries: int = 12, max_rate_wait: int = 5400) -> str:
+    """Run `gh` with exponential backoff. Rate-limit errors (primary or secondary) do not
+    count as tries; they are waited out for up to `max_rate_wait` seconds in total."""
+    delay, tries, rate_waited = 10, 0, 0
+    while True:
         p = subprocess.run(["gh", *args], capture_output=True, text=True)
         if p.returncode == 0:
             return p.stdout
         msg = (p.stderr or p.stdout).strip()[:300]
-        if "404" in msg or "Not Found" in msg or "410" in msg:
+        if "HTTP 404" in msg or "HTTP 410" in msg:
             raise FileNotFoundError(msg)
-        wait = max(65, delay) if is_rate_error(msg) else delay
-        log(f"gh try {attempt + 1} failed, sleeping {wait}s: {msg}")
-        time.sleep(wait)
+        if is_rate_error(msg) and rate_waited < max_rate_wait:
+            log(f"gh rate limited, sleeping 120s: {msg}")
+            time.sleep(120)
+            rate_waited += 120
+            continue
+        tries += 1
+        if tries >= max_tries:
+            raise RuntimeError(f"gh failed after {max_tries} tries: {args[:3]}: {msg}")
+        log(f"gh try {tries} failed, sleeping {delay}s: {msg}")
+        time.sleep(delay)
         delay = min(delay * 2, 300)
-    raise RuntimeError(f"gh failed after {max_tries} tries: {args[:3]}")
 
 
 def core_rate() -> tuple[int, int]:
-    d = json.loads(gh(["api", "rate_limit"]))["resources"]["core"]
-    return d["remaining"], d["reset"]
+    """(remaining, reset epoch) of the REST core budget, read from the headers of a real
+    1-request call. The /rate_limit endpoint returned stale values (always 5000 left) for
+    this token, so it is not used."""
+    out = gh(["api", "-i", f"repos/{REPO}/issues/1/labels"])
+    hdr = {}
+    for line in out.splitlines():
+        if not line.strip():
+            break
+        if ":" in line:
+            k, v = line.split(":", 1)
+            hdr[k.strip().lower()] = v.strip()
+    return int(hdr["x-ratelimit-remaining"]), int(hdr["x-ratelimit-reset"])
