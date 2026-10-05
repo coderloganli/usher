@@ -1,0 +1,193 @@
+{
+ "issues_pulled": 107422,
+ "issues_per_split_before_filter": {
+  "train": 56331,
+  "tune": 2537,
+  "test": 7966
+ },
+ "kept": {
+  "type": {
+   "train": 15284,
+   "tune": 625,
+   "test": 1864
+  },
+  "assignee": {
+   "train": 40111,
+   "tune": 2053,
+   "test": 6604
+  },
+  "duplicate": {
+   "train": 1112,
+   "tune": 96,
+   "test": 268
+  }
+ },
+ "removed": {
+  "type": {
+   "train": {
+    "bot_author": 523,
+    "no_type_label": 39872,
+    "multiple_type_labels": 652
+   },
+   "tune": {
+    "bot_author": 69,
+    "no_type_label": 1825,
+    "multiple_type_labels": 18
+   },
+   "test": {
+    "bot_author": 379,
+    "no_type_label": 5665,
+    "multiple_type_labels": 58
+   }
+  },
+  "assignee": {
+   "train": {
+    "bot_author": 523,
+    "no_assignee": 15697
+   },
+   "tune": {
+    "bot_author": 69,
+    "no_assignee": 415
+   },
+   "test": {
+    "bot_author": 379,
+    "no_assignee": 983
+   }
+  },
+  "duplicate": {
+   "train": {
+    "bot_author": 523,
+    "no_duplicate_of": 54159,
+    "canonical_other_repo": 37,
+    "canonical_not_earlier": 399,
+    "canonical_before_2023": 101
+   },
+   "tune": {
+    "bot_author": 69,
+    "no_duplicate_of": 2342,
+    "canonical_other_repo": 1,
+    "canonical_not_earlier": 25,
+    "canonical_before_2023": 4
+   },
+   "test": {
+    "bot_author": 379,
+    "no_duplicate_of": 7248,
+    "canonical_other_repo": 10,
+    "canonical_not_earlier": 42,
+    "canonical_before_2023": 19
+   }
+  }
+ },
+ "rule_order": {
+  "type": [
+   "bot_author",
+   "no_type_label",
+   "multiple_type_labels"
+  ],
+  "assignee": [
+   "bot_author",
+   "no_assignee"
+  ],
+  "duplicate": [
+   "bot_author",
+   "no_duplicate_of",
+   "canonical_other_repo",
+   "canonical_not_earlier",
+   "canonical_before_2023"
+  ]
+ },
+ "exact_dup_flagged_test": {
+  "type": 0,
+  "assignee": 9,
+  "duplicate": 0
+ },
+ "exact_dup_flags": {
+  "type": [],
+  "assignee": [
+   {
+    "number": 331498,
+    "train_match": 268763
+   },
+   {
+    "number": 334257,
+    "train_match": 254192
+   },
+   {
+    "number": 334701,
+    "train_match": 237170
+   },
+   {
+    "number": 334748,
+    "train_match": 245127
+   },
+   {
+    "number": 334821,
+    "train_match": 301952
+   },
+   {
+    "number": 334936,
+    "train_match": 246866
+   },
+   {
+    "number": 334937,
+    "train_match": 307774
+   },
+   {
+    "number": 336010,
+    "train_match": 239848
+   },
+   {
+    "number": 336116,
+    "train_match": 262644
+   }
+  ],
+  "duplicate": []
+ },
+ "diagnostics": {
+  "kept_authors_with_graphql_typename_bot": 9,
+  "empty_body": {
+   "type": {
+    "train": 186,
+    "tune": 4,
+    "test": 16
+   },
+   "assignee": {
+    "train": 349,
+    "tune": 10,
+    "test": 29
+   },
+   "duplicate": {
+    "train": 3,
+    "tune": 0,
+    "test": 0
+   }
+  },
+  "duplicate_canonical_missing_from_pull": 0,
+  "duplicate_canonical_bot_authored": 5,
+  "duplicate_corpus_size": 107422,
+  "type_label_distribution_test": {
+   "bug": 1229,
+   "feature-request": 498,
+   "polish": 57,
+   "debt": 32,
+   "under-discussion": 24,
+   "*question": 15,
+   "upstream": 5,
+   "upstream-issue-linked": 2,
+   "engineering": 1,
+   "electron": 1
+  },
+  "type_label_distribution_train": {
+   "bug": 8905,
+   "feature-request": 4207,
+   "*question": 553,
+   "debt": 518,
+   "under-discussion": 492,
+   "polish": 414,
+   "upstream": 109,
+   "engineering": 40,
+   "upstream-issue-linked": 35,
+   "electron": 11
+  }
+ }
+}
