@@ -16,7 +16,8 @@ h1 { font-size: 1.8rem; margin: 0; }
 h2 { font-size: 1.2rem; margin: 22px 0 0; padding-top: 8px; border-top: 2px solid var(--fg); }
 p, ul, ol, dl { margin: 0; }
 ul, ol { padding-left: 1.3em; display: flex; flex-direction: column; gap: 4px; }
-dl { display: grid; grid-template-columns: 7em 1fr; gap: 6px 12px; }
+dl { display: grid; grid-template-columns: 7em 1fr; gap: 8px 12px; }
+h3 { font-size: 1.02rem; margin: 10px 0 0; }
 dt { color: var(--muted); font-weight: 600; }
 dd { margin: 0; min-width: 0; }
 code, pre { font-family: var(--mono); font-size: 0.86em; }
@@ -28,109 +29,177 @@ table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
 th, td { text-align: left; vertical-align: top; padding: 7px 12px; border-bottom: 1px solid var(--line); }
 tr:last-child td { border-bottom: 0; }
 th { font-size: 0.82rem; color: var(--muted); }
-td.n { text-align: right; font-variant-numeric: tabular-nums; }
-</style>
-</head>
-<body>
-<main>
+td.n { text-align: right; font-variant-numeric: t
   <h1>Usher 第一阶段数据流水线</h1>
-  <span class="meta">记录本次运行 · 快照 2026-10-05（UTC）· 分支 stage1-data</span>
-  <p>本文记录第一阶段数据部分（实验说明 A5–A9）的每一步：做了什么、用什么脚本、读什么、写什么，以及这次运行的实际情况。所有数字来自 <code>manifest/</code> 和 <code>data/</code> 下的结果文件。</p>
+  <span class="meta">运行记录 · 数据快照时间：2026 年 10 月 5 日（UTC） · 所在分支：stage1-data</span>
+  <p>本文记录第一阶段数据部分的完整过程，对应实验说明的 A5 至 A9 节。流水线共有 6 个步骤。每个步骤都说明：它对应实验说明的哪一节，用哪个脚本执行，读取哪些数据，具体做了哪些处理，生成哪些文件，以及这次运行的实际情况。文中所有数字都来自 <code>manifest/</code> 和 <code>data/</code> 目录下由脚本生成的结果文件，没有手工填写。</p>
 
-  <h2>怎么重跑</h2>
-  <pre>./run_data.sh            # 从 GitHub 拉取（可断点续拉）并重建所有结果
-./run_data.sh --offline  # 不访问 GitHub，只用已缓存的原始数据重建</pre>
-  <p>只要 <code>data/raw/</code> 存在，就不会重新拉取。要做新快照，先把 <code>data/raw/</code> 移走。<code>data/</code> 不进 git；进 git 的是脚本、<code>manifest/</code>（编号列表、校验值、统计）和 <code>review/</code>。</p>
+  <h2>如何重新运行</h2>
+  <p>整条流水线由一个入口脚本 <code>run_data.sh</code> 按顺序执行。它有两种运行方式：</p>
+  <pre>./run_data.sh            # 访问 GitHub 拉取数据，然后重新生成所有结果。拉取中断后再次运行会从中断处继续。
+./run_data.sh --offline  # 不访问 GitHub，只用本地已缓存的原始数据重新生成所有结果。</pre>
+  <p>只要本地存在 <code>data/raw/</code> 目录，脚本就直接使用其中缓存的原始数据，不会重新拉取。如果要基于最新数据生成新的快照，需要先把 <code>data/raw/</code> 目录移走。</p>
+  <p>关于哪些文件纳入 git 版本管理：<code>data/</code> 目录存放原始数据和中间数据，不纳入 git。纳入 git 的有三类：脚本；<code>manifest/</code> 目录，存放 issue 编号列表、文件校验值和各项统计数字；<code>review/</code> 目录，存放数据报告和人工核对表。</p>
 
-  <h2>第 1 步：批量拉取 issue（说明 A5）</h2>
+  <h2>第 1 步：批量拉取 issue</h2>
   <dl>
-    <dt>命令</dt><dd><code>scripts/pipeline/pull_issues.py</code>，再执行一次加 <code>--flatten</code></dd>
-    <dt>输入</dt><dd>GitHub GraphQL 接口（通过已登录的 <code>gh</code>）</dd>
-    <dt>做了什么</dt><dd>按创建时间从新到旧，每页 100 条，拉取 2023-01-01 至 2026-09-30 创建的全部 vscode issue。每条记录编号、创建时间、标题、正文、作者（登录名和账号类型）、最终标签（最多 50 个）、最终负责人（最多 20 个）、重复关系 <code>duplicateOf</code>（原 issue 的编号、创建时间、所在仓库）。原始页面逐页存盘，中断后可从上次位置继续；遇到限流会等待重试。<code>--flatten</code> 把所有页面合并成每条 issue 一行的表。</dd>
-    <dt>输出</dt><dd><code>data/raw/issues_pages/</code>（原始页面）；<code>data/issues.jsonl.gz</code>（合并后的表）；<code>data/pull_meta.json</code>（拉取时间和数量）</dd>
-    <dt>本次运行</dt><dd>2026-10-05 04:09:07 至 04:54:19（45 分钟），1,078 页，107,422 条。标签和负责人都没有超过上限被截断。</dd>
-  </dl>
-
-  <h2>第 2 步：筛选和切分（说明 A7、A8）</h2>
-  <dl>
-    <dt>命令</dt><dd><code>scripts/pipeline/build_sets.py</code></dd>
-    <dt>输入</dt><dd><code>data/issues.jsonl.gz</code></dd>
-    <dt>做了什么</dt><dd>
-      <ol>
-        <li>按创建时间把 issue 分到训练集（2025-01-01 至 2026-05-31）、调参集（2026-06）、测试集（2026-07-01 至 2026-09-30）。</li>
-        <li>三项判断都先去掉 bot 提交的 issue（规则：登录名在 PoC 的 bot 名单里，或以 <code>[bot]</code> 结尾）。</li>
-        <li>类型：只保留恰好带一个类型标签的（类型标签是 vscode wiki 列出的 10 个），这个标签就是正确答案。</li>
-        <li>负责人：只保留至少有一位负责人的，全部最终负责人都算正确答案。</li>
-        <li>查重：只保留 <code>duplicateOf</code> 指向 vscode 仓库、原 issue 比它早创建、且原 issue 创建于 2023-01-01 之后的；原 issue 就是正确答案。查重的检索范围是全部 107,422 条中早于该 issue 创建的。</li>
-        <li>标记测试集里和同一判断训练集正文完全相同的 issue（标题加正文，去掉 HTML 注释，正文截到 2,000 字符，合并空白、转小写后比较），保留不删。</li>
-      </ol>
+    <dt>对应说明</dt><dd>A5 节“怎么获取数据”。</dd>
+    <dt>执行脚本</dt><dd>先运行 <code>scripts/pipeline/pull_issues.py</code> 拉取数据，再运行同一脚本并加上参数 <code>--flatten</code>，把拉取结果合并成一张表。</dd>
+    <dt>读取数据</dt><dd>通过已登录的 GitHub 命令行工具 <code>gh</code> 访问 GitHub 的 GraphQL 接口。</dd>
+    <dt>处理过程</dt><dd>
+      <p>拉取 microsoft/vscode 仓库中，创建时间在 2023 年 1 月 1 日至 2026 年 9 月 30 日之间的全部 issue。按创建时间从新到旧排序，每次请求取 100 条。每条 issue 记录以下字段：</p>
+      <ul>
+        <li>编号和创建时间；</li>
+        <li>标题和正文；</li>
+        <li>提交者的登录名，以及 GitHub 标注的账号类型（例如普通用户或 Bot）；</li>
+        <li>当前带有的全部标签，每条最多取 50 个；</li>
+        <li>当前的全部负责人，每条最多取 20 个；</li>
+        <li>重复关系，即 GitHub 的 <code>duplicateOf</code> 字段。如果这条 issue 被维护者标为另一条 issue 的重复，这个字段记录那条原 issue 的编号、创建时间和所在仓库。</li>
+      </ul>
+      <p>每次请求返回的原始数据都立即保存到本地。如果拉取中途中断，再次运行时会从上次的位置继续。如果 GitHub 返回限流错误，脚本会等待一段时间后重试。</p>
+      <p>加上参数 <code>--flatten</code> 运行时，脚本把所有原始数据合并成一张表，每条 issue 占一行，按编号排序。</p>
     </dd>
-    <dt>输出</dt><dd><code>data/sets.json</code>（完整集合，不进 git）；<code>manifest/sets/&lt;判断&gt;_&lt;集合&gt;.tsv</code>（编号和正确答案）；<code>manifest/counts.json</code>（各集合数量、每条规则去掉的数量、标记情况）</dd>
+    <dt>生成文件</dt><dd>
+      <ul>
+        <li><code>data/raw/issues_pages/</code>：每次请求返回的原始数据。</li>
+        <li><code>data/issues.jsonl.gz</code>：合并后的 issue 表。</li>
+        <li><code>data/pull_meta.json</code>：拉取的开始和结束时间、拉取数量。</li>
+      </ul>
+    </dd>
+    <dt>本次运行</dt><dd>拉取从 2026 年 10 月 5 日 04:09:07 开始，到 04:54:19 结束，用时 45 分钟。共发出 1,078 次请求，拉到 107,422 条 issue。没有任何一条 issue 的标签数超过 50 个，也没有任何一条的负责人数超过 20 个，因此没有数据因为数量上限被截断。</dd>
   </dl>
-  <p>筛选前：训练 56,331、调参 2,537、测试 7,966。筛选后的数量：</p>
+
+  <h2>第 2 步：筛选数据并切分为三个集合</h2>
+  <dl>
+    <dt>对应说明</dt><dd>A7 节“筛选”和 A8 节“切分”。</dd>
+    <dt>执行脚本</dt><dd><code>scripts/pipeline/build_sets.py</code>。</dd>
+    <dt>读取数据</dt><dd>第 1 步生成的 issue 表 <code>data/issues.jsonl.gz</code>。</dd>
+  </dl>
+
+  <h3>2.1 按创建时间切分</h3>
+  <p>先按每条 issue 的创建时间，把它分到三个集合中的一个：</p>
+  <ul>
+    <li>训练集：2025 年 1 月 1 日至 2026 年 5 月 31 日创建的 issue；</li>
+    <li>调参集：2026 年 6 月创建的 issue；</li>
+    <li>测试集：2026 年 7 月 1 日至 9 月 30 日创建的 issue。</li>
+  </ul>
+  <p>2025 年以前创建的 issue 不属于这三个集合，只在查重时作为可以被检索到的历史 issue 使用（见 2.5）。</p>
+  <p>切分之后、筛选之前，训练集有 56,331 条，调参集有 2,537 条，测试集有 7,966 条。</p>
+
+  <h3>2.2 三项判断共用的筛选：去掉 bot 提交的 issue</h3>
+  <p>bot 自动提交的 issue 不是真实用户的反馈，三项判断都要去掉。判断规则沿用 PoC 的代码：提交者的登录名在一份已知的 bot 名单中，或者登录名以 <code>[bot]</code> 结尾，就认为是 bot。这一步去掉的数量是：训练集 523 条，调参集 69 条，测试集 379 条。</p>
+
+  <h3>2.3 类型判断的筛选</h3>
+  <p>类型标签指 vscode 官方 wiki 列出的 10 个标签，例如 <code>bug</code>、<code>feature-request</code>。只有恰好带一个类型标签的 issue 才保留，这个标签就是该 issue 类型的正确答案。去掉的有两种情况：</p>
+  <ul>
+    <li>没有任何类型标签：训练集 39,872 条，调参集 1,825 条，测试集 5,665 条。</li>
+    <li>带有两个或以上类型标签，无法确定哪个是正确答案：训练集 652 条，调参集 18 条，测试集 58 条。</li>
+  </ul>
+
+  <h3>2.4 负责人判断的筛选</h3>
+  <p>只有至少有一位负责人的 issue 才保留。如果一条 issue 有多位负责人，他们都算正确答案，模型预测出其中任何一位都算对。没有负责人而被去掉的数量是：训练集 15,697 条，调参集 415 条，测试集 983 条。</p>
+
+  <h3>2.5 查重判断的筛选</h3>
+  <p>只有被维护者标为重复、并且指向的原 issue 同时满足以下三个条件的 issue 才保留，原 issue 就是正确答案。按顺序检查，每一项去掉的数量如下：</p>
+  <ul>
+    <li>没有被标为重复（没有 <code>duplicateOf</code> 字段）：训练集 54,159 条，调参集 2,342 条，测试集 7,248 条。</li>
+    <li>原 issue 不在 vscode 仓库，而在其他仓库：训练集 37 条，调参集 1 条，测试集 10 条。</li>
+    <li>原 issue 的创建时间不早于这条 issue。这种情况下，这条 issue 提交时原 issue 还不存在，不可能被检索到：训练集 399 条，调参集 25 条，测试集 42 条。</li>
+    <li>原 issue 创建于 2023 年 1 月 1 日之前，不在我们拉取的数据范围内：训练集 101 条，调参集 4 条，测试集 19 条。</li>
+  </ul>
+  <p>查重时的检索范围：对每一条要查重的 issue，在全部 107,422 条已拉取的 issue 中，只检索创建时间比它早的那些。</p>
+
+  <h3>2.6 标记与训练集正文完全相同的测试 issue</h3>
+  <p>按照实验说明，测试集中与训练集某条 issue 正文完全相同的 issue 保留，但要做标记，以便报告时分别给出“全部测试数据”和“去掉这些 issue 之后”两个分数。</p>
+  <p>比较方法：把每条 issue 的标题和正文拼在一起，去掉正文中的 HTML 注释（issue 模板里的说明文字），正文截到 2,000 个字符，再把连续的空白合并成一个空格、全部转成小写，然后和同一项判断训练集中的每条 issue 比较是否完全相同。</p>
+  <p>结果：类型判断的测试集中有 0 条被标记，负责人判断有 9 条，查重判断有 0 条。负责人的这 9 条都是只填了模板、没有实际内容的报告，例如正文只有“bug”或一个句号。</p>
+
+  <h3>2.7 筛选后的数量</h3>
   <div class="table-wrap"><table>
-    <thead><tr><th>判断</th><th>训练</th><th>调参</th><th>测试</th></tr></thead>
+    <thead><tr><th>判断</th><th>训练集</th><th>调参集</th><th>测试集</th></tr></thead>
     <tbody>
       <tr><td>类型</td><td class="n">15,284</td><td class="n">625</td><td class="n">1,864</td></tr>
       <tr><td>负责人</td><td class="n">40,111</td><td class="n">2,053</td><td class="n">6,604</td></tr>
       <tr><td>查重</td><td class="n">1,112</td><td class="n">96</td><td class="n">268</td></tr>
     </tbody>
   </table></div>
-  <p>每条规则去掉的数量（按顺序执行，格式为训练 / 调参 / 测试）：</p>
-  <div class="table-wrap"><table>
-    <thead><tr><th>规则</th><th>去掉的数量</th></tr></thead>
-    <tbody>
-      <tr><td>bot 提交（三项相同）</td><td>523 / 69 / 379</td></tr>
-      <tr><td>类型：没有类型标签</td><td>39,872 / 1,825 / 5,665</td></tr>
-      <tr><td>类型：多个类型标签</td><td>652 / 18 / 58</td></tr>
-      <tr><td>负责人：没有负责人</td><td>15,697 / 415 / 983</td></tr>
-      <tr><td>查重：没有 <code>duplicateOf</code></td><td>54,159 / 2,342 / 7,248</td></tr>
-      <tr><td>查重：原 issue 在其他仓库</td><td>37 / 1 / 10</td></tr>
-      <tr><td>查重：原 issue 不早于该 issue</td><td>399 / 25 / 42</td></tr>
-      <tr><td>查重：原 issue 早于 2023 年</td><td>101 / 4 / 19</td></tr>
-    </tbody>
-  </table></div>
-  <p>和训练集正文完全相同、被标记的测试 issue：类型 0 条，负责人 9 条（都是只填了模板的空报告），查重 0 条。</p>
 
-  <h2>第 3 步：拉取测试集时间线（说明 A5）</h2>
   <dl>
-    <dt>命令</dt><dd><code>scripts/pipeline/pull_timelines.py</code>（离线重建时加 <code>--extract-only</code>）</dd>
-    <dt>输入</dt><dd>负责人测试集的 issue 编号（来自第 2 步）；GitHub REST 接口</dd>
-    <dt>做了什么</dt><dd>逐条拉取负责人测试集 issue 的完整操作记录，缓存到本地。从中找出第一个由 <code>vs-code-engineering[bot]</code> 执行的分派事件，记下 bot 首次分派的负责人。每拉 50 条检查一次剩余请求额度（从实际请求的响应头读取），剩余不足 200 次时等到额度重置。</dd>
-    <dt>输出</dt><dd><code>data/raw/timelines/</code>（原始操作记录）；<code>data/bot_first_assignment.json</code> 和 <code>manifest/bot_first_assignment.tsv</code>；<code>data/timeline_meta.json</code></dd>
-    <dt>本次运行</dt><dd>2026-10-05 04:12:45 至 05:26:18（1 小时 13 分钟，其中约 7 分钟在等额度重置），6,615 次请求，6,604 条全部拉到。其中 4,264 条（64.6%）有 bot 的首次分派。这一步在第 1 步拉完 7–9 月数据后就开始了，第 1 步全部完成后测试集没有变化。</dd>
+    <dt>生成文件</dt><dd>
+      <ul>
+        <li><code>data/sets.json</code>：三项判断各自的三个集合，含每条 issue 的正确答案。不纳入 git。</li>
+        <li><code>manifest/sets/</code>：共 9 个文件，每项判断的每个集合一个，记录 issue 编号和正确答案，不含正文。</li>
+        <li><code>manifest/counts.json</code>：各集合的数量、每条筛选规则去掉的数量、被标记的测试 issue。</li>
+      </ul>
+    </dd>
   </dl>
 
-  <h2>第 4 步：存档（说明 A6）</h2>
+  <h2>第 3 步：拉取测试集 issue 的操作记录</h2>
   <dl>
-    <dt>命令</dt><dd><code>scripts/pipeline/archive.py</code></dd>
-    <dt>做了什么</dt><dd>记录拉取时间和数量、所用的 GraphQL 查询语句、全部 issue 编号，以及每条 issue 记录的哈希值（重新拉取后可以逐条比对哪些变了）。对 <code>data/</code> 下每个文件计算 SHA-256 校验值。</dd>
-    <dt>输出</dt><dd><code>manifest/snapshot.json</code>、<code>manifest/issue_numbers.txt</code>、<code>manifest/issue_hashes.tsv</code>、<code>manifest/checksums.sha256</code></dd>
-    <dt>本次运行</dt><dd>存档于 2026-10-05 05:37:07，共 7,688 个文件计算了校验值。离线重跑两次，校验值完全一致。</dd>
+    <dt>对应说明</dt><dd>A5 节“怎么获取数据”。</dd>
+    <dt>执行脚本</dt><dd><code>scripts/pipeline/pull_timelines.py</code>。只用缓存重新生成结果时，加参数 <code>--extract-only</code>，不访问 GitHub。</dd>
+    <dt>读取数据</dt><dd>第 2 步得到的负责人测试集 issue 编号；GitHub 的 REST 接口。</dd>
+    <dt>处理过程</dt><dd>
+      <p>对负责人测试集中的每一条 issue，拉取它的完整操作记录（GitHub 称为时间线，记录了打标签、分派负责人、关闭等每一次操作），并缓存到本地。</p>
+      <p>在每条操作记录中，找到第一次由 vscode 的 bot 账号 <code>vs-code-engineering[bot]</code> 执行的分派操作，记下这次分派给了谁。这就是 bot 的首次分派，用来和我们的负责人判断做对照。</p>
+      <p>GitHub 的 REST 接口每小时最多允许 5,000 次请求。脚本每拉 50 条检查一次剩余的请求次数；剩余不足 200 次时，暂停到额度重置后再继续。</p>
+    </dd>
+    <dt>生成文件</dt><dd>
+      <ul>
+        <li><code>data/raw/timelines/</code>：每条 issue 的原始操作记录。</li>
+        <li><code>data/bot_first_assignment.json</code> 和 <code>manifest/bot_first_assignment.tsv</code>：每条测试 issue 的 bot 首次分派结果。</li>
+        <li><code>data/timeline_meta.json</code>：拉取的开始和结束时间、请求次数、覆盖情况。</li>
+      </ul>
+    </dd>
+    <dt>本次运行</dt><dd>拉取从 2026 年 10 月 5 日 04:12:45 开始，到 05:26:18 结束，用时 1 小时 13 分钟，其中约 7 分钟是在等待请求额度重置。共发出 6,615 次请求，6,604 条测试 issue 的操作记录全部拉到。其中 4,264 条（64.6%）有 bot 的首次分派。为了节省时间，这一步在第 1 步拉完 2026 年 7 至 9 月的数据后就开始了；第 1 步全部完成后重新检查过，负责人测试集没有变化。</dd>
   </dl>
 
-  <h2>第 5 步：生成人工核对表（说明 A9）</h2>
+  <h2>第 4 步：存档</h2>
   <dl>
-    <dt>命令</dt><dd><code>scripts/pipeline/review_sheet.py</code></dd>
-    <dt>做了什么</dt><dd>每项判断从测试集随机抽 30 条（随机种子 20261004）。每条显示 issue 链接、标题、正文前 400 个字符和正确答案；查重还显示原 issue 的链接和标题。每条可选“对 / 错 / 无法判断”并写备注，填写内容保存在浏览器里，每组可导出 CSV。判断栏全部留空。</dd>
-    <dt>输出</dt><dd><code>review/review_sample.json</code>（抽中的编号）；<code>review/review_sheet.html</code></dd>
+    <dt>对应说明</dt><dd>A6 节“存档”。</dd>
+    <dt>执行脚本</dt><dd><code>scripts/pipeline/archive.py</code>。</dd>
+    <dt>处理过程</dt><dd>
+      <ul>
+        <li>记录两次拉取的开始和结束时间、拉取数量，以及第 1 步使用的 GraphQL 查询语句。</li>
+        <li>列出全部 107,422 条 issue 的编号。</li>
+        <li>为每条 issue 的记录计算一个哈希值。以后重新拉取时，可以逐条比较哈希值，找出哪些 issue 的内容发生了变化。</li>
+        <li>为 <code>data/</code> 目录下的每个文件计算 SHA-256 校验值。别人用同样的脚本拉取数据后，可以用校验值核对拿到的文件是否和我们完全一致。</li>
+      </ul>
+    </dd>
+    <dt>生成文件</dt><dd><code>manifest/snapshot.json</code>（拉取时间、数量和查询语句）、<code>manifest/issue_numbers.txt</code>（全部 issue 编号）、<code>manifest/issue_hashes.tsv</code>（每条 issue 的哈希值）、<code>manifest/checksums.sha256</code>（每个数据文件的校验值）。</dd>
+    <dt>本次运行</dt><dd>存档时间为 2026 年 10 月 5 日 05:37:07，共为 7,688 个文件计算了校验值。之后用离线方式重新运行了两次，两次得到的校验值和第一次完全一致，说明从原始数据到最终结果的处理过程是可复现的。</dd>
   </dl>
 
-  <h2>第 6 步：生成数据报告（说明 A9）</h2>
+  <h2>第 5 步：生成人工核对表</h2>
   <dl>
-    <dt>命令</dt><dd><code>scripts/pipeline/report.py</code></dd>
-    <dt>做了什么</dt><dd>读取上面各步的结果文件，生成中文数据报告，所有数字由脚本填入。</dd>
-    <dt>输出</dt><dd><code>review/data_report.html</code></dd>
+    <dt>对应说明</dt><dd>A9 节“评估数据质量”。</dd>
+    <dt>执行脚本</dt><dd><code>scripts/pipeline/review_sheet.py</code>。</dd>
+    <dt>处理过程</dt><dd>
+      <p>从每项判断的测试集中随机抽取 30 条 issue，随机种子固定为 20261004，重新运行会抽到同样的 30 条。</p>
+      <p>核对表中每条 issue 显示：issue 链接、标题、正文的前 400 个字符，以及数据里记录的正确答案。查重判断还额外显示原 issue 的链接和标题，方便对照。</p>
+      <p>每条 issue 可以选择“对”“错”或“无法判断”，并可写备注。填写的内容保存在浏览器中，刷新页面不会丢失。每组都有“导出 CSV”按钮。生成时所有判断都留空，由人工填写。</p>
+    </dd>
+    <dt>生成文件</dt><dd><code>review/review_sample.json</code>（抽中的 issue 编号和正确答案）、<code>review/review_sheet.html</code>（核对表页面）。</dd>
   </dl>
 
-  <h2>和说明不一致、需要决定的地方</h2>
+  <h2>第 6 步：生成数据报告</h2>
+  <dl>
+    <dt>对应说明</dt><dd>A9 节“评估数据质量”。</dd>
+    <dt>执行脚本</dt><dd><code>scripts/pipeline/report.py</code>。</dd>
+    <dt>处理过程</dt><dd>读取前面各步生成的结果文件，生成一份中文数据报告。报告中的所有数字都由脚本从结果文件中读取并填入。</dd>
+    <dt>生成文件</dt><dd><code>review/data_report.html</code>。</dd>
+  </dl>
+
+  <h2>与实验说明不一致、需要决定的地方</h2>
   <ul>
-    <li><strong>正文为空的 issue</strong>：质量标准（A4）要求每条都有正文，但筛选规则（A7）没写去掉它们，所以暂时保留，只做了统计。测试集中类型 16 条、负责人 29 条、查重 0 条；训练集中分别为 186、349、3 条。待决定是否去掉。</li>
-    <li><strong>bot 识别规则的漏网</strong>：有 9 条保留下来的 issue，GitHub 把作者账号类型标为 Bot，但按说明里的规则没有识别出来。待决定是否把账号类型也纳入规则。</li>
-    <li><strong>查重的检索范围包含 bot 提交的 issue</strong>：有 5 条测试 issue 的原 issue 是 bot 提交的。bot 提交的 issue 只排除在测试题目之外，仍然可以被检索到。</li>
-    <li><strong>人工核对表含 issue 原文</strong>：发布到公开 repo 前要去掉正文。</li>
-    <li><strong>请求额度的检查方式</strong>：<code>gh api rate_limit</code> 返回的额度一直是满的，和实际不符，改为从实际请求的响应头读取。</li>
-    <li><strong>脚本目录名</strong>：<code>scripts/data/</code> 会被 <code>.gitignore</code> 里的 <code>data/</code> 规则忽略，所以脚本放在 <code>scripts/pipeline/</code>。</li>
+    <li><strong>正文为空的 issue。</strong>实验说明 A4 节的质量标准要求每条 issue 都有正文，但 A7 节的筛选规则没有写要去掉正文为空的 issue。这次暂时保留了它们，只做了统计：测试集中，类型判断有 16 条，负责人判断有 29 条，查重判断有 0 条；训练集中分别有 186 条、349 条、3 条。需要决定是否去掉。</li>
+    <li><strong>bot 识别规则有遗漏。</strong>有 9 条保留下来的 issue，GitHub 把提交者的账号类型标为 Bot，但按照实验说明沿用的 bot 名单规则没有识别出来。需要决定是否把 GitHub 的账号类型也加入识别规则。</li>
+    <li><strong>查重的检索范围包含 bot 提交的 issue。</strong>有 5 条测试 issue，它们的原 issue 是 bot 提交的。如果把 bot 提交的 issue 从检索范围中去掉，这 5 条就不可能被找到。因此 bot 提交的 issue 只是不作为查重的测试题目，仍然保留在检索范围内。</li>
+    <li><strong>人工核对表包含 issue 原文。</strong>核对表显示了正文的前 400 个字符，而实验说明规定公开 repo 中不放 issue 正文。发布前需要去掉这部分内容。</li>
+    <li><strong>请求额度的检查方式。</strong>GitHub 的额度查询命令 <code>gh api rate_limit</code> 一直返回满额，和实际消耗不符。因此改为从每次实际请求的响应头中读取剩余额度。</li>
+    <li><strong>脚本目录的名称。</strong>如果把脚本放在 <code>scripts/data/</code>，会被 <code>.gitignore</code> 中忽略 <code>data/</code> 的规则一并忽略，所以脚本放在 <code>scripts/pipeline/</code>。</li>
+  </ul>
+<code>scripts/pipeline/</code>。</li>
   </ul>
 </main>
 </body>
