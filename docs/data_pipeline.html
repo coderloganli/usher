@@ -29,7 +29,11 @@ table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
 th, td { text-align: left; vertical-align: top; padding: 7px 12px; border-bottom: 1px solid var(--line); }
 tr:last-child td { border-bottom: 0; }
 th { font-size: 0.82rem; color: var(--muted); }
-td.n { text-align: right; font-variant-numeric: t
+td.n { text-align: right; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<main>
   <h1>Usher 第一阶段数据流水线</h1>
   <span class="meta">运行记录 · 数据快照时间：2026 年 10 月 5 日（UTC） · 所在分支：stage1-data</span>
   <p>本文记录第一阶段数据部分的完整过程，对应实验说明的 A5 至 A9 节。流水线共有 6 个步骤。每个步骤都说明：它对应实验说明的哪一节，用哪个脚本执行，读取哪些数据，具体做了哪些处理，生成哪些文件，以及这次运行的实际情况。文中所有数字都来自 <code>manifest/</code> 和 <code>data/</code> 目录下由脚本生成的结果文件，没有手工填写。</p>
@@ -198,8 +202,6 @@ td.n { text-align: right; font-variant-numeric: t
     <li><strong>人工核对表包含 issue 原文。</strong>核对表显示了正文的前 400 个字符，而实验说明规定公开 repo 中不放 issue 正文。发布前需要去掉这部分内容。</li>
     <li><strong>请求额度的检查方式。</strong>GitHub 的额度查询命令 <code>gh api rate_limit</code> 一直返回满额，和实际消耗不符。因此改为从每次实际请求的响应头中读取剩余额度。</li>
     <li><strong>脚本目录的名称。</strong>如果把脚本放在 <code>scripts/data/</code>，会被 <code>.gitignore</code> 中忽略 <code>data/</code> 的规则一并忽略，所以脚本放在 <code>scripts/pipeline/</code>。</li>
-  </ul>
-<code>scripts/pipeline/</code>。</li>
   </ul>
 </main>
 </body>
