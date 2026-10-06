@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usher 第一阶段数据流水线</title>
+<style>
+:root { --bg: #c2cebc; --surface: #d0dacb; --line: #a8b6a2; --fg: #1c2328; --muted: #4a5660; --accent: #0f5c4f;
+  --font: "PingFang SC", "Noto Sans SC", system-ui, -apple-system, "Segoe UI", sans-serif; --mono: ui-monospace, "SFMono-Regular", Menlo, monospace; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #12171a; --surface: #192024; --fg: #e3e8eb; --muted: #9aa6ae; --line: #2c363c; --accent: #5cc4ae; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg: #12171a; --surface: #192024; --fg: #e3e8eb; --muted: #9aa6ae; --line: #2c363c; --accent: #5cc4ae; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font); font-size: 16px; line-height: 1.7; padding: 48px 20px; }
+main { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+h1 { font-size: 1.8rem; margin: 0; }
+h2 { font-size: 1.2rem; margin: 22px 0 0; padding-top: 8px; border-top: 2px solid var(--fg); }
+p, ul, ol, dl { margin: 0; }
+ul, ol { padding-left: 1.3em; display: flex; flex-direction: column; gap: 4px; }
+dl { display: grid; grid-template-columns: 7em 1fr; gap: 6px 12px; }
+dt { color: var(--muted); font-weight: 600; }
+dd { margin: 0; min-width: 0; }
+code, pre { font-family: var(--mono); font-size: 0.86em; }
+code { background: var(--surface); padding: 1px 5px; border-radius: 3px; overflow-wrap: anywhere; }
+pre { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; overflow-x: auto; }
+.meta { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+th, td { text-align: left; vertical-align: top; padding: 7px 12px; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th { font-size: 0.82rem; color: var(--muted); }
+td.n { text-align: right; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Usher 第一阶段数据流水线</h1>
+  <span class="meta">记录本次运行 · 快照 2026-10-05（UTC）· 分支 stage1-data</span>
+  <p>本文记录第一阶段数据部分（实验说明 A5–A9）的每一步：做了什么、用什么脚本、读什么、写什么，以及这次运行的实际情况。所有数字来自 <code>manifest/</code> 和 <code>data/</code> 下的结果文件。</p>
+
+  <h2>怎么重跑</h2>
+  <pre>./run_data.sh            # 从 GitHub 拉取（可断点续拉）并重建所有结果
+./run_data.sh --offline  # 不访问 GitHub，只用已缓存的原始数据重建</pre>
+  <p>只要 <code>data/raw/</code> 存在，就不会重新拉取。要做新快照，先把 <code>data/raw/</code> 移走。<code>data/</code> 不进 git；进 git 的是脚本、<code>manifest/</code>（编号列表、校验值、统计）和 <code>review/</code>。</p>
+
+  <h2>第 1 步：批量拉取 issue（说明 A5）</h2>
+  <dl>
+    <dt>命令</dt><dd><code>scripts/pipeline/pull_issues.py</code>，再执行一次加 <code>--flatten</code></dd>
+    <dt>输入</dt><dd>GitHub GraphQL 接口（通过已登录的 <code>gh</code>）</dd>
+    <dt>做了什么</dt><dd>按创建时间从新到旧，每页 100 条，拉取 2023-01-01 至 2026-09-30 创建的全部 vscode issue。每条记录编号、创建时间、标题、正文、作者（登录名和账号类型）、最终标签（最多 50 个）、最终负责人（最多 20 个）、重复关系 <code>duplicateOf</code>（原 issue 的编号、创建时间、所在仓库）。原始页面逐页存盘，中断后可从上次位置继续；遇到限流会等待重试。<code>--flatten</code> 把所有页面合并成每条 issue 一行的表。</dd>
+    <dt>输出</dt><dd><code>data/raw/issues_pages/</code>（原始页面）；<code>data/issues.jsonl.gz</code>（合并后的表）；<code>data/pull_meta.json</code>（拉取时间和数量）</dd>
+    <dt>本次运行</dt><dd>2026-10-05 04:09:07 至 04:54:19（45 分钟），1,078 页，107,422 条。标签和负责人都没有超过上限被截断。</dd>
+  </dl>
+
+  <h2>第 2 步：筛选和切分（说明 A7、A8）</h2>
+  <dl>
+    <dt>命令</dt><dd><code>scripts/pipeline/build_sets.py</code></dd>
+    <dt>输入</dt><dd><code>data/issues.jsonl.gz</code></dd>
+    <dt>做了什么</dt><dd>
+      <ol>
+        <li>按创建时间把 issue 分到训练集（2025-01-01 至 2026-05-31）、调参集（2026-06）、测试集（2026-07-01 至 2026-09-30）。</li>
+        <li>三项判断都先去掉 bot 提交的 issue（规则：登录名在 PoC 的 bot 名单里，或以 <code>[bot]</code> 结尾）。</li>
+        <li>类型：只保留恰好带一个类型标签的（类型标签是 vscode wiki 列出的 10 个），这个标签就是正确答案。</li>
+        <li>负责人：只保留至少有一位负责人的，全部最终负责人都算正确答案。</li>
+        <li>查重：只保留 <code>duplicateOf</code> 指向 vscode 仓库、原 issue 比它早创建、且原 issue 创建于 2023-01-01 之后的；原 issue 就是正确答案。查重的检索范围是全部 107,422 条中早于该 issue 创建的。</li>
+        <li>标记测试集里和同一判断训练集正文完全相同的 issue（标题加正文，去掉 HTML 注释，正文截到 2,000 字符，合并空白、转小写后比较），保留不删。</li>
+      </ol>
+    </dd>
+    <dt>输出</dt><dd><code>data/sets.json</code>（完整集合，不进 git）；<code>manifest/sets/&lt;判断&gt;_&lt;集合&gt;.tsv</code>（编号和正确答案）；<code>manifest/counts.json</code>（各集合数量、每条规则去掉的数量、标记情况）</dd>
+  </dl>
+  <p>筛选前：训练 56,331、调参 2,537、测试 7,966。筛选后的数量：</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>判断</th><th>训练</th><th>调参</th><th>测试</th></tr></thead>
+    <tbody>
+      <tr><td>类型</td><td class="n">15,284</td><td class="n">625</td><td class="n">1,864</td></tr>
+      <tr><td>负责人</td><td class="n">40,111</td><td class="n">2,053</td><td class="n">6,604</td></tr>
+      <tr><td>查重</td><td class="n">1,112</td><td class="n">96</td><td class="n">268</td></tr>
+    </tbody>
+  </table></div>
+  <p>每条规则去掉的数量（按顺序执行，格式为训练 / 调参 / 测试）：</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>规则</th><th>去掉的数量</th></tr></thead>
+    <tbody>
+      <tr><td>bot 提交（三项相同）</td><td>523 / 69 / 379</td></tr>
+      <tr><td>类型：没有类型标签</td><td>39,872 / 1,825 / 5,665</td></tr>
+      <tr><td>类型：多个类型标签</td><td>652 / 18 / 58</td></tr>
+      <tr><td>负责人：没有负责人</td><td>15,697 / 415 / 983</td></tr>
+      <tr><td>查重：没有 <code>duplicateOf</code></td><td>54,159 / 2,342 / 7,248</td></tr>
+      <tr><td>查重：原 issue 在其他仓库</td><td>37 / 1 / 10</td></tr>
+      <tr><td>查重：原 issue 不早于该 issue</td><td>399 / 25 / 42</td></tr>
+      <tr><td>查重：原 issue 早于 2023 年</td><td>101 / 4 / 19</td></tr>
+    </tbody>
+  </table></div>
+  <p>和训练集正文完全相同、被标记的测试 issue：类型 0 条，负责人 9 条（都是只填了模板的空报告），查重 0 条。</p>
+
+  <h2>第 3 步：拉取测试集时间线（说明 A5）</h2>
+  <dl>
+    <dt>命令</dt><dd><code>scripts/pipeline/pull_timelines.py</code>（离线重建时加 <code>--extract-only</code>）</dd>
+    <dt>输入</dt><dd>负责人测试集的 issue 编号（来自第 2 步）；GitHub REST 接口</dd>
+    <dt>做了什么</dt><dd>逐条拉取负责人测试集 issue 的完整操作记录，缓存到本地。从中找出第一个由 <code>vs-code-engineering[bot]</code> 执行的分派事件，记下 bot 首次分派的负责人。每拉 50 条检查一次剩余请求额度（从实际请求的响应头读取），剩余不足 200 次时等到额度重置。</dd>
+    <dt>输出</dt><dd><code>data/raw/timelines/</code>（原始操作记录）；<code>data/bot_first_assignment.json</code> 和 <code>manifest/bot_first_assignment.tsv</code>；<code>data/timeline_meta.json</code></dd>
+    <dt>本次运行</dt><dd>2026-10-05 04:12:45 至 05:26:18（1 小时 13 分钟，其中约 7 分钟在等额度重置），6,615 次请求，6,604 条全部拉到。其中 4,264 条（64.6%）有 bot 的首次分派。这一步在第 1 步拉完 7–9 月数据后就开始了，第 1 步全部完成后测试集没有变化。</dd>
+  </dl>
+
+  <h2>第 4 步：存档（说明 A6）</h2>
+  <dl>
+    <dt>命令</dt><dd><code>scripts/pipeline/archive.py</code></dd>
+    <dt>做了什么</dt><dd>记录拉取时间和数量、所用的 GraphQL 查询语句、全部 issue 编号，以及每条 issue 记录的哈希值（重新拉取后可以逐条比对哪些变了）。对 <code>data/</code> 下每个文件计算 SHA-256 校验值。</dd>
+    <dt>输出</dt><dd><code>manifest/snapshot.json</code>、<code>manifest/issue_numbers.txt</code>、<code>manifest/issue_hashes.tsv</code>、<code>manifest/checksums.sha256</code></dd>
+    <dt>本次运行</dt><dd>存档于 2026-10-05 05:37:07，共 7,688 个文件计算了校验值。离线重跑两次，校验值完全一致。</dd>
+  </dl>
+
+  <h2>第 5 步：生成人工核对表（说明 A9）</h2>
+  <dl>
+    <dt>命令</dt><dd><code>scripts/pipeline/review_sheet.py</code></dd>
+    <dt>做了什么</dt><dd>每项判断从测试集随机抽 30 条（随机种子 20261004）。每条显示 issue 链接、标题、正文前 400 个字符和正确答案；查重还显示原 issue 的链接和标题。每条可选“对 / 错 / 无法判断”并写备注，填写内容保存在浏览器里，每组可导出 CSV。判断栏全部留空。</dd>
+    <dt>输出</dt><dd><code>review/review_sample.json</code>（抽中的编号）；<code>review/review_sheet.html</code></dd>
+  </dl>
+
+  <h2>第 6 步：生成数据报告（说明 A9）</h2>
+  <dl>
+    <dt>命令</dt><dd><code>scripts/pipeline/report.py</code></dd>
+    <dt>做了什么</dt><dd>读取上面各步的结果文件，生成中文数据报告，所有数字由脚本填入。</dd>
+    <dt>输出</dt><dd><code>review/data_report.html</code></dd>
+  </dl>
+
+  <h2>和说明不一致、需要决定的地方</h2>
+  <ul>
+    <li><strong>正文为空的 issue</strong>：质量标准（A4）要求每条都有正文，但筛选规则（A7）没写去掉它们，所以暂时保留，只做了统计。测试集中类型 16 条、负责人 29 条、查重 0 条；训练集中分别为 186、349、3 条。待决定是否去掉。</li>
+    <li><strong>bot 识别规则的漏网</strong>：有 9 条保留下来的 issue，GitHub 把作者账号类型标为 Bot，但按说明里的规则没有识别出来。待决定是否把账号类型也纳入规则。</li>
+    <li><strong>查重的检索范围包含 bot 提交的 issue</strong>：有 5 条测试 issue 的原 issue 是 bot 提交的。bot 提交的 issue 只排除在测试题目之外，仍然可以被检索到。</li>
+    <li><strong>人工核对表含 issue 原文</strong>：发布到公开 repo 前要去掉正文。</li>
+    <li><strong>请求额度的检查方式</strong>：<code>gh api rate_limit</code> 返回的额度一直是满的，和实际不符，改为从实际请求的响应头读取。</li>
+    <li><strong>脚本目录名</strong>：<code>scripts/data/</code> 会被 <code>.gitignore</code> 里的 <code>data/</code> 规则忽略，所以脚本放在 <code>scripts/pipeline/</code>。</li>
+  </ul>
+</main>
+</body>
+</html>
