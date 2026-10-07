@@ -1,11 +1,13 @@
 """A9: write review/data_report.html (Chinese) from the result files. No number is typed by hand.
 
 Inputs: manifest/counts.json, manifest/snapshot.json, data/timeline_meta.json,
-        review/review_sample.json
+        review/review_sample.json, review/ai_review_{type,duplicate}.csv,
+        review/ai_review_summary.json, manifest/assignee_check.json
 Usage : .venv/bin/python scripts/pipeline/report.py
 """
 from __future__ import annotations
 
+import csv
 import html
 import json
 from datetime import datetime
@@ -48,6 +50,124 @@ def dur(a: str | None, b: str | None) -> str:
 
 def link(n: int) -> str:
     return f'<a href="https://github.com/microsoft/vscode/issues/{n}">#{n}</a>'
+
+
+def pct1(x: float | None) -> str:
+    return "—" if x is None else f"{100 * x:.1f}%"
+
+
+def ai_review_section(rs: dict) -> str:
+    summ = json.load(open(REVIEW / "ai_review_summary.json"))
+    std = summ["a4_standard"]
+    rows, notes, verdicts = [], [], []
+    for j in ("type", "duplicate"):
+        v = summ["judgments"][j]
+        c = v["counts"]
+        if v["meets_a4_point_estimate"] and v["ci95_low_meets_a4"]:
+            verdict = f"达标：正确率和 95% 置信区间的下限都不低于 {pct1(std)}。"
+        elif v["meets_a4_point_estimate"]:
+            verdict = (f"按正确率本身达标（不低于 {pct1(std)}），但 95% 置信区间的下限是 {pct1(v['ci95_low'])}，"
+                       f"低于 {pct1(std)}，也就是说，只凭这 {c['对'] + c['错']} 条样本还不能排除真实正确率略低于标准的可能。")
+        else:
+            verdict = f"未达标：正确率低于 {pct1(std)}。"
+        verdicts.append(f"<li><b>{JN[j]}：</b>{verdict}</li>")
+        rows.append(
+            f"<tr><td>{JN[j]}</td><td class=\"num\">{v['reviewed']}</td><td class=\"num\">{c['对']}</td>"
+            f"<td class=\"num\">{c['错']}</td><td class=\"num\">{c['无法判断']}</td>"
+            f"<td class=\"num\">{pct1(v['cannot_judge_share'])}</td><td class=\"num\"><b>{pct1(v['accuracy'])}</b></td>"
+            f"<td class=\"num\">{pct1(v['ci95_low'])} – {pct1(v['ci95_high'])}</td></tr>")
+        with open(REVIEW / f"ai_review_{j}.csv", newline="") as fh:
+            items = [r for r in csv.DictReader(fh) if r["verdict"] != "对"]
+        for r in items:
+            truth = f"<code>{html.escape(r['truth'])}</code>" if j == "type" else f"重复于 {link(int(r['truth']))}"
+            notes.append(f"<tr><td>{JN[j]}</td><td>{link(int(r['number']))}</td><td>{truth}</td>"
+                         f"<td>{html.escape(r['verdict'])}</td><td>{html.escape(r['reason'])}</td></tr>")
+    return f"""
+<h2>7. 类型和查重：正确答案核对</h2>
+<div class="card"><p><b>本节的核对由 AI 模型（Claude Opus 5.5）完成，未经人工核实。</b></p></div>
+<p><b>为什么改由 AI 核对。</b>实验说明 A9 在 2026-10-07 修订：类型和查重两项的“正确答案”是否正确，只需要根据 issue 的公开内容就能判断，人和模型掌握的信息相同，所以改由 AI 模型逐条核对，并在结果中注明。原先的人工核对表保留在 <a href="review_sheet.html">review_sheet.html</a>，可以随时用来做人工复核。</p>
+<p><b>样本。</b>核对的样本就是原来人工核对表里的样本：每项从测试集中随机抽 {rs['n_per_judgment']} 条（随机种子 {rs['seed']}），编号保存在 <code>review/review_sample.json</code>，抽样在核对之前就已固定。</p>
+<p><b>核对方法。</b>对每条样本，模型阅读快照中的标题和正文；查重一项同时阅读原 issue 的标题和正文。正文不足以判断时再参考 GitHub 上的评论。为了做法一致，这 60 条样本以及查重样本对应的原 issue 的评论都通过 GitHub 接口统一拉取了一次，缓存在 <code>data/review_comments/</code>。这些评论是在快照之后拉取的，不属于快照，也不计入快照的校验值。判断标准如下，对每一条都按同样的标准执行：</p>
+<ul>
+<li><b>类型</b>：如果维护者最后打上的类型标签符合 issue 的内容，判为“对”，例如真实的缺陷对应 <code>bug</code>，请求新的行为对应 <code>feature-request</code>；如果内容明显属于另一种类型，判为“错”；如果内容太少，或者确实可以归入不止一种类型，判为“无法判断”。</li>
+<li><b>查重</b>：如果这条 issue 和它被标为重复的原 issue 描述的是同一个根本问题或同一个需求，判为“对”；如果明显是不同的问题，判为“错”；如果看不清楚，判为“无法判断”。</li>
+</ul>
+<p>每一条都写了一句理由，完整结果在 <code>review/ai_review_type.csv</code> 和 <code>review/ai_review_duplicate.csv</code>，汇总数字在 <code>review/ai_review_summary.json</code>。</p>
+<p><b>正确率的算法。</b>正确率 = “对”的条数 ÷（“对”的条数 + “错”的条数），“无法判断”的条目不计入分母，但单独报告它占全部样本的比例。95% 置信区间用 Wilson 方法计算。置信区间表示：考虑到只抽了 30 条，真实的正确率大致落在这个范围内。Wilson 方法在样本少、正确率接近 100% 时仍然给出合理的区间，而常见的“正确率 ± 1.96 × 标准误”在这种情况下会给出超过 100% 或宽度为零的区间。</p>
+<div class="scroll"><table><thead><tr><th>判断</th><th class="num">核对条数</th><th class="num">对</th><th class="num">错</th><th class="num">无法判断</th><th class="num">无法判断占比</th><th class="num">正确率</th><th class="num">95% 置信区间</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
+<p><b>与 A4 质量标准（正确答案正确的比例不低于 {pct1(std)}）的对比：</b></p>
+<ul>{''.join(verdicts)}</ul>
+<p><b>判为“错”或“无法判断”的条目。</b>下表列出全部这类条目和理由，便于检查错误集中在哪类情况。</p>
+<div class="scroll"><table><thead><tr><th>判断</th><th>issue</th><th>正确答案</th><th>核对结果</th><th>理由</th></tr></thead><tbody>{''.join(notes) or '<tr><td colspan="5">无</td></tr>'}</tbody></table></div>
+"""
+
+
+def assignee_section(tl: dict) -> str:
+    a = json.load(open(MANIFEST / "assignee_check.json"))
+    o = a["overall"]
+    cats = a["categories"]
+    subsets = a["by_bot_subset"]
+
+    def cell(v: dict, k: str) -> str:
+        return f'<td class="num">{f(v["counts"][k])}（{pct(v["counts"][k], v["issues"])}）</td>'
+
+    def_rows = "".join(f"<tr><td>{c['name_zh']}</td><td>{c['definition_zh']}</td>{cell(o, c['key'])}</tr>" for c in cats)
+    sub_head = "".join(f'<th class="num">{v["name_zh"]}</th>' for v in subsets.values())
+    sub_rows = "".join(
+        f"<tr><td>{c['name_zh']}</td>{cell(o, c['key'])}" + "".join(cell(v, c["key"]) for v in subsets.values()) + "</tr>"
+        for c in cats)
+    sub_rows += (f"<tr><td><b>合计</b></td><td class=\"num\"><b>{f(o['issues'])}</b></td>"
+                 + "".join(f'<td class="num"><b>{f(v["issues"])}</b></td>' for v in subsets.values()) + "</tr>")
+    month_rows = "".join(
+        f"<tr><td>{m}</td><td class=\"num\">{f(v['issues'])}</td><td class=\"num\">{f(v['counts']['none'])}（{pct(v['counts']['none'], v['issues'])}）</td></tr>"
+        for m, v in a["by_month"].items())
+    none = o["counts"]["none"]
+    s_in, s_out, s_no = subsets["bot_in_final"], subsets["bot_not_in_final"], subsets["no_bot_assignment"]
+    share = {k: v["counts"]["none"] / v["issues"] for k, v in subsets.items() if v["issues"]}
+    if len(share) == 3 and share["bot_in_final"] > max(share["bot_not_in_final"], share["no_bot_assignment"]):
+        subset_note = ("也就是说，最终负责人就是 bot 首次分派的人时，没有任何操作的比例最高；"
+                       "负责人经过人工改派或由人工直接指定时，这个比例更低。")
+    else:
+        subset_note = ""
+    return f"""
+<h2>8. 负责人：最终决定是否落实</h2>
+<p><b>为什么不做主观核对。</b>一条 issue 该分给谁，取决于 vscode 团队内部的分工，从公开信息无法判断对错。因此按 2026-10-07 修订的实验说明 A9，负责人的正确答案就定义为维护者最后的决定，不再核对它“对不对”，而是检查这个决定是否落实：最终负责人有没有在这条 issue 上实际做过操作。这一项不适用 A4 中“正确率不低于 85%”的标准，只报告落实的比例。</p>
+<p><b>怎么检查。</b>脚本 <code>scripts/pipeline/assignee_check.py</code> 读取负责人测试集全部 {f(o['issues'])} 条 issue 已缓存的时间线（时间线是 GitHub 对一条 issue 上每一次操作的记录，包括评论、关闭、加标签、分派等，每条记录都写明是谁做的），找出由任何一位最终负责人执行的操作。以下几类记录虽然也写着这个人的名字，但不是他本人的操作，所以不计入：被别人分派或取消分派（assigned/unassigned，执行者是别人）；被别人在评论里提到（mentioned）；被 GitHub 自动加入或移出关注（subscribed/unsubscribed）。打开 issue 本身不是时间线里的记录，所以提交 issue 也不算一次操作。</p>
+<p>每条 issue 只归入一类：按下表从上到下的顺序，取任何一位最终负责人做过的最“强”的那种操作。例如一条 issue 的负责人既评论过、又关闭了它，就归入“关闭了 issue”。时间线缺失的 issue 有 {f(a['timelines_missing'])} 条。逐条结果保存在 <code>manifest/assignee_check.tsv</code>，汇总在 <code>manifest/assignee_check.json</code>。</p>
+<div class="scroll"><table><thead><tr><th>类别</th><th>定义</th><th class="num">issue 数（占比）</th></tr></thead><tbody>{def_rows}</tbody></table></div>
+<p><b>结果。</b>在 {f(o['issues'])} 条负责人测试 issue 中，有 {f(o['any_action'])} 条（{pct(o['any_action'], o['issues'])}）至少有一位最终负责人做过操作；如果不把“只做了自我分派”算作实际处理，这个数字是 {f(o['substantive_action'])} 条（{pct(o['substantive_action'], o['issues'])}）。没有任何最终负责人操作的有 <b>{f(none)} 条（{pct(none, o['issues'])}）</b>。在这 {f(none)} 条中，拉取时间线时仍然打开的有 {f(o['none_still_open'])} 条，被分诊 bot 关闭的有 {f(o['none_closed_by_bot'])} 条（例如信息不足或被标为重复后自动关闭），被负责人以外的其他人关闭的有 {f(o['none_closed_by_other_person'])} 条。</p>
+<p>另外，有 {f(o['authored_by_final_assignee'])} 条 issue 是由它的某位最终负责人自己提交的；其中只有 {f(o['authored_by_final_assignee_among_none'])} 条落在“没有任何操作”一类。</p>
+<p><b>按 bot 的首次分派分组。</b>第 5 节介绍了分诊 bot 的首次分派。下表把负责人测试集分成三组：bot 首次分派的人在最终负责人中（{f(s_in['issues'])} 条），bot 首次分派的人不在最终负责人中、也就是后来被人改派了（{f(s_out['issues'])} 条），以及 bot 没有分派过、负责人是人工指定的（{f(s_no['issues'])} 条）。</p>
+<div class="scroll"><table><thead><tr><th>类别</th><th class="num">全部</th>{sub_head}</tr></thead><tbody>{sub_rows}</tbody></table></div>
+<p>三组中“没有任何操作”的比例分别是 {pct(s_in['counts']['none'], s_in['issues'])}、{pct(s_out['counts']['none'], s_out['issues'])} 和 {pct(s_no['counts']['none'], s_no['issues'])}。{subset_note}</p>
+<p><b>按创建月份。</b>时间线在 {tl['first_fetched_at']} 到 {tl['last_fetched_at']}（UTC）之间拉取，9 月创建的 issue 到拉取时最多只有一个月，负责人还没来得及处理的可能性更大。下表按创建月份列出“没有任何操作”的比例。</p>
+<div class="scroll"><table><thead><tr><th>创建月份</th><th class="num">issue 数</th><th class="num">没有任何操作（占比）</th></tr></thead><tbody>{month_rows}</tbody></table></div>
+<p><b>怎么理解这些数字。</b>“没有任何操作”不等于分错了人：负责人可能只是还没处理、可能在 GitHub 以外处理（例如在其他仓库提交修复而没有引用这条 issue），也可能认为 issue 不需要处理而由 bot 自动关闭。反过来，“有操作”也不能证明分派是对的。这项检查只说明最终决定在 GitHub 上有没有留下被执行的痕迹；后续用负责人作为正确答案打分时，应当把这个比例一并报告。</p>
+<p>需要特别注意的是第一组中没有任何操作的 {f(s_in['counts']['none'])} 条（占负责人测试集的 {pct(s_in['counts']['none'], o['issues'])}）：它们的正确答案就是 bot 当初的分派，之后没有任何负责人在 GitHub 上处理过，因此这个答案并没有经过人的确认。基线阶段拿 bot 的首次分派做对照时，bot 在这些 issue 上必然“答对”，所以除了全部测试集的分数，还应报告去掉这部分 issue 之后的分数。</p>
+"""
+
+
+def a4_section() -> str:
+    summ = json.load(open(REVIEW / "ai_review_summary.json"))
+    a = json.load(open(MANIFEST / "assignee_check.json"))["overall"]
+    std = summ["a4_standard"]
+    rows = []
+    for j in ("type", "duplicate"):
+        v = summ["judgments"][j]
+        ok = "达标" if v["meets_a4_point_estimate"] else "未达标"
+        low = "下限也不低于标准" if v["ci95_low_meets_a4"] else "下限低于标准"
+        rows.append(f"<tr><td>{JN[j]}的正确答案正确的比例不低于 {pct1(std)}（AI 核对）</td>"
+                    f"<td>{pct1(v['accuracy'])}，95% 置信区间 {pct1(v['ci95_low'])} – {pct1(v['ci95_high'])}（{low}）</td><td>{ok}</td></tr>")
+    rows.append(f"<tr><td>负责人</td><td>不适用正确率标准。至少有一位最终负责人做过操作的比例是 "
+                f"{pct(a['any_action'], a['issues'])}，没有任何操作的比例是 {pct(a['counts']['none'], a['issues'])}。</td><td>只报告</td></tr>")
+    rows.append("<tr><td>不包含 bot 自动提交的 issue</td><td>由筛选规则保证，见第 3 节。</td><td>达标</td></tr>")
+    rows.append("<tr><td>每条 issue 都有正文和创建时间</td><td>正文为空的 issue 已在筛选中去掉，创建时间由 GitHub 记录，每条都有。</td><td>达标</td></tr>")
+    return f"""
+<h2>9. 与 A4 质量标准的对比</h2>
+<p>实验说明 A4 规定，数据必须同时满足下表中的条件才能用来出结果。类型和查重两项的核对由 AI 模型（Claude Opus 5.5）完成，未经人工核实。</p>
+<div class="scroll"><table><thead><tr><th>条件</th><th>结果</th><th>结论</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
+<p>这里“达标”按正确率本身是否不低于 {pct1(std)} 判断。由于每项只核对了 30 条，置信区间较宽，表中同时注明了区间下限是否也不低于标准。</p>
+"""
 
 
 def main() -> None:
@@ -99,7 +219,7 @@ def main() -> None:
 <p class="sub">本页由 <code>scripts/pipeline/report.py</code> 根据结果文件自动生成，页面里的数字都来自脚本输出，没有手工填写。</p>
 
 <div class="card">
-<p>这份报告对应实验说明（stage1_spec.html）里 A5 到 A9 的数据部分：从 GitHub 拉取 microsoft/vscode 的 issue，固定成一个快照，按规则筛选，按创建时间切成训练集、调参集和测试集，并准备人工核对表。基线模型（B 部分）不在本页范围内，会在下一步完成。</p>
+<p>这份报告对应实验说明（stage1_spec.html）里 A5 到 A9 的数据部分：从 GitHub 拉取 microsoft/vscode 的 issue，固定成一个快照，按规则筛选，按创建时间切成训练集、调参集和测试集，并评估正确答案的质量（A9，2026-10-07 修订：类型和查重由 AI 模型核对，负责人改为自动检查最终决定是否落实）。基线模型（B 部分）不在本页范围内，会在下一步完成。</p>
 <p>报告中的“issue”指 GitHub 上的问题报告；“正确答案”指我们从维护者的操作中提取、用来给模型打分的标准答案；“bot”指自动操作的账号，例如 vscode 团队自己的分诊机器人 <code>vs-code-engineering[bot]</code>。</p>
 </div>
 
@@ -133,15 +253,21 @@ def main() -> None:
 <p><b>类型标签的分布。</b>下表是筛选后训练集和测试集中各类型标签的数量，供以后看 macro-F1 时参考。</p>
 <div class="scroll"><table><thead><tr><th>类型标签</th><th class="num">训练集</th><th class="num">测试集</th></tr></thead><tbody>{type_dist}</tbody></table></div>
 
-<h2>7. 人工核对</h2>
-<p>核对表在 <a href="review_sheet.html">review_sheet.html</a>。每项判断从测试集里随机抽了 {rs['n_per_judgment']} 条（随机种子 {rs['seed']}），抽到的编号保存在 <code>review/review_sample.json</code>。表里已经列好每条 issue 的链接、标题、正文开头约 400 个字符和正确答案，判断一栏留空，需要你逐条选择“对”“错”或“无法判断”。输入会自动保存在浏览器里，核对完请用每一节的“导出 CSV”按钮导出结果。核对结果出来之后，再计算每项的正确率和置信区间，并和 A4 的 85% 标准对比。</p>
-<p>注意：核对表里含有 issue 正文的片段。实验说明规定公开 repo 里不放 issue 正文，所以发布前需要把核对表换成只含编号和核对结果的版本。</p>
+{ai_review_section(rs)}
+{assignee_section(tl)}
+{a4_section()}
 
-<h2>8. 如何重新运行</h2>
-<p>在 worktree 根目录执行下面这条命令，就会依次完成拉取、筛选与切分、时间线拉取、存档、核对表和本报告。拉取脚本可以中断后续跑：已经拉到的页面和时间线会缓存在 <code>data/raw/</code> 里，不会重复请求。这次快照拉取 issue 用了 {dur(ip['started_at'], ip['finished_at'])}，拉取时间线用了 {dur(tp['first_fetched_at'], tp['last_fetched_at'])}（REST 接口每小时限 5,000 次请求，脚本在额度不足时会自动等待到额度重置）。</p>
+<h2>10. 如何重新运行</h2>
+<p>在 worktree 根目录执行下面这条命令，就会依次完成拉取、筛选与切分、时间线拉取、负责人落实检查、存档、核对表、AI 核对结果的汇总和本报告。拉取脚本可以中断后续跑：已经拉到的页面和时间线会缓存在 <code>data/raw/</code> 里，不会重复请求。这次快照拉取 issue 用了 {dur(ip['started_at'], ip['finished_at'])}，拉取时间线用了 {dur(tp['first_fetched_at'], tp['last_fetched_at'])}（REST 接口每小时限 5,000 次请求，脚本在额度不足时会自动等待到额度重置）。</p>
 <p>因为拉取结果会被缓存，在已有 <code>data/raw/</code> 的情况下再次运行这条命令不会重新拉取，而是在同一个快照上重新计算，结果和本页完全一致（已核对过两次运行的校验值相同）。如果要拉一个新的快照，需要先删掉或移走 <code>data/raw/</code> 目录。</p>
 <pre>./run_data.sh</pre>
-<p>如果只想在已有数据上重新筛选和生成报告，不再请求 GitHub，可以运行 <code>./run_data.sh --offline</code>。</p>
+<p>如果只想在已有数据上重新筛选和生成报告，不再请求 GitHub，可以运行 <code>./run_data.sh --offline</code>。负责人落实检查只读取已缓存的时间线，AI 核对的汇总只读取 <code>review/</code> 下已保存的核对结果，两者在离线模式下都可以重新运行；AI 核对本身（逐条阅读和判断）不是脚本的一部分，重新运行不会改变核对结果。</p>
+
+<h2>11. 变更记录</h2>
+<ul>
+<li><b>2026-10-06：</b>筛选规则增加两条：去掉正文为空的 issue；识别 bot 时加上 GitHub 标注的账号类型。数量和核对样本随之更新。</li>
+<li><b>2026-10-07：</b>按修订后的实验说明 A9 完成数据质量评估。类型和查重的正确答案改由 AI 模型（Claude Opus 5.5）根据公开内容逐条核对，结果见第 7 节，未经人工核实；负责人不再做主观核对，改为自动检查最终负责人是否在 issue 上实际做过操作，结果见第 8 节；第 9 节把结果和 A4 的质量标准做了对比。人工核对表保留，但其中负责人一节已不再使用。</li>
+</ul>
 </main><script>{THEME_JS}</script></body></html>
 """
     (REVIEW / "data_report.html").write_text(page)

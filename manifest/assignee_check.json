@@ -1,0 +1,186 @@
+{
+ "definition": "For each assignee test issue: the strongest action (in category order) taken by any final assignee, read from the cached REST timeline. Passive events (mentioned, subscribed, unsubscribed) and being assigned/unassigned by someone else are not actions.",
+ "categories": [
+  {
+   "key": "closed",
+   "name_zh": "关闭了 issue",
+   "definition_zh": "某位最终负责人是这条 issue 的“关闭”（closed）操作的执行者。"
+  },
+  {
+   "key": "code_reference",
+   "name_zh": "通过提交或 PR 关联",
+   "definition_zh": "某位最终负责人在代码层面关联了这条 issue：提交的说明里提到了它（referenced 事件），或在一个 PR 中引用了它（来源是 PR 的 cross-referenced 事件），或把一个 PR 关联到它（connected 事件）。"
+  },
+  {
+   "key": "commented",
+   "name_zh": "评论",
+   "definition_zh": "某位最终负责人在这条 issue 下发表过评论（commented 事件）。"
+  },
+  {
+   "key": "issue_reference",
+   "name_zh": "在其他 issue 中引用",
+   "definition_zh": "某位最终负责人在另一条 issue（不是 PR）中提到了这条 issue（来源不是 PR 的 cross-referenced 事件）。"
+  },
+  {
+   "key": "other_edit",
+   "name_zh": "其他编辑操作",
+   "definition_zh": "某位最终负责人做过上面以外的操作，例如加减标签、设置里程碑、修改标题、重新打开、锁定、设置 issue 类型或项目字段、标为重复，或者把这条 issue 分派给别人、取消别人的分派。"
+  },
+  {
+   "key": "self_assigned_only",
+   "name_zh": "只做了自我分派",
+   "definition_zh": "最终负责人做过的唯一操作是把自己分派到这条 issue（或取消自己的分派）。"
+  },
+  {
+   "key": "none",
+   "name_zh": "没有任何操作",
+   "definition_zh": "在时间线里找不到任何由最终负责人执行的操作。"
+  }
+ ],
+ "passive_events_ignored": [
+  "mentioned",
+  "subscribed",
+  "unsubscribed"
+ ],
+ "timelines_missing": 0,
+ "overall": {
+  "issues": 6569,
+  "counts": {
+   "closed": 1996,
+   "code_reference": 179,
+   "commented": 452,
+   "issue_reference": 45,
+   "other_edit": 704,
+   "self_assigned_only": 27,
+   "none": 3166
+  },
+  "any_action": 3403,
+  "substantive_action": 3376,
+  "authored_by_final_assignee": 756,
+  "authored_by_final_assignee_among_none": 1,
+  "none_still_open": 2208,
+  "none_closed_by_bot": 475,
+  "none_closed_by_other_person": 483
+ },
+ "by_bot_subset": {
+  "bot_in_final": {
+   "name_zh": "bot 首次分派的人在最终负责人中",
+   "issues": 3371,
+   "counts": {
+    "closed": 566,
+    "code_reference": 41,
+    "commented": 244,
+    "issue_reference": 8,
+    "other_edit": 276,
+    "self_assigned_only": 3,
+    "none": 2233
+   },
+   "any_action": 1138,
+   "substantive_action": 1135,
+   "authored_by_final_assignee": 36,
+   "authored_by_final_assignee_among_none": 1,
+   "none_still_open": 1437,
+   "none_closed_by_bot": 462,
+   "none_closed_by_other_person": 334
+  },
+  "bot_not_in_final": {
+   "name_zh": "bot 首次分派的人不在最终负责人中",
+   "issues": 874,
+   "counts": {
+    "closed": 249,
+    "code_reference": 34,
+    "commented": 67,
+    "issue_reference": 7,
+    "other_edit": 113,
+    "self_assigned_only": 4,
+    "none": 400
+   },
+   "any_action": 474,
+   "substantive_action": 470,
+   "authored_by_final_assignee": 46,
+   "authored_by_final_assignee_among_none": 0,
+   "none_still_open": 332,
+   "none_closed_by_bot": 11,
+   "none_closed_by_other_person": 57
+  },
+  "no_bot_assignment": {
+   "name_zh": "bot 没有分派过",
+   "issues": 2324,
+   "counts": {
+    "closed": 1181,
+    "code_reference": 104,
+    "commented": 141,
+    "issue_reference": 30,
+    "other_edit": 315,
+    "self_assigned_only": 20,
+    "none": 533
+   },
+   "any_action": 1791,
+   "substantive_action": 1771,
+   "authored_by_final_assignee": 674,
+   "authored_by_final_assignee_among_none": 0,
+   "none_still_open": 439,
+   "none_closed_by_bot": 2,
+   "none_closed_by_other_person": 92
+  }
+ },
+ "by_month": {
+  "2026-07": {
+   "issues": 2091,
+   "counts": {
+    "closed": 690,
+    "code_reference": 45,
+    "commented": 167,
+    "issue_reference": 22,
+    "other_edit": 238,
+    "self_assigned_only": 7,
+    "none": 922
+   },
+   "any_action": 1169,
+   "substantive_action": 1162,
+   "authored_by_final_assignee": 292,
+   "authored_by_final_assignee_among_none": 1,
+   "none_still_open": 573,
+   "none_closed_by_bot": 210,
+   "none_closed_by_other_person": 139
+  },
+  "2026-08": {
+   "issues": 2229,
+   "counts": {
+    "closed": 780,
+    "code_reference": 63,
+    "commented": 163,
+    "issue_reference": 18,
+    "other_edit": 238,
+    "self_assigned_only": 14,
+    "none": 953
+   },
+   "any_action": 1276,
+   "substantive_action": 1262,
+   "authored_by_final_assignee": 262,
+   "authored_by_final_assignee_among_none": 0,
+   "none_still_open": 657,
+   "none_closed_by_bot": 117,
+   "none_closed_by_other_person": 179
+  },
+  "2026-09": {
+   "issues": 2249,
+   "counts": {
+    "closed": 526,
+    "code_reference": 71,
+    "commented": 122,
+    "issue_reference": 5,
+    "other_edit": 228,
+    "self_assigned_only": 6,
+    "none": 1291
+   },
+   "any_action": 958,
+   "substantive_action": 952,
+   "authored_by_final_assignee": 202,
+   "authored_by_final_assignee_among_none": 0,
+   "none_still_open": 978,
+   "none_closed_by_bot": 148,
+   "none_closed_by_other_person": 165
+  }
+ }
+}

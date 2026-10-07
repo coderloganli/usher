@@ -6,7 +6,7 @@ Outputs (tracked):
   manifest/issue_hashes.tsv   per issue: first 16 hex chars of SHA-256 over its canonical JSON
                               record (number, created_at, title, body, author, labels,
                               assignees, duplicate_of), so a re-pull can be compared issue by issue
-  manifest/checksums.sha256   SHA-256 of every file under data/ (sha256sum format, paths
+  manifest/checksums.sha256   SHA-256 of every file under data/ except logs/ and review_comments/ (sha256sum format, paths
                               relative to the repo root). gzip files are written with mtime=0.
 
 Usage: .venv/bin/python scripts/pipeline/archive.py
@@ -34,8 +34,10 @@ def main() -> None:
     (MANIFEST / "issue_hashes.tsv").write_text(
         "number\tsha256_16\n" + "".join(f"{n}\t{record_hash(issues[n])}\n" for n in nums))
 
+    # data/review_comments/ caches issue comments fetched later for the A9 AI review; it is
+    # not part of the 2026-10-05 snapshot, so it is left out like the logs.
     files = sorted(p for p in DATA.rglob("*") if p.is_file() and "logs" not in p.parts
-                   and not p.name.endswith(".tmp"))
+                   and "review_comments" not in p.parts and not p.name.endswith(".tmp"))
     lines = [f"{sha256_file(p)}  {p.relative_to(ROOT)}" for p in files]
     (MANIFEST / "checksums.sha256").write_text("\n".join(lines) + "\n")
 

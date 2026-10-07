@@ -1,0 +1,31 @@
+number,url,truth,verdict,reason
+325290,https://github.com/microsoft/vscode/issues/325290,325287,对,两条 issue 的标题和正文完全相同，是同一个人重复提交。
+325568,https://github.com/microsoft/vscode/issues/325568,325354,对,两条都描述关闭窗口时旧界面短暂闪现，是同一个问题。
+325709,https://github.com/microsoft/vscode/issues/325709,323937,对,两条都描述提问组件中的问题文字无法选中复制，是同一个问题。
+326177,https://github.com/microsoft/vscode/issues/326177,326092,无法判断,这条是 1.129.0 在 Linux Mint 上崩溃、退出码 135，而原 issue 跟踪的是 clean-exit（退出码 0）的崩溃；维护者在原 issue 中说非零退出码的崩溃性质不同，但也有用户在原 issue 中报告了退出码 135 并在修复后消失，无法确定是否同一根因。
+326208,https://github.com/microsoft/vscode/issues/326208,326092,对,1.129.0 在 Linux 上打开项目时反复出现 clean-exit、退出码 0 的窗口终止，与原 issue 的症状和版本一致。
+326297,https://github.com/microsoft/vscode/issues/326297,326092,对,每次启动都出现 clean-exit、退出码 0 的窗口终止，Linux 上 1.129.0，与原 issue 相同。
+326308,https://github.com/microsoft/vscode/issues/326308,326092,对,Linux 上更新到 1.129.0 后持续崩溃，评论中的现象和变通方法与原 issue 一致。
+326463,https://github.com/microsoft/vscode/issues/326463,326092,无法判断,这条说的是 Codex 扩展无法加载、VS Code 本身没有崩溃，而原 issue 是带 Codex 面板启动时整个窗口崩溃；维护者认为重复，但从公开内容看症状不同，无法确定。
+326912,https://github.com/microsoft/vscode/issues/326912,325618,对,两条都是 Dataverse MCP 服务器的 delete_record 工具因数组参数缺少 items 而校验失败。
+326962,https://github.com/microsoft/vscode/issues/326962,321321,对,两条都是 Ctrl+Shift+A 被打开智能体窗口占用、与切换块注释冲突。
+327183,https://github.com/microsoft/vscode/issues/327183,326126,对,这条是 Modern UI 下菜单栏在深色主题中字体颜色错误；维护者在评论中说明根因就是原 issue 里 Modern UI 不支持主题的标题栏颜色。
+327469,https://github.com/microsoft/vscode/issues/327469,316712,对,两条都是通过 SSH 连接 Windows 主机时智能体执行 uname 失败。
+328032,https://github.com/microsoft/vscode/issues/328032,316204,对,生成提交信息没有结果，评论中的日志显示 422 和 promptFiltered，与原 issue 的问题相同。
+329174,https://github.com/microsoft/vscode/issues/329174,328507,对,两条都是聊天滚动到底部时最后一条较短的消息无法成为当前项，原因都是最后一条消息下方不再留白，属于同一问题。
+329811,https://github.com/microsoft/vscode/issues/329811,289795,对,这条指出集成浏览器因 ffmpeg 缺少 AAC 等解码而无法播放视频音频，与原 issue 请求集成浏览器支持视频播放是同一问题。
+329921,https://github.com/microsoft/vscode/issues/329921,329901,对,Windows 上 1.132.0 所有模态对话框自动关闭，与原 issue 的原生对话框自动关闭相同。
+330055,https://github.com/microsoft/vscode/issues/330055,329901,错,这条报告的是从 Windows 资源管理器拖放文件失效，原 issue 是原生对话框自动关闭，公开内容中没有任何信息把两者联系起来，问题明显不同。
+330155,https://github.com/microsoft/vscode/issues/330155,329606,对,两条都是 Mac 上更新按钮位置不对、超出边界，维护者在原 issue 中确认是 Mac 上缺少边距。
+330436,https://github.com/microsoft/vscode/issues/330436,329901,对,Windows 上关于对话框打开后立即关闭，与原 issue 相同。
+331806,https://github.com/microsoft/vscode/issues/331806,312279,对,两条都请求在一条聊天消息中任意位置调用多个技能。
+332603,https://github.com/microsoft/vscode/issues/332603,234393,对,这条给出主进程因缓冲终端输出事件而内存耗尽的根因，原 issue 的评论最终定位到同一个终端 IPC 事件缓冲泄漏并给出修复。
+332928,https://github.com/microsoft/vscode/issues/332928,332622,对,这条的日志中有与原 issue 相同的“Not allowed to create elements in child window”错误，都是新聊天窗口无法打开。
+333594,https://github.com/microsoft/vscode/issues/333594,333534,对,两条都是 VS Code 宠物遮挡了提示的关闭按钮。
+334857,https://github.com/microsoft/vscode/issues/334857,334856,对,两条都请求按发现来源分组显示自定义智能体，内容几乎相同。
+335744,https://github.com/microsoft/vscode/issues/335744,334144,对,正文较简略，但图标缺失的现象与原 issue 一致，评论者也确认使用 Remote-SSH 时出现同样问题。
+336835,https://github.com/microsoft/vscode/issues/336835,321240,对,WSL 中无法用集成浏览器打开 HTML 文件，正是原 issue 请求的在远程工作区支持 file:// 链接。
+336976,https://github.com/microsoft/vscode/issues/336976,215988,对,两条都是扩展无法以编程方式切换当前活动的调试会话。
+337191,https://github.com/microsoft/vscode/issues/337191,334856,对,这条请求按作用域区分同名自定义智能体，原 issue 请求按发现来源分组，解决的是同一个问题。
+337210,https://github.com/microsoft/vscode/issues/337210,316260,对,用户希望像 Cursor 那样用标签页管理多个会话，与原 issue 请求在聊天面板中支持多个聊天标签是同一需求。
+337822,https://github.com/microsoft/vscode/issues/337822,337562,对,两条都是升级到 1.139 后使用 GHE 登录 Copilot 时反复要求登录。

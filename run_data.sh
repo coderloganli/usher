@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Rerun the whole stage-1 data pipeline (spec A5-A9).
-#   ./run_data.sh            pull (resumable) + filter/split + timelines + archive + review sheet + report
+#   ./run_data.sh            pull (resumable) + filter/split + timelines + assignee check + archive
+#                            + review sheet + AI review summary + report
 #   ./run_data.sh --offline  skip all GitHub requests; rebuild everything from cached raw data
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -16,6 +17,8 @@ if [[ $OFFLINE == 0 ]]; then
 else
   $PY $S/pull_timelines.py --extract-only
 fi
+$PY $S/assignee_check.py                               # A9: assignee follow-through check (cached timelines only)
 $PY $S/archive.py                                      # A6: snapshot manifest + checksums
-$PY $S/review_sheet.py                                 # A9: human review sheet
+$PY $S/review_sheet.py                                 # A9: review sample + sheet (assignee section no longer used)
+$PY $S/ai_review_summary.py                            # A9: counts + Wilson CI of the AI review CSVs in review/
 $PY $S/report.py                                       # A9: data report

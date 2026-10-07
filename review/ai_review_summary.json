@@ -1,0 +1,47 @@
+{
+ "reviewer": "AI model (Claude Opus 5.5), not verified by a person",
+ "accuracy_definition": "对 / (对 + 错); 95% Wilson score interval",
+ "a4_standard": 0.85,
+ "judgments": {
+  "type": {
+   "reviewed": 30,
+   "counts": {
+    "对": 28,
+    "错": 0,
+    "无法判断": 2
+   },
+   "accuracy": 1.0,
+   "ci95_low": 0.8793566952341543,
+   "ci95_high": 0.9999999999999998,
+   "cannot_judge_share": 0.06666666666666667,
+   "meets_a4_point_estimate": true,
+   "ci95_low_meets_a4": true,
+   "wrong": [],
+   "cannot_judge": [
+    326459,
+    327568
+   ]
+  },
+  "duplicate": {
+   "reviewed": 30,
+   "counts": {
+    "对": 27,
+    "错": 1,
+    "无法判断": 2
+   },
+   "accuracy": 0.9642857142857143,
+   "ci95_low": 0.8228780225664668,
+   "ci95_high": 0.9936674801509623,
+   "cannot_judge_share": 0.06666666666666667,
+   "meets_a4_point_estimate": true,
+   "ci95_low_meets_a4": false,
+   "wrong": [
+    330055
+   ],
+   "cannot_judge": [
+    326177,
+    326463
+   ]
+  }
+ }
+}

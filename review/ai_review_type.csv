@@ -1,0 +1,31 @@
+number,url,truth,verdict,reason
+324716,https://github.com/microsoft/vscode/issues/324716,polish,对,标题和截图反映“新建标签”按钮缺少悬停提示，属于界面细节打磨，polish 合适。
+325494,https://github.com/microsoft/vscode/issues/325494,feature-request,对,正文只有模板，但标题明确要求 AgentHost 支持 git.worktreeIncludeFiles 设置，是新功能请求。
+326015,https://github.com/microsoft/vscode/issues/326015,feature-request,对,issue 要求为 Claude 智能体后端增加 MCP Apps 支持，属于新功能请求。
+326459,https://github.com/microsoft/vscode/issues/326459,bug,无法判断,内容描述的是聊天行在获得焦点或选中时显示附加控件这一交互的设计调整，既可看作缺陷修正，也可看作界面打磨或功能变更，无法确定。
+326591,https://github.com/microsoft/vscode/issues/326591,feature-request,对,用户请求集成浏览器支持系统密码自动填充，这是新功能请求。
+326909,https://github.com/microsoft/vscode/issues/326909,feature-request,对,用户请求终端配置文件下拉菜单支持分组子菜单，这是新功能请求。
+326968,https://github.com/microsoft/vscode/issues/326968,bug,对,用户报告 Copilot 经常输出乱码式的工具调用文本，这是实际出现的错误行为，bug 合适。
+327033,https://github.com/microsoft/vscode/issues/327033,bug,对,在网站点击“Try Free”在未安装稳定版时没有任何反应，是明确的缺陷。
+327037,https://github.com/microsoft/vscode/issues/327037,bug,对,有复现步骤，重新加载后元素附件显示不正确，是明确的缺陷。
+327197,https://github.com/microsoft/vscode/issues/327197,bug,对,/compact 命令没有压缩上下文而手动操作可以，属于功能失效的缺陷。
+327227,https://github.com/microsoft/vscode/issues/327227,debt,对,内容是删除一个只在内部使用的接口字段，属于代码清理，debt 合适。
+327498,https://github.com/microsoft/vscode/issues/327498,bug,对,正常启动时 Git 无法加载且无法登录，是明确的缺陷报告。
+327502,https://github.com/microsoft/vscode/issues/327502,bug,对,在模态窗口中编辑 settings.json 时不显示未保存标记，是界面行为缺陷。
+327568,https://github.com/microsoft/vscode/issues/327568,bug,无法判断,搜索结果受 files.encoding 设置影响，未打开的其他编码文件搜不到；这可以看作缺陷，也可以看作要求支持多编码搜索的功能请求，内容不足以区分。
+327610,https://github.com/microsoft/vscode/issues/327610,polish,对,请求中键点击关闭多聊天标签，是一个小的交互改进，polish 合适。
+327668,https://github.com/microsoft/vscode/issues/327668,feature-request,对,测试时提出为宠物增加右键菜单选项，是新功能请求。
+328236,https://github.com/microsoft/vscode/issues/328236,bug,对,通过开发隧道连接时会话历史不同步，有复现步骤，是缺陷。
+329184,https://github.com/microsoft/vscode/issues/329184,feature-request,对,请求提供快捷键恢复已关闭的聊天，是新功能请求。
+329648,https://github.com/microsoft/vscode/issues/329648,bug,对,按名称选择模型时 create_session 选错提供方并给出代码层面的原因，是明确的缺陷。
+329649,https://github.com/microsoft/vscode/issues/329649,bug,对,send_message 工具对 Codex 和 Claude 没有阻止聊天给自己发消息，安全检查失效，是缺陷。
+329717,https://github.com/microsoft/vscode/issues/329717,feature-request,对,请求主题定义支持仅针对 Modern UI 的颜色覆盖，是新功能请求。
+331111,https://github.com/microsoft/vscode/issues/331111,bug,对,父会话取消订阅后仍在运行的对等聊天被清除，有复现步骤和预期行为，是缺陷。
+331653,https://github.com/microsoft/vscode/issues/331653,bug,对,Auto 档位下拉框选择后不自动关闭，是界面行为上的缺陷，bug 合适。
+333309,https://github.com/microsoft/vscode/issues/333309,feature-request,对,请求按类型分组显示最近打开的文件，是新功能请求。
+333975,https://github.com/microsoft/vscode/issues/333975,bug,对,休眠或断网后 Microsoft 认证丢失设置同步会话且不能自动恢复，是缺陷。
+334590,https://github.com/microsoft/vscode/issues/334590,bug,对,Codex 在 AHP 中不能发现和加载技能，有复现步骤，是缺陷。
+335178,https://github.com/microsoft/vscode/issues/335178,bug,对,fix-ci-failures 技能在没有失败时会无限等待，是该技能的行为缺陷。
+335745,https://github.com/microsoft/vscode/issues/335745,feature-request,对,请求通过 Alt 点击把分叉的对话在原对话旁边打开，是新功能请求。
+335820,https://github.com/microsoft/vscode/issues/335820,bug,对,迁移面板在特定多根工作区中不断刷新闪烁，是缺陷。
+337322,https://github.com/microsoft/vscode/issues/337322,bug,对,向远程会话发送第一条消息时打开了错误的会话，有时间线分析，是缺陷。
