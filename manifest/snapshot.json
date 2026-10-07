@@ -1,5 +1,5 @@
 {
- "archived_at": "2026-10-05T05:37:07Z",
+ "archived_at": "2026-10-07T00:43:01Z",
  "repo": "microsoft/vscode",
  "issue_pull": {
   "started_at": "2026-10-05T04:09:07Z",
@@ -24,16 +24,16 @@
  "timeline_pull": {
   "first_fetched_at": "2026-10-05T04:12:45Z",
   "last_fetched_at": "2026-10-05T05:26:18Z",
-  "issues": 6604,
-  "timelines_available": 6604,
+  "issues": 6569,
+  "timelines_available": 6569,
   "timelines_missing": 0,
-  "rest_pages": 6615
+  "rest_pages": 6580
  },
  "files_checksummed": 7688,
  "key_files": {
   "data/issues.jsonl.gz": "e03be2a4f3d33a4aafa57386e6f3319b3b38934e60251997e8402a25ef4adb03",
-  "data/sets.json": "92f7b5c2c86343b43e4e0d1102d1e4254bc10b74e446ba07da774fd97e367e1d",
-  "data/bot_first_assignment.json": "0a562ad8594046fd88ea2e07f73f050d56663927a899fe290056232323662f38"
+  "data/sets.json": "2ed92c2a7c4390ce52c6d20f38d630fa518223ecbed3495c03ca8bac5f6d2ec7",
+  "data/bot_first_assignment.json": "6e6ea86be82c6012557e7c9dc44df4b76b42eab85859e5b2254833fc90998cf5"
  },
  "issue_numbers_sha256": "45b81d156525f75d3491aa468ab7371b00409997ac4e1e33acdf5407a80ea25b"
 }

@@ -7,17 +7,17 @@
  },
  "kept": {
   "type": {
-   "train": 15284,
-   "tune": 625,
-   "test": 1864
+   "train": 15098,
+   "tune": 621,
+   "test": 1848
   },
   "assignee": {
-   "train": 40111,
-   "tune": 2053,
-   "test": 6604
+   "train": 39761,
+   "tune": 2043,
+   "test": 6569
   },
   "duplicate": {
-   "train": 1112,
+   "train": 1109,
    "tune": 96,
    "test": 268
   }
@@ -25,53 +25,62 @@
  "removed": {
   "type": {
    "train": {
-    "bot_author": 523,
-    "no_type_label": 39872,
-    "multiple_type_labels": 652
+    "bot_author": 526,
+    "empty_body": 593,
+    "no_type_label": 39468,
+    "multiple_type_labels": 646
    },
    "tune": {
     "bot_author": 69,
-    "no_type_label": 1825,
-    "multiple_type_labels": 18
+    "empty_body": 23,
+    "no_type_label": 1807,
+    "multiple_type_labels": 17
    },
    "test": {
-    "bot_author": 379,
-    "no_type_label": 5665,
+    "bot_author": 385,
+    "empty_body": 44,
+    "no_type_label": 5631,
     "multiple_type_labels": 58
    }
   },
   "assignee": {
    "train": {
-    "bot_author": 523,
-    "no_assignee": 15697
+    "bot_author": 526,
+    "empty_body": 593,
+    "no_assignee": 15451
    },
    "tune": {
     "bot_author": 69,
-    "no_assignee": 415
+    "empty_body": 23,
+    "no_assignee": 402
    },
    "test": {
-    "bot_author": 379,
-    "no_assignee": 983
+    "bot_author": 385,
+    "empty_body": 44,
+    "no_assignee": 968
    }
   },
   "duplicate": {
    "train": {
-    "bot_author": 523,
-    "no_duplicate_of": 54159,
+    "bot_author": 526,
+    "empty_body": 593,
+    "no_duplicate_of": 53569,
     "canonical_other_repo": 37,
-    "canonical_not_earlier": 399,
+    "canonical_not_earlier": 396,
     "canonical_before_2023": 101
    },
    "tune": {
     "bot_author": 69,
-    "no_duplicate_of": 2342,
+    "empty_body": 23,
+    "no_duplicate_of": 2319,
     "canonical_other_repo": 1,
     "canonical_not_earlier": 25,
     "canonical_before_2023": 4
    },
    "test": {
-    "bot_author": 379,
-    "no_duplicate_of": 7248,
+    "bot_author": 385,
+    "empty_body": 44,
+    "no_duplicate_of": 7198,
     "canonical_other_repo": 10,
     "canonical_not_earlier": 42,
     "canonical_before_2023": 19
@@ -81,15 +90,18 @@
  "rule_order": {
   "type": [
    "bot_author",
+   "empty_body",
    "no_type_label",
    "multiple_type_labels"
   ],
   "assignee": [
    "bot_author",
+   "empty_body",
    "no_assignee"
   ],
   "duplicate": [
    "bot_author",
+   "empty_body",
    "no_duplicate_of",
    "canonical_other_repo",
    "canonical_not_earlier",
@@ -144,30 +156,13 @@
   "duplicate": []
  },
  "diagnostics": {
-  "kept_authors_with_graphql_typename_bot": 9,
-  "empty_body": {
-   "type": {
-    "train": 186,
-    "tune": 4,
-    "test": 16
-   },
-   "assignee": {
-    "train": 349,
-    "tune": 10,
-    "test": 29
-   },
-   "duplicate": {
-    "train": 3,
-    "tune": 0,
-    "test": 0
-   }
-  },
+  "bot_by_typename_only": 9,
   "duplicate_canonical_missing_from_pull": 0,
   "duplicate_canonical_bot_authored": 5,
   "duplicate_corpus_size": 107422,
   "type_label_distribution_test": {
-   "bug": 1229,
-   "feature-request": 498,
+   "bug": 1224,
+   "feature-request": 487,
    "polish": 57,
    "debt": 32,
    "under-discussion": 24,
@@ -178,14 +173,14 @@
    "electron": 1
   },
   "type_label_distribution_train": {
-   "bug": 8905,
-   "feature-request": 4207,
-   "*question": 553,
-   "debt": 518,
+   "bug": 8850,
+   "feature-request": 4104,
+   "*question": 550,
+   "debt": 500,
    "under-discussion": 492,
-   "polish": 414,
+   "polish": 410,
    "upstream": 109,
-   "engineering": 40,
+   "engineering": 37,
    "upstream-issue-linked": 35,
    "electron": 11
   }

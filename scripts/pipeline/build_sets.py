@@ -7,7 +7,8 @@ Output: data/sets.json                    full sets with ground truth (gitignore
                                           exact-duplicate flags (tracked)
 
 Rules (stage1_spec.html A7/A8):
-  * every judgment: drop issues whose author is a bot (`is_bot_login`);
+  * every judgment: drop issues whose author is a bot (`is_bot_login`, or GraphQL
+    author __typename == "Bot"), then issues whose body is empty (whitespace only);
   * type: exactly one of the 10 TYPE_LABELS (ground truth = that label);
   * assignee: at least one final assignee (ground truth = all final assignees);
   * duplicate: `duplicateOf` points to microsoft/vscode, the canonical was created
@@ -57,11 +58,15 @@ def judge(r: dict, judgment: str) -> tuple[str | None, object]:
 
 
 RULE_ORDER = {
-    "type": ["bot_author", "no_type_label", "multiple_type_labels"],
-    "assignee": ["bot_author", "no_assignee"],
-    "duplicate": ["bot_author", "no_duplicate_of", "canonical_other_repo",
+    "type": ["bot_author", "empty_body", "no_type_label", "multiple_type_labels"],
+    "assignee": ["bot_author", "empty_body", "no_assignee"],
+    "duplicate": ["bot_author", "empty_body", "no_duplicate_of", "canonical_other_repo",
                   "canonical_not_earlier", "canonical_before_2023"],
 }
+
+
+def is_bot_author(r: dict) -> bool:
+    return is_bot_login(r["author"]) or r.get("author_type") == "Bot"
 
 
 def gt_str(judgment: str, gt) -> str:
@@ -80,10 +85,14 @@ def main() -> None:
         if s is None:
             continue  # 2023-2024: only part of the duplicate retrieval corpus
         in_split[s] += 1
-        bot = is_bot_login(r["author"])
+        bot = is_bot_author(r)
+        empty = not (r["body"] or "").strip()
         for j in JUDGMENTS:
             if bot:
                 removed[j][s]["bot_author"] += 1
+                continue
+            if empty:
+                removed[j][s]["empty_body"] += 1
                 continue
             rule, gt = judge(r, j)
             if rule:
@@ -109,16 +118,12 @@ def main() -> None:
 
     # Extra diagnostics (reported, not used as filters).
     diag = {}
-    bot_typename_kept = sum(1 for r in issues.values() if split_of(r["created_at"])
-                            and r["author_type"] == "Bot" and not is_bot_login(r["author"]))
-    diag["kept_authors_with_graphql_typename_bot"] = bot_typename_kept
-    empty_body = {j: {s: sum(1 for it in sets[j][s] if not issues[it["number"]]["body"].strip())
-                      for s in SPLITS} for j in JUDGMENTS}
-    diag["empty_body"] = empty_body
+    diag["bot_by_typename_only"] = sum(1 for r in issues.values() if split_of(r["created_at"])
+                                       and r["author_type"] == "Bot" and not is_bot_login(r["author"]))
     dq = [it for s in SPLITS for it in sets["duplicate"][s]]
     diag["duplicate_canonical_missing_from_pull"] = sum(1 for it in dq if it["truth"] not in issues)
     diag["duplicate_canonical_bot_authored"] = sum(
-        1 for it in dq if it["truth"] in issues and is_bot_login(issues[it["truth"]]["author"]))
+        1 for it in dq if it["truth"] in issues and is_bot_author(issues[it["truth"]]))
     diag["duplicate_corpus_size"] = len(issues)
     diag["type_label_distribution_test"] = dict(Counter(it["truth"] for it in sets["type"]["test"]).most_common())
     diag["type_label_distribution_train"] = dict(Counter(it["truth"] for it in sets["type"]["train"]).most_common())

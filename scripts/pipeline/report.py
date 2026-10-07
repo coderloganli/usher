@@ -19,6 +19,7 @@ SPLIT_DESC = {"train": "2025-01-01 至 2026-05-31", "tune": "2026-06-01 至 2026
               "test": "2026-07-01 至 2026-09-30"}
 RULE_NAMES = {
     "bot_author": "提交者是 bot",
+    "empty_body": "正文为空",
     "no_type_label": "没有任何类型标签",
     "multiple_type_labels": "带两个及以上类型标签",
     "no_assignee": "没有负责人",
@@ -84,9 +85,6 @@ def main() -> None:
         flag_rows.append(f"<tr><td>{JN[j]}</td><td class=\"num\">{f(n)}</td><td class=\"num\">{f(tot)}</td>"
                          f"<td class=\"num\">{pct(n, tot)}</td><td>{exs}{more}</td></tr>")
 
-    empty_rows = "".join(
-        f"<tr><td>{JN[j]}</td>" + "".join(f'<td class="num">{f(diag["empty_body"][j][s])}</td>' for s in SPLITS) + "</tr>"
-        for j in JUDGMENTS)
     type_dist = "".join(
         f"<tr><td><code>{html.escape(k)}</code></td><td class=\"num\">{f(diag['type_label_distribution_train'].get(k, 0))}</td>"
         f"<td class=\"num\">{f(diag['type_label_distribution_test'].get(k, 0))}</td></tr>" for k in TYPE_LABELS)
@@ -130,9 +128,8 @@ def main() -> None:
 <p>负责人测试集共有 {f(tl['issues'])} 条 issue，其中 {f(tl['timelines_available'])} 条成功拉到了时间线，{f(tl['timelines_missing'])} 条拉不到（例如 issue 已被删除或转移）。在全部 {f(tl['issues'])} 条中，有 <b>{f(tl['with_bot_first_assignment'])}</b> 条（{pct(tl['with_bot_first_assignment'], tl['issues'])}）找到了 bot 的第一次分派；其余 issue 的时间线里没有这个 bot 发出的分派事件（通常是维护者直接分派的）。bot 分派得对不对，留到基线阶段再统计。结果保存在 <code>manifest/bot_first_assignment.tsv</code>。</p>
 
 <h2>6. 其他检查</h2>
-<p><b>正文为空的 issue。</b>说明 A4 要求每条 issue 都有正文和创建时间。所有 issue 都有创建时间；但有一部分 issue 的正文为空（只有标题）。A7 的筛选规则里没有“去掉正文为空的 issue”这一条，所以这些 issue 目前保留在数据里，下表列出它们的数量，是否去掉需要另外决定。</p>
-<div class="scroll"><table><thead><tr><th>判断</th>{''.join(f'<th class="num">{SN[s]}</th>' for s in SPLITS)}</tr></thead><tbody>{empty_rows}</tbody></table></div>
-<p><b>bot 判定。</b>按说明，bot 提交的 issue 用 PoC 的 <code>is_bot_login</code> 规则判断（固定的 bot 账号名单，以及以 <code>[bot]</code> 结尾的账号）。GraphQL 还会标出提交者的账号类型；在 2025-01 到 2026-09 的 issue 中，账号类型是 Bot、但没有被 <code>is_bot_login</code> 识别出来、因而被保留的有 {f(diag['kept_authors_with_graphql_typename_bot'])} 条。</p>
+<p><b>正文为空的 issue。</b>说明 A4 要求每条 issue 都有正文。正文为空（去掉空白后没有任何字符）的 issue 在筛选中直接去掉，去掉的数量见第 3 节各表中“正文为空”一行。</p>
+<p><b>bot 判定。</b>提交者满足以下任一条件，就认为是 bot：登录名在 PoC 的 bot 账号名单中，或以 <code>[bot]</code> 结尾；或者 GitHub 标注的账号类型是 Bot。在 2025-01 到 2026-09 的 issue 中，只靠账号类型才识别出来的 bot issue 有 {f(diag['bot_by_typename_only'])} 条。</p>
 <p><b>类型标签的分布。</b>下表是筛选后训练集和测试集中各类型标签的数量，供以后看 macro-F1 时参考。</p>
 <div class="scroll"><table><thead><tr><th>类型标签</th><th class="num">训练集</th><th class="num">测试集</th></tr></thead><tbody>{type_dist}</tbody></table></div>
 

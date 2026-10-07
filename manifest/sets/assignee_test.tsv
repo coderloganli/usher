@@ -1,5 +1,4 @@
 number	created_at	truth	exact_dup_of_train
-323809	2026-07-01T00:02:01Z	connor4312	
 323811	2026-07-01T00:10:03Z	roblourens	
 323813	2026-07-01T00:33:49Z	justschen	
 323814	2026-07-01T01:08:31Z	deepak1556	
@@ -338,14 +337,10 @@ number	created_at	truth	exact_dup_of_train
 324505	2026-07-06T14:43:22Z	connor4312,dmitrivMS	
 324507	2026-07-06T14:47:03Z	lszomoru	
 324509	2026-07-06T14:49:20Z	vritant24	
-324510	2026-07-06T14:53:13Z	DonJayamanne,dmitrivMS	
 324511	2026-07-06T14:55:25Z	joshspicer	
-324512	2026-07-06T14:56:14Z	lramos15	
-324515	2026-07-06T15:04:56Z	roblourens	
 324516	2026-07-06T15:05:01Z	meganrogge	
 324517	2026-07-06T15:05:05Z	lszomoru	
 324518	2026-07-06T15:13:48Z	sandy081	
-324519	2026-07-06T15:14:49Z	hawkticehurst	
 324521	2026-07-06T15:17:38Z	Giuspepe	
 324522	2026-07-06T15:25:20Z	sandy081	
 324524	2026-07-06T15:32:09Z	sandy081	
@@ -531,7 +526,6 @@ number	created_at	truth	exact_dup_of_train
 324894	2026-07-08T09:22:40Z	mrleemurray	
 324895	2026-07-08T09:22:45Z	hawkticehurst,mrleemurray	
 324899	2026-07-08T09:42:40Z	hediet	
-324900	2026-07-08T09:43:25Z	hediet	
 324901	2026-07-08T09:57:06Z	roblourens	
 324902	2026-07-08T10:01:53Z	sandy081	
 324903	2026-07-08T10:04:14Z	sandy081	
@@ -769,7 +763,6 @@ number	created_at	truth	exact_dup_of_train
 325459	2026-07-12T04:10:10Z	alexdima	
 325461	2026-07-12T04:43:33Z	joshspicer	
 325462	2026-07-12T04:44:00Z	benvillalobos	
-325465	2026-07-12T05:32:34Z	zhichli	
 325467	2026-07-12T05:57:36Z	osortega	
 325470	2026-07-12T07:41:38Z	roblourens	
 325471	2026-07-12T08:09:01Z	hediet	
@@ -975,7 +968,6 @@ number	created_at	truth	exact_dup_of_train
 325862	2026-07-14T21:13:15Z	deepak1556	
 325871	2026-07-14T22:25:49Z	hediet,justschen,lostintangent	
 325884	2026-07-14T23:59:19Z	roblourens	
-325890	2026-07-15T00:30:54Z	DonJayamanne	
 325891	2026-07-15T00:57:42Z	hediet	
 325899	2026-07-15T03:59:22Z	hediet	
 325900	2026-07-15T04:12:42Z	lszomoru	
@@ -1049,7 +1041,6 @@ number	created_at	truth	exact_dup_of_train
 326041	2026-07-15T19:49:35Z	roblourens	
 326042	2026-07-15T19:58:27Z	hawkticehurst	
 326043	2026-07-15T20:06:39Z	connor4312	
-326045	2026-07-15T20:22:52Z	Copilot,meganrogge	
 326051	2026-07-15T21:03:10Z	sandy081	
 326054	2026-07-15T21:28:25Z	sandy081	
 326059	2026-07-15T21:56:26Z	alexdima	
@@ -1228,8 +1219,6 @@ number	created_at	truth	exact_dup_of_train
 326443	2026-07-18T13:28:00Z	sandy081	
 326445	2026-07-18T13:42:19Z	mrleemurray	
 326446	2026-07-18T14:06:45Z	roblourens	
-326448	2026-07-18T15:28:29Z	hawkticehurst	
-326449	2026-07-18T15:28:37Z	lszomoru	
 326450	2026-07-18T15:53:04Z	connor4312	
 326459	2026-07-18T17:43:35Z	roblourens	
 326462	2026-07-18T18:04:42Z	connor4312	
@@ -1239,8 +1228,6 @@ number	created_at	truth	exact_dup_of_train
 326469	2026-07-18T19:26:07Z	hediet	
 326470	2026-07-18T19:39:09Z	justschen	
 326474	2026-07-18T20:15:30Z	connor4312	
-326477	2026-07-18T20:45:19Z	lszomoru	
-326478	2026-07-18T20:45:27Z	lszomoru	
 326484	2026-07-18T21:59:14Z	benibenj	
 326486	2026-07-18T22:28:59Z	sandy081	
 326489	2026-07-18T23:29:28Z	roblourens	
@@ -1403,7 +1390,6 @@ number	created_at	truth	exact_dup_of_train
 326789	2026-07-21T09:56:49Z	pwang347	
 326790	2026-07-21T10:13:56Z	benibenj	
 326791	2026-07-21T10:18:18Z	aiday-mar	
-326792	2026-07-21T10:22:19Z	ulugbekna	
 326793	2026-07-21T10:29:38Z	justschen	
 326794	2026-07-21T11:32:19Z	hediet	
 326795	2026-07-21T11:33:05Z	hediet	
@@ -1517,9 +1503,6 @@ number	created_at	truth	exact_dup_of_train
 327062	2026-07-22T21:57:29Z	connor4312	
 327064	2026-07-22T22:22:02Z	dileepyavan	
 327066	2026-07-22T22:37:14Z	sandy081	
-327068	2026-07-22T23:25:55Z	aeschli	
-327069	2026-07-22T23:26:49Z	aeschli	
-327070	2026-07-22T23:27:41Z	karthiknadig	
 327073	2026-07-22T23:49:38Z	osortega	
 327076	2026-07-23T00:56:17Z	lramos15	
 327077	2026-07-23T01:22:44Z	aiday-mar	
@@ -1711,7 +1694,6 @@ number	created_at	truth	exact_dup_of_train
 327521	2026-07-26T14:13:39Z	meganrogge	
 327522	2026-07-26T14:32:37Z	anthonykim1	
 327523	2026-07-26T15:10:14Z	lramos15	
-327525	2026-07-26T17:25:37Z	lszomoru	
 327527	2026-07-26T17:56:17Z	lramos15	
 327528	2026-07-26T18:20:25Z	hediet	
 327529	2026-07-26T18:51:15Z	ulugbekna	
@@ -1931,7 +1913,6 @@ number	created_at	truth	exact_dup_of_train
 328076	2026-07-29T19:01:26Z	benibenj	
 328079	2026-07-29T19:16:05Z	sandy081	
 328083	2026-07-29T19:44:20Z	Copilot,meganrogge	
-328084	2026-07-29T19:45:49Z	meganrogge	
 328085	2026-07-29T19:46:28Z	roblourens	
 328089	2026-07-29T20:10:04Z	aeschli	
 328092	2026-07-29T20:23:32Z	sandy081	
@@ -2920,7 +2901,6 @@ number	created_at	truth	exact_dup_of_train
 330395	2026-08-12T08:04:17Z	roblourens	
 330396	2026-08-12T08:06:15Z	benvillalobos	
 330397	2026-08-12T08:20:14Z	meganrogge	
-330398	2026-08-12T08:23:50Z	lramos15	
 330400	2026-08-12T08:54:47Z	Copilot,benibenj	
 330402	2026-08-12T08:59:56Z	lszomoru	
 330403	2026-08-12T09:05:30Z	eli-w-king	
@@ -3127,7 +3107,6 @@ number	created_at	truth	exact_dup_of_train
 330935	2026-08-14T19:34:59Z	TylerLeonhardt	
 330936	2026-08-14T19:36:43Z	hawkticehurst,mrleemurray	
 330938	2026-08-14T19:46:51Z	meganrogge	
-330939	2026-08-14T19:49:53Z	hawkticehurst,mrleemurray	
 330941	2026-08-14T20:05:49Z	osortega	
 330944	2026-08-14T20:09:12Z	alexdima	
 330946	2026-08-14T20:14:13Z	justschen	
@@ -3378,7 +3357,6 @@ number	created_at	truth	exact_dup_of_train
 331428	2026-08-18T06:23:07Z	justschen	
 331429	2026-08-18T06:23:16Z	justschen	
 331431	2026-08-18T07:21:43Z	hediet	
-331433	2026-08-18T07:48:24Z	aiday-mar	
 331441	2026-08-18T08:52:28Z	sandy081	
 331443	2026-08-18T09:22:19Z	osortega	
 331445	2026-08-18T09:28:11Z	deepak1556	
@@ -3666,7 +3644,6 @@ number	created_at	truth	exact_dup_of_train
 332182	2026-08-23T16:57:48Z	jruales,kycutler	
 332185	2026-08-23T17:11:26Z	DonJayamanne,benibenj	
 332186	2026-08-23T17:19:53Z	sandy081	
-332191	2026-08-23T19:19:14Z	lszomoru	
 332193	2026-08-23T20:02:24Z	hawkticehurst,mrleemurray	
 332198	2026-08-23T21:44:55Z	Giuspepe,amunger	
 332199	2026-08-23T21:46:50Z	justschen	
@@ -3869,7 +3846,6 @@ number	created_at	truth	exact_dup_of_train
 332651	2026-08-25T22:20:23Z	mrleemurray	
 332652	2026-08-25T22:25:05Z	deepak1556	
 332659	2026-08-25T23:35:15Z	hediet	
-332662	2026-08-26T00:08:40Z	hediet	
 332663	2026-08-26T00:27:14Z	jruales,kycutler	
 332665	2026-08-26T00:55:13Z	benibenj	
 332666	2026-08-26T01:10:10Z	roblourens	
@@ -4198,7 +4174,6 @@ number	created_at	truth	exact_dup_of_train
 333408	2026-08-30T15:48:45Z	meganrogge	
 333409	2026-08-30T15:49:39Z	roblourens	
 333413	2026-08-30T17:35:34Z	lramos15	
-333414	2026-08-30T18:10:19Z	lszomoru	
 333417	2026-08-30T18:23:14Z	meganrogge	
 333419	2026-08-30T18:39:45Z	roblourens	
 333420	2026-08-30T18:48:39Z	roblourens	
@@ -4395,7 +4370,6 @@ number	created_at	truth	exact_dup_of_train
 333817	2026-09-01T17:32:32Z	connor4312	
 333819	2026-09-01T17:35:34Z	Copilot,justschen	
 333820	2026-09-01T17:37:58Z	hediet	
-333824	2026-09-01T17:48:48Z	hediet	
 333828	2026-09-01T17:59:16Z	justschen	
 333830	2026-09-01T18:14:21Z	chrmarti,deepak1556	
 333832	2026-09-01T18:24:22Z	meganrogge	
@@ -4650,7 +4624,6 @@ number	created_at	truth	exact_dup_of_train
 334468	2026-09-04T11:32:37Z	aeschli	
 334469	2026-09-04T11:45:01Z	TylerLeonhardt	
 334470	2026-09-04T12:10:20Z	kycutler	
-334472	2026-09-04T12:35:18Z	osortega	
 334473	2026-09-04T12:38:45Z	Giuspepe	
 334486	2026-09-04T12:54:52Z	justschen	
 334489	2026-09-04T13:01:06Z	aeschli	
@@ -4716,7 +4689,6 @@ number	created_at	truth	exact_dup_of_train
 334595	2026-09-04T19:36:57Z	DonJayamanne	
 334596	2026-09-04T19:37:15Z	justschen,mrleemurray	
 334597	2026-09-04T19:40:29Z	justschen	
-334598	2026-09-04T19:45:56Z	lramos15	
 334599	2026-09-04T19:46:39Z	mrleemurray	
 334600	2026-09-04T19:50:14Z	Copilot,meganrogge	
 334601	2026-09-04T19:50:14Z	Giuspepe	
@@ -5059,7 +5031,6 @@ number	created_at	truth	exact_dup_of_train
 335277	2026-09-09T15:02:51Z	meganrogge	
 335278	2026-09-09T15:08:07Z	lszomoru	
 335279	2026-09-09T15:14:23Z	chrmarti	
-335283	2026-09-09T15:26:57Z	Copilot,meganrogge	
 335287	2026-09-09T15:31:06Z	anthonykim1	
 335288	2026-09-09T15:31:15Z	federicobrancasi	
 335292	2026-09-09T16:02:32Z	justschen	
@@ -5421,7 +5392,6 @@ number	created_at	truth	exact_dup_of_train
 336045	2026-09-13T14:41:46Z	justschen	
 336046	2026-09-13T14:56:46Z	lramos15	
 336048	2026-09-13T16:42:07Z	chrmarti	
-336050	2026-09-13T17:09:55Z	hediet	
 336051	2026-09-13T17:34:59Z	bamurtaugh	
 336052	2026-09-13T18:11:09Z	Copilot,hediet	
 336054	2026-09-13T18:20:48Z	lszomoru	
@@ -5615,7 +5585,6 @@ number	created_at	truth	exact_dup_of_train
 336449	2026-09-16T16:24:59Z	aeschli,vritant24	
 336452	2026-09-16T16:50:28Z	hediet	
 336456	2026-09-16T17:17:44Z	TylerLeonhardt	
-336458	2026-09-16T17:40:55Z	anthonykim1	
 336459	2026-09-16T17:50:23Z	alexr00	
 336460	2026-09-16T18:10:09Z	Giuspepe	
 336461	2026-09-16T18:26:21Z	roblourens	
@@ -6296,7 +6265,6 @@ number	created_at	truth	exact_dup_of_train
 338190	2026-09-27T10:25:09Z	lszomoru	
 338194	2026-09-27T12:32:21Z	sandy081	
 338196	2026-09-27T13:20:20Z	deepak1556	
-338198	2026-09-27T13:28:40Z	hediet	
 338199	2026-09-27T13:55:03Z	hediet	
 338200	2026-09-27T14:16:49Z	lramos15	
 338201	2026-09-27T14:22:50Z	karthiknadig	
@@ -6393,8 +6361,6 @@ number	created_at	truth	exact_dup_of_train
 338428	2026-09-28T15:52:50Z	houghj16,pwang347	
 338429	2026-09-28T15:53:49Z	dileepyavan	
 338432	2026-09-28T15:57:29Z	hawkticehurst,pwang347	
-338433	2026-09-28T16:00:48Z	benvillalobos	
-338434	2026-09-28T16:00:58Z	lszomoru	
 338435	2026-09-28T16:01:42Z	pwang347	
 338438	2026-09-28T16:07:37Z	justschen	
 338439	2026-09-28T16:10:28Z	jruales,kycutler	
@@ -6547,7 +6513,6 @@ number	created_at	truth	exact_dup_of_train
 338825	2026-09-30T02:03:28Z	connor4312	
 338827	2026-09-30T02:22:40Z	meganrogge	
 338834	2026-09-30T03:50:35Z	justschen	
-338835	2026-09-30T04:26:17Z	bhavyaus	
 338837	2026-09-30T04:55:35Z	roblourens	
 338850	2026-09-30T06:45:28Z	lramos15	
 338855	2026-09-30T07:54:54Z	anthonykim1	
