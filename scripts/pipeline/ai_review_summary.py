@@ -1,7 +1,7 @@
-"""A9 (revised 2026-10-07): summarize the AI review of the type and duplicate ground truth.
+"""A9 (revised 2026-10-07): summarize the AI review of the type, module and duplicate ground truth.
 
-The verdicts themselves are in review/ai_review_type.csv and review/ai_review_duplicate.csv
-(columns: number, url, truth, verdict, reason). They were written by an AI model
+The verdicts themselves are in review/ai_review_{type,module,duplicate}.csv
+(columns: number, url, truth, verdict, reason; module truth is ";"-separated). They were written by an AI model
 (Claude Opus 5.5) from the public issue content, one per sampled issue in
 review/review_sample.json, and are NOT verified by a person. This script only counts them.
 
@@ -19,7 +19,7 @@ import math
 
 from common import REVIEW, write_json
 
-JUDGMENTS = ["type", "duplicate"]
+JUDGMENTS = ["type", "module", "duplicate"]
 VERDICTS = ["对", "错", "无法判断"]
 STANDARD = 0.85  # spec A4
 Z = 1.959963984540054  # two-sided 95%
@@ -60,6 +60,13 @@ def main() -> None:
             "wrong": [int(r["number"]) for r in rows if r["verdict"] == "错"],
             "cannot_judge": [int(r["number"]) for r in rows if r["verdict"] == "无法判断"],
         }
+        if j == "module":
+            multi = [r for r in rows if ";" in r["truth"]]
+            out["judgments"][j]["multi_module_items"] = {
+                "count": len(multi),
+                "counts": {v: sum(r["verdict"] == v for r in multi) for v in VERDICTS},
+                "numbers": [int(r["number"]) for r in multi],
+            }
     write_json(REVIEW / "ai_review_summary.json", out)
     for j, v in out["judgments"].items():
         print(f"{j}: {v['counts']} accuracy={v['accuracy']:.3f} CI=[{v['ci95_low']:.3f}, {v['ci95_high']:.3f}]")

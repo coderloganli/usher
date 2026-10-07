@@ -8,6 +8,7 @@ Outputs (tracked):
                               assignees, duplicate_of), so a re-pull can be compared issue by issue
   manifest/checksums.sha256   SHA-256 of every file under data/ except logs/ and review_comments/ (sha256sum format, paths
                               relative to the repo root). gzip files are written with mtime=0.
+                              Includes data/raw/classifier.json (module labels, added 2026-10-07).
 
 Usage: .venv/bin/python scripts/pipeline/archive.py
 """
@@ -53,9 +54,11 @@ def main() -> None:
                        "query": st["query"]},
         "timeline_pull": {k: tl.get(k) for k in ("first_fetched_at", "last_fetched_at", "issues", "timelines_available",
                                                  "timelines_missing", "rest_pages")},
+        "module_labels_source": json.load(open(MANIFEST / "module_labels.json"))["source"],
         "files_checksummed": len(files),
         "key_files": {str(p.relative_to(ROOT)): sha256_file(p)
-                      for p in [DATA / "issues.jsonl.gz", DATA / "sets.json", DATA / "bot_first_assignment.json"]},
+                      for p in [DATA / "issues.jsonl.gz", DATA / "sets.json", DATA / "bot_first_assignment.json",
+                                DATA / "raw" / "classifier.json"]},
         "issue_numbers_sha256": sha256_file(MANIFEST / "issue_numbers.txt"),
     }
     write_json(MANIFEST / "snapshot.json", snap)

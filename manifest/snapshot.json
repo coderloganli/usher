@@ -1,5 +1,5 @@
 {
- "archived_at": "2026-10-07T00:43:01Z",
+ "archived_at": "2026-10-07T02:03:26Z",
  "repo": "microsoft/vscode",
  "issue_pull": {
   "started_at": "2026-10-05T04:09:07Z",
@@ -29,11 +29,26 @@
   "timelines_missing": 0,
   "rest_pages": 6580
  },
- "files_checksummed": 7688,
+ "module_labels_source": {
+  "repo": "microsoft/vscode",
+  "path": ".github/classifier.json",
+  "url": "https://github.com/microsoft/vscode/blob/main/.github/classifier.json",
+  "fetched_on": "2026-10-03",
+  "fetched_file_time_utc": "2026-10-03T20:12:32Z",
+  "commit": "9de77c295b1bd405e4c21e3e089a8af538a0c83f",
+  "commit_date": "2026-05-22T18:26:32Z",
+  "commit_headline": "Add browser-integration assignment to classifier.json (#317925)",
+  "git_blob": "f38027d88bbde65a62e2e38b19c634b80b78ce50",
+  "commit_determination": "git blob id of the fetched file equals the blob of the file at this commit; one GraphQL history query on 2026-10-07T01:58Z returned it as the latest commit touching the file on the default branch",
+  "snapshot_file": "data/raw/classifier.json",
+  "sha256": "7bf5fc7086c3cd0631cff7127f428bc565383debca19ca8ca1ae106e890a6894"
+ },
+ "files_checksummed": 7689,
  "key_files": {
   "data/issues.jsonl.gz": "e03be2a4f3d33a4aafa57386e6f3319b3b38934e60251997e8402a25ef4adb03",
-  "data/sets.json": "2ed92c2a7c4390ce52c6d20f38d630fa518223ecbed3495c03ca8bac5f6d2ec7",
-  "data/bot_first_assignment.json": "6e6ea86be82c6012557e7c9dc44df4b76b42eab85859e5b2254833fc90998cf5"
+  "data/sets.json": "265d511af091e9f37cf2f4e45838c08fa669a02b0919cfddc9f1eeb0cd29bda7",
+  "data/bot_first_assignment.json": "6e6ea86be82c6012557e7c9dc44df4b76b42eab85859e5b2254833fc90998cf5",
+  "data/raw/classifier.json": "7bf5fc7086c3cd0631cff7127f428bc565383debca19ca8ca1ae106e890a6894"
  },
  "issue_numbers_sha256": "45b81d156525f75d3491aa468ab7371b00409997ac4e1e33acdf5407a80ea25b"
 }

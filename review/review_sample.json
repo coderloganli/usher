@@ -124,6 +124,315 @@
     "truth": "bug"
    }
   ],
+  "module": [
+   {
+    "number": 324895,
+    "truth": [
+     "ux"
+    ]
+   },
+   {
+    "number": 325455,
+    "truth": [
+     "api"
+    ]
+   },
+   {
+    "number": 325758,
+    "truth": [
+     "layout",
+     "ux",
+     "workbench-status"
+    ]
+   },
+   {
+    "number": 326513,
+    "truth": [
+     "api"
+    ]
+   },
+   {
+    "number": 326713,
+    "truth": [
+     "browser-integration"
+    ]
+   },
+   {
+    "number": 326726,
+    "truth": [
+     "markdown"
+    ]
+   },
+   {
+    "number": 326833,
+    "truth": [
+     "accessibility"
+    ]
+   },
+   {
+    "number": 327113,
+    "truth": [
+     "ux",
+     "workbench-views"
+    ]
+   },
+   {
+    "number": 327195,
+    "truth": [
+     "install-update"
+    ]
+   },
+   {
+    "number": 327310,
+    "truth": [
+     "web"
+    ]
+   },
+   {
+    "number": 327326,
+    "truth": [
+     "terminal"
+    ]
+   },
+   {
+    "number": 327520,
+    "truth": [
+     "ux"
+    ]
+   },
+   {
+    "number": 327616,
+    "truth": [
+     "accessibility"
+    ]
+   },
+   {
+    "number": 327721,
+    "truth": [
+     "terminal"
+    ]
+   },
+   {
+    "number": 328299,
+    "truth": [
+     "chat-terminal"
+    ]
+   },
+   {
+    "number": 328305,
+    "truth": [
+     "extensions",
+     "user-profiles"
+    ]
+   },
+   {
+    "number": 328565,
+    "truth": [
+     "ux",
+     "workbench-window"
+    ]
+   },
+   {
+    "number": 328687,
+    "truth": [
+     "editor-input-IME"
+    ]
+   },
+   {
+    "number": 328772,
+    "truth": [
+     "install-update"
+    ]
+   },
+   {
+    "number": 329291,
+    "truth": [
+     "install-update"
+    ]
+   },
+   {
+    "number": 330434,
+    "truth": [
+     "perf"
+    ]
+   },
+   {
+    "number": 330549,
+    "truth": [
+     "install-update"
+    ]
+   },
+   {
+    "number": 331311,
+    "truth": [
+     "accessibility"
+    ]
+   },
+   {
+    "number": 331457,
+    "truth": [
+     "terminal-suggest"
+    ]
+   },
+   {
+    "number": 332070,
+    "truth": [
+     "workbench-tabs"
+    ]
+   },
+   {
+    "number": 332235,
+    "truth": [
+     "terminal"
+    ]
+   },
+   {
+    "number": 333509,
+    "truth": [
+     "testing"
+    ]
+   },
+   {
+    "number": 335193,
+    "truth": [
+     "terminal-sticky-scroll"
+    ]
+   },
+   {
+    "number": 337026,
+    "truth": [
+     "containers"
+    ]
+   },
+   {
+    "number": 338051,
+    "truth": [
+     "terminal"
+    ]
+   }
+  ],
+  "duplicate": [
+   {
+    "number": 325290,
+    "truth": 325287
+   },
+   {
+    "number": 325568,
+    "truth": 325354
+   },
+   {
+    "number": 325709,
+    "truth": 323937
+   },
+   {
+    "number": 326177,
+    "truth": 326092
+   },
+   {
+    "number": 326208,
+    "truth": 326092
+   },
+   {
+    "number": 326297,
+    "truth": 326092
+   },
+   {
+    "number": 326308,
+    "truth": 326092
+   },
+   {
+    "number": 326463,
+    "truth": 326092
+   },
+   {
+    "number": 326912,
+    "truth": 325618
+   },
+   {
+    "number": 326962,
+    "truth": 321321
+   },
+   {
+    "number": 327183,
+    "truth": 326126
+   },
+   {
+    "number": 327469,
+    "truth": 316712
+   },
+   {
+    "number": 328032,
+    "truth": 316204
+   },
+   {
+    "number": 329174,
+    "truth": 328507
+   },
+   {
+    "number": 329811,
+    "truth": 289795
+   },
+   {
+    "number": 329921,
+    "truth": 329901
+   },
+   {
+    "number": 330055,
+    "truth": 329901
+   },
+   {
+    "number": 330155,
+    "truth": 329606
+   },
+   {
+    "number": 330436,
+    "truth": 329901
+   },
+   {
+    "number": 331806,
+    "truth": 312279
+   },
+   {
+    "number": 332603,
+    "truth": 234393
+   },
+   {
+    "number": 332928,
+    "truth": 332622
+   },
+   {
+    "number": 333594,
+    "truth": 333534
+   },
+   {
+    "number": 334857,
+    "truth": 334856
+   },
+   {
+    "number": 335744,
+    "truth": 334144
+   },
+   {
+    "number": 336835,
+    "truth": 321240
+   },
+   {
+    "number": 336976,
+    "truth": 215988
+   },
+   {
+    "number": 337191,
+    "truth": 334856
+   },
+   {
+    "number": 337210,
+    "truth": 316260
+   },
+   {
+    "number": 337822,
+    "truth": 337562
+   }
+  ],
   "assignee": [
    {
     "number": 324697,
@@ -310,128 +619,6 @@
      "hawkticehurst",
      "mrleemurray"
     ]
-   }
-  ],
-  "duplicate": [
-   {
-    "number": 325290,
-    "truth": 325287
-   },
-   {
-    "number": 325568,
-    "truth": 325354
-   },
-   {
-    "number": 325709,
-    "truth": 323937
-   },
-   {
-    "number": 326177,
-    "truth": 326092
-   },
-   {
-    "number": 326208,
-    "truth": 326092
-   },
-   {
-    "number": 326297,
-    "truth": 326092
-   },
-   {
-    "number": 326308,
-    "truth": 326092
-   },
-   {
-    "number": 326463,
-    "truth": 326092
-   },
-   {
-    "number": 326912,
-    "truth": 325618
-   },
-   {
-    "number": 326962,
-    "truth": 321321
-   },
-   {
-    "number": 327183,
-    "truth": 326126
-   },
-   {
-    "number": 327469,
-    "truth": 316712
-   },
-   {
-    "number": 328032,
-    "truth": 316204
-   },
-   {
-    "number": 329174,
-    "truth": 328507
-   },
-   {
-    "number": 329811,
-    "truth": 289795
-   },
-   {
-    "number": 329921,
-    "truth": 329901
-   },
-   {
-    "number": 330055,
-    "truth": 329901
-   },
-   {
-    "number": 330155,
-    "truth": 329606
-   },
-   {
-    "number": 330436,
-    "truth": 329901
-   },
-   {
-    "number": 331806,
-    "truth": 312279
-   },
-   {
-    "number": 332603,
-    "truth": 234393
-   },
-   {
-    "number": 332928,
-    "truth": 332622
-   },
-   {
-    "number": 333594,
-    "truth": 333534
-   },
-   {
-    "number": 334857,
-    "truth": 334856
-   },
-   {
-    "number": 335744,
-    "truth": 334144
-   },
-   {
-    "number": 336835,
-    "truth": 321240
-   },
-   {
-    "number": 336976,
-    "truth": 215988
-   },
-   {
-    "number": 337191,
-    "truth": 334856
-   },
-   {
-    "number": 337210,
-    "truth": 316260
-   },
-   {
-    "number": 337822,
-    "truth": 337562
    }
   ]
  }

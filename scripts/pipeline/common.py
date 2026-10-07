@@ -38,12 +38,22 @@ SPLITS = {
     "tune": ("2026-06-01T00:00:00Z", "2026-07-01T00:00:00Z"),
     "test": ("2026-07-01T00:00:00Z", "2026-10-01T00:00:00Z"),
 }
-JUDGMENTS = ["type", "assignee", "duplicate"]
+# "module" replaced "assignee" on 2026-10-07 (spec revision). The assignee judgment is still
+# built so its outputs stay on record, but it is discontinued and not evaluated further.
+JUDGMENTS = ["type", "module", "duplicate", "assignee"]
+ACTIVE_JUDGMENTS = ["type", "module", "duplicate"]
+DISCONTINUED = {"assignee": {"date": "2026-10-07",
+                             "reason": "who should own an issue depends on internal team allocation and "
+                                       "cannot be checked from public content, and many final assignees "
+                                       "in the test set never acted on the issue (see "
+                                       "manifest/assignee_check.json). Replaced by module."}}
+
 
 # Raw / intermediate data (gitignored).
 PAGES = DATA / "raw" / "issues_pages"
 TIMELINES = DATA / "raw" / "timelines"
 ISSUES = DATA / "issues.jsonl.gz"
+MODULE_LABELS_FILE = MANIFEST / "module_labels.json"
 SETS = DATA / "sets.json"
 
 

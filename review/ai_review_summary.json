@@ -22,6 +22,36 @@
     327568
    ]
   },
+  "module": {
+   "reviewed": 30,
+   "counts": {
+    "对": 30,
+    "错": 0,
+    "无法判断": 0
+   },
+   "accuracy": 1.0,
+   "ci95_low": 0.8864866068260312,
+   "ci95_high": 0.9999999999999999,
+   "cannot_judge_share": 0.0,
+   "meets_a4_point_estimate": true,
+   "ci95_low_meets_a4": true,
+   "wrong": [],
+   "cannot_judge": [],
+   "multi_module_items": {
+    "count": 4,
+    "counts": {
+     "对": 4,
+     "错": 0,
+     "无法判断": 0
+    },
+    "numbers": [
+     325758,
+     327113,
+     328305,
+     328565
+    ]
+   }
+  },
   "duplicate": {
    "reviewed": 30,
    "counts": {

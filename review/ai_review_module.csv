@@ -1,0 +1,31 @@
+number,url,truth,verdict,reason
+324895,https://github.com/microsoft/vscode/issues/324895,ux,对,issue 请求为小屏幕笔记本提供减小面板间距的“紧凑模式”，属于界面整体观感和用户体验问题，ux 标签合适。
+325455,https://github.com/microsoft/vscode/issues/325455,api,对,issue 请求在 vscode.lm 命名空间中新增读写模型可见性的扩展 API，属于扩展 API 的新增需求，api 标签合适。
+325758,https://github.com/microsoft/vscode/issues/325758,layout;ux;workbench-status,对,这是多模块 issue：内容是状态栏上下留白不均，状态栏本身对应 workbench-status，留白属于整体布局（layout）和界面观感（ux），三个标签都与问题有关。
+326513,https://github.com/microsoft/vscode/issues/326513,api,对,issue 请求提供一个重启全部语言服务器的扩展 API，属于扩展 API 需求，api 标签合适。
+326713,https://github.com/microsoft/vscode/issues/326713,browser-integration,对,issue 请求在集成浏览器的“模拟设备”选择器中支持自定义设备预设，正对应集成浏览器模块 browser-integration。
+326726,https://github.com/microsoft/vscode/issues/326726,markdown,对,issue 报告的是 Markdown 编辑器中的选中内容没有作为上下文传给聊天，Markdown 编辑器确实涉及其中，markdown 标签合理；但问题的另一半在聊天上下文，而 classifier.json 中没有对应的聊天模块标签。
+326833,https://github.com/microsoft/vscode/issues/326833,accessibility,对,issue 指出现代界面中被选中的标签页只靠颜色区分，违反无障碍准则，属于无障碍问题，accessibility 标签合适。
+327113,https://github.com/microsoft/vscode/issues/327113,ux;workbench-views,对,这是多模块 issue：内容是 Agents 窗口会话列表的悬停和选中背景相互贴合，属于界面观感（ux），会话列表是工作台中的一个视图（workbench-views），两个标签都与问题有关。
+327195,https://github.com/microsoft/vscode/issues/327195,install-update,对,issue 报告通过 winget 安装后资源管理器右键菜单没有“用 Code 打开”，属于安装配置问题，install-update 标签合适。
+327310,https://github.com/microsoft/vscode/issues/327310,web,对,issue 要求让语音模式在网页版（vscode.dev）中可用，评论也以 insiders.vscode.dev 测试，web 标签合适；语音模式本身不在 classifier.json 中。
+327326,https://github.com/microsoft/vscode/issues/327326,terminal,对,issue 请求为终端提供跨窗口重新加载保持不变的会话 ID，讨论的对象是终端及其扩展接口，terminal 标签合适。
+327520,https://github.com/microsoft/vscode/issues/327520,ux,对,issue 报告活动栏图标在侧边栏关闭时仍被高亮，是界面状态显示的问题，ux 标签合理，不过活动栏所属的工作台视图标签可能更具体。
+327616,https://github.com/microsoft/vscode/issues/327616,accessibility,对,issue 报告下一编辑建议的装订线指示器没有无障碍角色和名称、不能用键盘操作，属于无障碍问题，accessibility 标签合适。
+327721,https://github.com/microsoft/vscode/issues/327721,terminal,对,issue 报告转义序列被写入 Agent Host 的终端，评论把原因定位到 xterm 对 OSC 11 查询的应答，属于终端模块，terminal 标签合适。
+328299,https://github.com/microsoft/vscode/issues/328299,chat-terminal,对,issue 报告聊天中显示的终端输出被截断和抖动，评论中的修复也针对聊天里的终端输出区域，chat-terminal 标签合适。
+328305,https://github.com/microsoft/vscode/issues/328305,extensions;user-profiles,对,这是多模块 issue：内容是新建配置文件沿用默认配置文件的扩展时，被禁用的扩展变成了启用，同时涉及扩展管理（extensions）和配置文件（user-profiles），两个标签都与问题有关。
+328565,https://github.com/microsoft/vscode/issues/328565,ux;workbench-window,对,这是多模块 issue：内容是窗口右上角的最小化和关闭按钮与界面其余部分风格不一致，按钮属于窗口本身（workbench-window），风格问题属于界面观感（ux），两个标签都与问题有关。
+328687,https://github.com/microsoft/vscode/issues/328687,editor-input-IME,对,issue 报告在 Windows 上用 Alt+Tab 切回 VS Code 时输入法从英文切换成中文，属于编辑器输入法处理问题，editor-input-IME 标签合适。
+328772,https://github.com/microsoft/vscode/issues/328772,install-update,对,issue 报告安装目录中的 Code.exe 变成了 new_Code.exe、程序无法启动，这是 Windows 上更新未完成时留下的文件，install-update 标签合适。
+329291,https://github.com/microsoft/vscode/issues/329291,install-update,对,这是一条测试计划，内容是标题栏中“更新”按钮的位置和行为，属于更新功能，install-update 标签合适。
+330434,https://github.com/microsoft/vscode/issues/330434,perf,对,issue 提议跳过 Electron 进程间通信的缓冲区编码以提升启动性能，并给出了基准测试数据，perf 标签合适；classifier.json 中的 ipc 标签在快照中从未被使用，已不在模块标签列表里。
+330549,https://github.com/microsoft/vscode/issues/330549,install-update,对,issue 报告 1.133 版的 .deb 安装包在 Ubuntu Noble 上因依赖声明无法安装，属于安装问题，install-update 标签合适。
+331311,https://github.com/microsoft/vscode/issues/331311,accessibility,对,issue 请求在 Claude 智能体后端弹出权限确认时播放提示音，VS Code 的提示音属于无障碍信号功能，accessibility 标签合理；问题的主体是聊天和智能体，而 classifier.json 中没有对应的模块标签。
+331457,https://github.com/microsoft/vscode/issues/331457,terminal-suggest,对,issue 指出内置的 terminal-suggest 扩展只在激活时读取一次 PATH，导致终端补全不再更新，正对应 terminal-suggest 模块。
+332070,https://github.com/microsoft/vscode/issues/332070,workbench-tabs,对,issue 报告用 Alt+Tab 切回后标签页的关闭按钮卡在“关闭其他”状态，属于编辑器标签页问题，workbench-tabs 标签合适。
+332235,https://github.com/microsoft/vscode/issues/332235,terminal,对,issue 报告终端中的听写图标位置不同步，问题发生在终端里，terminal 标签合适；听写功能本身没有对应的 classifier.json 标签。
+333509,https://github.com/microsoft/vscode/issues/333509,testing,对,issue 请求在测试资源管理器的树节点上显示测试数量，属于测试功能，testing 标签合适。
+335193,https://github.com/microsoft/vscode/issues/335193,terminal-sticky-scroll,对,issue 报告终端的粘性滚动标题位置错误，正对应 terminal-sticky-scroll 模块。
+337026,https://github.com/microsoft/vscode/issues/337026,containers,对,issue 报告从 WSL 上的开发容器打开 Agents 窗口时工作区选择不正确，开发容器场景确实涉及其中，containers 标签合理；问题的主体是 Agents 窗口，而 classifier.json 中没有对应的模块标签。
+338051,https://github.com/microsoft/vscode/issues/338051,terminal,对,issue 要求在 Agent Host 聊天会话中保留 Codex 命令的完整输出，并从聊天里的终端卡片打开，命令输出和终端卡片与终端模块有关，terminal 标签合理，不过 chat-terminal 会更具体。
