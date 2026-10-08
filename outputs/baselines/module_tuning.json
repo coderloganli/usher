@@ -1,0 +1,110 @@
+{
+ "n": {
+  "train": 8057,
+  "tune": 986
+ },
+ "modules_in_train": 272,
+ "tune_modules_unseen_in_train": [
+  "notebook-remote"
+ ],
+ "tune_issues_with_only_unseen_modules": 0,
+ "tfidf_vocabulary_size": 73217,
+ "majority": {
+  "top3_labels": [
+   "ux",
+   "chat-terminal",
+   "git"
+  ],
+  "tune": {
+   "top1": 0.12271805273833672,
+   "top3": 0.22920892494929007
+  }
+ },
+ "logreg_grid": [
+  {
+   "C": 0.01,
+   "class_weight": null,
+   "converged": true,
+   "seconds": 2.0,
+   "top1": 0.12474645030425964,
+   "top3": 0.2829614604462475
+  },
+  {
+   "C": 0.01,
+   "class_weight": "balanced",
+   "converged": true,
+   "seconds": 0.9,
+   "top1": 0.44726166328600403,
+   "top3": 0.6490872210953347
+  },
+  {
+   "C": 0.1,
+   "class_weight": null,
+   "converged": true,
+   "seconds": 1.3,
+   "top1": 0.2434077079107505,
+   "top3": 0.3711967545638945
+  },
+  {
+   "C": 0.1,
+   "class_weight": "balanced",
+   "converged": true,
+   "seconds": 1.5,
+   "top1": 0.5324543610547667,
+   "top3": 0.72920892494929
+  },
+  {
+   "C": 1.0,
+   "class_weight": null,
+   "converged": true,
+   "seconds": 1.5,
+   "top1": 0.46551724137931033,
+   "top3": 0.6328600405679513
+  },
+  {
+   "C": 1.0,
+   "class_weight": "balanced",
+   "converged": true,
+   "seconds": 1.7,
+   "top1": 0.5547667342799188,
+   "top3": 0.7677484787018256
+  },
+  {
+   "C": 10.0,
+   "class_weight": null,
+   "converged": true,
+   "seconds": 1.9,
+   "top1": 0.5547667342799188,
+   "top3": 0.7596348884381339
+  },
+  {
+   "C": 10.0,
+   "class_weight": "balanced",
+   "converged": true,
+   "seconds": 1.8,
+   "top1": 0.5709939148073022,
+   "top3": 0.7677484787018256
+  },
+  {
+   "C": 100.0,
+   "class_weight": null,
+   "converged": true,
+   "seconds": 2.0,
+   "top1": 0.5578093306288032,
+   "top3": 0.7596348884381339
+  },
+  {
+   "C": 100.0,
+   "class_weight": "balanced",
+   "converged": true,
+   "seconds": 1.6,
+   "top1": 0.5709939148073022,
+   "top3": 0.7586206896551724
+  }
+ ],
+ "selection_rule": "highest tune top1, ties broken by tune top3",
+ "chosen": {
+  "C": 10.0,
+  "class_weight": "balanced"
+ }
+}
