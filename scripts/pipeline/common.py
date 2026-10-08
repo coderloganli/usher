@@ -33,9 +33,11 @@ PULL_START = "2023-01-01T00:00:00Z"
 PULL_END = "2026-10-01T00:00:00Z"
 
 # Splits by createdAt (A8), [start, end) in UTC ISO strings.
+# 2026-10-07 (Part B plan): tune widened from 2026-06 to 2026-04..06, the same length as test;
+# train ends 2026-03-31 instead of 2026-05-31. Test is unchanged.
 SPLITS = {
-    "train": ("2025-01-01T00:00:00Z", "2026-06-01T00:00:00Z"),
-    "tune": ("2026-06-01T00:00:00Z", "2026-07-01T00:00:00Z"),
+    "train": ("2025-01-01T00:00:00Z", "2026-04-01T00:00:00Z"),
+    "tune": ("2026-04-01T00:00:00Z", "2026-07-01T00:00:00Z"),
     "test": ("2026-07-01T00:00:00Z", "2026-10-01T00:00:00Z"),
 }
 # "module" replaced "assignee" on 2026-10-07 (spec revision). The assignee judgment is still

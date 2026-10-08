@@ -17,7 +17,8 @@ Rules (stage1_spec.html A7/A8):
     (ground truth = all final assignees);
   * duplicate: `duplicateOf` points to microsoft/vscode, the canonical was created
     before the issue and on/after 2023-01-01 (ground truth = canonical number);
-  * split by createdAt: train 2025-01-01..2026-05-31, tune 2026-06, test 2026-07..09.
+  * split by createdAt: train 2025-01-01..2026-03-31, tune 2026-04..06, test 2026-07..09
+    (tune widened from 2026-06 on 2026-10-07).
     Duplicate queries retrieve from all pulled issues (2023+) created before them.
   * exact-duplicate texts are kept; a test issue is FLAGGED when its normalized
     `issue_text` equals the text of some issue in the same judgment's train set.

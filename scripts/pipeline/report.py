@@ -24,7 +24,7 @@ def jname(j: str) -> str:
     """Judgment name; the discontinued assignee line is marked wherever it is listed."""
     return f"{JN[j]}（{DISCONTINUED[j]['date']} 起停用，仅作记录）" if j in DISCONTINUED else JN[j]
 SN = {"train": "训练集", "tune": "调参集", "test": "测试集"}
-SPLIT_DESC = {"train": "2025-01-01 至 2026-05-31", "tune": "2026-06-01 至 2026-06-30",
+SPLIT_DESC = {"train": "2025-01-01 至 2026-03-31", "tune": "2026-04-01 至 2026-06-30",
               "test": "2026-07-01 至 2026-09-30"}
 RULE_NAMES = {
     "bot_author": "提交者是 bot",
