@@ -143,7 +143,8 @@ def top10(s: np.ndarray, numbers: list[int]) -> list[int]:
     return [numbers[i] for i in top[np.argsort(-s[top], kind="stable")]]
 
 
-def retrieve(queries: list[dict], corpus: Corpus, bm25: BM25, emb: np.ndarray) -> list[dict]:
+def retrieve(queries: list[dict], corpus: Corpus, bm25: BM25, emb: np.ndarray,
+             methods: tuple[str, ...] = METHODS) -> list[dict]:
     out = []
     for k, q in enumerate(queries):
         qi, ci = corpus.pos[q["number"]], corpus.pos[q["truth"]]
@@ -151,9 +152,12 @@ def retrieve(queries: list[dict], corpus: Corpus, bm25: BM25, emb: np.ndarray) -
         assert ci < p <= qi, q
         s_bm = bm25.scores(corpus.texts[qi], p)
         s_em = emb[:p] @ emb[qi]
-        s_rrf = 1.0 / (RRF_K + competition_rank(s_bm)) + 1.0 / (RRF_K + competition_rank(s_em))
+        scores = {"bm25": s_bm, "embedding": s_em}
+        if "rrf" in methods:
+            scores["rrf"] = 1.0 / (RRF_K + competition_rank(s_bm)) + 1.0 / (RRF_K + competition_rank(s_em))
         row = {"query": q["number"], "original": q["truth"], "pool_size": p}
-        for m, s in (("bm25", s_bm), ("embedding", s_em), ("rrf", s_rrf)):
+        for m in methods:
+            s = scores[m]
             row[f"{m}_rank"] = pessimistic_rank(s, ci)
             row[f"{m}_top10"] = top10(s, corpus.numbers)
         out.append(row)

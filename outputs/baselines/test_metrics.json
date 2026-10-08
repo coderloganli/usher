@@ -1,0 +1,609 @@
+{
+ "n_boot": 10000,
+ "seed": 20261007,
+ "ground_truth_note": "reviewed by an AI model (Claude Opus 5.5), not human-verified",
+ "type": {
+  "n": 1848,
+  "settings": {
+   "logreg_macro_f1": {
+    "rule": "highest tune macro_f1, ties broken by tune accuracy",
+    "C": 1.0,
+    "class_weight": "balanced"
+   },
+   "logreg_accuracy": {
+    "rule": "highest tune accuracy, ties broken by tune macro_f1",
+    "C": 1.0,
+    "class_weight": null
+   }
+  },
+  "converged": {
+   "logreg_macro_f1": true,
+   "logreg_accuracy": true
+  },
+  "subsets": {
+   "all": {
+    "n": 1848,
+    "methods": {
+     "majority": {
+      "accuracy": {
+       "point": 0.6623376623376623,
+       "ci95": [
+        0.6406926406926406,
+        0.6834415584415584
+       ]
+      },
+      "macro_f1": {
+       "point": 0.0796875,
+       "ci95": [
+        0.07850098619329389,
+        0.1014946962391514
+       ]
+      },
+      "per_type": {
+       "*question": {
+        "test_count": 15,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "bug": {
+        "test_count": 1224,
+        "predicted": 1848,
+        "precision": 0.6623376623376623,
+        "recall": 1.0,
+        "f1": 0.796875
+       },
+       "debt": {
+        "test_count": 32,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "electron": {
+        "test_count": 1,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "engineering": {
+        "test_count": 1,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "feature-request": {
+        "test_count": 487,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "polish": {
+        "test_count": 57,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "under-discussion": {
+        "test_count": 24,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "upstream": {
+        "test_count": 5,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "upstream-issue-linked": {
+        "test_count": 2,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       }
+      }
+     },
+     "logreg_macro_f1": {
+      "accuracy": {
+       "point": 0.6347402597402597,
+       "ci95": [
+        0.6130952380952381,
+        0.6563852813852814
+       ]
+      },
+      "macro_f1": {
+       "point": 0.2102428504535318,
+       "ci95": [
+        0.19167132226928743,
+        0.2521136438378855
+       ]
+      },
+      "per_type": {
+       "*question": {
+        "test_count": 15,
+        "predicted": 79,
+        "precision": 0.13924050632911392,
+        "recall": 0.7333333333333333,
+        "f1": 0.23404255319148937
+       },
+       "bug": {
+        "test_count": 1224,
+        "predicted": 967,
+        "precision": 0.8614270941054809,
+        "recall": 0.6805555555555556,
+        "f1": 0.7603833865814696
+       },
+       "debt": {
+        "test_count": 32,
+        "predicted": 71,
+        "precision": 0.16901408450704225,
+        "recall": 0.375,
+        "f1": 0.23300970873786409
+       },
+       "electron": {
+        "test_count": 1,
+        "predicted": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "engineering": {
+        "test_count": 1,
+        "predicted": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "feature-request": {
+        "test_count": 487,
+        "predicted": 431,
+        "precision": 0.6844547563805105,
+        "recall": 0.6057494866529775,
+        "f1": 0.6427015250544662
+       },
+       "polish": {
+        "test_count": 57,
+        "predicted": 157,
+        "precision": 0.10191082802547771,
+        "recall": 0.2807017543859649,
+        "f1": 0.14953271028037382
+       },
+       "under-discussion": {
+        "test_count": 24,
+        "predicted": 121,
+        "precision": 0.049586776859504134,
+        "recall": 0.25,
+        "f1": 0.08275862068965517
+       },
+       "upstream": {
+        "test_count": 5,
+        "predicted": 18,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "upstream-issue-linked": {
+        "test_count": 2,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       }
+      }
+     },
+     "logreg_accuracy": {
+      "accuracy": {
+       "point": 0.7938311688311688,
+       "ci95": [
+        0.7754329004329005,
+        0.8116883116883117
+       ]
+      },
+      "macro_f1": {
+       "point": 0.2027030431643871,
+       "ci95": [
+        0.17511625974459832,
+        0.2789704918626884
+       ]
+      },
+      "per_type": {
+       "*question": {
+        "test_count": 15,
+        "predicted": 4,
+        "precision": 1.0,
+        "recall": 0.26666666666666666,
+        "f1": 0.42105263157894735
+       },
+       "bug": {
+        "test_count": 1224,
+        "predicted": 1474,
+        "precision": 0.7951153324287653,
+        "recall": 0.9575163398692811,
+        "f1": 0.8687916975537435
+       },
+       "debt": {
+        "test_count": 32,
+        "predicted": 2,
+        "precision": 0.5,
+        "recall": 0.03125,
+        "f1": 0.058823529411764705
+       },
+       "electron": {
+        "test_count": 1,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "engineering": {
+        "test_count": 1,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "feature-request": {
+        "test_count": 487,
+        "predicted": 368,
+        "precision": 0.7880434782608695,
+        "recall": 0.5954825462012321,
+        "f1": 0.6783625730994152
+       },
+       "polish": {
+        "test_count": 57,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "under-discussion": {
+        "test_count": 24,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "upstream": {
+        "test_count": 5,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       },
+       "upstream-issue-linked": {
+        "test_count": 2,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+       }
+      }
+     }
+    },
+    "differences": {
+     "logreg_macro_f1_minus_majority_macro_f1": {
+      "point": 0.1305553504535318,
+      "ci95": [
+       0.10198456448525396,
+       0.15923331905334565
+      ],
+      "excludes_zero": true
+     },
+     "logreg_macro_f1_minus_majority_accuracy": {
+      "point": -0.02759740259740262,
+      "ci95": [
+       -0.05627705627705626,
+       0.00054112554112562
+      ],
+      "excludes_zero": false
+     },
+     "logreg_accuracy_minus_majority_macro_f1": {
+      "point": 0.12301554316438709,
+      "ci95": [
+       0.09300084616425651,
+       0.17770294883796392
+      ],
+      "excludes_zero": true
+     },
+     "logreg_accuracy_minus_majority_accuracy": {
+      "point": 0.13149350649350644,
+      "ci95": [
+       0.11309523809523814,
+       0.15043290043290047
+      ],
+      "excludes_zero": true
+     },
+     "logreg_macro_f1_minus_logreg_accuracy_macro_f1": {
+      "point": 0.007539807289144718,
+      "ci95": [
+       -0.05846450537562671,
+       0.03909636611689454
+      ],
+      "excludes_zero": false
+     },
+     "logreg_macro_f1_minus_logreg_accuracy_accuracy": {
+      "point": -0.15909090909090906,
+      "ci95": [
+       -0.18073593073593064,
+       -0.137987012987013
+      ],
+      "excludes_zero": true
+     }
+    }
+   }
+  }
+ },
+ "module": {
+  "n": 687,
+  "settings": {
+   "C": 10.0,
+   "class_weight": "balanced"
+  },
+  "converged": true,
+  "test_issues_with_module_unseen_in_train": [
+   330214
+  ],
+  "subsets": {
+   "all": {
+    "n": 687,
+    "methods": {
+     "majority": {
+      "top1": {
+       "point": 0.15283842794759825,
+       "ci95": [
+        0.12663755458515283,
+        0.1790756914119354
+       ]
+      },
+      "top3": {
+       "point": 0.17612809315866085,
+       "ci95": [
+        0.14847161572052403,
+        0.2052401746724891
+       ]
+      }
+     },
+     "logreg": {
+      "top1": {
+       "point": 0.48180494905385735,
+       "ci95": [
+        0.44395924308588064,
+        0.519650655021834
+       ]
+      },
+      "top3": {
+       "point": 0.6797671033478894,
+       "ci95": [
+        0.6462518195050949,
+        0.7132459970887919
+       ]
+      }
+     }
+    },
+    "differences": {
+     "logreg_minus_majority_top1": {
+      "point": 0.3289665211062591,
+      "ci95": [
+       0.28820960698689957,
+       0.37117903930131
+      ],
+      "excludes_zero": true
+     },
+     "logreg_minus_majority_top3": {
+      "point": 0.5036390101892285,
+      "ci95": [
+       0.46433770014556036,
+       0.5429403202328966
+      ],
+      "excludes_zero": true
+     }
+    }
+   },
+   "single_module": {
+    "n": 615,
+    "methods": {
+     "majority": {
+      "top1": {
+       "point": 0.11382113821138211,
+       "ci95": [
+        0.08943089430894309,
+        0.13821138211382114
+       ]
+      },
+      "top3": {
+       "point": 0.13821138211382114,
+       "ci95": [
+        0.11219512195121951,
+        0.16585365853658537
+       ]
+      }
+     },
+     "logreg": {
+      "top1": {
+       "point": 0.4682926829268293,
+       "ci95": [
+        0.4292682926829268,
+        0.5089430894308943
+       ]
+      },
+      "top3": {
+       "point": 0.6536585365853659,
+       "ci95": [
+        0.616260162601626,
+        0.6910569105691057
+       ]
+      }
+     }
+    },
+    "differences": {
+     "logreg_minus_majority_top1": {
+      "point": 0.3544715447154472,
+      "ci95": [
+       0.31219512195121946,
+       0.39837398373983746
+      ],
+      "excludes_zero": true
+     },
+     "logreg_minus_majority_top3": {
+      "point": 0.5154471544715448,
+      "ci95": [
+       0.4715447154471545,
+       0.5593495934959349
+      ],
+      "excludes_zero": true
+     }
+    }
+   },
+   "multi_module": {
+    "n": 72,
+    "methods": {
+     "majority": {
+      "top1": {
+       "point": 0.4861111111111111,
+       "ci95": [
+        0.375,
+        0.5972222222222222
+       ]
+      },
+      "top3": {
+       "point": 0.5,
+       "ci95": [
+        0.3888888888888889,
+        0.6111111111111112
+       ]
+      }
+     },
+     "logreg": {
+      "top1": {
+       "point": 0.5972222222222222,
+       "ci95": [
+        0.4861111111111111,
+        0.7083333333333334
+       ]
+      },
+      "top3": {
+       "point": 0.9027777777777778,
+       "ci95": [
+        0.8333333333333334,
+        0.9583333333333334
+       ]
+      }
+     }
+    },
+    "differences": {
+     "logreg_minus_majority_top1": {
+      "point": 0.1111111111111111,
+      "ci95": [
+       -0.04166666666666663,
+       0.26388888888888884
+      ],
+      "excludes_zero": false
+     },
+     "logreg_minus_majority_top3": {
+      "point": 0.4027777777777778,
+      "ci95": [
+       0.29166666666666663,
+       0.5138888888888888
+      ],
+      "excludes_zero": true
+     }
+    }
+   }
+  }
+ },
+ "duplicate": {
+  "n": 268,
+  "methods_frozen": [
+   "bm25",
+   "embedding"
+  ],
+  "subsets": {
+   "all": {
+    "n": 268,
+    "methods": {
+     "bm25": {
+      "recall@1": {
+       "point": 0.1044776119402985,
+       "ci95": [
+        0.06716417910447761,
+        0.1417910447761194
+       ]
+      },
+      "recall@5": {
+       "point": 0.16417910447761194,
+       "ci95": [
+        0.12313432835820895,
+        0.208955223880597
+       ]
+      },
+      "recall@10": {
+       "point": 0.19029850746268656,
+       "ci95": [
+        0.1455223880597015,
+        0.23880597014925373
+       ]
+      }
+     },
+     "embedding": {
+      "recall@1": {
+       "point": 0.17164179104477612,
+       "ci95": [
+        0.12686567164179105,
+        0.21641791044776118
+       ]
+      },
+      "recall@5": {
+       "point": 0.33955223880597013,
+       "ci95": [
+        0.2835820895522388,
+        0.39552238805970147
+       ]
+      },
+      "recall@10": {
+       "point": 0.3880597014925373,
+       "ci95": [
+        0.332089552238806,
+        0.44402985074626866
+       ]
+      }
+     }
+    },
+    "differences": {
+     "embedding_minus_bm25_recall@1": {
+      "point": 0.06716417910447761,
+      "ci95": [
+       0.02238805970149252,
+       0.11567164179104478
+      ],
+      "excludes_zero": true
+     },
+     "embedding_minus_bm25_recall@5": {
+      "point": 0.1753731343283582,
+      "ci95": [
+       0.11940298507462685,
+       0.23507462686567163
+      ],
+      "excludes_zero": true
+     },
+     "embedding_minus_bm25_recall@10": {
+      "point": 0.19776119402985076,
+      "ci95": [
+       0.1380597014925373,
+       0.2574626865671642
+      ],
+      "excludes_zero": true
+     }
+    }
+   }
+  }
+ }
+}

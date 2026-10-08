@@ -39,7 +39,6 @@
    "C": 0.01,
    "class_weight": null,
    "converged": true,
-   "seconds": 1.0,
    "macro_f1": 0.12369065553874013,
    "accuracy": 0.6859122401847575
   },
@@ -47,7 +46,6 @@
    "C": 0.01,
    "class_weight": "balanced",
    "converged": true,
-   "seconds": 0.3,
    "macro_f1": 0.12418604911304139,
    "accuracy": 0.2161662817551963
   },
@@ -55,7 +53,6 @@
    "C": 0.1,
    "class_weight": null,
    "converged": true,
-   "seconds": 1.5,
    "macro_f1": 0.17056859433541047,
    "accuracy": 0.77459584295612
   },
@@ -63,7 +60,6 @@
    "C": 0.1,
    "class_weight": "balanced",
    "converged": true,
-   "seconds": 1.5,
    "macro_f1": 0.22180597499821952,
    "accuracy": 0.3579676674364896
   },
@@ -71,7 +67,6 @@
    "C": 1.0,
    "class_weight": null,
    "converged": true,
-   "seconds": 4.0,
    "macro_f1": 0.24751560128902034,
    "accuracy": 0.8018475750577367
   },
@@ -79,7 +74,6 @@
    "C": 1.0,
    "class_weight": "balanced",
    "converged": true,
-   "seconds": 4.2,
    "macro_f1": 0.35216673773496354,
    "accuracy": 0.6429561200923788
   },
@@ -87,7 +81,6 @@
    "C": 10.0,
    "class_weight": null,
    "converged": true,
-   "seconds": 9.6,
    "macro_f1": 0.2787782126548468,
    "accuracy": 0.7926096997690532
   },
@@ -95,7 +88,6 @@
    "C": 10.0,
    "class_weight": "balanced",
    "converged": true,
-   "seconds": 7.8,
    "macro_f1": 0.3030654615266883,
    "accuracy": 0.7413394919168591
   },
@@ -103,7 +95,6 @@
    "C": 100.0,
    "class_weight": null,
    "converged": true,
-   "seconds": 10.5,
    "macro_f1": 0.27322314670541054,
    "accuracy": 0.7773672055427252
   },
@@ -111,7 +102,6 @@
    "C": 100.0,
    "class_weight": "balanced",
    "converged": true,
-   "seconds": 10.2,
    "macro_f1": 0.3257044450778284,
    "accuracy": 0.7542725173210162
   }

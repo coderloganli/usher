@@ -74,10 +74,10 @@ def tune_type(issues: dict) -> dict:
         for cw in CW_GRID:
             t0 = time.time()
             m, ok = fit_quiet(logreg(C, cw), Xtr, ytr)
-            row = {"C": C, "class_weight": cw, "converged": ok, "seconds": round(time.time() - t0, 1),
+            row = {"C": C, "class_weight": cw, "converged": ok,
                    **type_scores(ytu, list(m.predict(Xtu)))}
             grid.append(row)
-            print("type", row, flush=True)
+            print("type", row, f"{time.time() - t0:.1f}s", flush=True)
     # Two type baselines (decided 2026-10-07 after the tune run showed that the two metrics
     # pick different settings): one selected by macro-F1, one selected by accuracy.
     best_f1 = max(grid, key=lambda g: (g["macro_f1"], g["accuracy"]))
@@ -126,10 +126,10 @@ def tune_module(issues: dict) -> dict:
             t0 = time.time()
             m, ok = fit_quiet(OneVsRestClassifier(logreg(C, cw), n_jobs=-1), Xtr, Ytr)
             order = np.argsort(-m.predict_proba(Xtu), axis=1, kind="stable")[:, :3]
-            row = {"C": C, "class_weight": cw, "converged": ok, "seconds": round(time.time() - t0, 1),
+            row = {"C": C, "class_weight": cw, "converged": ok,
                    **hit_rates(ytu, [list(classes[o]) for o in order])}
             grid.append(row)
-            print("module", row, flush=True)
+            print("module", row, f"{time.time() - t0:.1f}s", flush=True)
     best = max(grid, key=lambda g: (g["top1"], g["top3"]))
     unseen = sorted({m for t in ytu for m in t} - set(classes))
     return {
