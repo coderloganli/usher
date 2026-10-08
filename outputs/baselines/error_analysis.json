@@ -1,0 +1,149 @@
+{
+ "type_by_template": {
+  "none": {
+   "n": 1379,
+   "bug_share": 0.6722262509064539,
+   "feature_request_share": 0.24655547498187091,
+   "majority": {
+    "accuracy": 0.6722262509064539,
+    "macro_f1": 0.08933217692974849
+   },
+   "logreg_macro_f1": {
+    "accuracy": 0.6272661348803481,
+    "macro_f1": 0.30751011166804687
+   },
+   "logreg_accuracy": {
+    "accuracy": 0.7722987672226251,
+    "macro_f1": 0.25106004169887786
+   }
+  },
+  "bug_report_template": {
+   "n": 177,
+   "bug_share": 0.9378531073446328,
+   "feature_request_share": 0.01694915254237288,
+   "majority": {
+    "accuracy": 0.9378531073446328,
+    "macro_f1": 0.1935860058309038
+   },
+   "logreg_macro_f1": {
+    "accuracy": 0.6440677966101694,
+    "macro_f1": 0.12832080200501253
+   },
+   "logreg_accuracy": {
+    "accuracy": 0.9322033898305084,
+    "macro_f1": 0.19298245614035087
+   }
+  },
+  "issue_reporter": {
+   "n": 173,
+   "bug_share": 0.7456647398843931,
+   "feature_request_share": 0.18497109826589594,
+   "majority": {
+    "accuracy": 0.7456647398843931,
+    "macro_f1": 0.12204351939451277
+   },
+   "logreg_macro_f1": {
+    "accuracy": 0.5202312138728323,
+    "macro_f1": 0.15766534547099678
+   },
+   "logreg_accuracy": {
+    "accuracy": 0.7572254335260116,
+    "macro_f1": 0.1465324384787472
+   }
+  },
+  "feature_request_template": {
+   "n": 119,
+   "bug_share": 0.01680672268907563,
+   "feature_request_share": 0.9411764705882353,
+   "majority": {
+    "accuracy": 0.01680672268907563,
+    "macro_f1": 0.011019283746556474
+   },
+   "logreg_macro_f1": {
+    "accuracy": 0.8739495798319328,
+    "macro_f1": 0.11711711711711711
+   },
+   "logreg_accuracy": {
+    "accuracy": 0.8907563025210085,
+    "macro_f1": 0.42483660130718953
+   }
+  }
+ },
+ "type_accuracy_model_bug_feature_confusion": {
+  "bug_predicted_as_feature_request": 52,
+  "feature_request_predicted_as_bug": 196
+ },
+ "module_per_module_min15": {
+  "terminal": {
+   "test_issues": 67,
+   "top1": 0.08955223880597014,
+   "top3": 0.34328358208955223
+  },
+  "containers": {
+   "test_issues": 24,
+   "top1": 0.25,
+   "top3": 0.4166666666666667
+  },
+  "workbench-tabs": {
+   "test_issues": 51,
+   "top1": 0.4117647058823529,
+   "top3": 0.6666666666666666
+  },
+  "extensions": {
+   "test_issues": 15,
+   "top1": 0.4666666666666667,
+   "top3": 0.8666666666666667
+  },
+  "accessibility": {
+   "test_issues": 29,
+   "top1": 0.6896551724137931,
+   "top3": 0.896551724137931
+  },
+  "ux": {
+   "test_issues": 105,
+   "top1": 0.7047619047619048,
+   "top3": 0.9047619047619048
+  },
+  "install-update": {
+   "test_issues": 44,
+   "top1": 0.75,
+   "top3": 0.9545454545454546
+  },
+  "browser-integration": {
+   "test_issues": 58,
+   "top1": 0.7586206896551724,
+   "top3": 0.8620689655172413
+  }
+ },
+ "module_first_guess_for_terminal": {
+  "chat-terminal": 32,
+  "terminal-process": 5,
+  "terminal": 4,
+  "terminal-suggest": 2,
+  "terminal-tabs": 2
+ },
+ "module_terminal_family_in_train": {
+  "labels": 31,
+  "terminal": 179,
+  "chat-terminal": 626
+ },
+ "module_top3_misses": 220,
+ "duplicate_top10_overlap": {
+  "both": {
+   "n": 39,
+   "query_or_original_over_512_tokens": 25
+  },
+  "bm25_only": {
+   "n": 12,
+   "query_or_original_over_512_tokens": 10
+  },
+  "embedding_only": {
+   "n": 65,
+   "query_or_original_over_512_tokens": 47
+  },
+  "neither": {
+   "n": 152,
+   "query_or_original_over_512_tokens": 122
+  }
+ }
+}
