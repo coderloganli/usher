@@ -1,0 +1,246 @@
+{
+ "seed": 20261008,
+ "misses": 706,
+ "sample": [
+  {
+   "query": 239329,
+   "original": 196344,
+   "bm25_rank": 2889,
+   "embedding_rank": 964
+  },
+  {
+   "query": 242756,
+   "original": 239559,
+   "bm25_rank": 13054,
+   "embedding_rank": 44
+  },
+  {
+   "query": 247304,
+   "original": 245792,
+   "bm25_rank": 1818,
+   "embedding_rank": 110
+  },
+  {
+   "query": 251976,
+   "original": 251888,
+   "bm25_rank": 21173,
+   "embedding_rank": 33133
+  },
+  {
+   "query": 252104,
+   "original": 251888,
+   "bm25_rank": 13662,
+   "embedding_rank": 18498
+  },
+  {
+   "query": 252536,
+   "original": 251888,
+   "bm25_rank": 361,
+   "embedding_rank": 2826
+  },
+  {
+   "query": 255777,
+   "original": 239423,
+   "bm25_rank": 16336,
+   "embedding_rank": 25
+  },
+  {
+   "query": 257702,
+   "original": 234708,
+   "bm25_rank": 26890,
+   "embedding_rank": 1209
+  },
+  {
+   "query": 258999,
+   "original": 258996,
+   "bm25_rank": 14947,
+   "embedding_rank": 44068
+  },
+  {
+   "query": 262952,
+   "original": 250552,
+   "bm25_rank": 2762,
+   "embedding_rank": 25
+  },
+  {
+   "query": 267725,
+   "original": 267408,
+   "bm25_rank": 20338,
+   "embedding_rank": 10867
+  },
+  {
+   "query": 274703,
+   "original": 271897,
+   "bm25_rank": 41506,
+   "embedding_rank": 1792
+  },
+  {
+   "query": 278008,
+   "original": 277214,
+   "bm25_rank": 296,
+   "embedding_rank": 1422
+  },
+  {
+   "query": 278739,
+   "original": 248054,
+   "bm25_rank": 13666,
+   "embedding_rank": 22509
+  },
+  {
+   "query": 279430,
+   "original": 277214,
+   "bm25_rank": 903,
+   "embedding_rank": 692
+  },
+  {
+   "query": 280764,
+   "original": 278568,
+   "bm25_rank": 479,
+   "embedding_rank": 1503
+  },
+  {
+   "query": 280862,
+   "original": 276220,
+   "bm25_rank": 115,
+   "embedding_rank": 1641
+  },
+  {
+   "query": 284594,
+   "original": 278483,
+   "bm25_rank": 26794,
+   "embedding_rank": 35
+  },
+  {
+   "query": 285152,
+   "original": 274118,
+   "bm25_rank": 130,
+   "embedding_rank": 81
+  },
+  {
+   "query": 285327,
+   "original": 249239,
+   "bm25_rank": 36898,
+   "embedding_rank": 45824
+  },
+  {
+   "query": 285475,
+   "original": 285128,
+   "bm25_rank": 34,
+   "embedding_rank": 18
+  },
+  {
+   "query": 287450,
+   "original": 287311,
+   "bm25_rank": 39,
+   "embedding_rank": 70
+  },
+  {
+   "query": 290473,
+   "original": 290352,
+   "bm25_rank": 22809,
+   "embedding_rank": 11895
+  },
+  {
+   "query": 294731,
+   "original": 292297,
+   "bm25_rank": 10749,
+   "embedding_rank": 1915
+  },
+  {
+   "query": 295393,
+   "original": 295197,
+   "bm25_rank": 67831,
+   "embedding_rank": 14
+  },
+  {
+   "query": 301180,
+   "original": 300136,
+   "bm25_rank": 10334,
+   "embedding_rank": 362
+  },
+  {
+   "query": 302236,
+   "original": 299234,
+   "bm25_rank": 57,
+   "embedding_rank": 163
+  },
+  {
+   "query": 303374,
+   "original": 303202,
+   "bm25_rank": 19,
+   "embedding_rank": 10998
+  },
+  {
+   "query": 306828,
+   "original": 304116,
+   "bm25_rank": 13942,
+   "embedding_rank": 1743
+  },
+  {
+   "query": 306835,
+   "original": 306729,
+   "bm25_rank": 37,
+   "embedding_rank": 162
+  },
+  {
+   "query": 306852,
+   "original": 306729,
+   "bm25_rank": 181,
+   "embedding_rank": 47
+  },
+  {
+   "query": 307085,
+   "original": 306729,
+   "bm25_rank": 198,
+   "embedding_rank": 67
+  },
+  {
+   "query": 307130,
+   "original": 304116,
+   "bm25_rank": 9468,
+   "embedding_rank": 8529
+  },
+  {
+   "query": 308363,
+   "original": 304778,
+   "bm25_rank": 637,
+   "embedding_rank": 304
+  },
+  {
+   "query": 308364,
+   "original": 304778,
+   "bm25_rank": 14630,
+   "embedding_rank": 3475
+  },
+  {
+   "query": 310750,
+   "original": 170529,
+   "bm25_rank": 14603,
+   "embedding_rank": 84
+  },
+  {
+   "query": 313427,
+   "original": 313172,
+   "bm25_rank": 13140,
+   "embedding_rank": 33
+  },
+  {
+   "query": 314268,
+   "original": 311999,
+   "bm25_rank": 17,
+   "embedding_rank": 31
+  },
+  {
+   "query": 320711,
+   "original": 319834,
+   "bm25_rank": 136,
+   "embedding_rank": 12028
+  },
+  {
+   "query": 322323,
+   "original": 311174,
+   "bm25_rank": 15410,
+   "embedding_rank": 11434
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+query,original,bm25_rank,embedding_rank,category,reason
+239329,196344,2889,964,R,Insiders update hangs vs installer freezes; both show a stuck 'Setup/Uninstall (32 bit)' process.
+242756,239559,13054,44,N,Vietnamese input with UniKey broken in Insiders; the original reports the same; embedding rank 44.
+247304,245792,1818,110,R,Microsoft login not kept across restarts vs Settings Sync signed out with 'No credentials found in the cache'.
+251976,251888,21173,33133,R,Search cannot be stopped vs Find in Files is slow; merged by maintainers under one search issue.
+252104,251888,13662,18498,R,Results not updating after a filter change vs Find in Files is slow.
+252536,251888,361,2826,R,Search keeps running an outdated query vs Find in Files is slow.
+255777,239423,16336,25,N,Renaming a file's letter case not picked up; same problem as the original; embedding rank 25.
+257702,234708,26890,1209,R,Generic 'VS Code not updating' vs a specific cause (app not moved out of Downloads).
+258999,258996,14947,44068,J,Query body is unrelated junk text.
+262952,250552,2762,25,N,Ask mode makes edits like Agent mode; same as the original; embedding rank 25.
+267725,267408,20338,10867,U,User reports 'clear' not clearing the terminal; original is a maintainer's note on terminal sticky scroll after clear.
+274703,271897,41506,1792,U,User reports the agent hanging on commands; original is a maintainer plan item to test powerlevel10k configs.
+278008,277214,296,1422,P,'Response truncated' vs 'keeps stopping in the middle of the sentence'.
+278739,248054,13666,22509,T,Both issues are almost only an image or video.
+279430,277214,903,692,P,'Claude response cut off' vs 'keeps stopping in the middle of the sentence'.
+280764,278568,479,1503,U,User reports hover only on background sessions; original is a maintainer item to improve session tooltips.
+280862,276220,115,1641,U,User reports a misleading 'running' indicator; original is a maintainer item to show when sessions need input.
+284594,278483,26794,35,N,Gemini 'stream terminated'; same as the original; embedding rank 35.
+285152,274118,130,81,N,Playwright in the built-in browser vs native browser integration request; embedding rank 81.
+285327,249239,36898,45824,U,User reports broken installs after updates; original is a maintainer item for a better Windows update flow.
+285475,285128,34,18,N,Gemini model not answering; original reports 'no response was returned' for Gemini; embedding rank 18.
+287450,287311,39,70,C,Same JSON parse error reported by many people; other reports of it outrank the original.
+290473,290352,22809,11895,T,Query is a video with almost no text.
+294731,292297,10749,1915,H,Query body is pasted HTML markup.
+295393,295197,67831,14,N,Maximising the secondary side bar over a maximised panel; same as the original; embedding rank 14.
+301180,300136,10334,362,P,'Extremely slow when Copilot Chat is active' vs 'unusably slow since the last update'.
+302236,299234,57,163,P,'Agent finishes with todos unchecked' vs 'chat reports the TODO list as completed while the UI differs'.
+303374,303202,19,10998,L,"Query in Chinese, original in English (terminal keeps pressing Enter)."
+306828,304116,13942,1743,P,'Code block not displayed' vs 'chat hides code blocks on initial render'.
+306835,306729,37,162,C,'mgt.clearMarks' error reported by many people; other reports outrank the original.
+306852,306729,181,47,C,'mgt.clearMarks' error reported by many people; other reports outrank the original.
+307085,306729,198,67,C,'mgt.clearMarks' error reported by many people; other reports outrank the original.
+307130,304116,9468,8529,P,'Collapsed code responses' vs 'chat hides code blocks on initial render'.
+308363,304778,637,304,R,Query describes the cause (unknown tool ids in agent templates); original describes the symptom in the Problems view.
+308364,304778,14630,3475,R,Query describes the cause (agent templates written to globalStorage); original describes the symptom in the Problems view.
+310750,170529,14603,84,R,Regex search ignores match case vs regex search ignores match whole word.
+313427,313172,13140,33,N,Markdown language server crashes; same as the original; embedding rank 33.
+314268,311999,17,31,N,Hide new models by default per vendor vs BYOK models should default to hidden; embedding rank 31.
+320711,319834,136,12028,L,"Query in Chinese, original in English (remote extension icons missing)."
+322323,311174,15410,11434,R,Start menu tile turns blank after updates vs desktop icon missing after updates; same cause.
