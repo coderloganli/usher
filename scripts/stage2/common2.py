@@ -38,6 +38,17 @@ def duplicate_links(issues: dict[int, dict]) -> dict[int, tuple[int, str]]:
     return links
 
 
+AGE_GROUPS = ("up_to_7_days", "8_to_30_days", "over_30_days")
+
+
+def age_group(issues: dict[int, dict], query: int, original: int) -> str:
+    """Group by how many whole days the original was created before the query (decided 2026-10-09)."""
+    from datetime import datetime
+    p = lambda s: datetime.fromisoformat(s.replace("Z", "+00:00"))
+    d = (p(issues[query]["created_at"]) - p(issues[original]["created_at"])).days
+    return AGE_GROUPS[0] if d <= 7 else AGE_GROUPS[1] if d <= 30 else AGE_GROUPS[2]
+
+
 def found_at(k: int, query: int, original: int, original_rank: int, top: list[int],
              links: dict[int, tuple[int, str]], query_created: str) -> bool:
     """True if the original is ranked within k, or a sibling linked before the query is in top[:k]."""
