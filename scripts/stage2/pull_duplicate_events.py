@@ -8,7 +8,7 @@ createdAt, stateReason (DUPLICATE when closed as a duplicate) and duplicateOf; R
 carries createdAt. Each request asks for up to BATCH issues through aliases; every raw response
 is cached under data/raw/duplicate_events/, so an interrupted run resumes.
 
-Output: data/duplicate_events.json   {issue number: [{"event", "created_at", "state_reason",
+Output: data/duplicate_events.json   {issue number: [{"event", "created_at", "actor", "actor_type", "state_reason",
                                                       "canonical", "canonical_repo"}]}
         data/duplicate_events_meta.json   pull time and counts
 Usage:  .venv/bin/python scripts/stage2/pull_duplicate_events.py
@@ -28,12 +28,13 @@ RAW = DATA / "raw" / "duplicate_events"
 BATCH = 50
 EVENTS = ("timelineItems(first: 50, itemTypes: [MARKED_AS_DUPLICATE_EVENT, UNMARKED_AS_DUPLICATE_EVENT, "
           "CLOSED_EVENT, REOPENED_EVENT])")
+ACTOR = "actor { __typename login }"
 TARGET = "... on Issue { number repository { nameWithOwner } } ... on PullRequest { number repository { nameWithOwner } }"
 FIELDS = (f"number {EVENTS} {{ totalCount nodes {{ __typename "
-          f"... on MarkedAsDuplicateEvent {{ createdAt canonical {{ {TARGET} }} }} "
-          f"... on UnmarkedAsDuplicateEvent {{ createdAt canonical {{ {TARGET} }} }} "
-          f"... on ClosedEvent {{ createdAt stateReason duplicateOf {{ {TARGET} }} }} "
-          f"... on ReopenedEvent {{ createdAt }} }} }}")
+          f"... on MarkedAsDuplicateEvent {{ createdAt {ACTOR} canonical {{ {TARGET} }} }} "
+          f"... on UnmarkedAsDuplicateEvent {{ createdAt {ACTOR} canonical {{ {TARGET} }} }} "
+          f"... on ClosedEvent {{ createdAt {ACTOR} stateReason duplicateOf {{ {TARGET} }} }} "
+          f"... on ReopenedEvent {{ createdAt {ACTOR} }} }} }}")
 KIND = {"MarkedAsDuplicateEvent": "marked", "UnmarkedAsDuplicateEvent": "unmarked",
         "ClosedEvent": "closed", "ReopenedEvent": "reopened"}
 
@@ -70,7 +71,9 @@ def main() -> None:
             rows = []
             for e in t["nodes"]:
                 target = e.get("canonical") or e.get("duplicateOf") or {}
+                actor = e.get("actor") or {}
                 rows.append({"event": KIND[e["__typename"]], "created_at": e["createdAt"],
+                             "actor": actor.get("login"), "actor_type": actor.get("__typename"),
                              "state_reason": e.get("stateReason"), "canonical": target.get("number"),
                              "canonical_repo": (target.get("repository") or {}).get("nameWithOwner")})
             events[node["number"]] = rows
