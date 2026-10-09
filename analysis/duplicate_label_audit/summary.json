@@ -1,0 +1,30 @@
+{
+ "reviewer": "AI model (Claude Opus 5.5), not human-verified",
+ "groups": {
+  "old": {
+   "pairs": 30,
+   "counts": {
+    "different": 16,
+    "cannot_tell": 8,
+    "same": 6
+   },
+   "share_same": 0.2727272727272727,
+   "share_same_ci95": [
+    0.13150760211464035,
+    0.48151734179678934
+   ]
+  },
+  "recent": {
+   "pairs": 30,
+   "counts": {
+    "same": 25,
+    "different": 5
+   },
+   "share_same": 0.8333333333333334,
+   "share_same_ci95": [
+    0.6643564934133498,
+    0.9266345767456822
+   ]
+  }
+ }
+}

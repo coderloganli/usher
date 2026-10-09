@@ -1,0 +1,61 @@
+group,query,candidate,position,candidate_age_days,labelled_original,verdict,reason
+old,250258,234577,1,188.7,233770,different,"Both are GPU-rendering colour problems, but of different elements (character background vs bracket decorations)."
+old,251810,199935,1,562.2,234708,cannot_tell,"Both: the update never finishes, but both reports are vague and two years apart."
+old,257533,210897,1,457.5,254459,different,A: Quick Fix is no longer available; B: Copilot disappeared after an update in 2024.
+old,263209,253490,3,54.4,263207,cannot_tell,"Same generic 'no response returned' message, which has many causes."
+old,263872,223347,1,401.1,258779,different,A: unknown tool read_notebook_cell_output; B: no TSX language support in notebook cells.
+old,266496,258477,1,45.6,266302,different,A: the 'allow' button is shown wrongly in Chinese; B: 'Language model unavailable'.
+old,269431,249440,1,133.4,266058,same,Both: the agent's tool selection is not remembered.
+old,269612,182897,1,868.1,269559,cannot_tell,"Both concern the editor watermark in small areas; A is about suggested actions overlapping it, B about it being cut off."
+old,274384,253412,1,122.0,268829,different,A wants a timer for request duration; B wants a sleep/wait command.
+old,277691,259046,1,107.7,277214,cannot_tell,"Both: chat answers stop part-way, but three months apart and the reports are too generic."
+old,278053,229934,1,417.1,219542,same,Both: inline chat is mispositioned near the top of the editor when sticky scroll is on.
+old,286582,275329,1,64.8,285063,same,Both: agent mode answers with code or a plan in chat instead of editing the files.
+old,293589,199908,1,796.3,265496,different,A asks for a third-party agent extension point; B is the 2024 chat participant API announcement.
+old,293629,199260,3,802.4,292784,different,A: double-click inside a string selects part of a word after 1.109; B: double-click-and-drag does not select whole words (2023).
+old,303530,290620,2,52.6,299224,different,A is a bug in sandboxed terminals writing to /tmp; B is the test-plan item for the sandboxing feature.
+old,304681,270409,2,167.6,304680,different,A wants change summaries and reviews in the Git panel; B wants a code review started from a commit in the graph.
+old,304722,274741,3,141.9,302880,cannot_tell,"Both: unknown tool names in the shipped .agent.md files, but months apart and different tools; may be a recurrence."
+old,304749,274741,3,142.0,302880,cannot_tell,"Both: unknown tool names in the shipped .agent.md files, but months apart; may be a recurrence."
+old,305114,268323,2,181.9,304746,different,A: mode and model menus flicker in a separate chat window; B: stuck in one chat thread.
+old,311655,284930,1,118.2,311611,different,A: Auto mode fails with an endpoint error; B: the model picker shows only Auto.
+old,312795,193586,1,950.0,312720,different,A: blank window after updating Insiders on macOS in 2026; B: blank window on Ubuntu with 2023 builds.
+old,312801,211582,1,728.9,257903,different,A: Show Hover does nothing in the modal settings editor; B: showHover called from an extension does not focus the hover.
+old,314476,246683,1,384.7,314450,cannot_tell,"Both discuss icons per item vs per type in a list, but A does not say which list."
+old,314512,227255,2,612.9,314497,different,A: two ways to collapse the customization menu; B: the application menu lacks expanded state for screen readers.
+old,316600,267578,1,237.0,309223,same,Both complain that update prompts come too often.
+old,320161,185366,3,1085.0,319834,cannot_tell,"Both: extension icons missing from the Activity Bar when working remotely, but three years apart and over different remote types."
+old,320711,303385,3,82.0,319834,different,A: Remote tool icons are missing; B: the terminal keeps pressing Enter.
+old,320726,306897,1,70.6,317756,same,Same error 'mgt.clearMarks is not a function' (misspelt in A).
+old,321232,291089,1,136.0,303222,different,A: two buttons overlap in a narrow window; B: the agent session window layout breaks when editors open.
+old,323056,207752,1,833.3,313882,same,Both: the Check for Updates popup does not follow the colour theme.
+recent,252984,252364,1,5.4,251888,same,Both: search keeps running the previous query after the query or the include filter changes.
+recent,261070,261066,2,0.0,257523,same,"Both are the team's Todo tool polish item, filed minutes apart."
+recent,276745,276744,2,0.0,276743,same,Identical text submitted twice.
+recent,277502,277459,1,0.1,277266,same,Both: new releases are missing from the Microsoft RPM/YUM repository.
+recent,279699,278685,2,6.0,249983,different,A wants live token counts in chat; B: provideTokenCount is never called for an extension's model provider.
+recent,280996,280995,1,0.0,277735,different,A: a slash command permanently switches the agent; B: a prompt file does not use its agent in a new chat.
+recent,285489,285488,1,0.0,285487,same,Identical text submitted twice.
+recent,293629,293615,1,0.1,292784,same,Both: double-click inside quotes selects only part of the string after 1.109.
+recent,293662,293647,3,0.0,293661,same,Same error 'Cannot read properties of undefined (reading 'bind')' on the same Insiders build.
+recent,298629,297484,1,5.3,297857,different,A wants the invoked skill's name shown; B: skills without a name are listed as /SKILL.
+recent,302667,300947,1,6.2,301711,same,Same error 'error diffing at .requests[N].response: Unreachable' when saving the chat session.
+recent,302987,300974,2,6.8,302986,same,Same API error: text content blocks must contain non-whitespace text.
+recent,303687,303203,2,1.6,303202,same,Both: the terminal keeps pressing Enter by itself after the 1.112 update.
+recent,304749,304722,1,0.1,302880,same,Both: 'Unknown tool github/issue_read' warnings for the shipped .agent.md files in March 2026.
+recent,305178,305140,1,0.1,304746,different,A: mode switching glitches in a separate chat window; B: chat stays 'working' without progress.
+recent,305543,305195,3,0.7,304746,same,Both: the model picker fails in a chat moved into a separate window.
+recent,306787,306777,1,0.0,306729,same,Same error 'mgt.clearMarks is not a function'.
+recent,306792,306790,1,0.0,306729,same,Same error 'mgt.clearMarks is not a function'.
+recent,306795,306754,1,0.1,306729,same,Same error 'mgt.clearMarks is not a function'.
+recent,306814,306754,2,0.1,306729,same,Same error 'mgt.clearMarks is not a function'.
+recent,306822,306754,1,0.1,306729,same,Same error 'mgt.clearMarks is not a function'.
+recent,306938,306777,2,0.2,306729,same,Same error 'mgt.clearMarks is not a function'.
+recent,306947,306781,2,0.3,306729,same,Same error 'mgt.clearMarks is not a function'.
+recent,307147,306759,2,1.0,306729,same,Same error 'mgt.clearMarks is not a function'.
+recent,307921,307270,1,4.0,303151,same,Identical error message about the 'list' argument.
+recent,309829,309827,1,0.0,309766,same,"Both: 'Language model unavailable' on every prompt, filed the same day."
+recent,309864,309856,1,0.0,309766,same,Identical text submitted twice.
+recent,315108,315107,1,0.0,308822,different,A: BYOK keys are not shared between apps; B: BYOK models are unusable because the Agents app has no Local agent type.
+recent,316287,314825,1,6.9,316217,same,Both: the option to hide models in Manage Models disappeared.
+recent,317527,317445,1,0.4,313164,same,Both: the Agents window cannot connect to SSH hosts that use ProxyJump.

@@ -1,0 +1,433 @@
+{
+ "seed": 20261009,
+ "eligible": {
+  "old": 1008,
+  "recent": 368
+ },
+ "sample": {
+  "old": [
+   {
+    "query": 250258,
+    "candidate": 234577,
+    "position": 1,
+    "candidate_age_days": 188.7,
+    "labelled_original": 233770
+   },
+   {
+    "query": 251810,
+    "candidate": 199935,
+    "position": 1,
+    "candidate_age_days": 562.2,
+    "labelled_original": 234708
+   },
+   {
+    "query": 257533,
+    "candidate": 210897,
+    "position": 1,
+    "candidate_age_days": 457.5,
+    "labelled_original": 254459
+   },
+   {
+    "query": 263209,
+    "candidate": 253490,
+    "position": 3,
+    "candidate_age_days": 54.4,
+    "labelled_original": 263207
+   },
+   {
+    "query": 263872,
+    "candidate": 223347,
+    "position": 1,
+    "candidate_age_days": 401.1,
+    "labelled_original": 258779
+   },
+   {
+    "query": 266496,
+    "candidate": 258477,
+    "position": 1,
+    "candidate_age_days": 45.6,
+    "labelled_original": 266302
+   },
+   {
+    "query": 269431,
+    "candidate": 249440,
+    "position": 1,
+    "candidate_age_days": 133.4,
+    "labelled_original": 266058
+   },
+   {
+    "query": 269612,
+    "candidate": 182897,
+    "position": 1,
+    "candidate_age_days": 868.1,
+    "labelled_original": 269559
+   },
+   {
+    "query": 274384,
+    "candidate": 253412,
+    "position": 1,
+    "candidate_age_days": 122.0,
+    "labelled_original": 268829
+   },
+   {
+    "query": 277691,
+    "candidate": 259046,
+    "position": 1,
+    "candidate_age_days": 107.7,
+    "labelled_original": 277214
+   },
+   {
+    "query": 278053,
+    "candidate": 229934,
+    "position": 1,
+    "candidate_age_days": 417.1,
+    "labelled_original": 219542
+   },
+   {
+    "query": 286582,
+    "candidate": 275329,
+    "position": 1,
+    "candidate_age_days": 64.8,
+    "labelled_original": 285063
+   },
+   {
+    "query": 293589,
+    "candidate": 199908,
+    "position": 1,
+    "candidate_age_days": 796.3,
+    "labelled_original": 265496
+   },
+   {
+    "query": 293629,
+    "candidate": 199260,
+    "position": 3,
+    "candidate_age_days": 802.4,
+    "labelled_original": 292784
+   },
+   {
+    "query": 303530,
+    "candidate": 290620,
+    "position": 2,
+    "candidate_age_days": 52.6,
+    "labelled_original": 299224
+   },
+   {
+    "query": 304681,
+    "candidate": 270409,
+    "position": 2,
+    "candidate_age_days": 167.6,
+    "labelled_original": 304680
+   },
+   {
+    "query": 304722,
+    "candidate": 274741,
+    "position": 3,
+    "candidate_age_days": 141.9,
+    "labelled_original": 302880
+   },
+   {
+    "query": 304749,
+    "candidate": 274741,
+    "position": 3,
+    "candidate_age_days": 142.0,
+    "labelled_original": 302880
+   },
+   {
+    "query": 305114,
+    "candidate": 268323,
+    "position": 2,
+    "candidate_age_days": 181.9,
+    "labelled_original": 304746
+   },
+   {
+    "query": 311655,
+    "candidate": 284930,
+    "position": 1,
+    "candidate_age_days": 118.2,
+    "labelled_original": 311611
+   },
+   {
+    "query": 312795,
+    "candidate": 193586,
+    "position": 1,
+    "candidate_age_days": 950.0,
+    "labelled_original": 312720
+   },
+   {
+    "query": 312801,
+    "candidate": 211582,
+    "position": 1,
+    "candidate_age_days": 728.9,
+    "labelled_original": 257903
+   },
+   {
+    "query": 314476,
+    "candidate": 246683,
+    "position": 1,
+    "candidate_age_days": 384.7,
+    "labelled_original": 314450
+   },
+   {
+    "query": 314512,
+    "candidate": 227255,
+    "position": 2,
+    "candidate_age_days": 612.9,
+    "labelled_original": 314497
+   },
+   {
+    "query": 316600,
+    "candidate": 267578,
+    "position": 1,
+    "candidate_age_days": 237.0,
+    "labelled_original": 309223
+   },
+   {
+    "query": 320161,
+    "candidate": 185366,
+    "position": 3,
+    "candidate_age_days": 1085.0,
+    "labelled_original": 319834
+   },
+   {
+    "query": 320711,
+    "candidate": 303385,
+    "position": 3,
+    "candidate_age_days": 82.0,
+    "labelled_original": 319834
+   },
+   {
+    "query": 320726,
+    "candidate": 306897,
+    "position": 1,
+    "candidate_age_days": 70.6,
+    "labelled_original": 317756
+   },
+   {
+    "query": 321232,
+    "candidate": 291089,
+    "position": 1,
+    "candidate_age_days": 136.0,
+    "labelled_original": 303222
+   },
+   {
+    "query": 323056,
+    "candidate": 207752,
+    "position": 1,
+    "candidate_age_days": 833.3,
+    "labelled_original": 313882
+   }
+  ],
+  "recent": [
+   {
+    "query": 252984,
+    "candidate": 252364,
+    "position": 1,
+    "candidate_age_days": 5.4,
+    "labelled_original": 251888
+   },
+   {
+    "query": 261070,
+    "candidate": 261066,
+    "position": 2,
+    "candidate_age_days": 0.0,
+    "labelled_original": 257523
+   },
+   {
+    "query": 276745,
+    "candidate": 276744,
+    "position": 2,
+    "candidate_age_days": 0.0,
+    "labelled_original": 276743
+   },
+   {
+    "query": 277502,
+    "candidate": 277459,
+    "position": 1,
+    "candidate_age_days": 0.1,
+    "labelled_original": 277266
+   },
+   {
+    "query": 279699,
+    "candidate": 278685,
+    "position": 2,
+    "candidate_age_days": 6.0,
+    "labelled_original": 249983
+   },
+   {
+    "query": 280996,
+    "candidate": 280995,
+    "position": 1,
+    "candidate_age_days": 0.0,
+    "labelled_original": 277735
+   },
+   {
+    "query": 285489,
+    "candidate": 285488,
+    "position": 1,
+    "candidate_age_days": 0.0,
+    "labelled_original": 285487
+   },
+   {
+    "query": 293629,
+    "candidate": 293615,
+    "position": 1,
+    "candidate_age_days": 0.1,
+    "labelled_original": 292784
+   },
+   {
+    "query": 293662,
+    "candidate": 293647,
+    "position": 3,
+    "candidate_age_days": 0.0,
+    "labelled_original": 293661
+   },
+   {
+    "query": 298629,
+    "candidate": 297484,
+    "position": 1,
+    "candidate_age_days": 5.3,
+    "labelled_original": 297857
+   },
+   {
+    "query": 302667,
+    "candidate": 300947,
+    "position": 1,
+    "candidate_age_days": 6.2,
+    "labelled_original": 301711
+   },
+   {
+    "query": 302987,
+    "candidate": 300974,
+    "position": 2,
+    "candidate_age_days": 6.8,
+    "labelled_original": 302986
+   },
+   {
+    "query": 303687,
+    "candidate": 303203,
+    "position": 2,
+    "candidate_age_days": 1.6,
+    "labelled_original": 303202
+   },
+   {
+    "query": 304749,
+    "candidate": 304722,
+    "position": 1,
+    "candidate_age_days": 0.1,
+    "labelled_original": 302880
+   },
+   {
+    "query": 305178,
+    "candidate": 305140,
+    "position": 1,
+    "candidate_age_days": 0.1,
+    "labelled_original": 304746
+   },
+   {
+    "query": 305543,
+    "candidate": 305195,
+    "position": 3,
+    "candidate_age_days": 0.7,
+    "labelled_original": 304746
+   },
+   {
+    "query": 306787,
+    "candidate": 306777,
+    "position": 1,
+    "candidate_age_days": 0.0,
+    "labelled_original": 306729
+   },
+   {
+    "query": 306792,
+    "candidate": 306790,
+    "position": 1,
+    "candidate_age_days": 0.0,
+    "labelled_original": 306729
+   },
+   {
+    "query": 306795,
+    "candidate": 306754,
+    "position": 1,
+    "candidate_age_days": 0.1,
+    "labelled_original": 306729
+   },
+   {
+    "query": 306814,
+    "candidate": 306754,
+    "position": 2,
+    "candidate_age_days": 0.1,
+    "labelled_original": 306729
+   },
+   {
+    "query": 306822,
+    "candidate": 306754,
+    "position": 1,
+    "candidate_age_days": 0.1,
+    "labelled_original": 306729
+   },
+   {
+    "query": 306938,
+    "candidate": 306777,
+    "position": 2,
+    "candidate_age_days": 0.2,
+    "labelled_original": 306729
+   },
+   {
+    "query": 306947,
+    "candidate": 306781,
+    "position": 2,
+    "candidate_age_days": 0.3,
+    "labelled_original": 306729
+   },
+   {
+    "query": 307147,
+    "candidate": 306759,
+    "position": 2,
+    "candidate_age_days": 1.0,
+    "labelled_original": 306729
+   },
+   {
+    "query": 307921,
+    "candidate": 307270,
+    "position": 1,
+    "candidate_age_days": 4.0,
+    "labelled_original": 303151
+   },
+   {
+    "query": 309829,
+    "candidate": 309827,
+    "position": 1,
+    "candidate_age_days": 0.0,
+    "labelled_original": 309766
+   },
+   {
+    "query": 309864,
+    "candidate": 309856,
+    "position": 1,
+    "candidate_age_days": 0.0,
+    "labelled_original": 309766
+   },
+   {
+    "query": 315108,
+    "candidate": 315107,
+    "position": 1,
+    "candidate_age_days": 0.0,
+    "labelled_original": 308822
+   },
+   {
+    "query": 316287,
+    "candidate": 314825,
+    "position": 1,
+    "candidate_age_days": 6.9,
+    "labelled_original": 316217
+   },
+   {
+    "query": 317527,
+    "candidate": 317445,
+    "position": 1,
+    "candidate_age_days": 0.4,
+    "labelled_original": 313164
+   }
+  ]
+ }
+}
