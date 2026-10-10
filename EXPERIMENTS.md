@@ -1,0 +1,185 @@
+# Usher: experiment record
+
+This is the chronological record of the experiments and decisions that led to the pipeline in [README.md](README.md). Each entry gives the date, the question, what was done (script and commit), the data used, the result numbers, the decision and the reason.
+
+Conventions used throughout:
+
+- "Train", "tune" and "test" refer to issues created 2025-01 to 2026-03, 2026-04 to 2026-06 and 2026-07 to 2026-09 (after the re-split of 2026-10-07; see entry 4).
+- "Development queries" are the 1,205 duplicate queries from the train and tune periods (864 + 341). Stage-2 work uses only these; the test set has been used once, in entry 7.
+- Intervals are 95% bootstrap intervals with 10,000 resamples and a fixed seed; differences are paired. "Points" are percentage points.
+- Ground truth is the maintainers' final labels and `duplicateOf` links. Where a check of it is mentioned, it was reviewed by an AI model (Claude Opus 5.5), not human-verified.
+- Dates are when the decision was made according to the lead session's decision notes; commit dates are given with each commit. Where they differ, both are stated.
+
+## Evaluation rules in force
+
+| Rule | Decided |
+|---|---|
+| Replay: a duplicate query is matched only against snapshot issues (from 2023-01) created strictly before it, including bot-authored and unlabeled issues; bot-authored issues are not queries. BM25 statistics come from that pool only. | 2026-10-07 (Part B plan) |
+| Develop only on train/tune (for duplicates: the 1,205 development queries); freeze the method and settings; then use the test set once. No change after seeing test results. | 2026-10-07 (Part B plan) |
+| Every score has a 95% percentile bootstrap interval with 10,000 resamples and a fixed seed (20261007 in `outputs/baselines/test_metrics.json`); differences use paired bootstrap on the same resamples. The resample count was raised from the spec's 1,000. | 2026-10-07 (Part B plan; recorded as a spec revision dated 2026-10-08) |
+| Primary metrics: type macro-F1 (against the LR selected by macro-F1) and accuracy (against the LR selected by accuracy); module top-1 hit rate; duplicate recall@10 (recall@1 and recall@5 also reported). | 2026-10-07 |
+| Ties in duplicate ranking are pessimistic: the true original is ranked last among candidates with an equal score. | 2026-10-07 |
+| Adoption of a new method or variant only by a decision rule fixed before the run, based on a paired bootstrap interval of the difference lying entirely above 0. | 2026-10-07 (first used for RRF in entry 6) |
+| Sibling rule: a duplicate query counts as found at k if the original, or a sibling whose duplicate link to the same original was created before the query, is among the first k candidates. | 2026-10-08 (timed version; see entries 10 and 11) |
+| Age-group reporting: every duplicate method reports recall@10 overall and for originals created at most 7 days, 8 to 30 days and more than 30 days before the query (development queries 640 / 216 / 349; test queries 114 / 44 / 110). No new method may be significantly worse (paired bootstrap) on the more-than-30-days group. LLM methods are judged by age group too. | 2026-10-09 |
+| Model choice for a component with candidate models: choose on the 864 train-period development queries, then validate the chosen one against the current method on the 341 tune-period queries with a pre-set rule. | 2026-10-09 (cross-encoder protocol, entry 18) |
+| Ground truth is always described as reviewed by an AI model (Claude Opus 5.5), not human-verified. | 2026-10-07 |
+| Every protocol that chooses among candidates states its tie-break in advance (default: the cheaper option, then the simpler one). Added after an unplanned tie in entry 19. | 2026-10-10 |
+
+The age-group counts above were checked against `data/sets.json` and `data/issues.jsonl.gz` (train 432 / 162 / 270, tune 208 / 54 / 79, test 114 / 44 / 110).
+
+## Stage 1: data and baselines
+
+### 1. Data snapshot and filtering (2026-10-04 to 2026-10-06)
+
+- **Question.** Can a clean, reproducible dataset for the judgments be built from public `microsoft/vscode` issues?
+- **What was done.** GraphQL bulk pull of every issue created 2023-01-01 to 2026-09-30, filters, time split, snapshot manifest (`scripts/pipeline/`, `run_data.sh`; commits `ee23cb6`, `215c0cb`, `5b8e74d`, `f1293cd`, `0778f3f`, `eb6be7d`). Bots are detected by login and by GitHub account type; empty-body issues are dropped (both added 2026-10-06).
+- **Data.** 107,422 issues pulled on 2026-10-05.
+- **Result.** Filtered sets per judgment; counts in `manifest/counts.json`.
+- **Decision.** Adopted as the stage-1 dataset.
+
+### 2. AI review of the ground truth (2026-10-06 to 2026-10-07)
+
+- **Question.** Is the ground truth correct often enough (spec standard: at least 85%)?
+- **What was done.** 30 random test issues per judgment were judged from public content by an AI model (Claude Opus 5.5), not human-verified (`scripts/pipeline/ai_review_summary.py`; commits `f443647`, `5c5ac77`). The review was originally planned as a human review and was changed to an AI review on 2026-10-07.
+- **Result** (`review/ai_review_summary.json`). Type: 28 right, 0 wrong, 2 cannot judge (accuracy 100%, interval 87.9% to 100%). Module: 30 right of 30 (interval 88.6% to 100%). Duplicate: 27 right, 1 wrong, 2 cannot judge (accuracy 96.4%, interval 82.3% to 99.4%; the lower bound is below 85%).
+- **Decision.** All three judgments meet the 85% standard on the point estimate; the duplicate interval caveat is reported.
+
+### 3. Assignee judgment replaced by module (2026-10-07)
+
+- **Question.** Can the assignee ground truth be checked from public information?
+- **What was done.** For every assignee test issue, a check of whether any final assignee acted on it (`scripts/pipeline/assignee_check.py`, commit `f443647`); module judgment added (`scripts/pipeline/module_labels.py`, `build_sets.py`, commit `5c5ac77`).
+- **Result.** In 3,166 of the 6,569 assignee test issues (48.2%), no final assignee acted on the issue at all (`manifest/assignee_check.json`; the spec revision of 2026-10-07 gives the same 48.2%).
+- **Decision.** Assignee discontinued; replaced by module (291 module labels from `classifier.json` keys that occur on at least one pulled issue). Reason: who should own an issue depends on internal team allocation and cannot be checked publicly.
+
+### 4. Re-split: tune widened to three months (2026-10-07)
+
+- **Question.** Is a one-month tune set (2026-06) large enough to choose settings?
+- **What was done.** Train shortened to 2025-01 to 2026-03, tune widened to 2026-04 to 2026-06, test unchanged (commit `a8828d4`, 2026-10-07). Train starts 2025-01 by the user's choice (newer data), not by tuning.
+- **Result.** Counts (train / tune / test): type 13,554 / 2,165 / 1,848; module 8,057 / 986 / 687; duplicate 864 / 341 / 268. Test sets, the AI review sample and raw checksums were unchanged. Before the change the June tune set had only 621 type and 255 module issues (spec revision note).
+- **Decision.** Adopted.
+
+### 5. Type and module baselines tuned on the tune set (2026-10-07)
+
+- **Question.** Which settings of the TF-IDF + logistic regression baselines should be frozen?
+- **What was done.** `scripts/baselines/classify.py` (commit `7ba4c44`): TF-IDF with scikit-learn defaults; grid C in {0.01, 0.1, 1, 10, 100} x class_weight in {none, balanced}; fit on train, score on tune. Outputs `outputs/baselines/type_tuning.json`, `module_tuning.json`.
+- **Data.** Train and tune only.
+- **Result.** Type: majority (`bug`) tune accuracy 63.8%, macro-F1 0.087. Best by macro-F1: C = 1, balanced (macro-F1 0.352, accuracy 64.3%). Best by accuracy: C = 1, no weighting (macro-F1 0.248, accuracy 80.2%). Module: majority top-1 12.3%, top-3 22.9%; chosen C = 10, balanced (top-1 57.1%, top-3 76.8%).
+- **Decision.** Adopted. Because the two type metrics chose different settings, two type LR baselines are kept (a revision of the plan made the same day).
+
+### 6. Duplicate retrievers on development queries, raw text (2026-10-07)
+
+- **Question.** BM25 or embedding retrieval, and is their RRF fusion better than the better one?
+- **What was done.** `scripts/baselines/dedup.py` (commit `3568728`): BM25 (lowercase word tokens, k1 = 1.2, b = 0.75); `BAAI/bge-small-en-v1.5` (pinned revision, no instruction, 512-token truncation, cosine); RRF with k = 60. Rule fixed in advance: keep RRF only if RRF minus the better single method on recall@10 has an interval entirely above 0. Output `outputs/baselines/duplicate_dev.json`.
+- **Data.** 1,205 development queries; title + raw body; scored against the original only (the sibling rule did not exist yet).
+- **Result.** Recall@10: BM25 25.2%, embedding 35.1%, RRF 36.2%. Embedding minus BM25 +9.9 points [+7.4, +12.5]. RRF minus embedding +1.1 points [-1.1, +3.2].
+- **Decision.** RRF not adopted (fails the pre-set rule). BM25 and embedding frozen.
+
+### 7. One-shot test evaluation of the frozen baselines (2026-10-08)
+
+- **Question.** How good are the frozen baselines on the test set? These scores are the targets for stage 2.
+- **What was done.** `scripts/baselines/evaluate_test.py` (commit `4fa7b4c`); final models trained on train only. Output `outputs/baselines/test_metrics.json`.
+- **Data.** Test set (2026-07 to 2026-09), used once.
+- **Result.** Type (1,848 issues): majority accuracy 66.2%, macro-F1 0.080; LR (macro-F1) macro-F1 0.210 [0.192, 0.252], accuracy 63.5%; LR (accuracy) accuracy 79.4% [77.5, 81.2], macro-F1 0.203. The two LRs' macro-F1 difference is +0.008 [-0.058, +0.039], not significant; the tune-set gap disappeared. Module (687 issues): LR top-1 48.2% [44.4, 52.0], top-3 68.0%; majority top-1 15.3%, top-3 17.6%. Duplicate (268 queries, original only, raw text): embedding recall@10 38.8% [33.2, 44.4], BM25 19.0%.
+- **Decision.** Stage-2 targets set: type macro-F1 0.210 and accuracy 79.4%; module top-1 48.2%; duplicate recall@10 38.8%.
+
+### 8. Stage-1 report and publication decision (2026-10-08)
+
+- **What was done.** `scripts/baselines/report.py` writes `docs/baselines.html` from the outputs (commit `e144b0f`); `./run_baselines.sh` reproduces every output and the report byte for byte.
+- **Decision.** Stage 1 complete. It is not published, because baselines alone are not worth publishing. If published later: a snapshot of the current files only, no git history, no HTML files, centred on a README.
+
+## Stage 2: duplicate detection (no LLM used yet)
+
+### 9. Which judgment first (2026-10-08)
+
+- **Question.** Where should stage 2 start?
+- **Decision.** Duplicate detection, raising recall@10 first, because retrieval recall caps any later reranking. Stage-2 work stays on branch `stage1-data`.
+
+### 10. Diagnosis of 40 development misses (2026-10-08; committed 2026-10-09)
+
+- **Question.** Why does retrieval miss the original?
+- **What was done.** `analysis/duplicate_miss_diagnosis/sample.py` drew 40 of the development queries that both stage-1 retrievers missed in the top 10 (raw text); an AI model (Claude Opus 5.5) read and categorised them, not human-verified; `summary.py` counts them (commit `086fb8f`, 2026-10-09).
+- **Data.** 706 development queries missed by both retrievers (raw text, original only); 40 sampled.
+- **Result** (`analysis/duplicate_miss_diagnosis/summary.json`). Categories of the 40: different symptoms with the same root cause 10; near miss (original ranked 11 to 100) 9; same symptom in very different wording 6; original is a maintainer's technical or tracking issue 5; a sibling duplicate retrieved instead 4; cross-language 2; little text 2; pasted HTML 1; spam 1. Embedding rank of the 706 missed originals: 142 at 11 to 50, 130 at 51 to 200, 434 beyond 200. Of the 706 misses, 211 have a sibling (judged from final-state `duplicateOf` links, link time not checked) in the embedding or BM25 top 10 (178 in the embedding top 10). The reading also found that templates and system-information tables use up the 512-token embedding window.
+- **Decision.** Analysis only. It motivated the sibling rule (entry 11) and text cleaning (entry 13).
+
+### 11. Count sibling duplicates as found; time the links (2026-10-08)
+
+- **Question.** Should a candidate that is another duplicate of the same original count as a correct answer, and how to avoid using links that did not yet exist?
+- **What was done.** First decision (2026-10-08): count siblings as found, using final-state links. Then `scripts/stage2/pull_duplicate_events.py` (commit `b948b01`, 2026-10-08) pulled the timeline events that create duplicate links (GitHub GraphQL `MarkedAsDuplicateEvent`, `UnmarkedAsDuplicateEvent`, and `ClosedEvent` with state reason `DUPLICATE`; fields verified by schema introspection on 2026-10-08). The pull was re-run on 2026-10-09 (2026-10-09T15:36Z to 15:37Z, `data/duplicate_events_meta.json`) to add who created each event (commit `70fac06`, entry 14); apart from the new actor fields the 2,667 events were identical to the first pull.
+- **Result.** 2,289 of the 2,304 snapshot links get a creation time. Development recall@10 of the stage-1 retrievers (raw text): original only, embedding 35.1% and BM25 25.2%; with final-state siblings 51.5% and 38.0% (decision notes; not found in a result file); with timed siblings (the adopted rule) 44.1% and 32.3% (`outputs/stage2/duplicate_clean_dev.json`, "raw"). The decision notes give a median of 2.5 days from issue creation to link; this figure is not in a result file.
+- **Decision.** Adopted: the sibling rule with link times (a sibling counts only if its link to the same original was created before the query). Baselines are re-scored with it on development data; the stage-1 test scores have not been re-scored.
+
+### 12. Following duplicate-graph links as a retrieval method (2026-10-08)
+
+- **Question.** Should retrieval follow `duplicateOf` links from retrieved candidates to their originals?
+- **Decision.** Not adopted, not run. Under the sibling rule a retrieved sibling already counts as found, so following its link adds nothing to the metric.
+
+### 13. Text cleaning (2026-10-08)
+
+- **Question.** Does removing automatically added template and system content raise recall?
+- **What was done.** `scripts/stage2/dedup_clean.py` (commit `4b3eccc`): cleaning rules as listed in README.md; same BM25 and embedding settings as stage 1. Rule fixed in advance: adopt cleaning for a method only if cleaned minus raw recall@10 has an interval entirely above 0. Output `outputs/stage2/duplicate_clean_dev.json`.
+- **Data.** 1,205 development queries, sibling rule.
+- **Result.** Recall@10, raw to cleaned: embedding 44.1% to 50.5% (+6.4 [+4.4, +8.5]); BM25 32.3% to 43.5% (+11.2 [+9.0, +13.5]). Recall@1 and recall@5 also improve for both, with intervals above 0.
+- **Decision.** Adopted for both. New comparison point: embedding retrieval on cleaned text, development recall@10 50.5%. Agreed order: non-LLM cleaning first, then LLM query rewriting on cleaned text, with the two gains reported separately (LLM rewriting has not been done).
+
+### 14. Who creates duplicate links, and how many duplicates have links (2026-10-09)
+
+- **Question.** Are duplicate links created by bots or by people, and how complete are they?
+- **What was done.** Part 1 of `analysis/duplicate_recency_signals/signals.py` (commit `70fac06`, the link-maker record; script committed in `086fb8f`). The label count below was checked from `data/issues.jsonl.gz` for this record.
+- **Result** (`analysis/duplicate_recency_signals/signals.json`). All 2,289 timed links were created by `User` accounts through a `closed` event (closing the issue as a duplicate); none by a bot or by a separate "marked as duplicate" event. 212 distinct accounts created them; the most active account created 331. An earlier report of 99 accounts was wrong (it was taken from one subgroup). Among issues created 2025-01 to 2026-09, 3,471 carry the `*duplicate` label but no link, while 2,168 have a link (2,052 of these without the label), so only about 38% of known duplicates have a usable link.
+- **Decision.** Analysis only. The ground truth is human decisions and is incomplete.
+
+### 15. Recency and popularity signals; metadata-reranking prototype (2026-10-09)
+
+- **Question.** Do time and popularity signals predict the original, and does reranking by them help?
+- **What was done.** Parts 2 to 4 of `analysis/duplicate_recency_signals/signals.py` (commit `086fb8f`): statistics on embedding retrieval on cleaned text, and a prototype logistic regression on cosine, log(1 + candidate age in days), log(1 + links already pointing at the candidate) and 1/rank, fitted on train-period queries and scored on tune-period queries (top 100).
+- **Data.** Development queries, sibling rule.
+- **Result.** In the top 100 of the 864 train-period queries, 75.8% of correct candidates (1,189 of 1,569) were created at most 7 days before the query. On the 341 tune-period queries, recall@10 rose from 48.1% to 62.8% (+14.7 [+10.3, +19.1]). By original age (the prototype's own grouping: 205 / 57 / 79 queries): at most 7 days 47.3% to 69.3% (45 gained, 0 lost); 7 to 30 days 43.9% to 57.9%; more than 30 days 53.2% to 49.4% (4 gained, 7 lost).
+- **Decision.** Not adopted as a method; kept only as an "imitate maintainers" contrast (possibly a two-column card in stage 4). Reason: all the gain is on recent originals and old originals get worse; the model learns maintainers' limited memory from biased labels (the user raised this concern, citing the idea of learning from biased demonstrations; a literature check found the closest established framings to be positive-unlabeled learning with selection bias and unbiased learning-to-rank with propensity weighting). Approved consequences: the age-group reporting rule (see rules above), and an audit of high-ranked "wrong" candidates (entry 16). The final decision on metadata reranking was deferred until LLM methods are evaluated with age groups.
+
+### 16. Audit of high-ranked "wrong" candidates (2026-10-09)
+
+- **Question.** How often is a high-ranked candidate that the labels call wrong actually a duplicate, for recent and for old candidates?
+- **What was done.** `analysis/duplicate_label_audit/sample.py` drew, from embedding retrieval on cleaned text, top-3 candidates that are neither the original nor a timed sibling: 30 created at most 7 days before the query ("recent") and 30 more than 30 days before ("old"). An AI model (Claude Opus 5.5) judged each pair from public title and body, partially blind (shuffled order, group and dates hidden, issue numbers visible); not human-verified. `summary.py` counts them (commit `750da7c`).
+- **Result** (`analysis/duplicate_label_audit/summary.json`). Recent: 25 of 30 report the same problem (83%, Wilson interval 66% to 93%). Old: 6 of 22 decidable (27%, interval 13% to 48%), 16 different, 8 cannot tell.
+- **Decision.** Analysis only. The labels miss many duplicates in both groups, so recall is underestimated. The idea that maintainers miss old duplicates more is not supported by this audit.
+
+### 17. RRF fusion on cleaned text (2026-10-09)
+
+- **Question.** With cleaned text, does RRF of BM25 and embedding beat embedding alone?
+- **What was done.** `scripts/stage2/dedup_fusion.py` (commit `af7777a`): RRF k = 60 on cleaned text. Rule fixed in advance: adopt only if RRF minus embedding recall@10 has an interval entirely above 0 and the more-than-30-days interval is not entirely below 0. Output `outputs/stage2/duplicate_fusion_dev.json`.
+- **Data.** 1,205 development queries, sibling rule.
+- **Result.** Recall@10: RRF 52.8% vs embedding 50.5%, +2.3 [+0.2, +4.5]. At most 7 days (640 queries): +4.5 [+1.7, +7.2]. 8 to 30 days (216): +0.5 [-5.1, +6.0]. More than 30 days (349): recall@10 -0.6 [-4.6, +3.4]; recall@5 -3.7 [-8.0, +0.3]. The output file records `adopt_rrf: true`, meaning the pre-set rule was passed.
+- **Decision.** Not adopted, by the user's decision on 2026-10-09 despite passing the rule. Reasons: the gain is small and confined to recent originals; it needs an extra BM25 index to maintain; and its rank-only scores are useless as confidence for stage 3. Main line stays embedding retrieval on cleaned text (development recall@10 50.5%).
+
+### 18. Local cross-encoder rerank of the embedding top 50 (2026-10-09 to 2026-10-10)
+
+- **Question.** Does a local cross-encoder reranking the embedding top 50 raise recall@10? (The user moved this before LLM reranking.)
+- **What was done.** `scripts/stage2/dedup_crossencoder.py` (commit `542393d`, 2026-10-10). Candidates: embedding retrieval on cleaned text, top 50. Models chosen by the user: `cross-encoder/quora-distilroberta-base` (82M parameters, trained on Quora duplicate questions, 254 tokens per side) and `Alibaba-NLP/gte-reranker-modernbert-base` (149M parameters, 1,024 tokens per side), both at pinned revisions. Protocol fixed in advance: choose the model on train-period queries by recall@10 (tie to the smaller model); validate on tune-period queries, adopting only if the recall@10 difference interval is entirely above 0 and the more-than-30-days interval is not entirely below 0. Output `outputs/stage2/duplicate_crossencoder_dev.json`.
+- **Data.** 864 train-period queries for the choice; 341 tune-period queries for validation; sibling rule.
+- **Result.** Choice (train period), recall@10: gte-reranker-modernbert 55.2%, embedding alone 51.4%, quora-distilroberta 34.0%. Validation (tune period), recall@10: embedding 48.1% to reranked 56.0%, +7.9 [+3.8, +12.0]; at most 7 days (208) +7.2 [+2.4, +12.5]; 8 to 30 days (54) +7.4 [-3.7, +18.5]; more than 30 days (79) 53.2% to 63.3%, +10.1 [+1.3, +19.0]. Runtime on an Apple MPS device: about 2.2 s per query (1,908.0 s for 864 queries, 746.9 s for 341).
+- **Decision.** Adopted. It passes both conditions, and unlike entries 15 and 17 its largest gain is on old originals. New comparison point for LLM methods: embedding top 50 + cross-encoder rerank, tune-period recall@10 56.0%. Its test score has not been measured.
+
+### 19. LLM query rewriting before retrieval (2026-10-10)
+
+- **Question.** Does rewriting the query with an LLM, used only for the retrieval step, raise recall@10 of the current best pipeline (embedding top 50 + cross-encoder)?
+- **What was done.** `scripts/stage2/dedup_rewrite.py`. Model `gpt-4o-mini-2024-07-18` (Chat Completions, official `openai` package 3.28.0), temperature 0, fixed seed, at most 300 output tokens; query text = cleaned text cut to 4,000 tokens. Three styles: summary (a title and two or three sentences, errors copied exactly), keywords (10 to 20 identifying keywords and phrases, as in CUPID), hyde (a hypothetical earlier issue, at most 150 words, as in HyDE). Two uses each: the rewrite alone, or the rewrite followed by the cleaned text; 6 configurations. The rewrite is embedded with the same model to get the top 50; the cross-encoder then reads the query's cleaned text, not the rewrite. Protocol fixed in advance: choose the configuration with the highest final recall@10 on train-period queries; validate on tune-period queries against the current best; adopt only if the recall@10 difference interval is entirely above 0 and the more-than-30-days interval is not entirely below 0. Outputs `outputs/stage2/duplicate_rewrite_trial_cost.json`, `duplicate_rewrite_cost.json`, `duplicate_rewrite_retrieval_train.json`, `duplicate_rewrite_rerank.json`; the rewrites themselves stay in the git-ignored `data/stage2/rewrites/` because they paraphrase issue text.
+- **Data.** 100-query trial, then all 1,205 development queries; sibling rule.
+- **Cost.** 3,615 calls in total, US$0.43 at standard prices (trial US$0.036); 2 outputs reached the length limit. The 100 trial calls ran on 41 to 45 distinct `system_fingerprint` values per style, so repeating the calls would not reproduce the same text; only the cached responses make the results reproducible.
+- **Result.** Retrieval only (864 train-period queries), recall@50: no rewrite 68.4%; best configuration (keywords + original) 70.4%; summary alone and keywords alone are below no rewrite. After cross-encoder reranking, recall@10: no rewrite 55.2%; summary alone 53.9%, summary + original 55.2%, keywords alone 53.4%, keywords + original 56.0%, hyde alone 55.9%, hyde + original 56.0%. Keywords + original and hyde + original tied; no tie-break had been set, and the code took the first (keywords), which is also the cheaper (US$0.13 vs US$0.17 for all queries). Validation (341 tune-period queries), recall@10: current best 56.0%, keywords + original 55.4%, difference -0.6 [-3.5, +2.3]; at most 7 days 0.0 [-3.8, +3.8]; 8 to 30 days +5.6 [-1.9, +13.0]; more than 30 days 63.3% to 57.0%, -6.3 [-12.7, -1.3].
+- **Decision.** Not adopted (fails the rule; significantly worse on originals over 30 days old). Inference: rewriting turns the query into a generic description of the symptom and loses specific details such as exact error text and setting names, which matter more for older originals. Difference from CUPID: CUPID fed keywords to a word-matching method (REP); here they were only embedded; keywords with BM25 were not tried because BM25 is not in the main line. LLM reranking of the cross-encoder's list was set aside by the user (small remaining headroom; the user's view is that the LLM is more useful for classification).
+
+### 20. One-time test of the final duplicate pipeline (2026-10-10)
+
+- **Question.** How does the frozen stage-2 duplicate pipeline (cleaned text, embedding top 50, cross-encoder rerank) do on the test set, compared with the stage-1 baseline?
+- **What was done.** `scripts/stage2/dedup_final.py`, run through `./run_stage2_duplicate.sh` once on the test split; first checked on tune-period queries, where it reproduced the earlier numbers exactly (final pipeline 56.0%, stage-1 baseline 41.6%, the latter matching the stage-1 development run restricted to those queries). The stage-1 baseline (embedding retrieval on raw text) was rescored with the sibling rule on the same queries; its method was not changed. Outputs `outputs/stage2/duplicate_final_tune.json`, `duplicate_final_test.json`.
+- **Data.** 268 test queries (2026-07 to 2026-09), never used by any stage-2 experiment before.
+- **Result.** Recall@10, sibling rule: stage-1 baseline 45.9% [39.9, 51.9], final pipeline 61.2% [55.2, 66.8], difference +15.3 [+9.7, +20.9]. By original age: at most 7 days (114) 43.0% to 55.3%, +12.3 [+5.3, +20.2]; 8 to 30 days (44) 50.0% to 63.6%, +13.6 [+0.0, +27.3]; more than 30 days (110) 47.3% to 66.4%, +19.1 [+9.1, +28.2]. Recall@1 +7.1 [+1.5, +12.3]; recall@5 +13.1 [+7.1, +19.0]. Original only: 38.8% (same as the stage-1 report) to 51.5%.
+- **Decision.** Duplicate detection closed with this pipeline as the stage-2 result. As on development data, the largest gain is on originals over 30 days old.
+
+## Open items
+
+- Only the stage-1 duplicate baseline has been re-scored under the sibling rule on the test set (entry 20); stage-1 BM25 has not.
+- LLM query rewriting for duplicates was tried and not adopted (entry 19); LLM reranking was set aside. The planned model is `gpt-4o-mini-2024-07-18` within a total budget of 10 US dollars (`plan.html`). OpenAI's official documentation, checked on 2026-10-08, lists it as available and not deprecated, at 0.15 / 0.60 US dollars per million input / output tokens (Batch API 0.075 / 0.30). The API key is kept in the git-ignored `.env` file.
+- Type and module have no stage-2 work yet.

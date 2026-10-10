@@ -1,0 +1,36 @@
+{
+ "model": "gpt-4o-mini-2024-07-18",
+ "price_per_million_usd": {
+  "input": 0.15,
+  "output": 0.6
+ },
+ "styles": {
+  "summary": {
+   "queries": 1205,
+   "new_calls": 1105,
+   "seconds": 157.0,
+   "prompt_tokens": 420364,
+   "completion_tokens": 95875,
+   "cost_usd": 0.1206,
+   "finish_reason_length": 0
+  },
+  "keywords": {
+   "queries": 1205,
+   "new_calls": 1105,
+   "seconds": 176.1,
+   "prompt_tokens": 414339,
+   "completion_tokens": 117342,
+   "cost_usd": 0.1326,
+   "finish_reason_length": 0
+  },
+  "hyde": {
+   "queries": 1205,
+   "new_calls": 1105,
+   "seconds": 241.6,
+   "prompt_tokens": 410724,
+   "completion_tokens": 184798,
+   "cost_usd": 0.1725,
+   "finish_reason_length": 2
+  }
+ }
+}
