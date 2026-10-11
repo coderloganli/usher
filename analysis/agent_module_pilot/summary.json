@@ -1,0 +1,684 @@
+{
+ "n_sample": 20,
+ "repo_commit": "9ed1e079300da92c7051094a05b4dbe136f9c23e",
+ "model": "gpt-4o-mini-2024-07-18",
+ "price_per_m_usd": {
+  "input": 0.15,
+  "cached": 0.075,
+  "output": 0.6
+ },
+ "tune_lr_top1": 0.5709939148073022,
+ "tune_lr_top10": 0.8813387423935092,
+ "methods": {
+  "plain": {
+   "issues_run": 20,
+   "hits": 8,
+   "hits_on_lr_wrong": "4/15",
+   "hits_on_lr_right": "4/5",
+   "answer_outside_lr_top10": 2,
+   "input_tokens_per_issue": 2837,
+   "cached_tokens_per_issue": 870,
+   "output_tokens_per_issue": 6,
+   "cost_usd": 0.00727,
+   "cost_per_issue_usd": 0.000364,
+   "projected_cost_full_tune_986_usd": 0.36,
+   "per_issue": [
+    {
+     "number": 312890,
+     "truth": [
+      "api-proposal"
+     ],
+     "lr_top1": "api",
+     "answer": "api",
+     "hit": false
+    },
+    {
+     "number": 323616,
+     "truth": [
+      "vscode-website"
+     ],
+     "lr_top1": "ux",
+     "answer": "ux",
+     "hit": false
+    },
+    {
+     "number": 314949,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "install-update",
+     "answer": "config",
+     "hit": false
+    },
+    {
+     "number": 308555,
+     "truth": [
+      "accessibility"
+     ],
+     "lr_top1": "ux",
+     "answer": "ux",
+     "hit": false
+    },
+    {
+     "number": 314149,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "ux",
+     "answer": "chat-terminal",
+     "hit": false
+    },
+    {
+     "number": 319200,
+     "truth": [
+      "terminal-editors"
+     ],
+     "lr_top1": "terminal",
+     "answer": "terminal",
+     "hit": false
+    },
+    {
+     "number": 319396,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "ux",
+     "answer": "ux",
+     "hit": false
+    },
+    {
+     "number": 320801,
+     "truth": [
+      "ux"
+     ],
+     "lr_top1": "diff-editor",
+     "answer": "layout",
+     "hit": false
+    },
+    {
+     "number": 323558,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "workbench-notifications",
+     "answer": "workbench-notifications",
+     "hit": false
+    },
+    {
+     "number": 318645,
+     "truth": [
+      "terminal"
+     ],
+     "lr_top1": "perf",
+     "answer": "terminal",
+     "hit": true
+    },
+    {
+     "number": 321555,
+     "truth": [
+      "remote-tunnel"
+     ],
+     "lr_top1": "install-update",
+     "answer": "remote",
+     "hit": false
+    },
+    {
+     "number": 309150,
+     "truth": [
+      "terminal-rendering"
+     ],
+     "lr_top1": "ux",
+     "answer": "terminal-rendering",
+     "hit": true
+    },
+    {
+     "number": 314089,
+     "truth": [
+      "accessibility"
+     ],
+     "lr_top1": "ux",
+     "answer": "accessibility",
+     "hit": true
+    },
+    {
+     "number": 309525,
+     "truth": [
+      "ux"
+     ],
+     "lr_top1": "accessibility",
+     "answer": "accessibility",
+     "hit": false
+    },
+    {
+     "number": 317702,
+     "truth": [
+      "editor-sticky-scroll"
+     ],
+     "lr_top1": "ux",
+     "answer": "editor-sticky-scroll",
+     "hit": true
+    },
+    {
+     "number": 309447,
+     "truth": [
+      "tasks"
+     ],
+     "lr_top1": "tasks",
+     "answer": "tasks",
+     "hit": true
+    },
+    {
+     "number": 309462,
+     "truth": [
+      "install-update"
+     ],
+     "lr_top1": "install-update",
+     "answer": "install-update",
+     "hit": true
+    },
+    {
+     "number": 321088,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "browser-integration",
+     "answer": "browser-integration",
+     "hit": true
+    },
+    {
+     "number": 307176,
+     "truth": [
+      "terminal-input"
+     ],
+     "lr_top1": "terminal-input",
+     "answer": "terminal",
+     "hit": false
+    },
+    {
+     "number": 313373,
+     "truth": [
+      "chat-terminal"
+     ],
+     "lr_top1": "chat-terminal",
+     "answer": "chat-terminal",
+     "hit": true
+    }
+   ]
+  },
+  "agent": {
+   "issues_run": 20,
+   "hits": 9,
+   "hits_on_lr_wrong": "4/15",
+   "hits_on_lr_right": "5/5",
+   "answer_outside_lr_top10": 2,
+   "input_tokens_per_issue": 9322,
+   "cached_tokens_per_issue": 6950,
+   "output_tokens_per_issue": 75,
+   "cost_usd": 0.01845,
+   "cost_per_issue_usd": 0.000922,
+   "projected_cost_full_tune_986_usd": 0.91,
+   "per_issue": [
+    {
+     "number": 312890,
+     "truth": [
+      "api-proposal"
+     ],
+     "lr_top1": "api",
+     "answer": "api",
+     "hit": false,
+     "tool_calls": 0,
+     "forced_answer": false
+    },
+    {
+     "number": 323616,
+     "truth": [
+      "vscode-website"
+     ],
+     "lr_top1": "ux",
+     "answer": "workbench-welcome",
+     "hit": false,
+     "tool_calls": 6,
+     "forced_answer": true
+    },
+    {
+     "number": 314949,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "install-update",
+     "answer": "config",
+     "hit": false,
+     "tool_calls": 1,
+     "forced_answer": false
+    },
+    {
+     "number": 308555,
+     "truth": [
+      "accessibility"
+     ],
+     "lr_top1": "ux",
+     "answer": "ux",
+     "hit": false,
+     "tool_calls": 0,
+     "forced_answer": false
+    },
+    {
+     "number": 314149,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "ux",
+     "answer": "chat-terminal",
+     "hit": false,
+     "tool_calls": 1,
+     "forced_answer": false
+    },
+    {
+     "number": 319200,
+     "truth": [
+      "terminal-editors"
+     ],
+     "lr_top1": "terminal",
+     "answer": "terminal",
+     "hit": false,
+     "tool_calls": 0,
+     "forced_answer": false
+    },
+    {
+     "number": 319396,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "ux",
+     "answer": "ux",
+     "hit": false,
+     "tool_calls": 0,
+     "forced_answer": false
+    },
+    {
+     "number": 320801,
+     "truth": [
+      "ux"
+     ],
+     "lr_top1": "diff-editor",
+     "answer": "layout",
+     "hit": false,
+     "tool_calls": 6,
+     "forced_answer": true
+    },
+    {
+     "number": 323558,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "workbench-notifications",
+     "answer": "workbench-notifications",
+     "hit": false,
+     "tool_calls": 0,
+     "forced_answer": false
+    },
+    {
+     "number": 318645,
+     "truth": [
+      "terminal"
+     ],
+     "lr_top1": "perf",
+     "answer": "terminal",
+     "hit": true,
+     "tool_calls": 6,
+     "forced_answer": false
+    },
+    {
+     "number": 321555,
+     "truth": [
+      "remote-tunnel"
+     ],
+     "lr_top1": "install-update",
+     "answer": "remote-tunnel",
+     "hit": true,
+     "tool_calls": 1,
+     "forced_answer": false
+    },
+    {
+     "number": 309150,
+     "truth": [
+      "terminal-rendering"
+     ],
+     "lr_top1": "ux",
+     "answer": "editor-render-whitespace",
+     "hit": false,
+     "tool_calls": 2,
+     "forced_answer": false
+    },
+    {
+     "number": 314089,
+     "truth": [
+      "accessibility"
+     ],
+     "lr_top1": "ux",
+     "answer": "accessibility",
+     "hit": true,
+     "tool_calls": 0,
+     "forced_answer": false
+    },
+    {
+     "number": 309525,
+     "truth": [
+      "ux"
+     ],
+     "lr_top1": "accessibility",
+     "answer": "accessibility",
+     "hit": false,
+     "tool_calls": 0,
+     "forced_answer": false
+    },
+    {
+     "number": 317702,
+     "truth": [
+      "editor-sticky-scroll"
+     ],
+     "lr_top1": "ux",
+     "answer": "editor-sticky-scroll",
+     "hit": true,
+     "tool_calls": 2,
+     "forced_answer": false
+    },
+    {
+     "number": 309447,
+     "truth": [
+      "tasks"
+     ],
+     "lr_top1": "tasks",
+     "answer": "tasks",
+     "hit": true,
+     "tool_calls": 0,
+     "forced_answer": false
+    },
+    {
+     "number": 309462,
+     "truth": [
+      "install-update"
+     ],
+     "lr_top1": "install-update",
+     "answer": "install-update",
+     "hit": true,
+     "tool_calls": 0,
+     "forced_answer": false
+    },
+    {
+     "number": 321088,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "browser-integration",
+     "answer": "browser-integration",
+     "hit": true,
+     "tool_calls": 0,
+     "forced_answer": false
+    },
+    {
+     "number": 307176,
+     "truth": [
+      "terminal-input"
+     ],
+     "lr_top1": "terminal-input",
+     "answer": "terminal-input",
+     "hit": true,
+     "tool_calls": 0,
+     "forced_answer": false
+    },
+    {
+     "number": 313373,
+     "truth": [
+      "chat-terminal"
+     ],
+     "lr_top1": "chat-terminal",
+     "answer": "chat-terminal",
+     "hit": true,
+     "tool_calls": 0,
+     "forced_answer": false
+    }
+   ],
+   "tool_calls_per_issue": 1.25,
+   "forced_answers": 2
+  },
+  "agent2": {
+   "issues_run": 20,
+   "hits": 7,
+   "hits_on_lr_wrong": "3/15",
+   "hits_on_lr_right": "4/5",
+   "answer_outside_lr_top10": 3,
+   "input_tokens_per_issue": 10786,
+   "cached_tokens_per_issue": 5389,
+   "output_tokens_per_issue": 77,
+   "cost_usd": 0.0252,
+   "cost_per_issue_usd": 0.00126,
+   "projected_cost_full_tune_986_usd": 1.24,
+   "per_issue": [
+    {
+     "number": 312890,
+     "truth": [
+      "api-proposal"
+     ],
+     "lr_top1": "api",
+     "answer": "api",
+     "hit": false,
+     "tool_calls": 2,
+     "forced_answer": false
+    },
+    {
+     "number": 323616,
+     "truth": [
+      "vscode-website"
+     ],
+     "lr_top1": "ux",
+     "answer": "settings-editor",
+     "hit": false,
+     "tool_calls": 4,
+     "forced_answer": false
+    },
+    {
+     "number": 314949,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "install-update",
+     "answer": "browser-integration",
+     "hit": true,
+     "tool_calls": 2,
+     "forced_answer": false
+    },
+    {
+     "number": 308555,
+     "truth": [
+      "accessibility"
+     ],
+     "lr_top1": "ux",
+     "answer": "ux",
+     "hit": false,
+     "tool_calls": 3,
+     "forced_answer": false
+    },
+    {
+     "number": 314149,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "ux",
+     "answer": "chat-terminal",
+     "hit": false,
+     "tool_calls": 2,
+     "forced_answer": false
+    },
+    {
+     "number": 319200,
+     "truth": [
+      "terminal-editors"
+     ],
+     "lr_top1": "terminal",
+     "answer": "terminal",
+     "hit": false,
+     "tool_calls": 3,
+     "forced_answer": false
+    },
+    {
+     "number": 319396,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "ux",
+     "answer": "ux",
+     "hit": false,
+     "tool_calls": 3,
+     "forced_answer": false
+    },
+    {
+     "number": 320801,
+     "truth": [
+      "ux"
+     ],
+     "lr_top1": "diff-editor",
+     "answer": "editor-scrollbar",
+     "hit": false,
+     "tool_calls": 2,
+     "forced_answer": false
+    },
+    {
+     "number": 323558,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "workbench-notifications",
+     "answer": "workbench-notifications",
+     "hit": false,
+     "tool_calls": 3,
+     "forced_answer": false
+    },
+    {
+     "number": 318645,
+     "truth": [
+      "terminal"
+     ],
+     "lr_top1": "perf",
+     "answer": "ux",
+     "hit": false,
+     "tool_calls": 3,
+     "forced_answer": false
+    },
+    {
+     "number": 321555,
+     "truth": [
+      "remote-tunnel"
+     ],
+     "lr_top1": "install-update",
+     "answer": "terminal",
+     "hit": false,
+     "tool_calls": 2,
+     "forced_answer": false
+    },
+    {
+     "number": 309150,
+     "truth": [
+      "terminal-rendering"
+     ],
+     "lr_top1": "ux",
+     "answer": "terminal-shell-pwsh",
+     "hit": false,
+     "tool_calls": 2,
+     "forced_answer": false
+    },
+    {
+     "number": 314089,
+     "truth": [
+      "accessibility"
+     ],
+     "lr_top1": "ux",
+     "answer": "accessibility",
+     "hit": true,
+     "tool_calls": 2,
+     "forced_answer": false
+    },
+    {
+     "number": 309525,
+     "truth": [
+      "ux"
+     ],
+     "lr_top1": "accessibility",
+     "answer": "accessibility",
+     "hit": false,
+     "tool_calls": 2,
+     "forced_answer": false
+    },
+    {
+     "number": 317702,
+     "truth": [
+      "editor-sticky-scroll"
+     ],
+     "lr_top1": "ux",
+     "answer": "editor-sticky-scroll",
+     "hit": true,
+     "tool_calls": 2,
+     "forced_answer": false
+    },
+    {
+     "number": 309447,
+     "truth": [
+      "tasks"
+     ],
+     "lr_top1": "tasks",
+     "answer": "tasks",
+     "hit": true,
+     "tool_calls": 2,
+     "forced_answer": false
+    },
+    {
+     "number": 309462,
+     "truth": [
+      "install-update"
+     ],
+     "lr_top1": "install-update",
+     "answer": "install-update",
+     "hit": true,
+     "tool_calls": 3,
+     "forced_answer": false
+    },
+    {
+     "number": 321088,
+     "truth": [
+      "browser-integration"
+     ],
+     "lr_top1": "browser-integration",
+     "answer": "browser-integration",
+     "hit": true,
+     "tool_calls": 2,
+     "forced_answer": false
+    },
+    {
+     "number": 307176,
+     "truth": [
+      "terminal-input"
+     ],
+     "lr_top1": "terminal-input",
+     "answer": "terminal",
+     "hit": false,
+     "tool_calls": 2,
+     "forced_answer": false
+    },
+    {
+     "number": 313373,
+     "truth": [
+      "chat-terminal"
+     ],
+     "lr_top1": "chat-terminal",
+     "answer": "chat-terminal",
+     "hit": true,
+     "tool_calls": 2,
+     "forced_answer": false
+    }
+   ],
+   "tool_calls_per_issue": 2.4,
+   "forced_answers": 0
+  }
+ },
+ "total_cost_usd": 0.05091
+}

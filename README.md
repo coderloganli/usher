@@ -8,10 +8,10 @@ Usher is an issue-triage agent for the `microsoft/vscode` GitHub repository. It 
 
 This file describes the best pipeline that exists today for each judgment and how to rerun it. The record of how it was reached is in [EXPERIMENTS.md](EXPERIMENTS.md).
 
-## Status (2026-10-10)
+## Status (2026-10-11)
 
 - Stage 1 (data snapshot, evaluation framework and non-LLM baselines) is complete. It was not published (decided 2026-10-08).
-- Stage 2 (LLM versions of the three judgments) is in progress. Duplicate detection is finished: its final pipeline is non-LLM (text cleaning and a local cross-encoder); LLM query rewriting was tried and not adopted. Type and module have no stage-2 work yet.
+- Stage 2 (LLM versions of the three judgments) is in progress. Duplicate detection is finished: its final pipeline is non-LLM (text cleaning and a local cross-encoder); LLM query rewriting was tried and not adopted. Module is finished: gpt-4o-mini makes the final judgment with the stage-1 LR candidates and similar past issues as reference material. Type has no stage-2 work yet; it is next.
 - All work is on the git branch `stage1-data` (this worktree). Nothing has been pushed.
 
 ## Data and evaluation in brief
@@ -20,7 +20,7 @@ This file describes the best pipeline that exists today for each judgment and ho
 - Split by issue creation time (UTC): train 2025-01 to 2026-03, tune 2026-04 to 2026-06, test 2026-07 to 2026-09. The tune period was widened from one month to three on 2026-10-07.
 - Issues per judgment after filtering (train / tune / test): type 13,554 / 2,165 / 1,848; module 8,057 / 986 / 687; duplicate queries 864 / 341 / 268 (`manifest/counts.json`).
 - Ground truth is the maintainers' final labels and `duplicateOf` links. A 30-issue test sample per judgment was reviewed by an AI model (Claude Opus 5.5), not human-verified: 28 of 28 decidable type labels, 30 of 30 module labels and 27 of 28 decidable duplicate links were judged correct (`review/ai_review_summary.json`).
-- The test set is used once per frozen pipeline: for the stage-1 baselines (2026-10-08) and for the final stage-2 duplicate pipeline (2026-10-10). No method was changed after seeing test results. Stage-2 methods are developed and judged on the 1,205 train-period and tune-period duplicate queries ("development queries").
+- The test set is used once per frozen pipeline: for the stage-1 baselines (2026-10-08), the final stage-2 duplicate pipeline (2026-10-10) and the stage-2 module pipeline (2026-10-11). No method was changed after seeing test results. Stage-2 duplicate methods are developed on the 1,205 train-period and tune-period duplicate queries ("development queries"); module methods on the 986 tune issues.
 - Every score has a 95% percentile bootstrap interval (10,000 resamples, fixed seed). Comparisons use paired bootstrap; adoption rules are fixed before a run. The evaluation rules in force are listed in [EXPERIMENTS.md](EXPERIMENTS.md#evaluation-rules-in-force).
 
 ## Environment and data
@@ -49,9 +49,46 @@ This file describes the best pipeline that exists today for each judgment and ho
 
 The two LR baselines' macro-F1 values are not significantly different on test (difference +0.008, interval -0.058 to +0.039). Stage-2 type methods are compared on macro-F1 with LR (macro-F1) and on accuracy with LR (accuracy). Source: `outputs/baselines/test_metrics.json`.
 
-## Module: one-vs-rest TF-IDF + logistic regression (stage-1 baseline)
+## Module: LLM final judgment with LR and similar issues as reference (stage 2, adopted 2026-10-10)
 
-**Method.** Same text and TF-IDF as type. One yes/no logistic regression per module seen in train (272 modules); modules are ranked by probability. Setting chosen on tune by top-1 hit rate: C = 10, `class_weight="balanced"` (tune top-1 57.1%, top-3 76.8%). An issue may have several module labels; a guess is a hit if it is any of them.
+**Task.** Give the one module label (from the 291 keys of vscode's `.github/classifier.json` that occur in the snapshot) that the team put on the issue; a guess is a hit if it is any of the issue's module labels. Primary metric: top-1 hit rate.
+
+**Prepared once, from train-period module issues only (2025-01 to 2026-03, 8,057 issues):**
+
+- the stage-1 LR model (below), covering the 272 modules seen in train;
+- `BAAI/bge-small-en-v1.5` vectors of their cleaned text (the duplicate pipeline's cache, `data/stage2/embeddings_clean.npy`);
+- the 291 module label names and the GitHub descriptions of 205 of them (`scripts/stage2/module_label_descriptions.json`, fetched 2026-10-10).
+
+**Pipeline for one issue, step by step** (`scripts/stage2/module_llm.py`).
+
+1. **Reference 1, LR.** The stage-1 LR scores the title + raw body; keep the 10 most probable modules with their probabilities.
+2. **Clean the text** with the duplicate pipeline's `clean_text` (templates, system-info blocks and images removed).
+3. **Reference 2, similar issues.** The 10 train issues created before this issue with the highest cosine to its cleaned text; keep their titles, module labels and similarity.
+4. **Prompt.** Cleaned issue text cut to 1,500 tokens, the two references, the descriptions of every candidate module in them, and the names of all 291 labels (about 3,100 input tokens per issue).
+5. **Final judgment.** `gpt-4o-mini-2024-07-18` (Chat Completions, temperature 0, fixed seed, no tools) returns structured output: a one-sentence reason, then one label constrained to the 291.
+
+Output: one label and a reason; no top-3 list and no confidence yet. Cost about US$0.0004 per issue.
+
+**Run.** `./run_stage2_module.sh` runs the frozen pipeline on the test split (`module_llm.py test`). `module_llm.py trial` and `module_llm.py tune` are the development runs. Responses are cached in `data/stage2/module_llm/`; with the cache a rerun makes no API calls and reproduces the outputs exactly (checked for tune).
+
+**Scores on the test set** (687 issues created 2026-07 to 2026-09, run once on 2026-10-11; `outputs/stage2/module_llm_test.json`). Top-1 hit [95% CI]:
+
+| Method | All (687) | True module has 1-19 train issues (107) | 20-99 (203) | 100 or more (376) |
+|---|---|---|---|---|
+| Stage-1 LR | 48.2% [44.4, 52.0] | 18.7% | 42.9% | 59.6% |
+| Similar-issue vote (10 neighbours) | 48.8% | 24.3% | 45.3% | 57.7% |
+| **LLM final judgment** | **60.8%** [57.2, 64.5] | 35.5% | 59.6% | 68.9% |
+| LLM minus LR | +12.7 [+9.3, +16.2] | +16.8 [+8.4, +26.2] | +16.7 [+10.8, +23.2] | +9.3 [+4.8, +13.8] |
+
+Relative to LR the LLM fixed 122 issues and broke 35. One test issue has a module never seen in train; every method misses it.
+
+**Scores on the tune set** (986 issues, 2026-04 to 2026-06; `outputs/stage2/module_llm_tune.json`), where the method was adopted by the pre-set rule (LLM minus LR interval entirely above 0): LLM 69.0%, LR 57.1%, similar-issue vote 59.1%; LLM minus LR +11.9 [+8.8, +14.9]; 176 fixed, 59 broken.
+
+**Known limits.** References use the train period only (as in the stage-1 final model); a deployed system would use all labelled history. For modules with 100 or more training issues the LLM overrules a correct LR relatively often (tune: 92 fixed, 51 broken). Code-search tools were tried and not adopted (EXPERIMENTS.md entries 22 and 23).
+
+### Stage-1 baseline: one-vs-rest TF-IDF + logistic regression
+
+**Method.** Same text and TF-IDF as type. One yes/no logistic regression per module seen in train (272 modules); modules are ranked by probability. Setting chosen on tune by top-1 hit rate: C = 10, `class_weight="balanced"` (tune top-1 57.1%, top-3 76.8%).
 
 **Run.** `./run_baselines.sh` (same steps as type; tuning record `outputs/baselines/module_tuning.json`).
 

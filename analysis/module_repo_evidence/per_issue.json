@@ -1,0 +1,13174 @@
+[
+ {
+  "number": 306984,
+  "truth": [
+   "file-explorer",
+   "list-widget",
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "workbench-hover"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 306985,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "chat-terminal",
+   "web"
+  ],
+  "evidence_top3": [
+   "webview",
+   "terminal-suggest",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 307001,
+  "truth": [
+   "file-glob",
+   "perf",
+   "search"
+  ],
+  "lr_top3": [
+   "search",
+   "file-explorer",
+   "file-watcher"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307063,
+  "truth": [
+   "VIM"
+  ],
+  "lr_top3": [
+   "merge-editor",
+   "accessibility",
+   "VIM"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307156,
+  "truth": [
+   "terminal-process"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "terminal-process",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "code-cli",
+   "authentication"
+  ]
+ },
+ {
+  "number": 307163,
+  "truth": [
+   "workbench-editor-grid",
+   "workbench-tabs"
+  ],
+  "lr_top3": [
+   "workbench-editors",
+   "workbench-tabs",
+   "workbench-editor-groups"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307167,
+  "truth": [
+   "proxy"
+  ],
+  "lr_top3": [
+   "proxy",
+   "remote",
+   "network"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307173,
+  "truth": [
+   "chat-terminal",
+   "chat-terminal-output-monitor"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "notebook-output",
+   "output"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307176,
+  "truth": [
+   "terminal-input"
+  ],
+  "lr_top3": [
+   "terminal-input",
+   "keybindings",
+   "editor-core"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "ux",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 307194,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal",
+   "chat-terminal",
+   "terminal-editors"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307196,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal-tabs",
+   "chat-terminal",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307201,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "api",
+   "api-proposal"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "tasks",
+   "terminal"
+  ]
+ },
+ {
+  "number": 307214,
+  "truth": [
+   "extension-activation",
+   "perf"
+  ],
+  "lr_top3": [
+   "perf",
+   "debug",
+   "git"
+  ],
+  "evidence_top3": [
+   "telemetry",
+   "perf-startup",
+   "settings-editor"
+  ]
+ },
+ {
+  "number": 307216,
+  "truth": [
+   "network"
+  ],
+  "lr_top3": [
+   "perf",
+   "network",
+   "inline-completions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307227,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "settings-editor"
+  ],
+  "evidence_top3": [
+   "workbench-tabs",
+   "settings-editor",
+   "terminal-editors"
+  ]
+ },
+ {
+  "number": 307233,
+  "truth": [
+   "workbench-window"
+  ],
+  "lr_top3": [
+   "workbench-window",
+   "workbench-os-integration",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307267,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "zoom",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307269,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "terminal-suggest"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "ux",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 307350,
+  "truth": [
+   "tree-views"
+  ],
+  "lr_top3": [
+   "editor-autoindent",
+   "tree-views",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307355,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "accessibility",
+   "terminal-input"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307375,
+  "truth": [
+   "tree-views"
+  ],
+  "lr_top3": [
+   "workbench-dnd",
+   "editor-drag-and-drop",
+   "tree-views"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307396,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "ghost-text",
+   "search"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307400,
+  "truth": [
+   "terminal-process"
+  ],
+  "lr_top3": [
+   "tasks",
+   "terminal-process",
+   "terminal-conpty"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal-shell-integration",
+   "terminal"
+  ]
+ },
+ {
+  "number": 307401,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "perf",
+   "terminal"
+  ],
+  "evidence_top3": [
+   "icons-product",
+   "accessibility",
+   "quick-open"
+  ]
+ },
+ {
+  "number": 307408,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "issue-reporter"
+  ],
+  "evidence_top3": [
+   "install-update",
+   "accessibility",
+   "extensions"
+  ]
+ },
+ {
+  "number": 307456,
+  "truth": [
+   "proxy"
+  ],
+  "lr_top3": [
+   "proxy",
+   "remote",
+   "network"
+  ],
+  "evidence_top3": [
+   "titlebar",
+   "workbench-electron",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 307491,
+  "truth": [
+   "file-io"
+  ],
+  "lr_top3": [
+   "debug",
+   "api",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307492,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "ux",
+   "terminal-rendering"
+  ],
+  "evidence_top3": [
+   "extensions",
+   "settings-sync",
+   "user-profiles"
+  ]
+ },
+ {
+  "number": 307534,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "scm",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307568,
+  "truth": [
+   "remote"
+  ],
+  "lr_top3": [
+   "install-update",
+   "perf",
+   "workbench-window"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307571,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307579,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "ghost-text",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307601,
+  "truth": [
+   "terminal-env-collection"
+  ],
+  "lr_top3": [
+   "terminal-env-collection",
+   "terminal-process",
+   "terminal-conpty"
+  ],
+  "evidence_top3": [
+   "terminal-shell-integration",
+   "terminal",
+   "api"
+  ]
+ },
+ {
+  "number": 307609,
+  "truth": [
+   "terminal-input"
+  ],
+  "lr_top3": [
+   "terminal-input",
+   "terminal",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307632,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "debug",
+   "ux",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307634,
+  "truth": [
+   "scm"
+  ],
+  "lr_top3": [
+   "git",
+   "scm",
+   "ux"
+  ],
+  "evidence_top3": [
+   "scm"
+  ]
+ },
+ {
+  "number": 307638,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "ux",
+   "editor-hover",
+   "inline-completions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307646,
+  "truth": [
+   "editor-input-IME"
+  ],
+  "lr_top3": [
+   "editor-input-IME",
+   "terminal-input",
+   "vscode.dev"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307649,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "keybindings-editor",
+   "json"
+  ],
+  "evidence_top3": [
+   "ux",
+   "accessibility",
+   "settings-editor"
+  ]
+ },
+ {
+  "number": 307653,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "perf",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307691,
+  "truth": [
+   "debug"
+  ],
+  "lr_top3": [
+   "debug",
+   "extension-host",
+   "json"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "debug",
+   "terminal-suggest"
+  ]
+ },
+ {
+  "number": 307696,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "chat-terminal",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307697,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307698,
+  "truth": [
+   "accessibility",
+   "terminal-shell-integration",
+   "terminal-shell-pwsh"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "terminal-shell-integration",
+   "terminal-shell-sh"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307700,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "keybindings",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307702,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "accessibility",
+   "workbench-views"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307703,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "settings-editor",
+   "accessibility",
+   "workbench-editors"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307704,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "extensions",
+   "accessibility",
+   "workbench-tabs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307720,
+  "truth": [
+   "editor-find",
+   "search-replace"
+  ],
+  "lr_top3": [
+   "editor-find",
+   "search-replace",
+   "keybindings-editor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307723,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "terminal",
+   "terminal-shell-pwsh",
+   "perf"
+  ],
+  "evidence_top3": [
+   "titlebar",
+   "workbench-electron"
+  ]
+ },
+ {
+  "number": 307731,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "api-proposal",
+   "workbench-editors"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307737,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal-tabs",
+   "titlebar",
+   "workbench-os-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307789,
+  "truth": [
+   "portable-mode",
+   "workbench-os-integration"
+  ],
+  "lr_top3": [
+   "portable-mode",
+   "workbench-history",
+   "workbench-os-integration"
+  ],
+  "evidence_top3": [
+   "tasks",
+   "timeline",
+   "git"
+  ]
+ },
+ {
+  "number": 307790,
+  "truth": [
+   "perf-startup"
+  ],
+  "lr_top3": [
+   "web",
+   "vscode.dev",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307792,
+  "truth": [
+   "workbench-tabs"
+  ],
+  "lr_top3": [
+   "terminal",
+   "remote",
+   "network"
+  ],
+  "evidence_top3": [
+   "remote",
+   "terminal-editors",
+   "settings-editor"
+  ]
+ },
+ {
+  "number": 307805,
+  "truth": [
+   "json",
+   "json-sorting"
+  ],
+  "lr_top3": [
+   "keybindings",
+   "menus",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307819,
+  "truth": [
+   "snippets",
+   "suggest"
+  ],
+  "lr_top3": [
+   "snippets",
+   "suggest",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307824,
+  "truth": [
+   "git"
+  ],
+  "lr_top3": [
+   "git",
+   "file-explorer",
+   "github"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307835,
+  "truth": [
+   "api"
+  ],
+  "lr_top3": [
+   "api",
+   "ux",
+   "api-proposal"
+  ],
+  "evidence_top3": [
+   "terminal-editors",
+   "ux",
+   "terminal-suggest"
+  ]
+ },
+ {
+  "number": 307837,
+  "truth": [
+   "markdown"
+  ],
+  "lr_top3": [
+   "terminal-links",
+   "api",
+   "editor-contrib"
+  ],
+  "evidence_top3": [
+   "notebook-ipynb",
+   "notebook-serialization"
+  ]
+ },
+ {
+  "number": 307845,
+  "truth": [
+   "simple-file-dialog"
+  ],
+  "lr_top3": [
+   "testing",
+   "file-explorer",
+   "workbench-multiroot"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307881,
+  "truth": [
+   "editor-sticky-scroll"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "install-update",
+   "terminal-rendering"
+  ],
+  "evidence_top3": [
+   "editor-autoindent",
+   "editor-clipboard",
+   "inline-completions"
+  ]
+ },
+ {
+  "number": 307913,
+  "truth": [
+   "network"
+  ],
+  "lr_top3": [
+   "network",
+   "chat-terminal",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307943,
+  "truth": [
+   "webview"
+  ],
+  "lr_top3": [
+   "webview",
+   "editor-find",
+   "workbench-tabs"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "webview",
+   "typescript"
+  ]
+ },
+ {
+  "number": 307953,
+  "truth": [
+   "scm"
+  ],
+  "lr_top3": [
+   "git",
+   "scm",
+   "ux"
+  ],
+  "evidence_top3": [
+   "telemetry"
+  ]
+ },
+ {
+  "number": 307972,
+  "truth": [
+   "api",
+   "webview"
+  ],
+  "lr_top3": [
+   "search",
+   "api",
+   "custom-editors"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 307997,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "accessibility",
+   "terminal-suggest"
+  ],
+  "evidence_top3": [
+   "workbench-tabs",
+   "settings-editor",
+   "terminal-editors"
+  ]
+ },
+ {
+  "number": 308005,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "workbench-auxwindow",
+   "ux"
+  ],
+  "evidence_top3": [
+   "workbench-tabs",
+   "settings-editor",
+   "terminal-editors"
+  ]
+ },
+ {
+  "number": 308007,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308012,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "api-proposal",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308017,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "json",
+   "ux"
+  ],
+  "evidence_top3": [
+   "extensions",
+   "accessibility",
+   "ux"
+  ]
+ },
+ {
+  "number": 308018,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "ux",
+   "install-update",
+   "dialogs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308030,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "terminal"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal",
+   "sandbox"
+  ]
+ },
+ {
+  "number": 308036,
+  "truth": [
+   "telemetry"
+  ],
+  "lr_top3": [
+   "telemetry",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308037,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "tasks"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308043,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308046,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "terminal-suggest",
+   "chat-terminal",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": [
+   "accessibility"
+  ]
+ },
+ {
+  "number": 308048,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "tasks",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308102,
+  "truth": [
+   "quick-open"
+  ],
+  "lr_top3": [
+   "quick-open",
+   "workspace-symbols",
+   "search"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "search",
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 308144,
+  "truth": [
+   "terminal",
+   "terminal-process"
+  ],
+  "lr_top3": [
+   "perf",
+   "terminal",
+   "suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308152,
+  "truth": [
+   "terminal-input"
+  ],
+  "lr_top3": [
+   "terminal-input",
+   "terminal-rendering",
+   "keybindings"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308158,
+  "truth": [
+   "debug"
+  ],
+  "lr_top3": [
+   "debug",
+   "ux",
+   "diff-editor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308193,
+  "truth": [
+   "install-update",
+   "terminal-shell-pwsh"
+  ],
+  "lr_top3": [
+   "terminal-shell-pwsh",
+   "install-update",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "remote",
+   "terminal-suggest",
+   "install-update"
+  ]
+ },
+ {
+  "number": 308214,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "editor-input-IME",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308238,
+  "truth": [
+   "workbench-tabs"
+  ],
+  "lr_top3": [
+   "workbench-tabs",
+   "workbench-editors",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308258,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "quick-pick",
+   "quick-open"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308259,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "quick-pick",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308260,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "ux",
+   "tree-views"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308265,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "scm",
+   "keybindings"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308296,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "api"
+  ],
+  "evidence_top3": [
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 308310,
+  "truth": [
+   "network"
+  ],
+  "lr_top3": [
+   "proxy",
+   "ux",
+   "network"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308322,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "scm",
+   "layout"
+  ],
+  "evidence_top3": [
+   "ux",
+   "accessibility",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 308327,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "file-explorer",
+   "scm"
+  ],
+  "evidence_top3": [
+   "file-explorer",
+   "comments",
+   "debug"
+  ]
+ },
+ {
+  "number": 308407,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "workbench-tabs",
+   "api"
+  ],
+  "evidence_top3": [
+   "typescript"
+  ]
+ },
+ {
+  "number": 308408,
+  "truth": [
+   "debug"
+  ],
+  "lr_top3": [
+   "remote",
+   "extension-host",
+   "terminal-process"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308421,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-conpty",
+   "terminal-rendering",
+   "install-update"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308447,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "git",
+   "workbench-window"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308449,
+  "truth": [
+   "scm"
+  ],
+  "lr_top3": [
+   "git",
+   "file-glob",
+   "scm"
+  ],
+  "evidence_top3": [
+   "git",
+   "scm",
+   "file-encoding"
+  ]
+ },
+ {
+  "number": 308483,
+  "truth": [
+   "api",
+   "opener"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "api",
+   "workbench-workspace"
+  ],
+  "evidence_top3": [
+   "typescript",
+   "settings-editor",
+   "settings-search"
+  ]
+ },
+ {
+  "number": 308514,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "terminal-input",
+   "terminal-shell-fish"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308519,
+  "truth": [
+   "terminal-conpty"
+  ],
+  "lr_top3": [
+   "terminal-conpty",
+   "terminal-rendering",
+   "terminal-shell-pwsh"
+  ],
+  "evidence_top3": [
+   "web",
+   "accessibility",
+   "perf"
+  ]
+ },
+ {
+  "number": 308524,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "terminal-process",
+   "git"
+  ],
+  "evidence_top3": [
+   "install-update",
+   "accessibility",
+   "extensions"
+  ]
+ },
+ {
+  "number": 308530,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "network",
+   "ux"
+  ],
+  "evidence_top3": [
+   "install-update",
+   "accessibility",
+   "extensions"
+  ]
+ },
+ {
+  "number": 308546,
+  "truth": [
+   "editor-minimap"
+  ],
+  "lr_top3": [
+   "ux",
+   "suggest",
+   "editor-core"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308548,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-suggest",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308551,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "perf",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308552,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "ux",
+   "api-proposal",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308555,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "ux",
+   "accessibility",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308582,
+  "truth": [
+   "perf"
+  ],
+  "lr_top3": [
+   "remote",
+   "keybindings",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308595,
+  "truth": [
+   "command-center",
+   "workbench-run-as-admin"
+  ],
+  "lr_top3": [
+   "workbench-run-as-admin",
+   "ux",
+   "install-update"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308601,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "terminal-links",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308610,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "perf"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "accessibility",
+   "terminal"
+  ]
+ },
+ {
+  "number": 308615,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "settings-editor",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308616,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308645,
+  "truth": [
+   "perf"
+  ],
+  "lr_top3": [
+   "perf",
+   "inline-completions",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308656,
+  "truth": [
+   "perf"
+  ],
+  "lr_top3": [
+   "api",
+   "ux",
+   "workbench-cli"
+  ],
+  "evidence_top3": [
+   "ux"
+  ]
+ },
+ {
+  "number": 308670,
+  "truth": [
+   "editor-input-IME"
+  ],
+  "lr_top3": [
+   "editor-input-IME",
+   "install-update",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308680,
+  "truth": [
+   "network"
+  ],
+  "lr_top3": [
+   "install-update",
+   "chat-terminal",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308704,
+  "truth": [
+   "quick-pick"
+  ],
+  "lr_top3": [
+   "quick-pick",
+   "ux",
+   "tree-views"
+  ],
+  "evidence_top3": [
+   "quick-pick",
+   "api",
+   "api-finalization"
+  ]
+ },
+ {
+  "number": 308705,
+  "truth": [
+   "font-rendering"
+  ],
+  "lr_top3": [
+   "font-rendering",
+   "ux",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308717,
+  "truth": [
+   "terminal-input"
+  ],
+  "lr_top3": [
+   "terminal-process",
+   "chat-terminal",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308783,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal",
+   "terminal-tabs",
+   "workbench-cli"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308788,
+  "truth": [
+   "telemetry"
+  ],
+  "lr_top3": [
+   "telemetry",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308850,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308868,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "api"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal-shell-integration",
+   "terminal"
+  ]
+ },
+ {
+  "number": 308870,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "chat-terminal",
+   "api"
+  ],
+  "evidence_top3": [
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 308881,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "editor-core",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308891,
+  "truth": [
+   "layout",
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "scm",
+   "diff-editor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308906,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "keybindings",
+   "keybindings-editor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308917,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "install-update",
+   "json"
+  ],
+  "evidence_top3": [
+   "issue-reporter",
+   "api-proposal",
+   "tree-views"
+  ]
+ },
+ {
+  "number": 308918,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "network",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308932,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "tasks",
+   "chat-terminal",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308943,
+  "truth": [
+   "config"
+  ],
+  "lr_top3": [
+   "file-watcher",
+   "git",
+   "search"
+  ],
+  "evidence_top3": [
+   "file-explorer",
+   "file-watcher",
+   "perf"
+  ]
+ },
+ {
+  "number": 308945,
+  "truth": [
+   "remote-explorer"
+  ],
+  "lr_top3": [
+   "remote-explorer",
+   "remote",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 308946,
+  "truth": [
+   "testing"
+  ],
+  "lr_top3": [
+   "testing",
+   "user-profiles",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "authentication",
+   "api-proposal"
+  ]
+ },
+ {
+  "number": 308972,
+  "truth": [
+   "debug"
+  ],
+  "lr_top3": [
+   "debug",
+   "workbench-editors",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309028,
+  "truth": [
+   "custom-editors"
+  ],
+  "lr_top3": [
+   "api",
+   "api-proposal",
+   "telemetry"
+  ],
+  "evidence_top3": [
+   "custom-editors",
+   "authentication",
+   "api"
+  ]
+ },
+ {
+  "number": 309044,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309057,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "terminal-rendering",
+   "menus"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309068,
+  "truth": [
+   "terminal-tabs"
+  ],
+  "lr_top3": [
+   "terminal-tabs",
+   "terminal",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "workbench-editors"
+  ]
+ },
+ {
+  "number": 309076,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "quick-pick",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309083,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "ux",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309090,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "ux",
+   "terminal",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": [
+   "accessibility"
+  ]
+ },
+ {
+  "number": 309116,
+  "truth": [
+   "snippets"
+  ],
+  "lr_top3": [
+   "snippets",
+   "ux",
+   "api"
+  ],
+  "evidence_top3": [
+   "snippets",
+   "inline-completions"
+  ]
+ },
+ {
+  "number": 309150,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "ux",
+   "layout",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309211,
+  "truth": [
+   "terminal-input"
+  ],
+  "lr_top3": [
+   "terminal",
+   "perf",
+   "remote"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309213,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "extensions",
+   "remote",
+   "config"
+  ],
+  "evidence_top3": [
+   "extensions",
+   "authentication",
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 309222,
+  "truth": [
+   "workbench-multiroot"
+  ],
+  "lr_top3": [
+   "workbench-multiroot",
+   "api-proposal",
+   "context-keys"
+  ],
+  "evidence_top3": [
+   "ux",
+   "dialogs"
+  ]
+ },
+ {
+  "number": 309223,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "remote",
+   "network",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309231,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "extensions",
+   "editor-core",
+   "layout"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309241,
+  "truth": [
+   "file-watcher"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "api",
+   "workbench-multiroot"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309243,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "api",
+   "config"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309281,
+  "truth": [
+   "editor-rendering"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "perf",
+   "terminal-shell-fish"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "tasks",
+   "sandbox"
+  ]
+ },
+ {
+  "number": 309282,
+  "truth": [
+   "editor-multicursor"
+  ],
+  "lr_top3": [
+   "editor-autoindent",
+   "editor-core",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "chat-terminal",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 309313,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309315,
+  "truth": [
+   "chat-terminal",
+   "install-update"
+  ],
+  "lr_top3": [
+   "workbench-cli",
+   "install-update",
+   "terminal"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "remote",
+   "terminal-process"
+  ]
+ },
+ {
+  "number": 309316,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "workbench-cli",
+   "install-update",
+   "terminal"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "remote",
+   "terminal-process"
+  ]
+ },
+ {
+  "number": 309362,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "telemetry",
+   "perf"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "tasks",
+   "chat-terminal-output-monitor"
+  ]
+ },
+ {
+  "number": 309368,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "perf",
+   "sandbox"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "browser-integration",
+   "terminal"
+  ]
+ },
+ {
+  "number": 309370,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "telemetry"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "tasks"
+  ]
+ },
+ {
+  "number": 309371,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "keybindings",
+   "menus"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309372,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "telemetry",
+   "tasks"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "tasks",
+   "terminal-suggest"
+  ]
+ },
+ {
+  "number": 309414,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "vscode.dev",
+   "ux"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "chat-terminal",
+   "git"
+  ]
+ },
+ {
+  "number": 309447,
+  "truth": [
+   "tasks"
+  ],
+  "lr_top3": [
+   "tasks",
+   "workspace-trust",
+   "config"
+  ],
+  "evidence_top3": [
+   "tasks",
+   "settings-search",
+   "settings-editor"
+  ]
+ },
+ {
+  "number": 309462,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "terminal",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309472,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "accessibility",
+   "terminal-links"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309475,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "accessibility",
+   "keybindings"
+  ],
+  "evidence_top3": [
+   "workspace-trust"
+  ]
+ },
+ {
+  "number": 309476,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "scm",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309490,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "accessibility",
+   "debug"
+  ],
+  "evidence_top3": [
+   "merge-editor",
+   "remote",
+   "web"
+  ]
+ },
+ {
+  "number": 309502,
+  "truth": [
+   "chat-terminal",
+   "terminal-profiles"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-profiles",
+   "terminal-shell-pwsh"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "remote",
+   "terminal-profiles"
+  ]
+ },
+ {
+  "number": 309505,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "ux",
+   "terminal-suggest",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309506,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "ux",
+   "scm",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309509,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309521,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "extensions",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309524,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal-output-monitor",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "ux",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 309525,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "browser-integration",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309529,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "getting-started",
+   "ux",
+   "workbench-status"
+  ],
+  "evidence_top3": [
+   "suggest"
+  ]
+ },
+ {
+  "number": 309541,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "outline",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309553,
+  "truth": [
+   "terminal-external"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "terminal-external",
+   "keybindings"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309576,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "accessibility",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "ux",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 309585,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "ux",
+   "quick-open",
+   "quick-pick"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "ux",
+   "terminal-inline-chat"
+  ]
+ },
+ {
+  "number": 309589,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-suggest",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309595,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "scm",
+   "accessibility",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309607,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "tasks",
+   "chat-terminal",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309613,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "ux",
+   "authentication"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309620,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "ux",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309621,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "search",
+   "ux"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "testing",
+   "portable-mode"
+  ]
+ },
+ {
+  "number": 309623,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "terminal-suggest",
+   "ux",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "ux"
+  ]
+ },
+ {
+  "number": 309835,
+  "truth": [
+   "editor-find"
+  ],
+  "lr_top3": [
+   "editor-symbols",
+   "quick-open",
+   "search"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309843,
+  "truth": [
+   "vscode.dev"
+  ],
+  "lr_top3": [
+   "vscode.dev",
+   "authentication",
+   "web"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 309881,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "telemetry",
+   "perf"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "telemetry",
+   "ux"
+  ]
+ },
+ {
+  "number": 309962,
+  "truth": [
+   "editor-autoindent"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "json",
+   "terminal-rendering"
+  ],
+  "evidence_top3": [
+   "editor-autoindent",
+   "editor-clipboard",
+   "notebook-output"
+  ]
+ },
+ {
+  "number": 310087,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "scm",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 310090,
+  "truth": [
+   "code-cli"
+  ],
+  "lr_top3": [
+   "install-update",
+   "workbench-cli",
+   "code-cli"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 310124,
+  "truth": [
+   "proxy"
+  ],
+  "lr_top3": [
+   "proxy",
+   "network",
+   "remote"
+  ],
+  "evidence_top3": [
+   "extensions",
+   "accessibility",
+   "authentication"
+  ]
+ },
+ {
+  "number": 310135,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "tasks",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 310150,
+  "truth": [
+   "api",
+   "workbench-state"
+  ],
+  "lr_top3": [
+   "extensions",
+   "install-update",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 310153,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "terminal-shell-bash"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 310158,
+  "truth": [
+   "workbench-multiroot",
+   "workbench-workspace"
+  ],
+  "lr_top3": [
+   "debug",
+   "file-explorer",
+   "install-update"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 310171,
+  "truth": [
+   "terminal-links"
+  ],
+  "lr_top3": [
+   "terminal-links",
+   "terminal-rendering",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 310173,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "ux",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 310196,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal-conpty",
+   "chat-terminal",
+   "terminal-input"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 310362,
+  "truth": [
+   "editor-input-IME"
+  ],
+  "lr_top3": [
+   "editor-input-IME",
+   "terminal-input",
+   "install-update"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "terminal-shell-pwsh",
+   "workbench-cli"
+  ]
+ },
+ {
+  "number": 310390,
+  "truth": [
+   "snippets"
+  ],
+  "lr_top3": [
+   "snippets",
+   "editor-core",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 310408,
+  "truth": [
+   "quick-open"
+  ],
+  "lr_top3": [
+   "typescript",
+   "quick-open",
+   "search"
+  ],
+  "evidence_top3": [
+   "snippets",
+   "terminal",
+   "terminal-rendering"
+  ]
+ },
+ {
+  "number": 310435,
+  "truth": [
+   "editor-code-actions"
+  ],
+  "lr_top3": [
+   "typescript",
+   "tasks",
+   "editor-hover"
+  ],
+  "evidence_top3": [
+   "scm",
+   "ux",
+   "extension-host"
+  ]
+ },
+ {
+  "number": 310710,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "accessibility",
+   "scm"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "accessibility",
+   "debug"
+  ]
+ },
+ {
+  "number": 310718,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "workbench-os-integration",
+   "remote"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 310738,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal",
+   "terminal-shell-integration"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "authentication",
+   "extensions"
+  ]
+ },
+ {
+  "number": 310748,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal"
+  ]
+ },
+ {
+  "number": 310762,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "chat-terminal",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 310765,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "file-explorer",
+   "workbench-dnd"
+  ],
+  "evidence_top3": [
+   "ux",
+   "install-update",
+   "titlebar"
+  ]
+ },
+ {
+  "number": 310823,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "testing",
+   "terminal",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 310842,
+  "truth": [
+   "editor-folding"
+  ],
+  "lr_top3": [
+   "editor-folding",
+   "editor-core",
+   "install-update"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "workbench-notifications",
+   "workbench-window"
+  ]
+ },
+ {
+  "number": 310902,
+  "truth": [
+   "portable-mode"
+  ],
+  "lr_top3": [
+   "ux",
+   "editor-core",
+   "debug"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 310927,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "ux",
+   "extensions"
+  ],
+  "evidence_top3": [
+   "ux",
+   "accessibility",
+   "settings-editor"
+  ]
+ },
+ {
+  "number": 310930,
+  "truth": [
+   "api",
+   "remote-explorer"
+  ],
+  "lr_top3": [
+   "api",
+   "api-proposal",
+   "remote"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "ux",
+   "remote-explorer"
+  ]
+ },
+ {
+  "number": 310947,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "ux"
+  ],
+  "evidence_top3": [
+   "install-update",
+   "ux",
+   "telemetry"
+  ]
+ },
+ {
+  "number": 310955,
+  "truth": [
+   "terminal-tabs"
+  ],
+  "lr_top3": [
+   "terminal-tabs",
+   "workbench-tabs",
+   "layout"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311024,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "git",
+   "cloud-changes"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311027,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311028,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "git",
+   "ux",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311029,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "git",
+   "cloud-changes"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311030,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "api",
+   "api-proposal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311045,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "perf",
+   "quick-pick",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311046,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal-tabs",
+   "terminal-shell-integration",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311051,
+  "truth": [
+   "notebook-cell-editor"
+  ],
+  "lr_top3": [
+   "notebook",
+   "notebook-execution",
+   "notebook-cell-editor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311064,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "terminal-links",
+   "api-proposal"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "ux",
+   "themes"
+  ]
+ },
+ {
+  "number": 311069,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "accessibility",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311070,
+  "truth": [
+   "ghost-text"
+  ],
+  "lr_top3": [
+   "inline-completions",
+   "ux",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311133,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "remote-explorer",
+   "containers"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311149,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "scm",
+   "menus"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "layout",
+   "workbench-notifications"
+  ]
+ },
+ {
+  "number": 311164,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal",
+   "terminal-editors",
+   "terminal-process"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311167,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "extensions",
+   "extension-host",
+   "vscode.dev"
+  ],
+  "evidence_top3": [
+   "extensions",
+   "config",
+   "settings-sync"
+  ]
+ },
+ {
+  "number": 311174,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "perf",
+   "workbench-window"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311187,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "terminal-shell-pwsh",
+   "install-update",
+   "workbench-os-integration"
+  ],
+  "evidence_top3": [
+   "accessibility"
+  ]
+ },
+ {
+  "number": 311267,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "chat-terminal",
+   "perf"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311289,
+  "truth": [
+   "notebook-api"
+  ],
+  "lr_top3": [
+   "notebook",
+   "api-proposal",
+   "api"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "authentication",
+   "api"
+  ]
+ },
+ {
+  "number": 311306,
+  "truth": [
+   "editor-clipboard"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "ux",
+   "editor-indent-guides"
+  ],
+  "evidence_top3": [
+   "ux",
+   "accessibility",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 311308,
+  "truth": [
+   "terminal-tabs"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311339,
+  "truth": [
+   "tree-views"
+  ],
+  "lr_top3": [
+   "ux",
+   "themes",
+   "icons-product"
+  ],
+  "evidence_top3": [
+   "themes",
+   "telemetry",
+   "web"
+  ]
+ },
+ {
+  "number": 311404,
+  "truth": [
+   "terminal-tabs"
+  ],
+  "lr_top3": [
+   "terminal-shell-pwsh",
+   "terminal-suggest",
+   "terminal-tabs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311414,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "issue-reporter"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311426,
+  "truth": [
+   "notebook-layout"
+  ],
+  "lr_top3": [
+   "notebook",
+   "notebook-layout",
+   "notebook-output"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311468,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "icons-product"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311614,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "terminal-input",
+   "terminal-process"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311673,
+  "truth": [
+   "workbench-workspace"
+  ],
+  "lr_top3": [
+   "workbench-window",
+   "workbench-history",
+   "workbench-auxwindow"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311734,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "ux"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal",
+   "tasks"
+  ]
+ },
+ {
+  "number": 311757,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "tasks",
+   "perf"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "tasks",
+   "chat-terminal-output-monitor"
+  ]
+ },
+ {
+  "number": 311760,
+  "truth": [
+   "workbench-auxwindow"
+  ],
+  "lr_top3": [
+   "remote",
+   "chat-terminal",
+   "network"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311770,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311818,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "layout",
+   "ux",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311821,
+  "truth": [
+   "terminal-conpty",
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "install-update",
+   "menus"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311836,
+  "truth": [
+   "perf",
+   "webview"
+  ],
+  "lr_top3": [
+   "perf",
+   "webview",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311878,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal",
+   "chat-terminal",
+   "perf"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal",
+   "terminal-shell-integration"
+  ]
+ },
+ {
+  "number": 311919,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311922,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "workbench-zen",
+   "install-update",
+   "layout"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311929,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "keybindings",
+   "workbench-window"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311938,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "editor-hover",
+   "vscode-website"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311966,
+  "truth": [
+   "typescript"
+  ],
+  "lr_top3": [
+   "typescript",
+   "extensions",
+   "perf"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 311974,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "api-proposal",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312008,
+  "truth": [
+   "workbench-link",
+   "workspace-edit"
+  ],
+  "lr_top3": [
+   "workbench-history",
+   "workspace-trust",
+   "workbench-multiroot"
+  ],
+  "evidence_top3": [
+   "ux",
+   "accessibility",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 312009,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-shell-integration",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312059,
+  "truth": [
+   "terminal-shell-bash",
+   "terminal-shell-zsh"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-shell-integration",
+   "terminal-profiles"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "terminal-profiles",
+   "telemetry"
+  ]
+ },
+ {
+  "number": 312069,
+  "truth": [
+   "network",
+   "perf"
+  ],
+  "lr_top3": [
+   "perf",
+   "terminal",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312087,
+  "truth": [
+   "terminal-conpty"
+  ],
+  "lr_top3": [
+   "terminal-shell-pwsh",
+   "terminal-conpty",
+   "install-update"
+  ],
+  "evidence_top3": [
+   "terminal",
+   "terminal-shell-integration",
+   "terminal-rendering"
+  ]
+ },
+ {
+  "number": 312098,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "keybindings",
+   "menus"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312113,
+  "truth": [
+   "authentication",
+   "remote-tunnel"
+  ],
+  "lr_top3": [
+   "authentication",
+   "network",
+   "remote"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312125,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "ux"
+  ],
+  "evidence_top3": [
+   "install-update",
+   "remote",
+   "telemetry"
+  ]
+ },
+ {
+  "number": 312148,
+  "truth": [
+   "chat-terminal-output-monitor"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "workbench-notifications"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "ux",
+   "terminal-suggest"
+  ]
+ },
+ {
+  "number": 312169,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "api-proposal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312194,
+  "truth": [
+   "scm"
+  ],
+  "lr_top3": [
+   "scm",
+   "editor-contrib",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312260,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "tasks",
+   "terminal-shell-integration"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "tasks",
+   "terminal"
+  ]
+ },
+ {
+  "number": 312325,
+  "truth": [
+   "network"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "ux",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312330,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "ux",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312331,
+  "truth": [
+   "git"
+  ],
+  "lr_top3": [
+   "install-update",
+   "scm",
+   "file-explorer"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312363,
+  "truth": [
+   "terminal-shell-integration"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-shell-pwsh",
+   "terminal"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "telemetry"
+  ]
+ },
+ {
+  "number": 312377,
+  "truth": [
+   "scm"
+  ],
+  "lr_top3": [
+   "git",
+   "scm",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312403,
+  "truth": [
+   "terminal-tabs"
+  ],
+  "lr_top3": [
+   "terminal-tabs",
+   "titlebar",
+   "terminal-process"
+  ],
+  "evidence_top3": [
+   "terminal",
+   "terminal-shell-integration",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 312405,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "install-update",
+   "snap"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312413,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "install-update",
+   "browser-integration",
+   "inline-completions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312423,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "keybindings",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "ux",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 312431,
+  "truth": [
+   "terminal-suggest"
+  ],
+  "lr_top3": [
+   "terminal-suggest",
+   "terminal-shell-pwsh",
+   "terminal-input"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312434,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "terminal-editors",
+   "chat-terminal",
+   "terminal-persistence"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312446,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "api",
+   "browser-integration",
+   "api-finalization"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312456,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "quick-open"
+  ],
+  "evidence_top3": [
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 312484,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "terminal-links",
+   "vscode.dev"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312509,
+  "truth": [
+   "debug"
+  ],
+  "lr_top3": [
+   "debug",
+   "ux",
+   "quick-pick"
+  ],
+  "evidence_top3": [
+   "debug",
+   "accessibility",
+   "debug-disassembly"
+  ]
+ },
+ {
+  "number": 312531,
+  "truth": [
+   "terminal-shell-bash"
+  ],
+  "lr_top3": [
+   "keybindings",
+   "workbench-os-integration",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312572,
+  "truth": [
+   "languages-guessing"
+  ],
+  "lr_top3": [
+   "install-update",
+   "terminal-rendering",
+   "terminal-shell-pwsh"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312576,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312612,
+  "truth": [
+   "comments"
+  ],
+  "lr_top3": [
+   "output",
+   "notebook-diff",
+   "workbench-state"
+  ],
+  "evidence_top3": [
+   "ux",
+   "chat-terminal",
+   "notebook-output"
+  ]
+ },
+ {
+  "number": 312643,
+  "truth": [
+   "scm"
+  ],
+  "lr_top3": [
+   "git",
+   "ux",
+   "scm"
+  ],
+  "evidence_top3": [
+   "scm"
+  ]
+ },
+ {
+  "number": 312658,
+  "truth": [
+   "scm"
+  ],
+  "lr_top3": [
+   "git",
+   "scm",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312716,
+  "truth": [
+   "browser-integration",
+   "ux"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "menus"
+  ],
+  "evidence_top3": [
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 312728,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "chrome-devtools",
+   "workbench-os-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312745,
+  "truth": [
+   "terminal-profiles"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-shell-integration",
+   "terminal"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal-suggest",
+   "tasks"
+  ]
+ },
+ {
+  "number": 312768,
+  "truth": [
+   "scm"
+  ],
+  "lr_top3": [
+   "scm",
+   "ux",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312769,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "references-viewlet",
+   "terminal-links"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312817,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "quick-pick",
+   "keybindings"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312890,
+  "truth": [
+   "api-proposal"
+  ],
+  "lr_top3": [
+   "api",
+   "extensions",
+   "file-io"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "settings-editor",
+   "settings-search"
+  ]
+ },
+ {
+  "number": 312922,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "perf",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312956,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "extensions",
+   "install-update",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312958,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-input",
+   "chat-terminal",
+   "terminal"
+  ],
+  "evidence_top3": [
+   "notebook-layout",
+   "workbench-dnd",
+   "workbench-tabs"
+  ]
+ },
+ {
+  "number": 312964,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-input",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312970,
+  "truth": [
+   "terminal-tabs"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal",
+   "terminal-tabs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 312994,
+  "truth": [
+   "notebook",
+   "notebook-remote"
+  ],
+  "lr_top3": [
+   "notebook",
+   "notebook-execution",
+   "vscode.dev"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313064,
+  "truth": [
+   "git"
+  ],
+  "lr_top3": [
+   "git",
+   "chat-terminal",
+   "remote"
+  ],
+  "evidence_top3": [
+   "git",
+   "file-encoding",
+   "timeline-git"
+  ]
+ },
+ {
+  "number": 313074,
+  "truth": [
+   "terminal-shell-integration"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-shell-integration",
+   "tasks"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal-shell-integration",
+   "terminal-shell-zsh"
+  ]
+ },
+ {
+  "number": 313096,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "html",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313104,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "ux",
+   "extensions"
+  ],
+  "evidence_top3": [
+   "install-update",
+   "extensions",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 313109,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "vscode-website",
+   "extensions"
+  ],
+  "evidence_top3": [
+   "install-update",
+   "extensions-development",
+   "themes"
+  ]
+ },
+ {
+  "number": 313160,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal-shell-pwsh",
+   "terminal-process",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "remote",
+   "telemetry",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 313166,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "ux",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313171,
+  "truth": [
+   "editor-find",
+   "search-replace"
+  ],
+  "lr_top3": [
+   "json",
+   "editor-find",
+   "notebook-cell-editor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313192,
+  "truth": [
+   "editor-folding"
+  ],
+  "lr_top3": [
+   "editor-autoindent",
+   "editor-folding",
+   "bracket-pair-colorization"
+  ],
+  "evidence_top3": [
+   "editor-folding"
+  ]
+ },
+ {
+  "number": 313248,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-shell-integration",
+   "terminal"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal-suggest",
+   "telemetry"
+  ]
+ },
+ {
+  "number": 313257,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "remote",
+   "workbench-window"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313268,
+  "truth": [
+   "file-io"
+  ],
+  "lr_top3": [
+   "file-io",
+   "file-explorer",
+   "workbench-editors"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313296,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "git",
+   "terminal-suggest"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "chat-terminal",
+   "git"
+  ]
+ },
+ {
+  "number": 313343,
+  "truth": [
+   "icons-product",
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "icons-product",
+   "layout"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313368,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal",
+   "telemetry"
+  ],
+  "evidence_top3": [
+   "ux",
+   "telemetry",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 313373,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "terminal-shell-pwsh"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal",
+   "tasks"
+  ]
+ },
+ {
+  "number": 313390,
+  "truth": [
+   "code-cli"
+  ],
+  "lr_top3": [
+   "code-cli",
+   "workbench-cli",
+   "terminal-links"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313396,
+  "truth": [
+   "authentication"
+  ],
+  "lr_top3": [
+   "authentication",
+   "api",
+   "github"
+  ],
+  "evidence_top3": [
+   "issue-reporter",
+   "ux",
+   "extensions"
+  ]
+ },
+ {
+  "number": 313402,
+  "truth": [
+   "git"
+  ],
+  "lr_top3": [
+   "git",
+   "scm",
+   "github"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313412,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "tasks"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "telemetry",
+   "tasks"
+  ]
+ },
+ {
+  "number": 313413,
+  "truth": [
+   "l10n-platform"
+  ],
+  "lr_top3": [
+   "titlebar",
+   "menus",
+   "l10n-platform"
+  ],
+  "evidence_top3": [
+   "themes",
+   "workbench-os-integration",
+   "workbench-window"
+  ]
+ },
+ {
+  "number": 313424,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "sandbox",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313465,
+  "truth": [
+   "vscode-build"
+  ],
+  "lr_top3": [
+   "web",
+   "vscode-build",
+   "debug"
+  ],
+  "evidence_top3": [
+   "install-update",
+   "terminal-suggest",
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 313570,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "terminal",
+   "terminal-editors"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313585,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "remote",
+   "install-update",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313609,
+  "truth": [
+   "terminal-process"
+  ],
+  "lr_top3": [
+   "extensions",
+   "chat-terminal",
+   "extension-host"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313613,
+  "truth": [
+   "file-explorer"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "simple-file-dialog",
+   "workbench-history"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313683,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "remote",
+   "notebook"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313729,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "extensions",
+   "chat-terminal",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313784,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "chat-terminal",
+   "perf"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313785,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "vscode-website",
+   "debug"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313790,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal-shell-integration",
+   "api",
+   "terminal-process"
+  ],
+  "evidence_top3": [
+   "terminal-shell-integration",
+   "terminal-suggest",
+   "terminal"
+  ]
+ },
+ {
+  "number": 313802,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "ux",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 313808,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "issue-reporter"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "accessibility",
+   "notebook"
+  ]
+ },
+ {
+  "number": 313809,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "remote",
+   "terminal-process",
+   "terminal-profiles"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "ux",
+   "perf"
+  ]
+ },
+ {
+  "number": 313812,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "api",
+   "perf",
+   "javascript"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "ux",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 313813,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "notebook",
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 313830,
+  "truth": [
+   "languages-guessing"
+  ],
+  "lr_top3": [
+   "install-update",
+   "menus",
+   "terminal-shell-pwsh"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313842,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "install-update",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313847,
+  "truth": [
+   "chat-terminal",
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-sticky-scroll",
+   "terminal-conpty"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313859,
+  "truth": [
+   "debug"
+  ],
+  "lr_top3": [
+   "install-update",
+   "file-explorer",
+   "keybindings"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313877,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "config"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313882,
+  "truth": [
+   "install-update",
+   "ux"
+  ],
+  "lr_top3": [
+   "install-update",
+   "dialogs",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313890,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "webview",
+   "browser-integration",
+   "webview-views"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313930,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "perf",
+   "grammar"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313941,
+  "truth": [
+   "workbench-history"
+  ],
+  "lr_top3": [
+   "workbench-history",
+   "file-explorer",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 313962,
+  "truth": [
+   "git"
+  ],
+  "lr_top3": [
+   "git",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "git",
+   "file-encoding"
+  ]
+ },
+ {
+  "number": 313987,
+  "truth": [
+   "workbench-tabs"
+  ],
+  "lr_top3": [
+   "workbench-tabs",
+   "workbench-editors",
+   "terminal-tabs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314028,
+  "truth": [
+   "webview"
+  ],
+  "lr_top3": [
+   "perf",
+   "editor-core",
+   "remote"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314038,
+  "truth": [
+   "editor-find"
+  ],
+  "lr_top3": [
+   "terminal",
+   "terminal-profiles",
+   "perf"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314051,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "themes",
+   "ux",
+   "workbench-auxwindow"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314057,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314064,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314066,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "tasks",
+   "terminal-process"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314069,
+  "truth": [
+   "chat-terminal",
+   "terminal-shell-pwsh"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314080,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-suggest",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314081,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-suggest",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314089,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "ux",
+   "quick-pick",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314092,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "tasks",
+   "json"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314094,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 314112,
+  "truth": [
+   "browser-integration",
+   "ux"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "accessibility",
+   "workbench-tabs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314128,
+  "truth": [
+   "terminal-process"
+  ],
+  "lr_top3": [
+   "testing",
+   "perf",
+   "extension-host"
+  ],
+  "evidence_top3": [
+   "perf",
+   "chat-terminal",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 314139,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "web"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314140,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "workbench-status",
+   "accessibility",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314143,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "workbench-tabs",
+   "accessibility",
+   "terminal-tabs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314145,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314146,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "testing",
+   "quick-open",
+   "search"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314147,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "ux",
+   "accessibility",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314149,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "settings-editor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314152,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "ux",
+   "accessibility",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314153,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "ux",
+   "authentication",
+   "settings-editor"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "chat-terminal",
+   "ux"
+  ]
+ },
+ {
+  "number": 314155,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "quick-pick",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314156,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "ux",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314157,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "extensions",
+   "scm",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "ux",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 314158,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "web",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314160,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "chat-terminal",
+   "ux"
+  ],
+  "evidence_top3": [
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 314166,
+  "truth": [
+   "browser-integration",
+   "ux"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 314168,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "ux",
+   "accessibility",
+   "workbench-tabs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314171,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314172,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "workbench-tabs",
+   "terminal-tabs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314173,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "ux",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314188,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "ux",
+   "browser-integration",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 314189,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal",
+   "terminal-conpty"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "accessibility",
+   "ux"
+  ]
+ },
+ {
+  "number": 314197,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "notebook-output"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314205,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-suggest",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314207,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314210,
+  "truth": [
+   "browser-integration",
+   "ux"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "scm",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314212,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314220,
+  "truth": [
+   "snippets",
+   "suggest"
+  ],
+  "lr_top3": [
+   "inline-completions",
+   "snippets",
+   "suggest"
+  ],
+  "evidence_top3": [
+   "editor-autoindent",
+   "editor-clipboard",
+   "inline-completions"
+  ]
+ },
+ {
+  "number": 314239,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314312,
+  "truth": [
+   "terminal-find"
+  ],
+  "lr_top3": [
+   "perf",
+   "terminal",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314327,
+  "truth": [
+   "custom-editors"
+  ],
+  "lr_top3": [
+   "custom-editors",
+   "workbench-editors",
+   "file-io"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314339,
+  "truth": [
+   "network"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "chat-terminal",
+   "ux"
+  ],
+  "evidence_top3": [
+   "json"
+  ]
+ },
+ {
+  "number": 314352,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "ux",
+   "accessibility",
+   "themes"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314426,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "terminal-suggest"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "accessibility",
+   "terminal"
+  ]
+ },
+ {
+  "number": 314428,
+  "truth": [
+   "network"
+  ],
+  "lr_top3": [
+   "network",
+   "extension-host",
+   "proxy"
+  ],
+  "evidence_top3": [
+   "perf-startup",
+   "network",
+   "authentication"
+  ]
+ },
+ {
+  "number": 314431,
+  "truth": [
+   "api",
+   "webview"
+  ],
+  "lr_top3": [
+   "webview",
+   "extensions-development",
+   "extension-host"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314432,
+  "truth": [
+   "accessibility",
+   "themes"
+  ],
+  "lr_top3": [
+   "ux",
+   "themes",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314452,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "terminal-inline-chat"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314455,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314456,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "terminal-inline-chat"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314458,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "css-less-scss"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314460,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "install-update",
+   "ux",
+   "notebook"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "perf",
+   "inline-completions"
+  ]
+ },
+ {
+  "number": 314464,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "issue-reporter",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314470,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-tabs",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314473,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "settings-editor",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314487,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "settings-editor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314490,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314496,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "css-less-scss",
+   "install-update",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314503,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "git",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314504,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "terminal-suggest",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314507,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "css-less-scss",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314508,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "editor-input-IME",
+   "terminal-input",
+   "install-update"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314519,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "ux",
+   "terminal-suggest",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314545,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "terminal-links",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 314600,
+  "truth": [
+   "issue-bot"
+  ],
+  "lr_top3": [
+   "issue-reporter",
+   "accessibility",
+   "ux"
+  ],
+  "evidence_top3": [
+   "file-watcher",
+   "perf-startup",
+   "telemetry"
+  ]
+ },
+ {
+  "number": 314627,
+  "truth": [
+   "workbench-cli"
+  ],
+  "lr_top3": [
+   "extensions",
+   "tasks",
+   "workbench-cli"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314634,
+  "truth": [
+   "file-explorer"
+  ],
+  "lr_top3": [
+   "search",
+   "file-explorer",
+   "file-glob"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314666,
+  "truth": [
+   "testing"
+  ],
+  "lr_top3": [
+   "testing",
+   "search",
+   "file-explorer"
+  ],
+  "evidence_top3": [
+   "testing",
+   "terminal-suggest",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 314696,
+  "truth": [
+   "languages-guessing"
+  ],
+  "lr_top3": [
+   "install-update",
+   "grammar",
+   "terminal-shell-pwsh"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314754,
+  "truth": [
+   "git"
+  ],
+  "lr_top3": [
+   "git",
+   "ux",
+   "editor-core"
+  ],
+  "evidence_top3": [
+   "git",
+   "scm"
+  ]
+ },
+ {
+  "number": 314777,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "ux",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314779,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "quick-pick",
+   "ux"
+  ],
+  "evidence_top3": [
+   "perf",
+   "vscode.dev",
+   "web"
+  ]
+ },
+ {
+  "number": 314789,
+  "truth": [
+   "browser-integration",
+   "ux"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "api-proposal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314791,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "ux",
+   "workbench-notifications",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314796,
+  "truth": [
+   "accessibility",
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "accessibility",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal-suggest",
+   "ux"
+  ]
+ },
+ {
+  "number": 314809,
+  "truth": [
+   "terminal-persistence",
+   "terminal-process"
+  ],
+  "lr_top3": [
+   "terminal-shell-integration",
+   "terminal",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314831,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "accessibility",
+   "terminal-inline-chat"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314832,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "quick-pick",
+   "editor-input-IME"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314833,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "editor-input-IME",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314844,
+  "truth": [
+   "scm"
+  ],
+  "lr_top3": [
+   "scm",
+   "ux",
+   "terminal"
+  ],
+  "evidence_top3": [
+   "settings-editor",
+   "settings-search",
+   "javascript"
+  ]
+ },
+ {
+  "number": 314845,
+  "truth": [
+   "api"
+  ],
+  "lr_top3": [
+   "api",
+   "api-proposal",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314846,
+  "truth": [
+   "javascript"
+  ],
+  "lr_top3": [
+   "editor-find",
+   "references-viewlet",
+   "install-update"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314858,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314873,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "api",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314889,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-suggest",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314896,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "network",
+   "api-proposal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314897,
+  "truth": [
+   "vscode-build"
+  ],
+  "lr_top3": [
+   "testing",
+   "api",
+   "vscode.dev"
+  ],
+  "evidence_top3": [
+   "telemetry",
+   "settings-editor",
+   "git"
+  ]
+ },
+ {
+  "number": 314923,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "extensions",
+   "config",
+   "terminal-rendering"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "extensions",
+   "interactive-window"
+  ]
+ },
+ {
+  "number": 314942,
+  "truth": [
+   "notebook",
+   "notebook-serialization"
+  ],
+  "lr_top3": [
+   "notebook-output",
+   "notebook-layout",
+   "notebook"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314949,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "config"
+  ],
+  "evidence_top3": [
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 314966,
+  "truth": [
+   "testing"
+  ],
+  "lr_top3": [
+   "testing",
+   "scm",
+   "diff-editor"
+  ],
+  "evidence_top3": [
+   "context-keys",
+   "terminal-suggest",
+   "monaco-editor"
+  ]
+ },
+ {
+  "number": 314974,
+  "truth": [
+   "webview"
+  ],
+  "lr_top3": [
+   "quick-pick",
+   "accessibility",
+   "editor-hover"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 314984,
+  "truth": [
+   "quick-open"
+  ],
+  "lr_top3": [
+   "quick-pick",
+   "search",
+   "terminal-find"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "workbench-editors",
+   "workbench-history"
+  ]
+ },
+ {
+  "number": 315025,
+  "truth": [
+   "proxy"
+  ],
+  "lr_top3": [
+   "proxy",
+   "remote",
+   "network"
+  ],
+  "evidence_top3": [
+   "perf-startup",
+   "network",
+   "portable-mode"
+  ]
+ },
+ {
+  "number": 315030,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "debug",
+   "workbench-window"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315038,
+  "truth": [
+   "themes",
+   "ux"
+  ],
+  "lr_top3": [
+   "editor-color-picker",
+   "install-update",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315039,
+  "truth": [
+   "browser-integration",
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "webview",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315116,
+  "truth": [
+   "containers",
+   "remote"
+  ],
+  "lr_top3": [
+   "remote",
+   "ux",
+   "containers"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315177,
+  "truth": [
+   "api",
+   "api-proposal"
+  ],
+  "lr_top3": [
+   "diff-editor",
+   "api",
+   "api-proposal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315186,
+  "truth": [
+   "api",
+   "tree-views"
+  ],
+  "lr_top3": [
+   "tree-views",
+   "accessibility",
+   "api"
+  ],
+  "evidence_top3": [
+   "icons-product",
+   "ux",
+   "layout"
+  ]
+ },
+ {
+  "number": 315191,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-rendering",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315229,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "scm",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315240,
+  "truth": [
+   "editor-synced-region"
+  ],
+  "lr_top3": [
+   "inline-completions",
+   "chat-terminal",
+   "suggest"
+  ],
+  "evidence_top3": [
+   "html",
+   "editor-autoindent",
+   "editor-clipboard"
+  ]
+ },
+ {
+  "number": 315250,
+  "truth": [
+   "workbench-editors"
+  ],
+  "lr_top3": [
+   "workbench-tabs",
+   "workbench-editors",
+   "workbench-window"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315252,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal-conpty",
+   "terminal-sticky-scroll",
+   "editor-core"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315314,
+  "truth": [
+   "perf",
+   "perf-startup"
+  ],
+  "lr_top3": [
+   "perf",
+   "perf-startup",
+   "extension-host"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "code-cli",
+   "file-watcher"
+  ]
+ },
+ {
+  "number": 315340,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "keybindings-editor",
+   "keybindings"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "ux",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 315347,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "extensions",
+   "ux",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "chat-terminal",
+   "ux"
+  ]
+ },
+ {
+  "number": 315373,
+  "truth": [
+   "suggest"
+  ],
+  "lr_top3": [
+   "terminal-suggest",
+   "inline-completions",
+   "suggest"
+  ],
+  "evidence_top3": [
+   "editor-autoindent",
+   "editor-clipboard",
+   "inline-completions"
+  ]
+ },
+ {
+  "number": 315376,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "telemetry",
+   "diff-editor"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "chat-terminal",
+   "git"
+  ]
+ },
+ {
+  "number": 315426,
+  "truth": [
+   "font-rendering"
+  ],
+  "lr_top3": [
+   "font-rendering",
+   "editor-core",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315476,
+  "truth": [
+   "chat-terminal-output-monitor"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "telemetry"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "tasks"
+  ]
+ },
+ {
+  "number": 315497,
+  "truth": [
+   "terminal-input"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "accessibility",
+   "editor-color-picker"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315522,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "editor-color-picker",
+   "workbench-tabs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315546,
+  "truth": [
+   "scm"
+  ],
+  "lr_top3": [
+   "install-update",
+   "accessibility",
+   "git"
+  ],
+  "evidence_top3": [
+   "git",
+   "scm",
+   "diff-editor"
+  ]
+ },
+ {
+  "number": 315612,
+  "truth": [
+   "telemetry"
+  ],
+  "lr_top3": [
+   "telemetry",
+   "network",
+   "web"
+  ],
+  "evidence_top3": [
+   "telemetry",
+   "ux",
+   "notebook"
+  ]
+ },
+ {
+  "number": 315639,
+  "truth": [
+   "custom-editors"
+  ],
+  "lr_top3": [
+   "notebook-diff",
+   "scm",
+   "custom-editors"
+  ],
+  "evidence_top3": [
+   "workbench-editors",
+   "accessibility",
+   "notebook-output"
+  ]
+ },
+ {
+  "number": 315645,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "ux",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315647,
+  "truth": [
+   "markdown"
+  ],
+  "lr_top3": [
+   "diff-editor",
+   "ux",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315649,
+  "truth": [
+   "editor-input-IME"
+  ],
+  "lr_top3": [
+   "editor-input-IME",
+   "terminal-input",
+   "monaco-editor"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "grammar",
+   "perf"
+  ]
+ },
+ {
+  "number": 315674,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "terminal-rendering",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315694,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "api",
+   "extension-host"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315699,
+  "truth": [
+   "scm"
+  ],
+  "lr_top3": [
+   "git",
+   "scm",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315744,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315745,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "terminal-suggest",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315758,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "terminal-suggest",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315762,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "layout",
+   "workbench-window"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315764,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "scm"
+  ],
+  "evidence_top3": [
+   "ux",
+   "chat-terminal",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 315769,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "scm",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315770,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "terminal-links",
+   "ux",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315773,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "git",
+   "ux",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315775,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315841,
+  "truth": [
+   "extension-host"
+  ],
+  "lr_top3": [
+   "authentication",
+   "extension-host",
+   "api"
+  ],
+  "evidence_top3": [
+   "extension-activation",
+   "remote",
+   "portable-mode"
+  ]
+ },
+ {
+  "number": 315881,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "git",
+   "testing"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "chat-terminal",
+   "git"
+  ]
+ },
+ {
+  "number": 315884,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "api",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "git",
+   "terminal-suggest"
+  ]
+ },
+ {
+  "number": 315892,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "api",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "perf",
+   "ux"
+  ]
+ },
+ {
+  "number": 315925,
+  "truth": [
+   "custom-editors"
+  ],
+  "lr_top3": [
+   "diff-editor",
+   "custom-editors",
+   "api"
+  ],
+  "evidence_top3": [
+   "file-explorer"
+  ]
+ },
+ {
+  "number": 315941,
+  "truth": [
+   "perf"
+  ],
+  "lr_top3": [
+   "perf",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315942,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "web",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315947,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "chat-terminal",
+   "ux"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "ux",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 315969,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "terminal-tabs",
+   "terminal-links"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 315971,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "api"
+  ],
+  "evidence_top3": [
+   "output"
+  ]
+ },
+ {
+  "number": 316001,
+  "truth": [
+   "file-explorer",
+   "remote"
+  ],
+  "lr_top3": [
+   "install-update",
+   "remote",
+   "menus"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316018,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "editor-input",
+   "javascript"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316030,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "ux",
+   "perf"
+  ],
+  "evidence_top3": [
+   "ux",
+   "accessibility",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 316036,
+  "truth": [
+   "ux",
+   "workbench-tabs"
+  ],
+  "lr_top3": [
+   "ux",
+   "workbench-tabs",
+   "editor-core"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316050,
+  "truth": [
+   "output"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "output"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316054,
+  "truth": [
+   "editor-find"
+  ],
+  "lr_top3": [
+   "ux",
+   "dialogs",
+   "suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316087,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "install-update",
+   "ux",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316090,
+  "truth": [
+   "perf"
+  ],
+  "lr_top3": [
+   "perf",
+   "debug",
+   "telemetry"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316100,
+  "truth": [
+   "suggest"
+  ],
+  "lr_top3": [
+   "terminal-suggest",
+   "inline-completions",
+   "suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316113,
+  "truth": [
+   "markdown",
+   "outline"
+  ],
+  "lr_top3": [
+   "outline",
+   "notebook-toc-outline",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316129,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "terminal-shell-zsh",
+   "chat-terminal",
+   "remote"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "debug",
+   "api"
+  ]
+ },
+ {
+  "number": 316139,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "config",
+   "settings-editor"
+  ],
+  "evidence_top3": [
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 316222,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "terminal-shell-integration",
+   "chat-terminal",
+   "terminal-shell-pwsh"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal-shell-integration",
+   "terminal-shell-zsh"
+  ]
+ },
+ {
+  "number": 316246,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "workbench-dnd",
+   "terminal-editors",
+   "terminal-input"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316256,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "workbench-os-integration"
+  ],
+  "evidence_top3": [
+   "portable-mode",
+   "api-finalization",
+   "extension-host"
+  ]
+ },
+ {
+  "number": 316307,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "accessibility",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316328,
+  "truth": [
+   "api"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "api",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316347,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-shell-zsh",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316354,
+  "truth": [
+   "user-profiles"
+  ],
+  "lr_top3": [
+   "user-profiles",
+   "ux",
+   "workbench-auxwindow"
+  ],
+  "evidence_top3": [
+   "user-profiles",
+   "api-proposal",
+   "tree-views"
+  ]
+ },
+ {
+  "number": 316375,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "chat-terminal",
+   "install-update"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316377,
+  "truth": [
+   "workbench-tabs"
+  ],
+  "lr_top3": [
+   "workbench-editors",
+   "ux",
+   "terminal-tabs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316378,
+  "truth": [
+   "browser-integration",
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "layout",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316388,
+  "truth": [
+   "tasks"
+  ],
+  "lr_top3": [
+   "tasks",
+   "extensions",
+   "install-update"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316391,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "workbench-os-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316398,
+  "truth": [
+   "git"
+  ],
+  "lr_top3": [
+   "git",
+   "search",
+   "file-explorer"
+  ],
+  "evidence_top3": [
+   "git",
+   "scm",
+   "file-encoding"
+  ]
+ },
+ {
+  "number": 316401,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316414,
+  "truth": [
+   "file-explorer"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "workbench-dnd",
+   "remote"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316415,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "api",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316437,
+  "truth": [
+   "scm"
+  ],
+  "lr_top3": [
+   "scm",
+   "git",
+   "workbench-views"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316471,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316483,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "ux",
+   "browser-integration",
+   "terminal"
+  ],
+  "evidence_top3": [
+   "telemetry",
+   "browser-integration",
+   "ux"
+  ]
+ },
+ {
+  "number": 316486,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal-process",
+   "chat-terminal",
+   "terminal-conpty"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal-process",
+   "terminal"
+  ]
+ },
+ {
+  "number": 316488,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "editor-core",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316502,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "search",
+   "testing",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316517,
+  "truth": [
+   "editor-symbols"
+  ],
+  "lr_top3": [
+   "workbench-editors",
+   "workbench-editor-groups",
+   "editor-symbols"
+  ],
+  "evidence_top3": [
+   "terminal-editors",
+   "editor-core",
+   "quick-open"
+  ]
+ },
+ {
+  "number": 316528,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "terminal-links",
+   "editor-contrib"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316535,
+  "truth": [
+   "workbench-hover"
+  ],
+  "lr_top3": [
+   "git",
+   "scm",
+   "workbench-hover"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316547,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "terminal",
+   "terminal-conpty"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316569,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316585,
+  "truth": [
+   "html"
+  ],
+  "lr_top3": [
+   "suggest",
+   "inline-completions",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316597,
+  "truth": [
+   "terminal-tabs"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "remote",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316600,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "terminal",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316603,
+  "truth": [
+   "git"
+  ],
+  "lr_top3": [
+   "git",
+   "editor-core",
+   "github"
+  ],
+  "evidence_top3": [
+   "git",
+   "scm",
+   "file-encoding"
+  ]
+ },
+ {
+  "number": 316615,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "workbench-tabs",
+   "remote"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316625,
+  "truth": [
+   "authentication"
+  ],
+  "lr_top3": [
+   "authentication",
+   "api-proposal",
+   "api"
+  ],
+  "evidence_top3": [
+   "authentication",
+   "ux",
+   "api-proposal"
+  ]
+ },
+ {
+  "number": 316658,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "debug"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "debug",
+   "tasks"
+  ]
+ },
+ {
+  "number": 316675,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "editor-hover",
+   "workbench-hover"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316689,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 316737,
+  "truth": [
+   "layout"
+  ],
+  "lr_top3": [
+   "layout",
+   "diff-editor",
+   "workbench-views"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316743,
+  "truth": [
+   "editor-find"
+  ],
+  "lr_top3": [
+   "install-update",
+   "perf",
+   "trackpad/scroll"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316781,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "chat-terminal",
+   "file-encoding"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316786,
+  "truth": [
+   "workbench-editors"
+  ],
+  "lr_top3": [
+   "install-update",
+   "git",
+   "workbench-window"
+  ],
+  "evidence_top3": [
+   "workbench-editors",
+   "accessibility",
+   "ux"
+  ]
+ },
+ {
+  "number": 316815,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "chat-terminal",
+   "ux"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "accessibility",
+   "themes"
+  ]
+ },
+ {
+  "number": 316817,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "tasks"
+  ],
+  "evidence_top3": [
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 316821,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "terminal"
+  ],
+  "evidence_top3": [
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 316841,
+  "truth": [
+   "code-server-web",
+   "vscode.dev"
+  ],
+  "lr_top3": [
+   "web",
+   "webview",
+   "perf"
+  ],
+  "evidence_top3": [
+   "notebook-ipynb",
+   "notebook-serialization"
+  ]
+ },
+ {
+  "number": 316851,
+  "truth": [
+   "editor-find"
+  ],
+  "lr_top3": [
+   "editor-sticky-scroll",
+   "editor-find",
+   "titlebar"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316860,
+  "truth": [
+   "workbench-views"
+  ],
+  "lr_top3": [
+   "ux",
+   "scm",
+   "themes"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316867,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "extensions",
+   "tasks",
+   "install-update"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316870,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "file-explorer",
+   "workbench-os-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316899,
+  "truth": [
+   "suggest"
+  ],
+  "lr_top3": [
+   "terminal-suggest",
+   "inline-completions",
+   "suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316940,
+  "truth": [
+   "git"
+  ],
+  "lr_top3": [
+   "git",
+   "chat-terminal",
+   "file-watcher"
+  ],
+  "evidence_top3": [
+   "git",
+   "terminal-suggest",
+   "search"
+  ]
+ },
+ {
+  "number": 316949,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-shell-integration",
+   "editor-core"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316960,
+  "truth": [
+   "terminal",
+   "terminal-input"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "perf",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316971,
+  "truth": [
+   "javascript"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "typescript",
+   "api-proposal"
+  ],
+  "evidence_top3": [
+   "settings-editor",
+   "settings-search",
+   "typescript"
+  ]
+ },
+ {
+  "number": 316976,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "output",
+   "notebook-output"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316977,
+  "truth": [
+   "markdown"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316980,
+  "truth": [
+   "notebook"
+  ],
+  "lr_top3": [
+   "notebook",
+   "themes",
+   "ux"
+  ],
+  "evidence_top3": [
+   "notebook-ipynb",
+   "notebook-serialization",
+   "notebook-diff"
+  ]
+ },
+ {
+  "number": 316981,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-suggest",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 316986,
+  "truth": [
+   "notebook"
+  ],
+  "lr_top3": [
+   "notebook",
+   "notebook-output",
+   "notebook-find"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317005,
+  "truth": [
+   "snippets"
+  ],
+  "lr_top3": [
+   "snippets",
+   "inline-completions",
+   "editor-core"
+  ],
+  "evidence_top3": [
+   "authentication",
+   "terminal-suggest",
+   "api"
+  ]
+ },
+ {
+  "number": 317006,
+  "truth": [
+   "file-io"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "git",
+   "formatting"
+  ],
+  "evidence_top3": [
+   "file-explorer"
+  ]
+ },
+ {
+  "number": 317007,
+  "truth": [
+   "terminal-profiles"
+  ],
+  "lr_top3": [
+   "user-profiles",
+   "terminal",
+   "terminal-profiles"
+  ],
+  "evidence_top3": [
+   "settings-search",
+   "settings-editor",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 317013,
+  "truth": [
+   "markdown"
+  ],
+  "lr_top3": [
+   "webview",
+   "api",
+   "html"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "continue-working-on",
+   "notebook-output"
+  ]
+ },
+ {
+  "number": 317014,
+  "truth": [
+   "notebook-output"
+  ],
+  "lr_top3": [
+   "notebook",
+   "webview",
+   "perf"
+  ],
+  "evidence_top3": [
+   "notebook-output",
+   "notebook-diff",
+   "notebook"
+  ]
+ },
+ {
+  "number": 317015,
+  "truth": [
+   "notebook-execution"
+  ],
+  "lr_top3": [
+   "notebook",
+   "webview",
+   "notebook-output"
+  ],
+  "evidence_top3": [
+   "notebook-output",
+   "accessibility",
+   "notebook-diff"
+  ]
+ },
+ {
+  "number": 317029,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "editor-core",
+   "terminal-input"
+  ],
+  "evidence_top3": [
+   "webview",
+   "terminal-suggest",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 317033,
+  "truth": [
+   "markdown"
+  ],
+  "lr_top3": [
+   "keybindings",
+   "menus",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317035,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "debug",
+   "file-glob"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "tasks",
+   "webview"
+  ]
+ },
+ {
+  "number": 317042,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-suggest",
+   "terminal-conpty"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317050,
+  "truth": [
+   "telemetry"
+  ],
+  "lr_top3": [
+   "telemetry",
+   "authentication",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "telemetry",
+   "web"
+  ]
+ },
+ {
+  "number": 317059,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-suggest",
+   "terminal-tabs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317076,
+  "truth": [
+   "editor-api"
+  ],
+  "lr_top3": [
+   "terminal-links",
+   "ux",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317102,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317106,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317117,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "terminal-suggest",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317118,
+  "truth": [
+   "markdown"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "diff-editor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317137,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "html",
+   "browser-integration",
+   "ux"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "telemetry"
+  ]
+ },
+ {
+  "number": 317138,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "workbench-untitled-editors",
+   "native-file-dialog"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317142,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "ux",
+   "browser-integration",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317145,
+  "truth": [
+   "quick-pick"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "quick-pick",
+   "quick-open"
+  ],
+  "evidence_top3": [
+   "terminal-links"
+  ]
+ },
+ {
+  "number": 317151,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "accessibility",
+   "telemetry"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317156,
+  "truth": [
+   "browser-integration",
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "icons-product",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317181,
+  "truth": [
+   "open-editors"
+  ],
+  "lr_top3": [
+   "open-editors",
+   "file-explorer",
+   "workbench-window"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317195,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "ux",
+   "workbench-notifications",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "notebook",
+   "ux"
+  ]
+ },
+ {
+  "number": 317210,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "layout",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317258,
+  "truth": [
+   "remote-explorer"
+  ],
+  "lr_top3": [
+   "remote",
+   "quick-pick",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317272,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "scm",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "ux"
+  ]
+ },
+ {
+  "number": 317301,
+  "truth": [
+   "diff-editor"
+  ],
+  "lr_top3": [
+   "diff-editor",
+   "monaco-editor",
+   "vscode-build"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317310,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "terminal",
+   "terminal-input"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317332,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "workbench-electron",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317376,
+  "truth": [
+   "editor-textbuffer",
+   "perf",
+   "undo-redo"
+  ],
+  "lr_top3": [
+   "ux",
+   "suggest",
+   "perf"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317380,
+  "truth": [
+   "containers"
+  ],
+  "lr_top3": [
+   "remote",
+   "vscode.dev",
+   "containers"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317420,
+  "truth": [
+   "settings-editor"
+  ],
+  "lr_top3": [
+   "settings-editor",
+   "settings-search",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317423,
+  "truth": [
+   "terminal",
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317439,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "terminal-tabs",
+   "workbench-tabs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317451,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal",
+   "terminal-suggest",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317488,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "git",
+   "terminal-input"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317490,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "file-io"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "tasks",
+   "terminal-suggest"
+  ]
+ },
+ {
+  "number": 317498,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "ux",
+   "api-proposal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317522,
+  "truth": [
+   "typescript"
+  ],
+  "lr_top3": [
+   "editor-core",
+   "inlay-hints",
+   "inline-completions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317536,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "extensions",
+   "quick-pick",
+   "extension-host"
+  ],
+  "evidence_top3": [
+   "telemetry",
+   "extensions",
+   "install-update"
+  ]
+ },
+ {
+  "number": 317557,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "tasks",
+   "install-update",
+   "keybindings"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317567,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "git",
+   "ux"
+  ],
+  "evidence_top3": [
+   "file-watcher",
+   "perf"
+  ]
+ },
+ {
+  "number": 317569,
+  "truth": [
+   "browser-integration",
+   "tasks"
+  ],
+  "lr_top3": [
+   "ux",
+   "tasks",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317638,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317647,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "issue-reporter"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317672,
+  "truth": [
+   "terminal-input"
+  ],
+  "lr_top3": [
+   "json-sorting",
+   "terminal-rendering",
+   "terminal-input"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317687,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "api-proposal",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317689,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "icons-product"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317690,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "browser-integration",
+   "titlebar"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317691,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "themes",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317702,
+  "truth": [
+   "editor-sticky-scroll"
+  ],
+  "lr_top3": [
+   "ux",
+   "scm",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317735,
+  "truth": [
+   "notebook"
+  ],
+  "lr_top3": [
+   "notebook",
+   "notebook-find",
+   "perf"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317740,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-input",
+   "terminal",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317765,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "install-update",
+   "keybindings"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 317767,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "install-update",
+   "config",
+   "extensions"
+  ],
+  "evidence_top3": [
+   "output",
+   "search",
+   "ux"
+  ]
+ },
+ {
+  "number": 317770,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "extensions",
+   "install-update",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317796,
+  "truth": [
+   "git"
+  ],
+  "lr_top3": [
+   "git",
+   "ux",
+   "file-explorer"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317835,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "terminal-inline-chat",
+   "inline-completions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317863,
+  "truth": [
+   "suggest"
+  ],
+  "lr_top3": [
+   "suggest",
+   "inline-completions",
+   "terminal-suggest"
+  ],
+  "evidence_top3": [
+   "inline-completions",
+   "editor-autoindent",
+   "editor-clipboard"
+  ]
+ },
+ {
+  "number": 317869,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "cloud-changes",
+   "web"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317896,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "debug",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317916,
+  "truth": [
+   "snippets"
+  ],
+  "lr_top3": [
+   "install-update",
+   "workbench-window",
+   "terminal-shell-pwsh"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 317917,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal-input",
+   "terminal",
+   "terminal-tabs"
+  ],
+  "evidence_top3": [
+   "authentication",
+   "chat-terminal",
+   "terminal"
+  ]
+ },
+ {
+  "number": 317969,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-input",
+   "terminal-rendering",
+   "terminal-conpty"
+  ],
+  "evidence_top3": [
+   "code-cli",
+   "terminal-suggest",
+   "terminal"
+  ]
+ },
+ {
+  "number": 317970,
+  "truth": [
+   "terminal-tabs"
+  ],
+  "lr_top3": [
+   "terminal-tabs",
+   "titlebar",
+   "layout"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318015,
+  "truth": [
+   "notebook-ipynb"
+  ],
+  "lr_top3": [
+   "notebook",
+   "notebook-layout",
+   "notebook-cell-editor"
+  ],
+  "evidence_top3": [
+   "notebook",
+   "notebook-output",
+   "ux"
+  ]
+ },
+ {
+  "number": 318021,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "layout",
+   "workbench-views"
+  ],
+  "evidence_top3": [
+   "ux",
+   "debug",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 318058,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "accessibility",
+   "layout"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 318062,
+  "truth": [
+   "config",
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "accessibility",
+   "icons-product"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318065,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318083,
+  "truth": [
+   "markdown"
+  ],
+  "lr_top3": [
+   "keybindings",
+   "diff-editor",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318103,
+  "truth": [
+   "extension-host"
+  ],
+  "lr_top3": [
+   "extensions",
+   "extension-host",
+   "extensions-development"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "telemetry",
+   "network"
+  ]
+ },
+ {
+  "number": 318108,
+  "truth": [
+   "markdown"
+  ],
+  "lr_top3": [
+   "install-update",
+   "terminal-rendering",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318116,
+  "truth": [
+   "workbench-os-integration"
+  ],
+  "lr_top3": [
+   "workbench-history",
+   "file-explorer",
+   "api"
+  ],
+  "evidence_top3": [
+   "portable-mode",
+   "api-finalization",
+   "git"
+  ]
+ },
+ {
+  "number": 318121,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "ux",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318138,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "config"
+  ],
+  "evidence_top3": [
+   "notebook-output",
+   "accessibility",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 318159,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal",
+   "perf"
+  ],
+  "evidence_top3": [
+   "terminal",
+   "chat-terminal",
+   "terminal-suggest"
+  ]
+ },
+ {
+  "number": 318160,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal",
+   "terminal-tabs"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal",
+   "tasks"
+  ]
+ },
+ {
+  "number": 318182,
+  "truth": [
+   "user-profiles"
+  ],
+  "lr_top3": [
+   "extensions",
+   "user-profiles",
+   "perf"
+  ],
+  "evidence_top3": [
+   "user-profiles"
+  ]
+ },
+ {
+  "number": 318189,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "workbench-status",
+   "suggest"
+  ],
+  "evidence_top3": [
+   "ux",
+   "browser-integration",
+   "editor-symbols"
+  ]
+ },
+ {
+  "number": 318196,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "ux",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318200,
+  "truth": [
+   "layout"
+  ],
+  "lr_top3": [
+   "layout",
+   "workbench-views",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318238,
+  "truth": [
+   "perf"
+  ],
+  "lr_top3": [
+   "perf",
+   "perf-startup",
+   "gpu"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318254,
+  "truth": [
+   "terminal-input"
+  ],
+  "lr_top3": [
+   "terminal",
+   "web",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318259,
+  "truth": [
+   "network"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "chat-terminal",
+   "ux"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "ux",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 318279,
+  "truth": [
+   "git",
+   "perf"
+  ],
+  "lr_top3": [
+   "git",
+   "extension-host",
+   "perf"
+  ],
+  "evidence_top3": [
+   "git",
+   "portable-mode",
+   "terminal-suggest"
+  ]
+ },
+ {
+  "number": 318305,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "scm",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318311,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318312,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "scm",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318313,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "quick-pick",
+   "terminal-suggest",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318332,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "issue-reporter",
+   "perf",
+   "terminal-links"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318356,
+  "truth": [
+   "workbench-views"
+  ],
+  "lr_top3": [
+   "install-update",
+   "typescript",
+   "workbench-views"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318362,
+  "truth": [
+   "debug"
+  ],
+  "lr_top3": [
+   "remote",
+   "install-update",
+   "file-watcher"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318380,
+  "truth": [
+   "emmet"
+  ],
+  "lr_top3": [
+   "suggest",
+   "install-update",
+   "perf"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318395,
+  "truth": [
+   "editor-symbols"
+  ],
+  "lr_top3": [
+   "workbench-editors",
+   "editor-symbols",
+   "terminal-editors"
+  ],
+  "evidence_top3": [
+   "editor-core",
+   "terminal-editors",
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 318402,
+  "truth": [
+   "terminal-suggest"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "scm",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318407,
+  "truth": [
+   "browser-integration",
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "terminal-suggest",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318437,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318452,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "browser-integration",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318453,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "issue-reporter",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318454,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "editor-clipboard",
+   "ux",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318522,
+  "truth": [
+   "editor-input-IME"
+  ],
+  "lr_top3": [
+   "install-update",
+   "inline-completions",
+   "json"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318523,
+  "truth": [
+   "workbench-history"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "workbench-editors",
+   "editor-core"
+  ],
+  "evidence_top3": [
+   "workbench-editors",
+   "themes",
+   "ux"
+  ]
+ },
+ {
+  "number": 318532,
+  "truth": [
+   "markdown"
+  ],
+  "lr_top3": [
+   "scm",
+   "workbench-tabs",
+   "json"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318549,
+  "truth": [
+   "snippets"
+  ],
+  "lr_top3": [
+   "snippets",
+   "json",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318553,
+  "truth": [
+   "debug"
+  ],
+  "lr_top3": [
+   "ux",
+   "debug",
+   "tasks"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318577,
+  "truth": [
+   "outline"
+  ],
+  "lr_top3": [
+   "outline",
+   "notebook-toc-outline",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318578,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "authentication",
+   "api-proposal",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318583,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "icons-product",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318605,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "themes",
+   "settings-editor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318611,
+  "truth": [
+   "telemetry"
+  ],
+  "lr_top3": [
+   "ux",
+   "telemetry",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318630,
+  "truth": [
+   "perf"
+  ],
+  "lr_top3": [
+   "perf",
+   "install-update",
+   "suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318644,
+  "truth": [
+   "editor-minimap"
+  ],
+  "lr_top3": [
+   "editor-minimap",
+   "editor-folding",
+   "html"
+  ],
+  "evidence_top3": [
+   "editor-autoindent",
+   "editor-clipboard",
+   "inline-completions"
+  ]
+ },
+ {
+  "number": 318645,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "perf",
+   "chat-terminal",
+   "workbench-auxwindow"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318658,
+  "truth": [
+   "layout"
+  ],
+  "lr_top3": [
+   "workbench-window",
+   "ux",
+   "workbench-auxwindow"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318660,
+  "truth": [
+   "webview"
+  ],
+  "lr_top3": [
+   "webview",
+   "extensions",
+   "api"
+  ],
+  "evidence_top3": [
+   "webview",
+   "accessibility",
+   "perf-startup"
+  ]
+ },
+ {
+  "number": 318679,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318694,
+  "truth": [
+   "suggest"
+  ],
+  "lr_top3": [
+   "install-update",
+   "perf",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318695,
+  "truth": [
+   "workbench-zen"
+  ],
+  "lr_top3": [
+   "workbench-zen",
+   "ux",
+   "layout"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318700,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "quick-pick",
+   "extensions"
+  ],
+  "evidence_top3": [
+   "extensions",
+   "telemetry",
+   "config"
+  ]
+ },
+ {
+  "number": 318702,
+  "truth": [
+   "perf"
+  ],
+  "lr_top3": [
+   "perf",
+   "gpu",
+   "install-update"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318703,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "themes",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318719,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "quick-pick",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "extensions",
+   "telemetry",
+   "config"
+  ]
+ },
+ {
+  "number": 318735,
+  "truth": [
+   "snippets"
+  ],
+  "lr_top3": [
+   "install-update",
+   "ux",
+   "terminal-input"
+  ],
+  "evidence_top3": [
+   "settings-sync",
+   "extensions",
+   "user-profiles"
+  ]
+ },
+ {
+  "number": 318738,
+  "truth": [
+   "notebook-perf"
+  ],
+  "lr_top3": [
+   "notebook",
+   "perf",
+   "notebook-output"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318739,
+  "truth": [
+   "snippets"
+  ],
+  "lr_top3": [
+   "inline-completions",
+   "suggest",
+   "json"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318764,
+  "truth": [
+   "git",
+   "perf"
+  ],
+  "lr_top3": [
+   "extension-host",
+   "perf",
+   "extensions"
+  ],
+  "evidence_top3": [
+   "telemetry",
+   "portable-mode",
+   "code-cli"
+  ]
+ },
+ {
+  "number": 318766,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "interactive-window",
+   "terminal-input"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318768,
+  "truth": [
+   "simple-file-dialog"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "quick-pick",
+   "quick-open"
+  ],
+  "evidence_top3": [
+   "simple-file-dialog",
+   "file-explorer",
+   "file-watcher"
+  ]
+ },
+ {
+  "number": 318769,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "inline-completions",
+   "terminal-inline-chat",
+   "install-update"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318773,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "workbench-banner"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318786,
+  "truth": [
+   "workbench-workspace"
+  ],
+  "lr_top3": [
+   "git",
+   "file-explorer",
+   "workbench-multiroot"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318853,
+  "truth": [
+   "accessibility",
+   "chat-terminal-output-monitor"
+  ],
+  "lr_top3": [
+   "notebook",
+   "terminal",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318860,
+  "truth": [
+   "perf"
+  ],
+  "lr_top3": [
+   "ux",
+   "perf",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318866,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "notebook-output"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318871,
+  "truth": [
+   "ghost-text"
+  ],
+  "lr_top3": [
+   "remote",
+   "install-update",
+   "menus"
+  ],
+  "evidence_top3": [
+   "issue-reporter",
+   "extensions",
+   "perf"
+  ]
+ },
+ {
+  "number": 318876,
+  "truth": [
+   "vscode-website"
+  ],
+  "lr_top3": [
+   "vscode-website",
+   "install-update",
+   "issue-reporter"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318910,
+  "truth": [
+   "terminal-conpty",
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-input",
+   "terminal-shell-pwsh",
+   "terminal-conpty"
+  ],
+  "evidence_top3": [
+   "terminal",
+   "terminal-shell-integration",
+   "terminal-rendering"
+  ]
+ },
+ {
+  "number": 318954,
+  "truth": [
+   "workbench-views"
+  ],
+  "lr_top3": [
+   "workbench-views",
+   "workbench-window",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318958,
+  "truth": [
+   "diff-editor"
+  ],
+  "lr_top3": [
+   "diff-editor",
+   "monaco-editor",
+   "editor-core"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318962,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "ux",
+   "editor-core",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318975,
+  "truth": [
+   "issue-reporter"
+  ],
+  "lr_top3": [
+   "ux",
+   "issue-reporter",
+   "workbench-editors"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318977,
+  "truth": [
+   "editor-input-IME"
+  ],
+  "lr_top3": [
+   "editor-input-IME",
+   "terminal-input",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 318993,
+  "truth": [
+   "terminal-ligatures"
+  ],
+  "lr_top3": [
+   "terminal-ligatures",
+   "chat-terminal",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319058,
+  "truth": [
+   "terminal-shell-fish",
+   "terminal-shell-integration"
+  ],
+  "lr_top3": [
+   "terminal-shell-fish",
+   "terminal-shell-integration",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "terminal-suggest"
+  ]
+ },
+ {
+  "number": 319071,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "quick-pick",
+   "quick-open"
+  ],
+  "evidence_top3": [
+   "editor-input-IME"
+  ]
+ },
+ {
+  "number": 319075,
+  "truth": [
+   "settings-sync"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "debug",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319080,
+  "truth": [
+   "markdown"
+  ],
+  "lr_top3": [
+   "editor-core",
+   "editor-scrollbar",
+   "editor-sticky-scroll"
+  ],
+  "evidence_top3": [
+   "workbench-editors",
+   "terminal-suggest",
+   "code-cli"
+  ]
+ },
+ {
+  "number": 319086,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "terminal",
+   "ux"
+  ],
+  "evidence_top3": [
+   "terminal"
+  ]
+ },
+ {
+  "number": 319104,
+  "truth": [
+   "titlebar"
+  ],
+  "lr_top3": [
+   "ux",
+   "install-update",
+   "workbench-window"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319115,
+  "truth": [
+   "perf",
+   "perf-bloat"
+  ],
+  "lr_top3": [
+   "terminal-process",
+   "chat-terminal",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319118,
+  "truth": [
+   "languages-basic"
+  ],
+  "lr_top3": [
+   "grammar",
+   "debug",
+   "inline-completions"
+  ],
+  "evidence_top3": [
+   "editor-color-picker",
+   "editor-folding",
+   "typescript"
+  ]
+ },
+ {
+  "number": 319134,
+  "truth": [
+   "remote"
+  ],
+  "lr_top3": [
+   "remote",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319146,
+  "truth": [
+   "release-notes"
+  ],
+  "lr_top3": [
+   "install-update",
+   "vscode-website",
+   "context-keys"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319159,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "file-explorer",
+   "perf"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319173,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "l10n-platform",
+   "browser-integration",
+   "extensions"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 319200,
+  "truth": [
+   "terminal-editors"
+  ],
+  "lr_top3": [
+   "terminal",
+   "terminal-persistence",
+   "terminal-process"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319207,
+  "truth": [
+   "grammar"
+  ],
+  "lr_top3": [
+   "extensions",
+   "grammar",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319230,
+  "truth": [
+   "remote",
+   "workbench-history"
+  ],
+  "lr_top3": [
+   "remote",
+   "workbench-history",
+   "quick-open"
+  ],
+  "evidence_top3": [
+   "file-explorer",
+   "file-watcher",
+   "perf"
+  ]
+ },
+ {
+  "number": 319246,
+  "truth": [
+   "tasks"
+  ],
+  "lr_top3": [
+   "tasks",
+   "vscode.dev",
+   "web"
+  ],
+  "evidence_top3": [
+   "tasks",
+   "quick-pick",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 319261,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "remote",
+   "chat-terminal",
+   "file-watcher"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319270,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "icons-product"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319276,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "workbench-tabs",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319302,
+  "truth": [
+   "terminal-profiles"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-suggest",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319309,
+  "truth": [
+   "variable-resolving"
+  ],
+  "lr_top3": [
+   "debug",
+   "tasks",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319318,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319360,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "accessibility",
+   "terminal-tabs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319371,
+  "truth": [
+   "editor-RTL",
+   "editor-core"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "scm",
+   "grammar"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319373,
+  "truth": [
+   "editor-hover"
+  ],
+  "lr_top3": [
+   "font-rendering",
+   "editor-hover",
+   "settings-editor"
+  ],
+  "evidence_top3": [
+   "webview",
+   "chat-terminal",
+   "ux"
+  ]
+ },
+ {
+  "number": 319396,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "ux",
+   "browser-integration",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319400,
+  "truth": [
+   "authentication"
+  ],
+  "lr_top3": [
+   "authentication",
+   "workbench-auxwindow",
+   "workbench-os-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319411,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "terminal-suggest",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319413,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "tasks",
+   "chat-terminal",
+   "perf"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319414,
+  "truth": [
+   "rename"
+  ],
+  "lr_top3": [
+   "perf",
+   "proxy",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319423,
+  "truth": [
+   "extension-host"
+  ],
+  "lr_top3": [
+   "extension-host",
+   "extensions",
+   "perf"
+  ],
+  "evidence_top3": [
+   "ux",
+   "perf",
+   "telemetry"
+  ]
+ },
+ {
+  "number": 319425,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "file-encoding",
+   "browser-integration",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319427,
+  "truth": [
+   "grammar"
+  ],
+  "lr_top3": [
+   "grammar",
+   "editor-autoindent",
+   "comments"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319435,
+  "truth": [
+   "workbench-os-integration"
+  ],
+  "lr_top3": [
+   "install-update",
+   "workbench-window",
+   "issue-reporter"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319440,
+  "truth": [
+   "authentication"
+  ],
+  "lr_top3": [
+   "authentication",
+   "remote-explorer",
+   "api"
+  ],
+  "evidence_top3": [
+   "authentication",
+   "portable-mode",
+   "api-finalization"
+  ]
+ },
+ {
+  "number": 319458,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "ux",
+   "browser-integration",
+   "javascript"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319479,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "workbench-views",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319500,
+  "truth": [
+   "testing"
+  ],
+  "lr_top3": [
+   "testing",
+   "settings-editor",
+   "ux"
+  ],
+  "evidence_top3": [
+   "testing"
+  ]
+ },
+ {
+  "number": 319511,
+  "truth": [
+   "editor-hover"
+  ],
+  "lr_top3": [
+   "editor-hover",
+   "workbench-hover",
+   "file-explorer"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319512,
+  "truth": [
+   "workbench-views"
+  ],
+  "lr_top3": [
+   "workbench-views",
+   "layout",
+   "config"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319536,
+  "truth": [
+   "tasks"
+  ],
+  "lr_top3": [
+   "tasks",
+   "terminal-tabs",
+   "terminal-shell-integration"
+  ],
+  "evidence_top3": [
+   "ux",
+   "tasks",
+   "api-proposal"
+  ]
+ },
+ {
+  "number": 319557,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "accessibility",
+   "dialogs"
+  ],
+  "evidence_top3": [
+   "ux",
+   "perf",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 319680,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "issue-reporter"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319689,
+  "truth": [
+   "debug"
+  ],
+  "lr_top3": [
+   "debug",
+   "terminal-process",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319698,
+  "truth": [
+   "perf"
+  ],
+  "lr_top3": [
+   "perf",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "ux",
+   "accessibility",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 319710,
+  "truth": [
+   "perf"
+  ],
+  "lr_top3": [
+   "extension-host",
+   "perf",
+   "authentication"
+  ],
+  "evidence_top3": [
+   "ux",
+   "telemetry",
+   "extensions"
+  ]
+ },
+ {
+  "number": 319725,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "editor-input",
+   "perf"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319733,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "editor-clipboard",
+   "html",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319753,
+  "truth": [
+   "api",
+   "editor-api"
+  ],
+  "lr_top3": [
+   "api",
+   "api-proposal",
+   "editor-core"
+  ],
+  "evidence_top3": [
+   "themes",
+   "terminal-suggest",
+   "html"
+  ]
+ },
+ {
+  "number": 319754,
+  "truth": [
+   "themes"
+  ],
+  "lr_top3": [
+   "api",
+   "api-proposal",
+   "themes"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319764,
+  "truth": [
+   "git"
+  ],
+  "lr_top3": [
+   "git",
+   "ux",
+   "file-explorer"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319768,
+  "truth": [
+   "file-io"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "workbench-dnd",
+   "install-update"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319785,
+  "truth": [
+   "markdown"
+  ],
+  "lr_top3": [
+   "terminal-editors",
+   "image-preview",
+   "workbench-editors"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319786,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "themes",
+   "extensions",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319800,
+  "truth": [
+   "terminal-shell-fish"
+  ],
+  "lr_top3": [
+   "terminal-input",
+   "keyboard-layout",
+   "keybindings"
+  ],
+  "evidence_top3": [
+   "terminal",
+   "terminal-editors",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 319821,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-input",
+   "terminal-rendering",
+   "editor-clipboard"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319825,
+  "truth": [
+   "workbench-hover"
+  ],
+  "lr_top3": [
+   "terminal-shell-pwsh",
+   "terminal-tabs",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319834,
+  "truth": [
+   "remote"
+  ],
+  "lr_top3": [
+   "remote",
+   "file-watcher",
+   "remote-connection"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319838,
+  "truth": [
+   "snippets"
+  ],
+  "lr_top3": [
+   "remote",
+   "ux",
+   "workbench-views"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "suggest",
+   "inline-completions"
+  ]
+ },
+ {
+  "number": 319847,
+  "truth": [
+   "themes"
+  ],
+  "lr_top3": [
+   "layout",
+   "file-explorer",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "settings-editor",
+   "config"
+  ]
+ },
+ {
+  "number": 319853,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-input",
+   "editor-clipboard",
+   "terminal"
+  ],
+  "evidence_top3": [
+   "php",
+   "terminal-tabs",
+   "file-io"
+  ]
+ },
+ {
+  "number": 319861,
+  "truth": [
+   "open-editors"
+  ],
+  "lr_top3": [
+   "proxy",
+   "extensions",
+   "remote"
+  ],
+  "evidence_top3": [
+   "git",
+   "timeline-local-history",
+   "file-explorer"
+  ]
+ },
+ {
+  "number": 319867,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "remote",
+   "testing"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319902,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "terminal-shell-pwsh"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319909,
+  "truth": [
+   "accessibility",
+   "themes"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "themes",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319924,
+  "truth": [
+   "keyboard-layout"
+  ],
+  "lr_top3": [
+   "ux",
+   "telemetry",
+   "quick-open"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319934,
+  "truth": [
+   "editor-color-picker"
+  ],
+  "lr_top3": [
+   "editor-color-picker",
+   "workbench-tabs",
+   "config"
+  ],
+  "evidence_top3": [
+   "json",
+   "settings-editor",
+   "settings-search"
+  ]
+ },
+ {
+  "number": 319950,
+  "truth": [
+   "ux",
+   "vscode.dev"
+  ],
+  "lr_top3": [
+   "vscode.dev",
+   "github",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319981,
+  "truth": [
+   "html"
+  ],
+  "lr_top3": [
+   "install-update",
+   "git",
+   "scm"
+  ],
+  "evidence_top3": [
+   "editor-color-picker",
+   "chat-terminal",
+   "command-center"
+  ]
+ },
+ {
+  "number": 319985,
+  "truth": [
+   "editor-clipboard"
+  ],
+  "lr_top3": [
+   "editor-clipboard",
+   "editor-autoindent",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 319992,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "workbench-auxwindow",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320016,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "ux",
+   "quick-pick",
+   "menus"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "debug",
+   "quick-open"
+  ]
+ },
+ {
+  "number": 320017,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "workbench-hover"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 320044,
+  "truth": [
+   "remote"
+  ],
+  "lr_top3": [
+   "tasks",
+   "remote",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320045,
+  "truth": [
+   "remote"
+  ],
+  "lr_top3": [
+   "install-update",
+   "remote",
+   "vscode-website"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320051,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "web",
+   "vscode.dev"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320055,
+  "truth": [
+   "typescript"
+  ],
+  "lr_top3": [
+   "typescript",
+   "javascript",
+   "workbench-multiroot"
+  ],
+  "evidence_top3": [
+   "settings-editor",
+   "settings-search",
+   "javascript"
+  ]
+ },
+ {
+  "number": 320066,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "remote",
+   "accessibility",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320074,
+  "truth": [
+   "editor-input-IME"
+  ],
+  "lr_top3": [
+   "editor-input-IME",
+   "editor-core",
+   "editor-input"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320086,
+  "truth": [
+   "remote-explorer"
+  ],
+  "lr_top3": [
+   "remote-explorer",
+   "workbench-views",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "perf",
+   "remote",
+   "terminal"
+  ]
+ },
+ {
+  "number": 320095,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "issue-reporter",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320098,
+  "truth": [
+   "search"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "search",
+   "testing"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320101,
+  "truth": [
+   "issue-reporter"
+  ],
+  "lr_top3": [
+   "issue-reporter",
+   "api",
+   "perf"
+  ],
+  "evidence_top3": [
+   "issue-reporter",
+   "telemetry",
+   "settings-editor"
+  ]
+ },
+ {
+  "number": 320127,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "install-update",
+   "chat-terminal",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320133,
+  "truth": [
+   "grammar"
+  ],
+  "lr_top3": [
+   "editor-autoindent",
+   "comments",
+   "grammar"
+  ],
+  "evidence_top3": [
+   "terminal-suggest"
+  ]
+ },
+ {
+  "number": 320154,
+  "truth": [
+   "user-profiles"
+  ],
+  "lr_top3": [
+   "install-update",
+   "chat-terminal",
+   "user-profiles"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320157,
+  "truth": [
+   "chrome-devtools"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "install-update"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320168,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "issue-reporter",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320174,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "terminal-suggest",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320182,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320197,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "workbench-views"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320220,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "editor-clipboard",
+   "terminal-input",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320233,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "timeline-local-history",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320266,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "terminal-editors",
+   "workbench-views"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320270,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "web",
+   "perf"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320280,
+  "truth": [
+   "editor-hover"
+  ],
+  "lr_top3": [
+   "json",
+   "terminal-links",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320293,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "image-preview",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320297,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "web",
+   "chat-terminal"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "telemetry",
+   "editor-input-IME"
+  ]
+ },
+ {
+  "number": 320303,
+  "truth": [
+   "perf"
+  ],
+  "lr_top3": [
+   "perf",
+   "accessibility",
+   "telemetry"
+  ],
+  "evidence_top3": [
+   "ux",
+   "accessibility",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 320338,
+  "truth": [
+   "remote-explorer"
+  ],
+  "lr_top3": [
+   "remote-explorer",
+   "network",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "sandbox",
+   "workbench-link"
+  ]
+ },
+ {
+  "number": 320342,
+  "truth": [
+   "workbench-views"
+  ],
+  "lr_top3": [
+   "getting-started",
+   "extensions",
+   "workbench-views"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "ux",
+   "scm"
+  ]
+ },
+ {
+  "number": 320352,
+  "truth": [
+   "editor-input"
+  ],
+  "lr_top3": [
+   "install-update",
+   "menus",
+   "json"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320367,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "font-rendering",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320369,
+  "truth": [
+   "font-rendering"
+  ],
+  "lr_top3": [
+   "font-rendering",
+   "editor-core",
+   "terminal-rendering"
+  ],
+  "evidence_top3": [
+   "notebook-diff",
+   "scm",
+   "settings-editor"
+  ]
+ },
+ {
+  "number": 320383,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320384,
+  "truth": [
+   "simple-file-dialog"
+  ],
+  "lr_top3": [
+   "ux",
+   "file-explorer",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320385,
+  "truth": [
+   "simple-file-dialog"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "quick-pick",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320389,
+  "truth": [
+   "user-profiles"
+  ],
+  "lr_top3": [
+   "user-profiles",
+   "remote",
+   "terminal-profiles"
+  ],
+  "evidence_top3": [
+   "perf",
+   "remote",
+   "terminal"
+  ]
+ },
+ {
+  "number": 320413,
+  "truth": [
+   "workbench-workspace"
+  ],
+  "lr_top3": [
+   "workbench-history",
+   "workbench-window",
+   "workbench-auxwindow"
+  ],
+  "evidence_top3": [
+   "ux",
+   "browser-integration",
+   "git"
+  ]
+ },
+ {
+  "number": 320435,
+  "truth": [
+   "webview"
+  ],
+  "lr_top3": [
+   "webview",
+   "terminal-input",
+   "editor-clipboard"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "accessibility",
+   "workbench-editors"
+  ]
+ },
+ {
+  "number": 320437,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "terminal-editors",
+   "workbench-auxwindow"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320447,
+  "truth": [
+   "simple-file-dialog"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "workbench-multiroot",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320461,
+  "truth": [
+   "authentication"
+  ],
+  "lr_top3": [
+   "authentication",
+   "api",
+   "api-finalization"
+  ],
+  "evidence_top3": [
+   "code-cli"
+  ]
+ },
+ {
+  "number": 320475,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-shell-integration",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320561,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "extensions",
+   "editor-scrollbar",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320563,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "extensions",
+   "output",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320680,
+  "truth": [
+   "typescript"
+  ],
+  "lr_top3": [
+   "typescript",
+   "workbench-multiroot",
+   "javascript"
+  ],
+  "evidence_top3": [
+   "settings-editor",
+   "settings-search",
+   "terminal-links"
+  ]
+ },
+ {
+  "number": 320696,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "github",
+   "search"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320735,
+  "truth": [
+   "config"
+  ],
+  "lr_top3": [
+   "remote",
+   "settings-editor",
+   "user-profiles"
+  ],
+  "evidence_top3": [
+   "settings-editor",
+   "config",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 320783,
+  "truth": [
+   "settings-editor"
+  ],
+  "lr_top3": [
+   "suggest",
+   "settings-editor",
+   "editor-core"
+  ],
+  "evidence_top3": [
+   "editor-color-picker",
+   "json",
+   "editor-autoindent"
+  ]
+ },
+ {
+  "number": 320801,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "diff-editor",
+   "ux",
+   "editor-core"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320818,
+  "truth": [
+   "font-rendering"
+  ],
+  "lr_top3": [
+   "font-rendering",
+   "editor-core",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320830,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "workspace-trust",
+   "extensions",
+   "browser-integration"
+  ],
+  "evidence_top3": [
+   "themes",
+   "workbench-os-integration",
+   "workspace-trust"
+  ]
+ },
+ {
+  "number": 320849,
+  "truth": [
+   "perf-bloat"
+  ],
+  "lr_top3": [
+   "ux",
+   "perf",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320851,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "notebook",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320869,
+  "truth": [
+   "editor-find"
+  ],
+  "lr_top3": [
+   "editor-input-IME",
+   "editor-find",
+   "webview"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320872,
+  "truth": [
+   "outline"
+  ],
+  "lr_top3": [
+   "outline",
+   "notebook-toc-outline",
+   "suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320888,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "web",
+   "context-keys"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320899,
+  "truth": [
+   "remote-explorer"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "remote",
+   "typescript"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320928,
+  "truth": [
+   "perf",
+   "perf-bloat"
+  ],
+  "lr_top3": [
+   "perf",
+   "webview",
+   "extensions"
+  ],
+  "evidence_top3": [
+   "code-cli",
+   "terminal-suggest",
+   "ux"
+  ]
+ },
+ {
+  "number": 320947,
+  "truth": [
+   "terminal-shell-pwsh"
+  ],
+  "lr_top3": [
+   "remote",
+   "accessibility",
+   "proxy"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320965,
+  "truth": [
+   "editor-commands"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "suggest",
+   "editor-autoindent"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320979,
+  "truth": [
+   "workbench-tabs"
+  ],
+  "lr_top3": [
+   "editor-core",
+   "workbench-tabs",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 320989,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "git",
+   "scm"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "ux",
+   "workbench-cli"
+  ]
+ },
+ {
+  "number": 320996,
+  "truth": [
+   "telemetry"
+  ],
+  "lr_top3": [
+   "telemetry",
+   "accessibility",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321004,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "ux",
+   "extensions"
+  ],
+  "evidence_top3": [
+   "install-update",
+   "code-cli",
+   "settings-sync"
+  ]
+ },
+ {
+  "number": 321018,
+  "truth": [
+   "output"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "terminal-rendering",
+   "remote"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321029,
+  "truth": [
+   "workbench-tabs"
+  ],
+  "lr_top3": [
+   "workbench-tabs",
+   "ux",
+   "terminal-tabs"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321034,
+  "truth": [
+   "workbench-tabs"
+  ],
+  "lr_top3": [
+   "settings-editor",
+   "workbench-tabs",
+   "config"
+  ],
+  "evidence_top3": [
+   "workbench-tabs",
+   "quick-open",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 321049,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal",
+   "terminal-env-collection"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321055,
+  "truth": [
+   "issue-reporter"
+  ],
+  "lr_top3": [
+   "typescript",
+   "perf",
+   "settings-editor"
+  ],
+  "evidence_top3": [
+   "telemetry"
+  ]
+ },
+ {
+  "number": 321088,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "dialogs"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "themes",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 321122,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "workbench-hover"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321126,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "layout",
+   "quick-pick"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321127,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "themes",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321136,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "extensions",
+   "config",
+   "install-update"
+  ],
+  "evidence_top3": [
+   "extensions",
+   "telemetry",
+   "debug"
+  ]
+ },
+ {
+  "number": 321151,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "extensions",
+   "install-update",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321159,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal-rendering",
+   "font-rendering",
+   "terminal-input"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal",
+   "terminal-rendering"
+  ]
+ },
+ {
+  "number": 321171,
+  "truth": [
+   "editor-hover"
+  ],
+  "lr_top3": [
+   "editor-hover",
+   "workbench-hover",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321178,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "extensions",
+   "terminal-links",
+   "extension-host"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "dropdown",
+   "terminal-editors"
+  ]
+ },
+ {
+  "number": 321232,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "ux",
+   "install-update",
+   "issue-reporter"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321240,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "remote",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321248,
+  "truth": [
+   "breadcrumbs",
+   "themes"
+  ],
+  "lr_top3": [
+   "themes",
+   "breadcrumbs",
+   "ux"
+  ],
+  "evidence_top3": [
+   "themes",
+   "telemetry",
+   "web"
+  ]
+ },
+ {
+  "number": 321273,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "telemetry"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "terminal",
+   "tasks"
+  ]
+ },
+ {
+  "number": 321294,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "remote",
+   "terminal-process"
+  ],
+  "evidence_top3": [
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 321334,
+  "truth": [
+   "network"
+  ],
+  "lr_top3": [
+   "network",
+   "install-update",
+   "api-finalization"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321336,
+  "truth": [
+   "git"
+  ],
+  "lr_top3": [
+   "git",
+   "install-update",
+   "editor-hover"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321345,
+  "truth": [
+   "file-encoding"
+  ],
+  "lr_top3": [
+   "file-encoding",
+   "install-update",
+   "titlebar"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321352,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "editor-input-IME",
+   "terminal-rendering",
+   "install-update"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321367,
+  "truth": [
+   "custom-editors"
+  ],
+  "lr_top3": [
+   "api",
+   "custom-editors",
+   "api-finalization"
+  ],
+  "evidence_top3": [
+   "workbench-editors",
+   "settings-editor",
+   "diff-editor"
+  ]
+ },
+ {
+  "number": 321375,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": [
+   "extensions",
+   "telemetry",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 321383,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "extensions",
+   "perf",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321385,
+  "truth": [
+   "notebook-ipynb"
+  ],
+  "lr_top3": [
+   "notebook",
+   "file-io",
+   "web"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321387,
+  "truth": [
+   "file-explorer"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "editor-clipboard",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321409,
+  "truth": [
+   "api",
+   "layout"
+  ],
+  "lr_top3": [
+   "layout",
+   "api",
+   "workbench-views"
+  ],
+  "evidence_top3": [
+   "layout",
+   "workbench-editors",
+   "custom-editors"
+  ]
+ },
+ {
+  "number": 321412,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "css-less-scss",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321436,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "remote",
+   "git",
+   "network"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321440,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321444,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "terminal-input"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "chat-terminal-output-monitor",
+   "tasks"
+  ]
+ },
+ {
+  "number": 321478,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321504,
+  "truth": [
+   "titlebar"
+  ],
+  "lr_top3": [
+   "titlebar",
+   "menus",
+   "ux"
+  ],
+  "evidence_top3": [
+   "layout",
+   "workbench-zen",
+   "workbench-notifications"
+  ]
+ },
+ {
+  "number": 321517,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "api-proposal",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321548,
+  "truth": [
+   "file-glob"
+  ],
+  "lr_top3": [
+   "search",
+   "quick-open",
+   "testing"
+  ],
+  "evidence_top3": [
+   "authentication",
+   "editor-folding",
+   "settings-editor"
+  ]
+ },
+ {
+  "number": 321555,
+  "truth": [
+   "remote-tunnel"
+  ],
+  "lr_top3": [
+   "install-update",
+   "context-keys",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321577,
+  "truth": [
+   "extensions"
+  ],
+  "lr_top3": [
+   "perf",
+   "extensions",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321616,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "webview",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321623,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "themes",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321656,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "browser-integration",
+   "titlebar"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321667,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-conpty",
+   "notebook-output"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "remote",
+   "terminal"
+  ]
+ },
+ {
+  "number": 321670,
+  "truth": [
+   "browser-integration",
+   "quick-pick"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "accessibility",
+   "quick-open"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "terminal-suggest",
+   "code-cli"
+  ]
+ },
+ {
+  "number": 321763,
+  "truth": [
+   "terminal-shell-integration"
+  ],
+  "lr_top3": [
+   "terminal-shell-integration",
+   "terminal-shell-fish",
+   "terminal-process"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321805,
+  "truth": [
+   "authentication"
+  ],
+  "lr_top3": [
+   "workbench-cli",
+   "terminal-input",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321806,
+  "truth": [
+   "layout"
+  ],
+  "lr_top3": [
+   "layout",
+   "workbench-editor-grid",
+   "workbench-window"
+  ],
+  "evidence_top3": [
+   "layout",
+   "ux",
+   "workbench-editor-grid"
+  ]
+ },
+ {
+  "number": 321820,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "workbench-auxwindow",
+   "diff-editor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321834,
+  "truth": [
+   "authentication"
+  ],
+  "lr_top3": [
+   "authentication",
+   "perf",
+   "network"
+  ],
+  "evidence_top3": [
+   "authentication",
+   "portable-mode",
+   "code-cli"
+  ]
+ },
+ {
+  "number": 321839,
+  "truth": [
+   "debug"
+  ],
+  "lr_top3": [
+   "debug",
+   "testing",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321849,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "perf",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321901,
+  "truth": [
+   "extension-host"
+  ],
+  "lr_top3": [
+   "perf",
+   "extension-host",
+   "git"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321958,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "api",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321971,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "accessibility",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321972,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "accessibility",
+   "chat-terminal-output-monitor"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 321973,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "themes",
+   "ux",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322015,
+  "truth": [
+   "authentication"
+  ],
+  "lr_top3": [
+   "authentication",
+   "ux",
+   "extension-host"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322061,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "portable-mode",
+   "vscode-website",
+   "install-update"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322095,
+  "truth": [
+   "snap"
+  ],
+  "lr_top3": [
+   "snap",
+   "install-update",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322160,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322163,
+  "truth": [
+   "terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "ux",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322225,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "vscode.dev",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322323,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "terminal-profiles",
+   "perf"
+  ],
+  "evidence_top3": [
+   "install-update",
+   "terminal-editors",
+   "terminal"
+  ]
+ },
+ {
+  "number": 322334,
+  "truth": [
+   "workbench-editors"
+  ],
+  "lr_top3": [
+   "workbench-window",
+   "accessibility",
+   "search"
+  ],
+  "evidence_top3": [
+   "workbench-editors",
+   "breadcrumbs",
+   "ux"
+  ]
+ },
+ {
+  "number": 322335,
+  "truth": [
+   "editor-color-picker"
+  ],
+  "lr_top3": [
+   "editor-color-picker",
+   "ux",
+   "css-less-scss"
+  ],
+  "evidence_top3": [
+   "editor-color-picker",
+   "editor-folding"
+  ]
+ },
+ {
+  "number": 322345,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "workbench-tabs",
+   "ux",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322380,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "terminal-rendering",
+   "terminal-shell-zsh"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322448,
+  "truth": [
+   "debug"
+  ],
+  "lr_top3": [
+   "debug",
+   "accessibility",
+   "git"
+  ],
+  "evidence_top3": [
+   "debug",
+   "debug-disassembly"
+  ]
+ },
+ {
+  "number": 322509,
+  "truth": [
+   "workbench-tabs"
+  ],
+  "lr_top3": [
+   "ux",
+   "layout",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322536,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322540,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "config",
+   "ux"
+  ],
+  "evidence_top3": [
+   "code-cli",
+   "browser-integration",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 322557,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322612,
+  "truth": [
+   "layout"
+  ],
+  "lr_top3": [
+   "workbench-window",
+   "workbench-auxwindow",
+   "titlebar"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322663,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "gpu"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322713,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "extensions",
+   "ux"
+  ],
+  "evidence_top3": [
+   "perf",
+   "terminal-suggest",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 322723,
+  "truth": [
+   "grammar"
+  ],
+  "lr_top3": [
+   "html",
+   "grammar",
+   "terminal-shell-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322730,
+  "truth": [
+   "tasks"
+  ],
+  "lr_top3": [
+   "tasks",
+   "typescript",
+   "error-list"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322746,
+  "truth": [
+   "telemetry"
+  ],
+  "lr_top3": [
+   "telemetry",
+   "ux",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322756,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "terminal",
+   "terminal-rendering",
+   "terminal-input"
+  ],
+  "evidence_top3": [
+   "terminal",
+   "terminal-shell-integration",
+   "terminal-rendering"
+  ]
+ },
+ {
+  "number": 322796,
+  "truth": [
+   "terminal-rendering"
+  ],
+  "lr_top3": [
+   "tree-views",
+   "themes",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322820,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "editor-core"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322826,
+  "truth": [
+   "file-explorer"
+  ],
+  "lr_top3": [
+   "file-explorer",
+   "remote",
+   "editor-clipboard"
+  ],
+  "evidence_top3": [
+   "file-explorer",
+   "file-watcher",
+   "perf"
+  ]
+ },
+ {
+  "number": 322861,
+  "truth": [
+   "issue-reporter"
+  ],
+  "lr_top3": [
+   "issue-reporter",
+   "extensions",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322876,
+  "truth": [
+   "terminal-persistence"
+  ],
+  "lr_top3": [
+   "remote",
+   "install-update",
+   "containers"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322883,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "workbench-cli",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322907,
+  "truth": [
+   "outline"
+  ],
+  "lr_top3": [
+   "outline",
+   "editor-find",
+   "output"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322927,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "api-proposal",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "accessibility",
+   "debug"
+  ]
+ },
+ {
+  "number": 322929,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "api-proposal",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322930,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "diff-editor",
+   "ux",
+   "scm"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322931,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "git",
+   "api-proposal",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322934,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "api-proposal",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 322943,
+  "truth": [
+   "php"
+  ],
+  "lr_top3": [
+   "remote",
+   "accessibility",
+   "terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323066,
+  "truth": [
+   "debug"
+  ],
+  "lr_top3": [
+   "debug",
+   "themes",
+   "terminal-rendering"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323072,
+  "truth": [
+   "list-widget"
+  ],
+  "lr_top3": [
+   "layout",
+   "ux",
+   "editor-input-IME"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323159,
+  "truth": [
+   "workbench-editors"
+  ],
+  "lr_top3": [
+   "workbench-editors",
+   "workbench-views",
+   "file-io"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323173,
+  "truth": [
+   "file-explorer"
+  ],
+  "lr_top3": [
+   "terminal-links",
+   "file-explorer",
+   "testing"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "file-explorer",
+   "open-editors"
+  ]
+ },
+ {
+  "number": 323192,
+  "truth": [
+   "api",
+   "tree-views"
+  ],
+  "lr_top3": [
+   "scm",
+   "file-explorer",
+   "api"
+  ],
+  "evidence_top3": [
+   "file-explorer",
+   "accessibility",
+   "debug"
+  ]
+ },
+ {
+  "number": 323196,
+  "truth": [
+   "accessibility",
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "workbench-editors",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323202,
+  "truth": [
+   "chat-terminal"
+  ],
+  "lr_top3": [
+   "chat-terminal",
+   "testing",
+   "terminal"
+  ],
+  "evidence_top3": [
+   "accessibility",
+   "chat-terminal",
+   "telemetry"
+  ]
+ },
+ {
+  "number": 323222,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "terminal-process",
+   "ux"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "ux",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 323226,
+  "truth": [
+   "perf"
+  ],
+  "lr_top3": [
+   "git",
+   "perf",
+   "ux"
+  ],
+  "evidence_top3": [
+   "ux",
+   "accessibility",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 323231,
+  "truth": [
+   "terminal-tabs"
+  ],
+  "lr_top3": [
+   "editor-color-picker",
+   "themes",
+   "terminal-tabs"
+  ],
+  "evidence_top3": [
+   "terminal-editors",
+   "terminal",
+   "remote"
+  ]
+ },
+ {
+  "number": 323235,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "ux",
+   "chat-terminal",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323238,
+  "truth": [
+   "editor-rendering"
+  ],
+  "lr_top3": [
+   "editor-core",
+   "editor-wrapping",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "scm",
+   "accessibility",
+   "editor-core"
+  ]
+ },
+ {
+  "number": 323243,
+  "truth": [
+   "api",
+   "terminal"
+  ],
+  "lr_top3": [
+   "terminal-editors",
+   "terminal-tabs",
+   "terminal"
+  ],
+  "evidence_top3": [
+   "terminal-suggest",
+   "terminal",
+   "terminal-editors"
+  ]
+ },
+ {
+  "number": 323252,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "ux",
+   "notebook",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323261,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "terminal-shell-pwsh",
+   "workbench-window"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323297,
+  "truth": [
+   "markdown"
+  ],
+  "lr_top3": [
+   "ux",
+   "editor-core",
+   "editor-sticky-scroll"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323326,
+  "truth": [
+   "notebook-toc-outline"
+  ],
+  "lr_top3": [
+   "notebook-toc-outline",
+   "outline",
+   "notebook"
+  ],
+  "evidence_top3": [
+   "notebook-execution",
+   "notebook",
+   "notebook-diff"
+  ]
+ },
+ {
+  "number": 323395,
+  "truth": [
+   "git"
+  ],
+  "lr_top3": [
+   "install-update",
+   "remote",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323427,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "accessibility",
+   "quick-pick",
+   "ux"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323438,
+  "truth": [
+   "merge-editor"
+  ],
+  "lr_top3": [
+   "config",
+   "custom-editors",
+   "api"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "ux",
+   "perf"
+  ]
+ },
+ {
+  "number": 323455,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "terminal-links",
+   "issue-reporter"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323460,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "api"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323465,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "chat-terminal",
+   "perf"
+  ],
+  "evidence_top3": [
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 323492,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "perf",
+   "extension-host",
+   "editor-core"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323507,
+  "truth": [
+   "accessibility"
+  ],
+  "lr_top3": [
+   "extensions",
+   "browser-integration",
+   "accessibility"
+  ],
+  "evidence_top3": [
+   "notebook-kernel-picker",
+   "accessibility",
+   "chat-terminal"
+  ]
+ },
+ {
+  "number": 323542,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "layout",
+   "accessibility"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323552,
+  "truth": [
+   "ux"
+  ],
+  "lr_top3": [
+   "git",
+   "file-explorer",
+   "ux"
+  ],
+  "evidence_top3": [
+   "git",
+   "file-encoding",
+   "scm"
+  ]
+ },
+ {
+  "number": 323558,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "workbench-notifications",
+   "accessibility",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323589,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "ux",
+   "issue-reporter"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323602,
+  "truth": [
+   "webview"
+  ],
+  "lr_top3": [
+   "webview",
+   "api",
+   "browser-integration"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323603,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "api",
+   "api-proposal"
+  ],
+  "evidence_top3": [
+   "browser-integration",
+   "accessibility"
+  ]
+ },
+ {
+  "number": 323616,
+  "truth": [
+   "vscode-website"
+  ],
+  "lr_top3": [
+   "ux",
+   "browser-integration",
+   "terminal-suggest"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323622,
+  "truth": [
+   "settings-sync"
+  ],
+  "lr_top3": [
+   "keybindings-editor",
+   "settings-sync",
+   "keybindings"
+  ],
+  "evidence_top3": [
+   "settings-editor",
+   "settings-sync",
+   "debug"
+  ]
+ },
+ {
+  "number": 323647,
+  "truth": [
+   "font-rendering"
+  ],
+  "lr_top3": [
+   "font-rendering",
+   "terminal-rendering",
+   "install-update"
+  ],
+  "evidence_top3": [
+   "notebook-diff",
+   "scm",
+   "settings-editor"
+  ]
+ },
+ {
+  "number": 323691,
+  "truth": [
+   "install-update"
+  ],
+  "lr_top3": [
+   "install-update",
+   "ux",
+   "tasks"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323698,
+  "truth": [
+   "grammar"
+  ],
+  "lr_top3": [
+   "install-update",
+   "quick-pick",
+   "grammar"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323733,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "install-update",
+   "workbench-os-integration"
+  ],
+  "evidence_top3": [
+   "browser-integration"
+  ]
+ },
+ {
+  "number": 323749,
+  "truth": [
+   "inline-completions"
+  ],
+  "lr_top3": [
+   "extensions",
+   "terminal",
+   "proxy"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323754,
+  "truth": [
+   "workbench-editors"
+  ],
+  "lr_top3": [
+   "workbench-window",
+   "install-update",
+   "perf"
+  ],
+  "evidence_top3": [
+   "git",
+   "ux",
+   "workbench-tabs"
+  ]
+ },
+ {
+  "number": 323775,
+  "truth": [
+   "notebook-layout"
+  ],
+  "lr_top3": [
+   "menus",
+   "layout",
+   "extensions"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323777,
+  "truth": [
+   "browser-integration"
+  ],
+  "lr_top3": [
+   "browser-integration",
+   "ux",
+   "chat-terminal"
+  ],
+  "evidence_top3": []
+ },
+ {
+  "number": 323808,
+  "truth": [
+   "telemetry"
+  ],
+  "lr_top3": [
+   "telemetry",
+   "inline-completions",
+   "api-proposal"
+  ],
+  "evidence_top3": [
+   "chat-terminal",
+   "ux",
+   "notebook"
+  ]
+ }
+]

@@ -1,0 +1,158 @@
+{
+ "team_proxy_accounts": 107,
+ "A_reporter_choice": {
+  "type_issues_train_tune": 15719,
+  "by_team_proxy": 8408,
+  "by_outside": 7311,
+  "outside_with_choice": 5914,
+  "choice_matches_final_type": 4652,
+  "top_mismatches": [
+   {
+    "chose": "bug",
+    "final": "*question",
+    "n": 337
+   },
+   {
+    "chose": "bug",
+    "final": "feature-request",
+    "n": 324
+   },
+   {
+    "chose": "bug",
+    "final": "under-discussion",
+    "n": 145
+   },
+   {
+    "chose": "feature-request",
+    "final": "bug",
+    "n": 113
+   },
+   {
+    "chose": "feature-request",
+    "final": "*question",
+    "n": 97
+   },
+   {
+    "chose": "feature-request",
+    "final": "under-discussion",
+    "n": 69
+   },
+   {
+    "chose": "bug",
+    "final": "upstream",
+    "n": 62
+   },
+   {
+    "chose": "bug",
+    "final": "polish",
+    "n": 28
+   }
+  ]
+ },
+ "B_type_label_coverage_2025_01_to_2026_06": {
+  "by_group": {
+   "outside": {
+    "untyped": 36172,
+    "typed": 7524
+   },
+   "team": {
+    "untyped": 5103,
+    "typed": 8858
+   }
+  },
+  "outside_untyped_top_labels": {
+   "info-needed": 13119,
+   "(no labels)": 12663,
+   "triage-needed": 7425,
+   "*duplicate": 2642,
+   "spam": 1977,
+   "ai-translated": 1845,
+   "chat-billing": 962,
+   "stale": 715,
+   "*caused-by-extension": 645,
+   "invalid": 415,
+   "duplicate": 350,
+   "chat-ext-issue": 332
+  }
+ },
+ "C_who_applies_type_label_tune_sample": {
+  "team": {
+   "n": 60,
+   "labelled_by": {
+    "other-human": 24,
+    "author": 36
+   },
+   "median_hours_not_author": 41.64,
+   "within_24h_not_author": 11,
+   "median_hours_author": 0.0
+  },
+  "outside": {
+   "n": 60,
+   "labelled_by": {
+    "other-human": 59,
+    "bot": 1
+   },
+   "median_hours_not_author": 42.52,
+   "within_24h_not_author": 24,
+   "median_hours_author": null
+  }
+ },
+ "D_state_and_milestone_outside_tune_sample": {
+  "bug": {
+   "CLOSED/COMPLETED | milestone iteration/release": 30,
+   "OPEN/- | milestone none": 28,
+   "OPEN/- | milestone Backlog/On Deck": 7,
+   "CLOSED/NOT_PLANNED | milestone iteration/release": 5,
+   "CLOSED/DUPLICATE | milestone none": 4,
+   "CLOSED/NOT_PLANNED | milestone none": 3,
+   "CLOSED/DUPLICATE | milestone iteration/release": 2,
+   "OPEN/REOPENED | milestone none": 1
+  },
+  "feature-request": {
+   "CLOSED/NOT_PLANNED | milestone Backlog Candidates": 43,
+   "OPEN/- | milestone Backlog/On Deck": 16,
+   "CLOSED/COMPLETED | milestone iteration/release": 13,
+   "CLOSED/NOT_PLANNED | milestone none": 2,
+   "CLOSED/DUPLICATE | milestone none": 1,
+   "OPEN/REOPENED | milestone Backlog/On Deck": 1,
+   "CLOSED/DUPLICATE | milestone Backlog/On Deck": 1,
+   "CLOSED/DUPLICATE | milestone iteration/release": 1,
+   "CLOSED/DUPLICATE | milestone Backlog Candidates": 1,
+   "CLOSED/NOT_PLANNED | milestone iteration/release": 1
+  },
+  "*question": {
+   "CLOSED/NOT_PLANNED | milestone none": 15,
+   "CLOSED/COMPLETED | milestone iteration/release": 3,
+   "CLOSED/NOT_PLANNED | milestone iteration/release": 2
+  },
+  "under-discussion": {
+   "OPEN/- | milestone none": 9,
+   "CLOSED/COMPLETED | milestone iteration/release": 2,
+   "CLOSED/DUPLICATE | milestone none": 1
+  },
+  "polish": {
+   "CLOSED/COMPLETED | milestone iteration/release": 3,
+   "OPEN/- | milestone none": 2,
+   "CLOSED/DUPLICATE | milestone none": 1,
+   "CLOSED/COMPLETED | milestone Backlog/On Deck": 1
+  },
+  "upstream": {
+   "OPEN/- | milestone none": 6,
+   "CLOSED/NOT_PLANNED | milestone none": 3,
+   "CLOSED/COMPLETED | milestone iteration/release": 1,
+   "CLOSED/DUPLICATE | milestone none": 1
+  }
+ },
+ "E_vscode_bot_first_assignment_stage1_test": {
+  "issues": 6569,
+  "bot_assigned": 4245,
+  "bot_assignee_among_final_assignees": 3371
+ },
+ "F_classifier_json_current": {
+  "labels": 311,
+  "owners": 34,
+  "areas_per_owner_median": 6,
+  "areas_per_owner_max": 29,
+  "owners_with_one_area": 8
+ }
+}

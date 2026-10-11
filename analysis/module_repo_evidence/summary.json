@@ -1,0 +1,84 @@
+{
+ "repo_commit": "9ed1e079300da92c7051094a05b4dbe136f9c23e",
+ "tune_issues": 986,
+ "path_table": "data/agent_pilot/path_modules.json (train-period fixes before 2026-04-01)",
+ "coverage": {
+  "with_identifier": 558,
+  "with_repo_match": 431,
+  "with_evidence": 340
+ },
+ "issues_with_kind": {
+  "quoted": 339,
+  "backtick": 322,
+  "dotted": 216
+ },
+ "issues_with_kind_used_as_evidence": {
+  "backtick": 179,
+  "dotted": 127,
+  "quoted": 165
+ },
+ "all_issues": {
+  "lr_top1": {
+   "point": 0.5709939148073022,
+   "ci95": [
+    0.5405679513184585,
+    0.6014198782961461
+   ]
+  },
+  "lr_top3": 0.7677484787018256,
+  "lr_top10": 0.8813387423935092,
+  "rule_evidence_else_lr_top1": {
+   "point": 0.5030425963488844,
+   "ci95": [
+    0.4716024340770791,
+    0.5334685598377282
+   ]
+  },
+  "rule_minus_lr_top1": {
+   "point": -0.06795131845841784,
+   "ci95": [
+    -0.09026369168356996,
+    -0.045638945233265726
+   ],
+   "excludes_zero": true
+  },
+  "either_lr_or_evidence_top1_right": 0.6014198782961461
+ },
+ "issues_with_evidence": {
+  "n": 340,
+  "lr_top1": {
+   "point": 0.5617647058823529,
+   "ci95": [
+    0.5088235294117647,
+    0.6147058823529412
+   ]
+  },
+  "evidence_top1": {
+   "point": 0.36470588235294116,
+   "ci95": [
+    0.31470588235294117,
+    0.4176470588235294
+   ]
+  },
+  "evidence_minus_lr_top1": {
+   "point": -0.1970588235294118,
+   "ci95": [
+    -0.25882352941176473,
+    -0.13529411764705884
+   ],
+   "excludes_zero": true
+  },
+  "lr_top3": 0.7676470588235295,
+  "evidence_top3": 0.4823529411764706,
+  "lr_top10": 0.9,
+  "evidence_top10": 0.5941176470588235,
+  "both_right": 94,
+  "only_lr_right": 97,
+  "only_evidence_right": 30,
+  "both_wrong": 119
+ },
+ "issues_without_evidence": {
+  "n": 646,
+  "lr_top1": 0.5758513931888545
+ }
+}

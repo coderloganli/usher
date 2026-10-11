@@ -1,0 +1,13 @@
+{
+ "cutoff": "2026-04-01T00:00:00Z",
+ "max_files_per_commit": 50,
+ "issues": 8057,
+ "issues_with_fix_link": 2202,
+ "commits_used": 2188,
+ "issues_used": 2004,
+ "commits_after_cutoff": 145,
+ "commits_missing_locally": 87,
+ "commits_too_large": 1,
+ "paths": 3120,
+ "module_labels_covered": 184
+}
