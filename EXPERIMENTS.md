@@ -1,6 +1,6 @@
 # Usher: experiment record
 
-This is the chronological record of the experiments and decisions that led to the pipeline in [README.md](README.md). Each entry gives the date, the question, what was done (script and commit), the data used, the result numbers, the decision and the reason.
+This is the chronological record of the experiments and decisions that led to the pipelines in [README.md](README.md) (overview and results) and [docs/pipeline.md](docs/pipeline.md) (exact settings). Each entry gives the date, the question, what was done (script and commit), the data used, the result numbers, the decision and the reason.
 
 Conventions used throughout:
 
@@ -118,7 +118,7 @@ The age-group counts above were checked against `data/sets.json` and `data/issue
 ### 13. Text cleaning (2026-10-08)
 
 - **Question.** Does removing automatically added template and system content raise recall?
-- **What was done.** `scripts/stage2/dedup_clean.py` (commit `4b3eccc`): cleaning rules as listed in README.md; same BM25 and embedding settings as stage 1. Rule fixed in advance: adopt cleaning for a method only if cleaned minus raw recall@10 has an interval entirely above 0. Output `outputs/stage2/duplicate_clean_dev.json`.
+- **What was done.** `scripts/stage2/dedup_clean.py` (commit `4b3eccc`): cleaning rules as listed in `docs/pipeline.md`; same BM25 and embedding settings as stage 1. Rule fixed in advance: adopt cleaning for a method only if cleaned minus raw recall@10 has an interval entirely above 0. Output `outputs/stage2/duplicate_clean_dev.json`.
 - **Data.** 1,205 development queries, sibling rule.
 - **Result.** Recall@10, raw to cleaned: embedding 44.1% to 50.5% (+6.4 [+4.4, +8.5]); BM25 32.3% to 43.5% (+11.2 [+9.0, +13.5]). Recall@1 and recall@5 also improve for both, with intervals above 0.
 - **Decision.** Adopted for both. New comparison point: embedding retrieval on cleaned text, development recall@10 50.5%. Agreed order: non-LLM cleaning first, then LLM query rewriting on cleaned text, with the two gains reported separately (LLM rewriting has not been done).
@@ -228,6 +228,14 @@ The age-group counts above were checked against `data/sets.json` and `data/issue
 - **Data.** 687 test issues (2026-07 to 2026-09).
 - **Result** (`outputs/stage2/module_llm_test.json`). Top-1: LLM 60.8% [57.2, 64.5]; LR 48.2% (same as the stage-1 report); vote 48.8%. LLM minus LR +12.7 [+9.3, +16.2]; minus vote +12.1 [+8.6, +15.7]; 122 fixed, 35 broken; 3 answers outside both references. By train frequency of the true module: 0 (1 issue) both miss; 1 to 19 (107) 35.5% vs 18.7%, +16.8 [+8.4, +26.2]; 20 to 99 (203) 59.6% vs 42.9%, +16.7 [+10.8, +23.2]; 100 or more (376) 68.9% vs 59.6%, +9.3 [+4.8, +13.8]. Cost US$0.291.
 - **Decision.** Module judgment closed for stage 2 with this pipeline. The gain matches the tune set (+11.9 there); absolute scores are lower on test for every method, as the test period is further from the training data. Total LLM spending so far about US$1.19 of the US$10 budget.
+
+## Project records
+
+### 27. Public repository and README restructure (2026-10-12)
+
+- **Question.** Should the work be published, and in what form?
+- **What was done.** The user chose to publish the repository publicly with its full git history, replacing the stage-1 plan of entry 8 (snapshot only, no HTML files). Repository: https://github.com/coderloganli/usher, branches `main` and `stage1-data` (default). Before pushing, the full history was checked for API keys and tokens (none found). The README was then rewritten for readers new to the project: purpose, test results, how each pipeline works, evaluation rules, how to reproduce, repository layout. Exact settings moved to the new `docs/pipeline.md`; development scores and the reasons behind choices stay in this file only.
+- **Decision.** From now on the README shows only the current best pipeline per judgment and its test result, `docs/pipeline.md` holds the exact settings, and this file holds the chronological record. All three are updated after each adopted change.
 
 ## Open items
 
