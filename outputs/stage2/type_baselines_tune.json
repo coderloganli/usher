@@ -1,0 +1,394 @@
+{
+ "team_proxy_accounts": 107,
+ "subset_sizes": {
+  "train": {
+   "all": 13554,
+   "non_team": 6421
+  },
+  "tune": {
+   "all": 2165,
+   "non_team": 890
+  },
+  "test": {
+   "all": 1848,
+   "non_team": 556
+  }
+ },
+ "tune_label_counts": {
+  "bug": 511,
+  "feature-request": 306,
+  "*question": 31,
+  "under-discussion": 12,
+  "upstream": 11,
+  "polish": 7,
+  "upstream-issue-linked": 6,
+  "debt": 5,
+  "engineering": 1
+ },
+ "tune_reporter_choice": {
+  "with_choice": 643,
+  "choice_matches_truth": 535,
+  "choices": {
+   "bug": 416,
+   "(none)": 247,
+   "feature-request": 227
+  }
+ },
+ "majority_train_type": "bug",
+ "tune": {
+  "methods": {
+   "always_bug": {
+    "accuracy": {
+     "point": 0.5741573033707865,
+     "ci95": [
+      0.5404494382022472,
+      0.6067415730337079
+     ]
+    },
+    "macro_f1": {
+     "point": 0.08105321595685622,
+     "ci95": [
+      0.07827915251496037,
+      0.09375
+     ]
+    }
+   },
+   "reporter_choice": {
+    "accuracy": {
+     "point": 0.7775280898876404,
+     "ci95": [
+      0.749438202247191,
+      0.8056179775280898
+     ]
+    },
+    "macro_f1": {
+     "point": 0.1756037898473599,
+     "ci95": [
+      0.16967372227472338,
+      0.20334109310139487
+     ]
+    }
+   },
+   "lr_macro_f1": {
+    "accuracy": {
+     "point": 0.6674157303370787,
+     "ci95": [
+      0.6359550561797753,
+      0.697752808988764
+     ]
+    },
+    "macro_f1": {
+     "point": 0.32148134172275705,
+     "ci95": [
+      0.24548940407017403,
+      0.39101027989688747
+     ]
+    }
+   },
+   "lr_accuracy": {
+    "accuracy": {
+     "point": 0.8325842696629213,
+     "ci95": [
+      0.8078651685393259,
+      0.8573033707865169
+     ]
+    },
+    "macro_f1": {
+     "point": 0.2266714498188859,
+     "ci95": [
+      0.20519748634212792,
+      0.2747311340525781
+     ]
+    }
+   }
+  },
+  "differences": {
+   "lr_accuracy minus reporter_choice": {
+    "accuracy": {
+     "point": 0.05505617977528088,
+     "ci95": [
+      0.03707865168539326,
+      0.07415730337078652
+     ],
+     "excludes_zero": true
+    },
+    "macro_f1": {
+     "point": 0.051067659971526014,
+     "ci95": [
+      0.027788531268439436,
+      0.07796382821580525
+     ],
+     "excludes_zero": true
+    }
+   },
+   "lr_macro_f1 minus reporter_choice": {
+    "accuracy": {
+     "point": -0.11011235955056176,
+     "ci95": [
+      -0.1460674157303371,
+      -0.07415730337078652
+     ],
+     "excludes_zero": true
+    },
+    "macro_f1": {
+     "point": 0.14587755187539717,
+     "ci95": [
+      0.060491369344012544,
+      0.2024176018721953
+     ],
+     "excludes_zero": true
+    }
+   },
+   "reporter_choice minus always_bug": {
+    "accuracy": {
+     "point": 0.20337078651685392,
+     "ci95": [
+      0.1741573033707865,
+      0.23258426966292134
+     ],
+     "excludes_zero": true
+    },
+    "macro_f1": {
+     "point": 0.09455057389050367,
+     "ci95": [
+      0.08854288403625644,
+      0.11218424286532197
+     ],
+     "excludes_zero": true
+    }
+   }
+  }
+ },
+ "tune_per_type": {
+  "bug": {
+   "support": 511,
+   "always_bug": {
+    "recall": 1.0,
+    "precision": 0.5741573033707865,
+    "predicted": 890
+   },
+   "reporter_choice": {
+    "recall": 0.9706457925636007,
+    "precision": 0.7481146304675717,
+    "predicted": 663
+   },
+   "lr_macro_f1": {
+    "recall": 0.6418786692759295,
+    "precision": 0.8608923884514436,
+    "predicted": 381
+   },
+   "lr_accuracy": {
+    "recall": 0.9628180039138943,
+    "precision": 0.8065573770491803,
+    "predicted": 610
+   }
+  },
+  "feature-request": {
+   "support": 306,
+   "always_bug": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": 0.6405228758169934,
+    "precision": 0.8634361233480177,
+    "predicted": 227
+   },
+   "lr_macro_f1": {
+    "recall": 0.7679738562091504,
+    "precision": 0.8453237410071942,
+    "predicted": 278
+   },
+   "lr_accuracy": {
+    "recall": 0.7941176470588235,
+    "precision": 0.8868613138686131,
+    "predicted": 274
+   }
+  },
+  "*question": {
+   "support": 31,
+   "always_bug": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_macro_f1": {
+    "recall": 0.7419354838709677,
+    "precision": 0.17692307692307693,
+    "predicted": 130
+   },
+   "lr_accuracy": {
+    "recall": 0.1935483870967742,
+    "precision": 1.0,
+    "predicted": 6
+   }
+  },
+  "under-discussion": {
+   "support": 12,
+   "always_bug": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_macro_f1": {
+    "recall": 0.08333333333333333,
+    "precision": 0.01639344262295082,
+    "predicted": 61
+   },
+   "lr_accuracy": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   }
+  },
+  "debt": {
+   "support": 5,
+   "always_bug": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_macro_f1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "predicted": 14
+   },
+   "lr_accuracy": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   }
+  },
+  "polish": {
+   "support": 7,
+   "always_bug": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_macro_f1": {
+    "recall": 0.14285714285714285,
+    "precision": 0.125,
+    "predicted": 8
+   },
+   "lr_accuracy": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   }
+  },
+  "upstream": {
+   "support": 11,
+   "always_bug": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_macro_f1": {
+    "recall": 0.2727272727272727,
+    "precision": 0.21428571428571427,
+    "predicted": 14
+   },
+   "lr_accuracy": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   }
+  },
+  "engineering": {
+   "support": 1,
+   "always_bug": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_macro_f1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "predicted": 1
+   },
+   "lr_accuracy": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   }
+  },
+  "upstream-issue-linked": {
+   "support": 6,
+   "always_bug": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_macro_f1": {
+    "recall": 0.5,
+    "precision": 1.0,
+    "predicted": 3
+   },
+   "lr_accuracy": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   }
+  },
+  "electron": {
+   "support": 0,
+   "always_bug": {
+    "recall": null,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": null,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_macro_f1": {
+    "recall": null,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_accuracy": {
+    "recall": null,
+    "precision": null,
+    "predicted": 0
+   }
+  }
+ }
+}
