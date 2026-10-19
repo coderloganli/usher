@@ -1,0 +1,16 @@
+{
+ "source": "vscode wiki page Issues-Triaging, https://github.com/microsoft/vscode.wiki.git commit 49c140c8edb797c8237ea3070c85f35055868cdf (2026-08-27), fetched 2026-10-16",
+ "note": "Text copied verbatim. 'type' is the row of the 'Categorizing Issues' table; 'closing_reason' is the row of the 'Closing Issues' table that names the label, where there is one.",
+ "labels": {
+  "bug": {"type": "the implementation of a feature is not correct"},
+  "feature-request": {"type": "request for a new feature"},
+  "under-discussion": {"type": "not decided whether the issue is a bug or feature"},
+  "debt": {"type": "improve the implementation/architecture"},
+  "*question": {"type": "we should direct questions to StackOverflow", "closing_reason": "The issue is a user question."},
+  "upstream": {"type": "an issue used to track an issue in an upstream component", "closing_reason": "The issue is tracked in a repository we rely on."},
+  "upstream-issue-linked": {"type": "an issue used to track an issue in an upstream component", "closing_reason": "The issue is tracked in a repository we rely on."},
+  "electron": {"type": "an issue with electron"},
+  "engineering": {"type": "issues related to our engineering system or our processes"},
+  "polish": {"type": "a feature could be improved, but not necessarily a bug"}
+ }
+}
