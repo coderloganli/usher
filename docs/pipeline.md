@@ -2,19 +2,32 @@
 
 Exact settings of the current pipeline for each judgment, as needed to reproduce it. The overview and results are in the [README](../README.md); why each setting was chosen is in [EXPERIMENTS.md](../EXPERIMENTS.md).
 
-## Type: TF-IDF + logistic regression
+## Type: LLM final judgment with the reporter's choice, logistic regression and similar issues
 
-- **Input text**: title plus the raw body (HTML comments kept, so issue-template markers are visible).
-- **Features**: TF-IDF with scikit-learn defaults, fitted on train text only.
-- **Model**: multinomial logistic regression trained on the train set, `max_iter` 5,000.
-- **Two settings** are kept, because accuracy and macro-F1 pick different ones on the tune set (grid C in {0.01, 0.1, 1, 10, 100} x `class_weight` in {none, balanced}):
+Code: `scripts/stage2/type_llm.py`; subset and logistic regressions in `scripts/stage2/type_baselines.py`.
 
-| Name | Selected by | Setting |
-|---|---|---|
-| LR (accuracy) | tune accuracy | C = 1, no class weighting |
-| LR (macro-F1) | tune macro-F1 | C = 1, `class_weight="balanced"` |
+**Label set.** The 10 type labels: `bug`, `feature-request`, `*question`, `under-discussion`, `debt`, `polish`, `upstream`, `engineering`, `upstream-issue-linked`, `electron`.
 
-Code: `scripts/baselines/classify.py` (tuning, writes `outputs/baselines/type_tuning.json`) and `scripts/baselines/evaluate_test.py` (trains the frozen settings on train, scores test).
+**Evaluation subset.** Type issues whose author is not a team-proxy account (an account that is an assignee on any snapshot issue; 107 accounts). Train 6,421, tune 890, test 556 issues. The subset only selects which issues are scored; the references below use all train-period type issues.
+
+**Prepared once, from train-period type issues** (2025-01 to 2026-03, 13,554 issues):
+
+- the logistic regression below;
+- `BAAI/bge-small-en-v1.5` vectors of their cleaned text (shared with the duplicate pipeline);
+- the type definitions from the vscode wiki page "Issues-Triaging", wiki commit `49c140c` (2026-08-27), copied verbatim into `scripts/stage2/type_definitions.json`: the "Categorizing Issues" row of each type, plus the "Closing Issues" row for `*question`, `upstream` and `upstream-issue-linked`.
+
+**Steps for one issue.**
+
+1. **Reporter's choice.** From the raw body: the Type field of VS Code's built-in issue reporter (`Type: <b>Bug</b>`, `Feature Request` or `Performance Issue`, the last counted as `bug`), else the bug or feature-request template marker; otherwise none.
+2. **Reference 1, logistic regression.** Probabilities of all 10 types from the title + raw body.
+3. **Clean the text** with the duplicate pipeline's `clean_text` (see below).
+4. **Reference 2, similar issues.** The 10 train-period type issues created before this issue with the highest cosine similarity to its cleaned text, with their titles, types and similarity.
+5. **Prompt.** Cleaned issue text cut to 1,500 tokens, the reporter's choice (with a note that reporters only choose between `bug` and `feature-request` and the team often changes it), the two references (with a note that the classifier rarely predicts other types), and the 10 definitions (about 1,100 input tokens per issue).
+6. **Final judgment.** `gpt-4o-mini-2024-07-18` (Chat Completions, temperature 0, fixed seed, no tools) returns structured output: a one-sentence reason, then one label constrained to the 10.
+
+Cost is about US$0.0002 per issue. Responses are cached in `data/stage2/type_llm/`; with the cache a rerun makes no API calls and reproduces the outputs exactly.
+
+**Logistic regression used in step 2.** Title plus raw body (HTML comments kept, so issue-template markers are visible); TF-IDF with scikit-learn defaults fitted on train text only; multinomial logistic regression, C = 1, no class weighting, `max_iter` 5,000, trained on all train-period type issues. The stage-1 grid was C in {0.01, 0.1, 1, 10, 100} x `class_weight` in {none, balanced}; this setting has the highest tune accuracy. The setting with the highest tune macro-F1 (C = 1, `class_weight="balanced"`) is kept as a second baseline.
 
 ## Module: LLM final judgment with LR and similar issues as reference
 
@@ -72,5 +85,7 @@ These scripts produced the development results that chose the pipelines above; t
 | `.venv/bin/python scripts/stage2/dedup_clean.py` | `outputs/stage2/duplicate_clean_dev.json`; embedding cache `data/stage2/embeddings_clean.npy` |
 | `.venv/bin/python scripts/stage2/dedup_crossencoder.py` | `outputs/stage2/duplicate_crossencoder_dev.json`; caches `data/stage2/crossencoder_<model>_<split>.npy` |
 | `.venv/bin/python scripts/stage2/module_llm.py trial` / `tune` | `outputs/stage2/module_llm_trial.json`, `outputs/stage2/module_llm_tune.json` |
+| `.venv/bin/python scripts/stage2/type_baselines.py` | `outputs/stage2/type_baselines_tune.json` |
+| `.venv/bin/python scripts/stage2/type_llm.py trial` / `tune` | `outputs/stage2/type_llm_trial.json`, `outputs/stage2/type_llm_tune.json` |
 
 Other experiments, including ones not adopted, are listed in EXPERIMENTS.md with their scripts.

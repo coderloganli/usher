@@ -213,7 +213,7 @@ def main() -> None:
         truth = [q["truth"] for q in queries]
         out["scores"] = scores(truth, preds)
         out["per_type"] = per_type(preds, truth)
-    out["per_issue"] = [{"number": q["number"], "truth": q["truth"], "reporter_choice": choice[q["number"]],
+    out["per_issue"] = [{"number": q["number"], "truth": q["truth"], "reporter_choice_raw": choice[q["number"]],
                          **{k: v[i] for k, v in preds.items()}} for i, q in enumerate(queries)]
     write_json(OUT2 / f"type_llm_{split}.json", out)
     print(json.dumps({k: v for k, v in out.items() if k not in ("per_issue", "per_type")}, indent=1))
