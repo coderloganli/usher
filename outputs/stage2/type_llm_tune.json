@@ -1,0 +1,8479 @@
+{
+ "split": "tune",
+ "n": 890,
+ "model": "gpt-4o-mini-2024-07-18",
+ "price_per_m_usd": {
+  "input": 0.15,
+  "cached": 0.075,
+  "output": 0.6
+ },
+ "cost": {
+  "calls": 890,
+  "prompt_tokens": 968465,
+  "cached_tokens": 1152,
+  "completion_tokens": 32571,
+  "cost_usd": 0.1647,
+  "cost_per_issue_usd": 0.000185,
+  "finish_reason_not_stop": 0,
+  "refusals": 0,
+  "no_answer": 0
+ },
+ "scores": {
+  "methods": {
+   "llm": {
+    "accuracy": {
+     "point": 0.8595505617977528,
+     "ci95": [
+      0.8359550561797753,
+      0.8820224719101124
+     ]
+    },
+    "macro_f1": {
+     "point": 0.2782377561700263,
+     "ci95": [
+      0.2272568444908833,
+      0.35159551684411916
+     ]
+    }
+   },
+   "lr_accuracy": {
+    "accuracy": {
+     "point": 0.8325842696629213,
+     "ci95": [
+      0.8078651685393259,
+      0.8573033707865169
+     ]
+    },
+    "macro_f1": {
+     "point": 0.2266714498188859,
+     "ci95": [
+      0.20519748634212792,
+      0.2747311340525781
+     ]
+    }
+   },
+   "reporter_choice": {
+    "accuracy": {
+     "point": 0.7775280898876404,
+     "ci95": [
+      0.749438202247191,
+      0.8056179775280898
+     ]
+    },
+    "macro_f1": {
+     "point": 0.1756037898473599,
+     "ci95": [
+      0.16967372227472338,
+      0.20334109310139487
+     ]
+    }
+   },
+   "knn_vote": {
+    "accuracy": {
+     "point": 0.7415730337078652,
+     "ci95": [
+      0.7123595505617978,
+      0.7707865168539326
+     ]
+    },
+    "macro_f1": {
+     "point": 0.27205787728940856,
+     "ci95": [
+      0.21099882228763708,
+      0.34279694951204914
+     ]
+    }
+   },
+   "lr_macro_f1": {
+    "accuracy": {
+     "point": 0.6674157303370787,
+     "ci95": [
+      0.6359550561797753,
+      0.697752808988764
+     ]
+    },
+    "macro_f1": {
+     "point": 0.32148134172275705,
+     "ci95": [
+      0.24548940407017403,
+      0.39101027989688747
+     ]
+    }
+   }
+  },
+  "differences": {
+   "llm minus lr_accuracy": {
+    "accuracy": {
+     "point": 0.026966292134831482,
+     "ci95": [
+      0.013483146067415741,
+      0.04157303370786514
+     ],
+     "excludes_zero": true
+    },
+    "macro_f1": {
+     "point": 0.05156630635114037,
+     "ci95": [
+      -0.00309987090090714,
+      0.10116294508313338
+     ],
+     "excludes_zero": false
+    }
+   },
+   "llm minus lr_macro_f1": {
+    "accuracy": {
+     "point": 0.19213483146067412,
+     "ci95": [
+      0.16179775280898878,
+      0.22359550561797747
+     ],
+     "excludes_zero": true
+    },
+    "macro_f1": {
+     "point": -0.04324358555273078,
+     "ci95": [
+      -0.12128868066483404,
+      0.06076920661928931
+     ],
+     "excludes_zero": false
+    }
+   },
+   "llm minus reporter_choice": {
+    "accuracy": {
+     "point": 0.08202247191011236,
+     "ci95": [
+      0.06292134831460672,
+      0.10224719101123592
+     ],
+     "excludes_zero": true
+    },
+    "macro_f1": {
+     "point": 0.10263396632266639,
+     "ci95": [
+      0.04813117679938604,
+      0.1564969876814973
+     ],
+     "excludes_zero": true
+    }
+   },
+   "llm minus knn_vote": {
+    "accuracy": {
+     "point": 0.1179775280898876,
+     "ci95": [
+      0.09323033707865186,
+      0.14382022471910116
+     ],
+     "excludes_zero": true
+    },
+    "macro_f1": {
+     "point": 0.006179878880617717,
+     "ci95": [
+      -0.06567324780410064,
+      0.08771030280169938
+     ],
+     "excludes_zero": false
+    }
+   }
+  },
+  "rule": "adopt only if LLM accuracy minus LR (accuracy) accuracy has a 95% interval entirely above 0, and LLM macro-F1 minus LR (macro-F1) macro-F1 has an interval not entirely below 0",
+  "accuracy_condition": true,
+  "macro_f1_condition": true,
+  "adopt": true,
+  "fixed_vs_lr_accuracy": 32,
+  "broken_vs_lr_accuracy": 8
+ },
+ "per_type": {
+  "bug": {
+   "support": 511,
+   "llm": {
+    "recall": 0.9647749510763209,
+    "precision": 0.8456260720411664,
+    "predicted": 583
+   },
+   "lr_accuracy": {
+    "recall": 0.9628180039138943,
+    "precision": 0.8065573770491803,
+    "predicted": 610
+   },
+   "reporter_choice": {
+    "recall": 0.9706457925636007,
+    "precision": 0.7481146304675717,
+    "predicted": 663
+   },
+   "knn_vote": {
+    "recall": 0.9099804305283757,
+    "precision": 0.7288401253918495,
+    "predicted": 638
+   },
+   "lr_macro_f1": {
+    "recall": 0.6418786692759295,
+    "precision": 0.8608923884514436,
+    "predicted": 381
+   }
+  },
+  "feature-request": {
+   "support": 306,
+   "llm": {
+    "recall": 0.8627450980392157,
+    "precision": 0.8949152542372881,
+    "predicted": 295
+   },
+   "lr_accuracy": {
+    "recall": 0.7941176470588235,
+    "precision": 0.8868613138686131,
+    "predicted": 274
+   },
+   "reporter_choice": {
+    "recall": 0.6405228758169934,
+    "precision": 0.8634361233480177,
+    "predicted": 227
+   },
+   "knn_vote": {
+    "recall": 0.6045751633986928,
+    "precision": 0.7773109243697479,
+    "predicted": 238
+   },
+   "lr_macro_f1": {
+    "recall": 0.7679738562091504,
+    "precision": 0.8453237410071942,
+    "predicted": 278
+   }
+  },
+  "*question": {
+   "support": 31,
+   "llm": {
+    "recall": 0.1935483870967742,
+    "precision": 1.0,
+    "predicted": 6
+   },
+   "lr_accuracy": {
+    "recall": 0.1935483870967742,
+    "precision": 1.0,
+    "predicted": 6
+   },
+   "reporter_choice": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "knn_vote": {
+    "recall": 0.22580645161290322,
+    "precision": 0.875,
+    "predicted": 8
+   },
+   "lr_macro_f1": {
+    "recall": 0.7419354838709677,
+    "precision": 0.17692307692307693,
+    "predicted": 130
+   }
+  },
+  "under-discussion": {
+   "support": 12,
+   "llm": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_accuracy": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "knn_vote": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "predicted": 1
+   },
+   "lr_macro_f1": {
+    "recall": 0.08333333333333333,
+    "precision": 0.01639344262295082,
+    "predicted": 61
+   }
+  },
+  "debt": {
+   "support": 5,
+   "llm": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "predicted": 2
+   },
+   "lr_accuracy": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "knn_vote": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_macro_f1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "predicted": 14
+   }
+  },
+  "polish": {
+   "support": 7,
+   "llm": {
+    "recall": 0.2857142857142857,
+    "precision": 0.6666666666666666,
+    "predicted": 3
+   },
+   "lr_accuracy": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "knn_vote": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_macro_f1": {
+    "recall": 0.14285714285714285,
+    "precision": 0.125,
+    "predicted": 8
+   }
+  },
+  "upstream": {
+   "support": 11,
+   "llm": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "predicted": 1
+   },
+   "lr_accuracy": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "knn_vote": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "predicted": 1
+   },
+   "lr_macro_f1": {
+    "recall": 0.2727272727272727,
+    "precision": 0.21428571428571427,
+    "predicted": 14
+   }
+  },
+  "engineering": {
+   "support": 1,
+   "llm": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_accuracy": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "knn_vote": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_macro_f1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "predicted": 1
+   }
+  },
+  "upstream-issue-linked": {
+   "support": 6,
+   "llm": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_accuracy": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": 0.0,
+    "precision": null,
+    "predicted": 0
+   },
+   "knn_vote": {
+    "recall": 0.5,
+    "precision": 0.75,
+    "predicted": 4
+   },
+   "lr_macro_f1": {
+    "recall": 0.5,
+    "precision": 1.0,
+    "predicted": 3
+   }
+  },
+  "electron": {
+   "support": 0,
+   "llm": {
+    "recall": null,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_accuracy": {
+    "recall": null,
+    "precision": null,
+    "predicted": 0
+   },
+   "reporter_choice": {
+    "recall": null,
+    "precision": null,
+    "predicted": 0
+   },
+   "knn_vote": {
+    "recall": null,
+    "precision": null,
+    "predicted": 0
+   },
+   "lr_macro_f1": {
+    "recall": null,
+    "precision": null,
+    "predicted": 0
+   }
+  }
+ },
+ "per_issue": [
+  {
+   "number": 306984,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 306995,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307001,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307010,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307109,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307154,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307156,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "upstream"
+  },
+  {
+   "number": 307163,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307194,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307207,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307210,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307214,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307233,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 307267,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307293,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307340,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307348,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307350,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307355,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307356,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307364,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 307373,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 307375,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307396,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307400,
+   "truth": "debt",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 307401,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307406,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307408,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307412,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307421,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307428,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307450,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307478,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307481,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307489,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307491,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307492,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 307534,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 307547,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307568,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307576,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307581,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307582,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "polish"
+  },
+  {
+   "number": 307601,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "upstream"
+  },
+  {
+   "number": 307605,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 307617,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307623,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307632,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307634,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307646,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307648,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307649,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307654,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 307662,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307663,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "*question",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307688,
+   "truth": "under-discussion",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307691,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 307720,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307723,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 307751,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307789,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307790,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 307792,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307804,
+   "truth": "*question",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307805,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307807,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307812,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307814,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307819,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307820,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307821,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307824,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307835,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307839,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307840,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307845,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307881,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307897,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307899,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307917,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307939,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307943,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 307953,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307965,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 307972,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 307973,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308050,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 308079,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 308102,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308104,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308158,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308168,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308193,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 308198,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308231,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 308238,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308405,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 308407,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308408,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308442,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308447,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 308449,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308483,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308489,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 308491,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308519,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "upstream",
+   "lr_macro_f1": "upstream"
+  },
+  {
+   "number": 308524,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 308530,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308546,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308555,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308563,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308566,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308578,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308585,
+   "truth": "upstream",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "upstream"
+  },
+  {
+   "number": 308595,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308615,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308627,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308665,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308670,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 308686,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 308704,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308705,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308728,
+   "truth": "upstream",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308766,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308783,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308795,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308822,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308833,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308843,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308943,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308945,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308946,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308961,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 308962,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "polish"
+  },
+  {
+   "number": 308968,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308972,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 308976,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309008,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 309012,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 309028,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309049,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309068,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309116,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309166,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 309213,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 309222,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309223,
+   "truth": "under-discussion",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 309229,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309231,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309241,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 309243,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309281,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 309282,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 309283,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 309285,
+   "truth": "*question",
+   "reporter_choice": "feature-request",
+   "llm": "*question",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 309315,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 309316,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 309320,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309334,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 309447,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309462,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 309463,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309490,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 309502,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 309510,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 309511,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 309514,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309682,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309756,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309766,
+   "truth": "under-discussion",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 309813,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 309828,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309835,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 309903,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "*question",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 309962,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 310020,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 310069,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 310087,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 310124,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 310135,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 310143,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 310150,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 310153,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 310158,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 310191,
+   "truth": "debt",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "engineering"
+  },
+  {
+   "number": 310362,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 310384,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 310390,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 310408,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 310409,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 310435,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 310682,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 310705,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 310710,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 310718,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 310757,
+   "truth": "engineering",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 310795,
+   "truth": "under-discussion",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 310850,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 310902,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 310920,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 310927,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 310930,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 310935,
+   "truth": "upstream",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 310949,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 310955,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 311001,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 311051,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 311056,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 311064,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 311070,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 311133,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 311149,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 311164,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "upstream"
+  },
+  {
+   "number": 311167,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 311174,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 311180,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 311187,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 311267,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 311289,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 311314,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 311339,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 311340,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 311370,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "*question",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 311443,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 311462,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 311595,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 311601,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 311673,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 311713,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 311734,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 311757,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 311760,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 311770,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 311775,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 311788,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 311816,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "*question",
+   "lr_accuracy": "*question",
+   "knn_vote": "*question",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 311818,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 311862,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 311919,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 311922,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 311926,
+   "truth": "*question",
+   "reporter_choice": "feature-request",
+   "llm": "*question",
+   "lr_accuracy": "*question",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 311929,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 311938,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 311946,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 311967,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 311999,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312069,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312087,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "upstream"
+  },
+  {
+   "number": 312098,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 312113,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312320,
+   "truth": "under-discussion",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312330,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 312339,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312377,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 312403,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312405,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312413,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312425,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 312434,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "upstream"
+  },
+  {
+   "number": 312474,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312483,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 312484,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 312509,
+   "truth": "polish",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 312511,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 312541,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 312554,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312572,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312584,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312600,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312610,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312616,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 312622,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312643,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 312658,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 312672,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312720,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312728,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312746,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312749,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 312754,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 312764,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 312769,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312890,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 312908,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312939,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "debt"
+  },
+  {
+   "number": 312956,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312964,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312970,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 312994,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 313025,
+   "truth": "debt",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313064,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 313072,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313084,
+   "truth": "debt",
+   "reporter_choice": "bug",
+   "llm": "upstream",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313109,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 313171,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 313172,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313192,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 313209,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 313253,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "*question",
+   "lr_accuracy": "*question",
+   "knn_vote": "*question",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 313257,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 313263,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313268,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313319,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 313372,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313411,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313413,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313459,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313470,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313472,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 313485,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 313508,
+   "truth": "upstream-issue-linked",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "upstream-issue-linked",
+   "lr_macro_f1": "upstream-issue-linked"
+  },
+  {
+   "number": 313514,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 313539,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313546,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 313570,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 313585,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313613,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 313647,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 313683,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313706,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 313715,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 313729,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313785,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313830,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 313842,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313857,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 313859,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 313865,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313877,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313882,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313890,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 313920,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "debt"
+  },
+  {
+   "number": 313930,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 313939,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 313941,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 313962,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 313970,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 313987,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "polish"
+  },
+  {
+   "number": 313996,
+   "truth": "*question",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314033,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314035,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314038,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 314211,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 314220,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 314246,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314247,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314339,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314352,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314377,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 314385,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314395,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "debt"
+  },
+  {
+   "number": 314408,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 314414,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314419,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314431,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 314453,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314503,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314536,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314560,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314562,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314600,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314619,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 314627,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 314666,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 314681,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314684,
+   "truth": "*question",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "*question",
+   "knn_vote": "*question",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 314696,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 314704,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314708,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314717,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 314720,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314754,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314772,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314800,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314803,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314804,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314844,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314845,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314873,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314877,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 314923,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314940,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314942,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314948,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "debt",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "debt"
+  },
+  {
+   "number": 314949,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 314952,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314966,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 314974,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314984,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 314986,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 314996,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "bug",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315030,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 315038,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 315039,
+   "truth": "polish",
+   "reporter_choice": "bug",
+   "llm": "polish",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 315116,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 315168,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "debt"
+  },
+  {
+   "number": 315171,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 315186,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315224,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 315240,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315243,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 315250,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 315289,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315329,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 315335,
+   "truth": "polish",
+   "reporter_choice": "bug",
+   "llm": "polish",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 315350,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315373,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 315426,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315448,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 315460,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315476,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 315494,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 315508,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315526,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 315594,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315596,
+   "truth": "upstream",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315645,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 315649,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 315657,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 315674,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 315699,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 315919,
+   "truth": "under-discussion",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315962,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315963,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315966,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315967,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315969,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315971,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 315979,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 315996,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316001,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316003,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "*question",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 316005,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316018,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316030,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316051,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316054,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 316113,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 316116,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316139,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316146,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316158,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316161,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316164,
+   "truth": "under-discussion",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 316192,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316204,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316217,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316223,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316246,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "upstream"
+  },
+  {
+   "number": 316252,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316256,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 316317,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316318,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316354,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316377,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316391,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316398,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316401,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316402,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316414,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 316437,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316483,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316517,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316535,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316569,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316571,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316585,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316586,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 316597,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316600,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 316603,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316642,
+   "truth": "*question",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316696,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316712,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316742,
+   "truth": "upstream",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316743,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 316747,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316752,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "debt"
+  },
+  {
+   "number": 316766,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316779,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316781,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 316786,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 316841,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316851,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316860,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316861,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316867,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316870,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 316880,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 316918,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316940,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316971,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316995,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316996,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 316997,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317005,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317006,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317014,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317015,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317021,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317027,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 317033,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317076,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317117,
+   "truth": "polish",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "polish"
+  },
+  {
+   "number": 317172,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317195,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317211,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317214,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317229,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317250,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 317258,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317285,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317298,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 317332,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 317414,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317445,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317490,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317498,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317512,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317528,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317536,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 317543,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317549,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317553,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317651,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "under-discussion",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 317683,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317688,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317697,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317702,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 317714,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317735,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 317763,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317765,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 317767,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317770,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317783,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317835,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317845,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317870,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317896,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 317916,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 317917,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317926,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317940,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 317948,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317969,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "upstream"
+  },
+  {
+   "number": 317970,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 317992,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318001,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 318015,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318021,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318027,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 318063,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318083,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318097,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318101,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318103,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318111,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318116,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318121,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318131,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 318139,
+   "truth": "upstream",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318152,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 318181,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318182,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318189,
+   "truth": "polish",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318192,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318196,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318200,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318211,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318213,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318238,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 318259,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318279,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318308,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318347,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318356,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318358,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 318362,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318363,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 318380,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 318382,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318395,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318402,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318422,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318522,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 318523,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318540,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "debt"
+  },
+  {
+   "number": 318545,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318549,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 318559,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318564,
+   "truth": "polish",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 318567,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 318589,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318605,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318630,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 318632,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318644,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318658,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318660,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "debt"
+  },
+  {
+   "number": 318671,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 318688,
+   "truth": "under-discussion",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318689,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318693,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318694,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 318697,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318702,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 318703,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318726,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318735,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 318738,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 318739,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 318748,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318753,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318762,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318764,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318830,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 318833,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318853,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 318866,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318876,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318893,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318910,
+   "truth": "upstream",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "upstream"
+  },
+  {
+   "number": 318917,
+   "truth": "*question",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "*question",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 318923,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318936,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318954,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318967,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318970,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318975,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 318977,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 318997,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319049,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319058,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319086,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319099,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "polish"
+  },
+  {
+   "number": 319104,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 319118,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319121,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319122,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319134,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319159,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319180,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319193,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319207,
+   "truth": "upstream",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "upstream"
+  },
+  {
+   "number": 319225,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319230,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319234,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 319248,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319255,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319258,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319309,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319331,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319371,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319373,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319414,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319423,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319427,
+   "truth": "upstream-issue-linked",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "upstream-issue-linked",
+   "lr_macro_f1": "upstream-issue-linked"
+  },
+  {
+   "number": 319435,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 319440,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319500,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319511,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319512,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319528,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "bug",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319536,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319538,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319557,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319560,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319592,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319641,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319680,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "bug",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 319684,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319688,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 319689,
+   "truth": "polish",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 319698,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319710,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319733,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319742,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319743,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319752,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319753,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "debt"
+  },
+  {
+   "number": 319754,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "debt"
+  },
+  {
+   "number": 319770,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319782,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319783,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319785,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 319786,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319803,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "debt",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "debt"
+  },
+  {
+   "number": 319821,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 319825,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319834,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319838,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319853,
+   "truth": "upstream",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319858,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319861,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 319867,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319883,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319898,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319902,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 319909,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319913,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319924,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319934,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319944,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 319968,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319981,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 319985,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 319993,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320028,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320044,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320045,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320051,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320055,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 320058,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320066,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320070,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320074,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320086,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320098,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320110,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320133,
+   "truth": "upstream-issue-linked",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "upstream-issue-linked"
+  },
+  {
+   "number": 320147,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320154,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 320168,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 320198,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320213,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320220,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320231,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320272,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "polish"
+  },
+  {
+   "number": 320280,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320293,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320338,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320339,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320341,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 320342,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320345,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320352,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320353,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320367,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 320369,
+   "truth": "under-discussion",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320389,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 320393,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320413,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320433,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320551,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320558,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320559,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320561,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320563,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320570,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320668,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 320680,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 320723,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320727,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320735,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320750,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 320818,
+   "truth": "upstream",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320821,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320830,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320850,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320851,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320869,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320872,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320888,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 320890,
+   "truth": "debt",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320899,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 320928,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 320939,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 320965,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 320989,
+   "truth": "under-discussion",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321004,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 321018,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321049,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "upstream"
+  },
+  {
+   "number": 321050,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321055,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "upstream"
+  },
+  {
+   "number": 321088,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 321127,
+   "truth": "upstream-issue-linked",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321134,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321135,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321150,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321151,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321157,
+   "truth": "under-discussion",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321159,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "upstream"
+  },
+  {
+   "number": 321178,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "polish"
+  },
+  {
+   "number": 321182,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321222,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "debt"
+  },
+  {
+   "number": 321321,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321334,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321336,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321343,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321352,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321367,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321372,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321385,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321396,
+   "truth": "*question",
+   "reporter_choice": "bug",
+   "llm": "*question",
+   "lr_accuracy": "*question",
+   "knn_vote": "*question",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 321403,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321409,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321415,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321416,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321418,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321431,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321504,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "polish",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321514,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321529,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321548,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321555,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "*question",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 321600,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321602,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321616,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321662,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321716,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321720,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 321729,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321747,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321761,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "debt"
+  },
+  {
+   "number": 321763,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321806,
+   "truth": "bug",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321834,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321839,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 321896,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 321901,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 322051,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322055,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 322067,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 322095,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322209,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322216,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 322225,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 322269,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 322275,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322280,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "debt"
+  },
+  {
+   "number": 322293,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322299,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322323,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322334,
+   "truth": "under-discussion",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 322335,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322364,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322371,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 322448,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 322509,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 322520,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 322525,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322540,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 322545,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 322609,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322612,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322663,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 322688,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 322713,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322723,
+   "truth": "upstream-issue-linked",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "upstream-issue-linked",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322728,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322731,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322749,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 322810,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 322826,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322872,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322876,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322904,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 322907,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 322915,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322943,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "upstream-issue-linked",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 322987,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 323066,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 323072,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 323094,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 323172,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 323173,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 323174,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 323192,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "bug",
+   "lr_macro_f1": "polish"
+  },
+  {
+   "number": 323231,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 323238,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 323243,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 323252,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 323261,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 323356,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 323492,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 323596,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 323602,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 323603,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 323622,
+   "truth": "feature-request",
+   "reporter_choice": "feature-request",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 323647,
+   "truth": "upstream",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 323653,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 323658,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "feature-request",
+   "lr_accuracy": "feature-request",
+   "knn_vote": "feature-request",
+   "lr_macro_f1": "feature-request"
+  },
+  {
+   "number": 323691,
+   "truth": "feature-request",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 323696,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 323698,
+   "truth": "upstream-issue-linked",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 323733,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "*question"
+  },
+  {
+   "number": 323758,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "under-discussion"
+  },
+  {
+   "number": 323765,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  },
+  {
+   "number": 323775,
+   "truth": "bug",
+   "reporter_choice": "bug",
+   "llm": "bug",
+   "lr_accuracy": "bug",
+   "knn_vote": "bug",
+   "lr_macro_f1": "bug"
+  }
+ ]
+}
